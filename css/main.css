@@ -1,0 +1,62 @@
+/* Custom styles not easily achievable with Tailwind */
+body {
+    font-family: 'Inter', sans-serif;
+    transition: background-color 0.3s ease;
+}
+
+/* Ensure smooth scrolling when navigating to sections */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Base styles for the "prose" content, which is used for the notes display */
+.prose {
+    color: var(--yellow-text);
+}
+
+.prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
+    color: var(--golden-yellow);
+}
+
+/* Message box animation */
+#message-box {
+    transition: transform 0.3s ease-in-out;
+    transform: translateY(120%); /* Start hidden off-screen */
+}
+#message-box.show {
+    transform: translateY(0);
+}
+
+/* Custom message box colors as requested */
+#message-box.success {
+    background-color: var(--golden-yellow);
+    color: var(--brown-dark);
+}
+
+#message-box.error {
+    background-color: var(--dark-red);
+    color: var(--dark-yellow);
+}
+
+/* Additional styling for interactive elements to improve user experience */
+.mode-button {
+    /* Add a subtle inset box-shadow on click to mimic a press effect */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), inset 0 2px 4px rgba(255, 255, 255, 0.05);
+}
+
+.mode-button:active {
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Placeholder image styling */
+.profile-picture-container img {
+    object-fit: cover;
+    background-color: var(--brown-card);
+}
+
+/* Style for disabled buttons */
+#save-profile-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background-color: #574438; /* A darker, inactive color */
+}

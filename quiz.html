@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dirimsi - Quiz</title>
+    <!-- Tailwind CSS (for base styling, though textbook.css will override some) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Re-include Tailwind config for consistency, though custom CSS might take precedence
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brown-dark': '#2c1e1a',
+                        'brown-card': '#42322a',
+                        'yellow-text': '#d4c2a5',
+                        'golden-yellow': '#d4af37',
+                        'dark-yellow': '#b8860b',
+                        'brown-accent': '#574438',
+                        'yellow-highlight': '#ffe26e',
+                        'dark-red': '#8B0000',
+                    },
+                },
+            },
+        };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Link to the custom textbook CSS file for consistent theme -->
+    <link rel="stylesheet" href="css/textbook.css">
+    <!-- Firebase configuration (needed for coin deduction) -->
+    <script src="/env.js"></script>
+    <style>
+        /* Additional custom styles for the quiz page for message box */
+        .message-box.show {
+            transform: translateY(0);
+        }
+        .message-box.info {
+            background-color: #3b82f6; /* Tailwind's blue-500 */
+            color: white;
+        }
+        .message-box.success {
+            background-color: #d4af37; /* golden-yellow */
+            color: #2c1e1a; /* brown-dark */
+        }
+        .message-box.error {
+            background-color: #8B0000; /* dark-red */
+            color: #ffe26e; /* yellow-highlight */
+        }
+        /* Styles for disabled options to prevent multiple clicks */
+        .quiz-option.disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            background-color: #574438 !important; /* brown-accent */
+            color: #d4c2a5 !important; /* yellow-text */
+        }
+        .quiz-option.correct {
+            background-color: #10B981 !important; /* green-500 */
+            color: white !important;
+        }
+        .quiz-option.incorrect {
+            background-color: #EF4444 !important; /* red-500 */
+            color: white !important;
+        }
+    </style>
+</head>
+<body>
+    <header class="quiz-header">
+        <div class="flex items-center justify-between container mx-auto px-4 py-2">
+            <div class="flex items-center space-x-2">
+                <button onclick="window.location.href='main.html'" class="px-3 py-2 bg-golden-yellow text-brown-dark rounded-lg text-sm hover:bg-dark-yellow transition-colors">
+                    <i class="fas fa-arrow-left mr-1"></i> Back to Main
+                </button>
+                <h1 id="quiz-title" class="text-xl font-bold text-golden-yellow ml-4">Loading Quiz...</h1>
+            </div>
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-coins text-golden-yellow"></i>
+                <p id="quiz-coin-balance" class="text-sm font-semibold text-golden-yellow">--</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="quiz-main">
+        <section class="bg-brown-card p-6 rounded-xl shadow-lg text-center">
+            <h3 id="question-number" class="text-2xl font-bold mb-4 text-golden-yellow">Question 1/X</h3>
+            <p id="quiz-question-text" class="text-xl text-yellow-text mb-6">Loading question...</p>
+            
+            <div id="quiz-options-container" class="flex flex-col gap-3 max-w-lg mx-auto">
+                <!-- Options will be dynamically loaded here -->
+            </div>
+
+            <!-- New: Explanation Display Area -->
+            <div id="explanation-container" class="hidden mt-6 p-4 bg-brown-dark rounded-lg text-left">
+                <h5 class="text-lg font-bold text-yellow-highlight mb-2">Explanation:</h5>
+                <p id="explanation-text" class="text-yellow-text"></p>
+            </div>
+
+            <button id="next-question-btn" class="mt-8 px-6 py-3 bg-golden-yellow text-brown-dark font-bold rounded-lg shadow-md hover:bg-dark-yellow transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-golden-yellow focus:ring-offset-2 focus:ring-offset-brown-dark hidden">
+                Next Question
+            </button>
+        </section>
+    </main>
+
+    <footer class="app-footer bg-brown-card p-4 text-center text-yellow-text mt-auto rounded-t-xl">
+        <p>&copy; 2025 Dirimsi. All rights reserved.</p>
+    </footer>
+
+    <!-- Message box for notifications -->
+    <div id="message-box" class="message-box fixed bottom-4 right-4 p-4 rounded-lg shadow-xl transition-transform transform translate-y-20 duration-300 z-50">
+        <p id="message-text" class="font-bold"></p>
+    </div>
+
+    <!-- Contact Modal for Zero Coins (similar to main.html) -->
+    <div id="contact-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-brown-card p-6 rounded-lg shadow-lg text-center max-w-sm w-full">
+            <h3 class="text-2xl font-bold text-golden-yellow mb-4">No Coins Left!</h3>
+            <p class="text-yellow-text mb-4">You've run out of coins for quizzes. Please purchase more coins by contacting SchrDbb with the following details:</p>
+            <p class="text-yellow-text mb-2"><strong>App ID:</strong> <span id="app-id-display" class="font-mono"></span></p>
+            <p class="text-yellow-text mb-4"><strong>Password:</strong> <span id="password-display" class="font-mono"></span></p>
+            <div class="flex justify-center space-x-4">
+                <a id="whatsapp-link" href="#" target="_blank" class="flex items-center space-x-2 px-4 py-2 bg-green-600 hover:bg-green-700 rounded-lg transition-colors">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="w-6 h-6">
+                    <span class="text-white">WhatsApp</span>
+                </a>
+                <a id="telegram-link" href="#" target="_blank" class="flex items-center space-x-2 px-4 py-2 bg-blue-500 hover:bg-blue-600 rounded-lg transition-colors">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram" class="w-6 h-6">
+                    <span class="text-white">Telegram</span>
+                </a>
+            </div>
+            <button id="close-contact-modal" class="mt-4 px-4 py-2 bg-golden-yellow text-brown-dark font-bold rounded-lg hover:bg-dark-yellow transition-colors">Close</button>
+        </div>
+    </div>
+
+    <!-- New: Quiz Results Modal -->
+    <div id="quiz-results-modal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 hidden">
+        <div class="bg-brown-card p-8 rounded-xl shadow-2xl text-center max-w-md w-full border-2 border-golden-yellow">
+            <h3 class="text-3xl font-bold text-golden-yellow mb-6 animate-pulse">Quiz Completed!</h3>
+            <p class="text-2xl text-yellow-text mb-4">Your Score:</p>
+            <p id="final-score" class="text-5xl font-extrabold text-yellow-highlight mb-8">0/0</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button id="restart-quiz-btn" class="px-6 py-3 bg-golden-yellow text-brown-dark font-bold rounded-lg shadow-md hover:bg-dark-yellow transition-colors duration-200">
+                    <i class="fas fa-redo-alt mr-2"></i> Retake Quiz
+                </button>
+                <button id="back-to-main-from-results" class="px-6 py-3 bg-brown-accent text-yellow-text font-bold rounded-lg shadow-md hover:bg-dark-yellow transition-colors duration-200">
+                    <i class="fas fa-home mr-2"></i> Back to Main
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Link to the external JavaScript file for quiz logic -->
+    <script type="module" src="js/quiz.js"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dirimsi - Choose an International Exam</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brown-dark': '#2c1e1a',
+                        'brown-card': '#42322a',
+                        'yellow-text': '#d4c2a5',
+                        'golden-yellow': '#d4af37',
+                        'dark-yellow': '#b8860b',
+                        'brown-accent': '#574438',
+                        'yellow-highlight': '#ffe26e',
+                        'dark-red': '#8B0000',
+                    },
+                },
+            },
+        };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-brown-dark text-yellow-text min-h-screen flex flex-col items-center justify-center p-4">
+
+    <div class="bg-brown-card p-6 sm:p-10 rounded-xl shadow-lg w-full max-w-2xl">
+        <h2 class="text-3xl font-bold mb-6 text-center text-golden-yellow">Choose an International Exam</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="bg-brown-dark p-6 rounded-lg shadow-md transition-transform duration-200 hover:scale-105 hover:bg-brown-accent">
+                <a href="quiz.html?type=international&exam=usmle" class="block text-2xl font-bold mb-2 text-golden-yellow hover:text-yellow-highlight transition-colors">USMLE (United States Medical Licensing Examination)</a>
+                <p class="text-yellow-text">The USMLE is a three-step examination for medical licensure in the United States.</p>
+            </div>
+            <div class="bg-brown-dark p-6 rounded-lg shadow-md transition-transform duration-200 hover:scale-105 hover:bg-brown-accent">
+                <a href="quiz.html?type=international&exam=mrcp" class="block text-2xl font-bold mb-2 text-golden-yellow hover:text-yellow-highlight transition-colors">MRCP (Membership of the Royal Colleges of Physicians)</a>
+                <p class="text-yellow-text">A postgraduate medical diploma in the United Kingdom and many other countries.</p>
+            </div>
+            <div class="bg-brown-dark p-6 rounded-lg shadow-md transition-transform duration-200 hover:scale-105 hover:bg-brown-accent">
+                <a href="quiz.html?type=international&exam=plab" class="block text-2xl font-bold mb-2 text-golden-yellow hover:text-yellow-highlight transition-colors">PLAB (Professional and Linguistic Assessments Board)</a>
+                <p class="text-yellow-text">An exam to demonstrate that international doctors have the necessary skills and knowledge to practice medicine in the UK.</p>
+            </div>
+            <div class="bg-brown-dark p-6 rounded-lg shadow-md transition-transform duration-200 hover:scale-105 hover:bg-brown-accent">
+                <a href="quiz.html?type=international&exam=fmge" class="block text-2xl font-bold mb-2 text-golden-yellow hover:text-yellow-highlight transition-colors">FMGE (Foreign Medical Graduate Examination)</a>
+                <p class="text-yellow-text">A screening test for Indian citizens who have obtained their primary medical qualification from outside India.</p>
+            </div>
+        </div>
+
+        <div class="mt-8 text-center">
+            <button onclick="window.location.href='main.html'" class="px-6 py-3 bg-golden-yellow text-brown-dark font-bold rounded-lg shadow-md hover:bg-dark-yellow transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-golden-yellow focus:ring-offset-2 focus:ring-offset-brown-dark">
+                <i class="fas fa-arrow-left mr-2"></i> Back to Arcade Mode
+            </button>
+        </div>
+    </div>
+
+</body>
+</html>

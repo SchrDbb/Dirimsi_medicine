@@ -1,0 +1,1970 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mathematics</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+	
+	<!----------------CSS CODE----------------->
+	<link rel="stylesheet" href="css/textbook.css">
+	
+</head>
+<body>
+ <header>
+    <h1>Mathematics</h1>
+   <h3>&copy; DirimSi Academy | Telegram: @SchrDbb | Phone: +237 6 52 65 94 29</h3>
+	
+</header>
+<button class="toc-button" aria-expanded="false" aria-controls="nav-menu">|||</button>
+
+<!------------------------NAVIGATION MENU--------------------------->
+<nav id="nav-menu" role="navigation" aria-label="Table of contents">
+        <h2>Table of Contents</h2>
+        <ul>
+            <li><a href="#chapter1">Chapter 1: Quadratic Equations & Miscellaneous Equations</a>
+      <ul>
+        <li><a href="#section1-1">1.1 Roots of Quadratic Equations</a></li>
+        <li><a href="#section1-2">1.2 Sum and Product of Roots</a></li>
+        <li><a href="#section1-3">1.3 Miscellaneous Equations</a></li>
+        <li><a href="#section1-4">1.4 Simultaneous Equations</a></li>
+        <li><a href="#section1-5">1.5 Square Root of (a + √b)</a></li>
+        <li><a href="#exercises1">Exercises 1</a></li>
+      </ul>
+    </li>
+    <li><a href="#chapter2">Chapter 2: Indices, Logarithms, Remainder Theorem, Partial Fractions</a>
+      <ul>
+        <li><a href="#section2-1">2.1 Fundamental Laws for Indices</a></li>
+        <li><a href="#section2-2">2.2 Fractional, Zero, Negative Indices</a></li>
+        <li><a href="#section2-3">2.3 Theory of Logarithms</a></li>
+        <li><a href="#section2-4">2.4 Common Logarithms</a></li>
+        <li><a href="#section2-5">2.5 Equations with Unknown as Index</a></li>
+        <li><a href="#section2-6">2.6 Remainder Theorem</a></li>
+        <li><a href="#section2-7">2.7 Undetermined Coefficients</a></li>
+        <li><a href="#section2-8">2.8 Partial Fractions</a></li>
+        <li><a href="#exercises2">Exercises 2</a></li>
+      </ul>
+    </li>
+    <li><a href="#chapter3">Chapter 3: Progressions, Permutations, Combinations, Binomial Theorem</a>
+      <ul>
+        <li><a href="#section3-1">3.1 Series</a></li>
+        <li><a href="#section3-2">3.2 Arithmetical Progression</a></li>
+        <li><a href="#section3-3">3.3 Geometrical Progression</a></li>
+        <li><a href="#section3-4">3.4 Simple and Compound Interest</a></li>
+        <li><a href="#section3-5">3.5 Convergence of Geometric Series</a></li>
+        <li><a href="#section3-6">3.6 Series of Natural Numbers</a></li>
+        <li><a href="#section3-7">3.7 Permutations and Combinations</a></li>
+        <li><a href="#section3-8">3.8 Probability</a></li>
+        <li><a href="#section3-9">3.9 Binomial Theorem (Positive Integral Index)</a></li>
+        <li><a href="#section3-10">3.10 Binomial Theorem (Non-Positive Index)</a></li>
+        <li><a href="#exercises3">Exercises 3</a></li>
+      </ul>
+    </li>
+	
+	<li><a href="#chapter4">Chapter 4: Trigonometrical Ratios for Any Angle, Graphs, Equations</a>
+                <ul>
+                    <li><a href="#section4-1">4.1 Introduction</a></li>
+                    <li><a href="#section4-2">4.2 Trigonometrical Ratios for the General Angle</a></li>
+                    <li><a href="#section4-3">4.3 Trigonometrical Ratios of Some Related Angles</a></li>
+                    <li><a href="#section4-4">4.4 Graphs of Trigonometrical Ratios for Acute Angles</a></li>
+                    <li><a href="#section4-5">4.5 Graphs of Trigonometrical Ratios for the General Angle</a></li>
+                    <li><a href="#section4-6">4.6 Solution of Trigonometrical Equations</a></li>
+                </ul>
+            </li>
+            <li><a href="#chapter5">Chapter 5: Addition Theorems, Multiple Angles, Inverse Notation, Small Angles</a>
+                <ul>
+                    <li><a href="#section5-1">5.1 Addition Theorems for Sine and Cosine</a></li>
+                    <li><a href="#section5-2">5.2 Addition Theorem for the Tangent</a></li>
+                    <li><a href="#section5-3">5.3 Multiple Angles</a></li>
+                    <li><a href="#section5-4">5.4 Submultiple Angles</a></li>
+                    <li><a href="#section5-5">5.5 Factor Formulae</a></li>
+                    <li><a href="#section5-6">5.6 Further Trigonometrical Equations</a></li>
+                    <li><a href="#section5-7">5.7 Equation \( a \cos \theta + b \sin \theta = c \)</a></li>
+                    <li><a href="#section5-8">5.8 The Inverse Notation</a></li>
+                    <li><a href="#section5-9">5.9 Small Angles</a></li>
+                </ul>
+            </li>
+			<li><a href="#chapter5">Chapter 5: Addition Theorems, Multiple Angles, Inverse Notation, Small Angles</a>
+                <ul>
+                    <li><a href="#section5-1">5.1 Addition Theorems for Sine and Cosine</a></li>
+                    <li><a href="#section5-2">5.2 Addition Theorem for the Tangent</a></li>
+                    <li><a href="#section5-3">5.3 Multiple Angles</a></li>
+                    <li><a href="#section5-4">5.4 Submultiple Angles</a></li>
+                    <li><a href="#section5-5">5.5 Factor Formulae</a></li>
+                    <li><a href="#section5-6">5.6 Further Trigonometrical Equations</a></li>
+                    <li><a href="#section5-7">5.7 Equation \( a \cos \theta + b \sin \theta = c \)</a></li>
+                    <li><a href="#section5-8">5.8 The Inverse Notation</a></li>
+                    <li><a href="#section5-9">5.9 Small Angles</a></li>
+                </ul>
+            </li>
+            <li><a href="#chapter6">Chapter 6: Heights and Distances</a>
+                <ul>
+                    <li><a href="#section6-1">6.1 Introduction</a></li>
+                    <li><a href="#section6-2">6.2 Angles of Elevation and Depression</a></li>
+                    <li><a href="#section6-3">6.3 Heights and Distances in One Plane</a></li>
+                    <li><a href="#section6-4">6.4 Heights and Distances Not in One Plane</a></li>
+                </ul>
+            </li>
+            <li><a href="#chapter7">Chapter 7: Properties of Triangles</a>
+                <ul>
+                    <li><a href="#section7-1">7.1 Sine Formula</a></li>
+                    <li><a href="#section7-2">7.2 Cosine Formula</a></li>
+                    <li><a href="#section7-3">7.3 Projection Formulae</a></li>
+                    <li><a href="#section7-4">7.4 Area of a Triangle</a></li>
+                </ul>
+            </li>
+            <li><a href="#chapter8">Chapter 8: Trigonometrical Identities</a>
+                <ul>
+                    <li><a href="#section8-1">8.1 Introduction</a></li>
+                    <li><a href="#section8-2">8.2 Sum and Difference Identities</a></li>
+                    <li><a href="#section8-3">8.3 Product-to-Sum Identities</a></li>
+                    <li><a href="#section8-4">8.4 Sum-to-Product Identities</a></li>
+                </ul>
+            </li>
+            <li><a href="#chapter9">Chapter 9: Applications of Trigonometry</a>
+                <ul>
+                    <li><a href="#section9-1">9.1 Introduction</a></li>
+                    <li><a href="#section9-2">9.2 Navigation</a></li>
+                    <li><a href="#section9-3">9.3 Surveying</a></li>
+                    <li><a href="#section9-4">9.4 Astronomy</a></li>
+                </ul>
+            </li>
+			 <li><a href="#chapter10">Chapter 10: Introduction to the Ideas of the Integral Calculus</a>
+                <ul>
+                    <li><a href="#section10-1">10.1 The Nature of the Fundamental Problem of the Integral Calculus</a></li>
+                    <li><a href="#section10-2">10.2 Standard Forms</a></li>
+                    <li><a href="#section10-3">10.3 Some Geometrical and Dynamical Applications</a></li>
+                    <li><a href="#section10-4">10.4 Calculation of an Area as a Limit of a Sum</a></li>
+                    <li><a href="#section10-5">10.5 The Integral as a Sum</a></li>
+                    <li><a href="#section10-6">10.6 The Example of § 10.4 Solved by Integration</a></li>
+                    <li><a href="#section10-7">10.7 Illustrative Examples of Definite Integrals and Calculation of Area</a></li>
+                    <li><a href="#section10-8">10.8 Volumes of Figures of Revolution</a></li>
+                </ul>
+            </li>
+            <li><a href="#chapter11">Chapter 11: Some Methods of Integration</a>
+                <ul>
+                    <li><a href="#section11-1">11.1 Introduction</a></li>
+                    <li><a href="#section11-2">11.2 Generalisation of the List of Standard Integrals</a></li>
+                    <li><a href="#section11-3">11.3 The Integration of Products of Sines and Cosines</a></li>
+                    <li><a href="#section11-4">11.4 Integration by Change of Variable</a></li>
+                    <li><a href="#section11-5">11.5 Definite Integrals by Change of Variable</a></li>
+                    <li><a href="#section11-6">11.6 Integration by Parts</a></li>
+                    <li><a href="#section11-7">11.7 Approximate Methods of Integration</a></li>
+                </ul>
+            </li>
+			 <li><a href="#chapter12">Chapter 12</a></li>
+            <li class="dropdown">
+                <a href="#chapter12" class="dropbtn">Chapter 12 Sections</a>
+                <div class="dropdown-content">
+                    <a href="#ch12s1">12.1 Introduction</a>
+                    <a href="#ch12s2">12.2 Calculation of Area</a>
+                    <a href="#ch12s3">12.3 Calculation of Volumes</a>
+                    <a href="#ch12s4">12.4 Mean Values</a>
+                    <a href="#ch12s5">12.5 Centres of Mass</a>
+                    <a href="#ch12s6">12.6 Moments of Inertia</a>
+                    <a href="#ch12s7">12.7 Length of Arc</a>
+                    <a href="#ch12s8">12.8 Areas of Surfaces of Revolution</a>
+                    <a href="#ch12ex">12 Exercises</a>
+                </div>
+            </li>
+            <li><a href="#chapter13">Chapter 13</a></li>
+            <li class="dropdown">
+                <a href="#chapter13" class="dropbtn">Chapter 13 Sections</a>
+                <div class="dropdown-content">
+                    <a href="#ch13s1">13.1 Introduction</a>
+                    <a href="#ch13s2">13.2 Area Below y = 1/x</a>
+                    <a href="#ch13s3">13.3 Properties of hyp(t)</a>
+                    <a href="#ch13s4">13.4 Logarithmic Function</a>
+                    <a href="#ch13s5">13.5 Exponential Function</a>
+                    <a href="#ch13s6">13.6 Differentiation and Integration of e^x</a>
+                    <a href="#ch13s7">13.7 Integrals Depending on ∫x^(-1)dx</a>
+                    <a href="#ch13s8">13.8 Logarithmic Differentiation</a>
+                    <a href="#ch13s9">13.9 Successive Approximations and Maclaurin’s Series</a>
+                    <a href="#ch13s10">13.10 Series for e^x and ln(1+x)</a>
+                    <a href="#ch13ex">13 Exercises</a>
+                </div>
+            </li>
+			<li><a href="#chapter14">Chapter 14: Coordinates, Lengths of Lines, Areas of Triangles, Loci, Intersection of Curves</a>
+            <ul>
+                <li><a href="#section14.1">14.1 Systems of coordinates</a></li>
+                <li><a href="#section14.2">14.2 The relation between Cartesian and polar coordinates</a></li>
+                <li><a href="#section14.3">14.3 The distance between two points with given rectangular coordinates</a></li>
+                <li><a href="#section14.4">14.4 A proof of the addition formulae of trigonometry</a></li>
+                <li><a href="#exercises14a">Exercises 14(a)</a></li>
+                <li><a href="#section14.5">14.5 The coordinates of a point which divides the join of two given points in a given ratio</a></li>
+                <li><a href="#section14.6">14.6 The area of a triangle whose vertices have given coordinates</a></li>
+                <li><a href="#exercises14b">Exercises 14(b)</a></li>
+                <li><a href="#section14.7">14.7 The equation to a locus</a></li>
+                <li><a href="#section14.8">14.8 The intersections of two curves whose equations are known</a></li>
+                <li><a href="#exercises14c">Exercises 14(c)</a></li>
+                <li><a href="#exercises14d">Exercises 14(d)</a></li>
+                <!-- Key Terms and Review Questions for Chapter 14 were not provided in the text, so they remain as navigation links only. -->
+                <li><a href="#keyterms14">Key Terms (Chapter 14)</a></li>
+                <li><a href="#reviewquestions14">Review Questions (Chapter 14)</a></li>
+            </ul>
+        </li>
+        <li><a href="#chapter15">Chapter 15: The Straight Line</a>
+            <ul>
+                <li><a href="#section15.1">15.1 An equation of the first degree in x and y represents a straight line</a></li>
+                <li><a href="#section15.2">15.2 The equation to a straight line which is parallel to one of the coordinate axes</a></li>
+                <li><a href="#section15.3">15.3 Special forms of the equation to a straight line</a>
+                    <ul>
+                        <li><a href="#section15.3a">15.3 (a) The equation to a line in terms of its slope and its intercept on the y-axis</a></li>
+                        <li><a href="#section15.3b">15.3 (b) The equation to a line in terms of its slope and the coordinates of a point on it</a></li>
+                        <li><a href="#section15.3c">15.3 (c) The equation to a line passing through two given points</a></li>
+                        <li><a href="#section15.3d">15.3 (d) The equation to a line in terms of its intercepts on the coordinate axes</a></li>
+                        <li><a href="#section15.3e">15.3 (e) The equation to a line in terms of the length of the perpendicular from the origin and the angle this perpendicular makes with the x-axis</a></li>
+                    </ul>
+                </li>
+                <!-- Exercises 15(a) to (d) and Key Terms/Review Questions for Chapter 15 were not provided in the text, so they remain as navigation links only. -->
+                <li><a href="#exercises15a">Exercises 15(a)</a></li>
+                <li><a href="#exercises15b">Exercises 15(b)</a></li>
+                <li><a href="#exercises15c">Exercises 15(c)</a></li>
+                <li><a href="#exercises15d">Exercises 15(d)</a></li>
+                <li><a href="#keyterms15">Key Terms (Chapter 15)</a></li>
+                <li><a href="#reviewquestions15">Review Questions (Chapter 15)</a></li>
+            </ul>
+        </li>
+        </ul>
+    </nav>
+
+
+
+
+<!------------------------MAIN CHAPTERS--------------------------->
+    <main>
+	<section id="chapter1">
+            <h2>Chapter 1: Quadratic Equations & Miscellaneous Equations</h2>
+            <section id="section1-1">
+                <h3>1.1 Roots of Quadratic Equations</h3>
+                <p>A quadratic equation has the form \( ax^2 + bx + c = 0 \). The roots are found using the quadratic formula: \( x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} \). The discriminant \( b^2 - 4ac \) determines the nature of roots: real and distinct if positive, equal if zero, or imaginary if negative.</p>
+                <h4>Example 1</h4>
+                <p>Solve: (a) \( 2x^2 + 5x - 12 = 0 \), (b) \( x^2 + 11 = 7x \).</p>
+                <p>(a) Factors: \( (2x - 3)(x + 4) = 0 \), so \( x = \frac{3}{2}, -4 \).</p>
+                <p>(b) Rewrite: \( x^2 - 7x + 11 = 0 \). Using the formula: \( x = \frac{7 \pm \sqrt{49 - 44}}{2} \approx 4.618, 2.382 \).</p>
+            </section>
+            <section id="section1-2">
+                <h3>1.2 Sum and Product of Roots</h3>
+                <p>For a quadratic equation \( ax^2 + bx + c = 0 \), if the roots are \( \alpha \) and \( \beta \), then sum of roots: \( \alpha + \beta = -\frac{b}{a} \), product of roots: \( \alpha \beta = \frac{c}{a} \).</p>
+                <h4>Example 5</h4>
+                <p>If one root is three times the other, find the relation. Let roots be \( \alpha, 3\alpha \). Then: \( 4\alpha = -\frac{b}{a} \), \( 3\alpha^2 = \frac{c}{a} \). Solving gives: \( 3b^2 = 16ac \).</p>
+            </section>
+            <section id="section1-3">
+                <h3>1.3 Miscellaneous Equations Involving One Unknown</h3>
+                <p>Equations reducible to quadratics through substitution or squaring are covered.</p>
+                <h4>Example 7</h4>
+                <p>Solve: \( \sqrt{3 - x} - \sqrt{7 + x} = \sqrt{16 + 2x} \). Squaring both sides and simplifying yields \( 2x^2 + 10x - 12 = 0 \), so \( x = -6 \) (verified).</p>
+            </section>
+            <section id="section1-4">
+                <h3>1.4 Simultaneous Equations</h3>
+                <p>Solve pairs of equations where at least one is quadratic using substitution or elimination.</p>
+                <h4>Example 9</h4>
+                <p>Solve: \( xy = 10 \), \( 3x + 2y = 16 \). Substitute \( y = \frac{10}{x} \) into the second equation: \( 3x + \frac{20}{x} = 16 \). Multiply by \( x \): \( 3x^2 - 16x + 20 = 0 \). Solutions: \( x = \frac{10}{3}, y = 3 \) or \( x = 2, y = 5 \).</p>
+            </section>
+            <section id="section1-5">
+                <h3>1.5 Square Root of (a + √b)</h3>
+                <p>Compute expressions like \( \sqrt{a + \sqrt{b}} \) by assuming \( \sqrt{a + \sqrt{b}} = \pm(\sqrt{x} + \sqrt{y}) \) and solving resulting equations.</p>
+                <h4>Example 11</h4>
+                <p>Find \( \sqrt{14 + 6\sqrt{5}} \). Assume \( \sqrt{14 + 6\sqrt{5}} = \sqrt{x} + \sqrt{y} \). Then: \( x + y = 14 \), \( xy = 45 \). Solutions: \( x = 9, y = 5 \) or \( x = 5, y = 9 \), so \( \pm(3 + \sqrt{5}) \).</p>
+            </section>
+            <div class="key-terms">
+                <h4>Key Terms</h4>
+                <p>Quadratic Equation, Discriminant, Roots, Simultaneous Equations, Irrational Expressions</p>
+            </div>
+            <div class="review-questions">
+                <h4>Review Questions</h4>
+                <ol>
+                    <li>Solve the quadratic equation \( 8x^2 - 2x - 3 = 0 \).</li>
+                    <li>Find the condition for \( kx(1 - x) = 1 \) to have no real roots.</li>
+                    <li>Solve the simultaneous equations \( x^2 + y = 7 \), \( x + y^2 = 11 \).</li>
+                </ol>
+            </div>
+        </section>
+
+        <section id="chapter2">
+            <h2>Chapter 2: Indices, Logarithms, Remainder Theorem, Partial Fractions</h2>
+            <section id="section2-1">
+                <h3>2.1 Fundamental Laws for Positive Integral Indices</h3>
+                <p>Index laws: \( a^m \times a^n = a^{m+n} \), \( a^m \div a^n = a^{m-n} \), \( (a^m)^n = a^{mn} \).</p>
+                <h4>Example 1</h4>
+                <p>Express \( \frac{2b^{-3} c^2}{7c^{-1/2} b^{2/3}} \) with positive indices: \( \frac{2c^{5/2}}{7b^{7/3}} \).</p>
+            </section>
+            <section id="section2-2">
+                <h3>2.2 Fractional, Zero, and Negative Indices</h3>
+                <p>Definitions: \( a^{p/q} = \sqrt[q]{a^p} \), \( a^0 = 1 \), \( a^{-n} = \frac{1}{a^n} \).</p>
+                <h4>Example 2</h4>
+                <p>Simplify \( 8^{2/3} \): \( 8^{2/3} = (\sqrt[3]{8})^2 = 2^2 = 4 \).</p>
+            </section>
+            <section id="section2-3">
+                <h3>2.3 Theory of Logarithms</h3>
+                <p>If \( a^x = N \), then \( x = \log_a N \). Properties: \( \log_a (MN) = \log_a M + \log_a N \), \( \log_a (M/N) = \log_a M - \log_a N \), \( \log_a (M^p) = p \log_a M \).</p>
+                <h4>Example 3</h4>
+                <p>Prove: \( \log_b N = \frac{\log_a N}{\log_a b} \). Let \( \log_b N = x \), so \( b^x = N \). Take \( \log_a \): \( x \log_a b = \log_a N \), thus \( x = \frac{\log_a N}{\log_a b} \).</p>
+            </section>
+            <section id="section2-4">
+                <h3>2.4 Common Logarithms</h3>
+                <p>Base-10 logarithms are used for calculations. \( \log 10 = 1 \), \( \log 1 = 0 \).</p>
+                <h4>Example 5</h4>
+                <p>Given \( \log 2 = 0.3010 \), find \( \log 5 \). Since \( 5 = \frac{10}{2} \), \( \log 5 = \log 10 - \log 2 = 1 - 0.3010 = 0.6990 \).</p>
+            </section>
+            <section id="section2-5">
+                <h3>2.5 Equations with Unknown as Index</h3>
+                <p>Solve using logarithms or index laws.</p>
+                <h4>Example 7</h4>
+                <p>Solve: \( 2^{x^2} = 16^{x-1} \). Since \( 16 = 2^4 \), rewrite: \( 2^{x^2} = 2^{4(x-1)} \). Equate exponents: \( x^2 = 4x - 4 \), so \( x^2 - 4x + 4 = 0 \), \( x = 2 \).</p>
+            </section>
+            <section id="section2-6">
+                <h3>2.6 Remainder Theorem</h3>
+                <p>For a polynomial \( P(x) \) divided by \( x - a \), the remainder is \( P(a) \).</p>
+                <h4>Example 10</h4>
+                <p>Find \( k \): \( 2x^4 + kx^3 - 11x^2 + 4x + 12 \) divided by \( x - 3 \) gives remainder 60. Compute \( P(3) = 60 \): \( 2(3^4) + k(3^3) - 11(3^2) + 4(3) + 12 = 60 \), so \( k = -1 \).</p>
+            </section>
+            <section id="section2-7">
+                <h3>2.7 Undetermined Coefficients</h3>
+                <p>Equate coefficients of equal polynomials to find unknowns.</p>
+                <h4>Example 12</h4>
+                <p>Find \( a, b, c \): \( 2x^2 - 9x + 14 = a(x-1)(x-2) + b(x-1) + c \). Expand and equate: \( a = 2, b = -3, c = 7 \).</p>
+            </section>
+            <section id="section2-8">
+                <h3>2.8 Partial Fractions</h3>
+                <p>Decompose fractions into sums of simpler fractions.</p>
+                <h4>Example 14</h4>
+                <p>Resolve: \( \frac{5}{x^2 + x - 6} \). Factor denominator: \( (x - 2)(x + 3) \). Assume \( \frac{5}{(x-2)(x+3)} = \frac{A}{x-2} + \frac{B}{x+3} \). Solve: \( A = 1, B = -1 \), so \( \frac{1}{x-2} - \frac{1}{x+3} \).</p>
+            </section>
+            <div class="key-terms">
+                <h4>Key Terms</h4>
+                <p>Indices, Logarithms, Remainder Theorem, Partial Fractions, Polynomial Division</p>
+            </div>
+            <div class="review-questions">
+                <h4>Review Questions</h4>
+                <ol>
+                    <li>Simplify \( \frac{6^{-3} x^{-2}}{4x} \) with positive indices.</li>
+                    <li>Solve \( 3^x - 3^{-x} = 6.832 \) using logarithms.</li>
+                    <li>Resolve \( \frac{5(x+1)}{25 - x^2} \) into partial fractions.</li>
+                </ol>
+            </div>
+        </section>
+
+        <section id="chapter3">
+            <h2>Chapter 3: Progressions, Permutations, Combinations, Binomial Theorem</h2>
+            <section id="section3-1">
+                <h3>3.1 Series</h3>
+                <p>A series is a sequence of terms following a specific law, such as arithmetic, geometric, or others like squares of integers.</p>
+            </section>
+            <section id="section3-2">
+                <h3>3.2 Arithmetical Progression</h3>
+                <p>An arithmetic progression (A.P.) has a constant difference \( d \). nth term: \( a + (n-1)d \). Sum: \( s_n = \frac{n}{2} [2a + (n-1)d] \).</p>
+                <h4>Example 1</h4>
+                <p>Insert seven arithmetic means between 2 and 26. Difference: \( d = \frac{26-2}{8} = 3 \). Terms: 5, 8, 11, 14, 17, 20, 23.</p>
+            </section>
+            <section id="section3-3">
+                <h3>3.3 Geometrical Progression</h3>
+                <p>A geometric progression (G.P.) has a constant ratio \( r \). nth term: \( ar^{n-1} \). Sum: \( s_n = \frac{a(1 - r^n)}{1 - r} \) (for \( r \neq 1 \)).</p>
+                <h4>Example 4</h4>
+                <p>Insert three geometric means between 162 and 1250. Ratio: \( r = \pm \sqrt[4]{\frac{1250}{162}} = \pm \frac{5}{3} \). Terms: \( \pm 270, 450, \pm 750 \).</p>
+            </section>
+            <section id="section3-4">
+                <h3>3.4 Simple and Compound Interest</h3>
+                <p>Simple interest: \( A = P(1 + \frac{nr}{100}) \). Compound interest: \( A = P(1 + \frac{r}{100})^n \).</p>
+                <h4>Example 7</h4>
+                <p>Calculate £400 at 4% compound interest for 10 years: (i) annual: \( 400 \times (1.04)^{10} \approx 591.7 \), (ii) semi-annual: \( 400 \times (1.02)^{20} \approx 594.4 \).</p>
+            </section>
+            <section id="section3-5">
+                <h3>3.5 Convergence of Geometric Series</h3>
+                <p>A geometric series converges if \( -1 < r < 1 \), sum: \( \frac{a}{1 - r} \).</p>
+                <h4>Example 9</h4>
+                <p>Find \( a, r \) if sum is \( k \), sum of squares is \( l \): \( r = \frac{k^2 - l}{k^2 + l} \), \( a = k(1 - r) \).</p>
+            </section>
+            <section id="section3-6">
+                <h3>3.6 Series of Natural Numbers</h3>
+                <p>Sum of first \( n \): \( \frac{n(n+1)}{2} \). Sum of squares: \( \frac{n(n+1)(2n+1)}{6} \).</p>
+                <h4>Example 10</h4>
+                <p>Evaluate 0.6 as a fraction: \( 0.6 = \frac{6}{10} + \frac{6}{100} + \cdots = \frac{\frac{6}{10}}{1 - \frac{1}{10}} = \frac{2}{3} \).</p>
+            </section>
+            <section id="section3-7">
+                <h3>3.7 Permutations and Combinations</h3>
+                <p>Permutations: \( nPr = \frac{n!}{(n-r)!} \). Combinations: \( nCr = \frac{n!}{r!(n-r)!} \).</p>
+                <h4>Example 12</h4>
+                <p>Number of 4-digit numbers from 9 digits: \( 9P4 = \frac{9!}{5!} = 3024 \).</p>
+            </section>
+            <section id="section3-8">
+                <h3>3.8 Probability</h3>
+                <p>Probability: \( \frac{m}{m+n} \), where \( m \) is favorable outcomes, \( n \) is unfavorable.</p>
+                <h4>Example 16</h4>
+                <p>Chance of 13 red cards from 52: \( \frac{^{26}C_{13}}{^{52}C_{13}} \approx \frac{1}{61055} \).</p>
+            </section>
+            <section id="section3-9">
+                <h3>3.9 Binomial Theorem (Positive Integral Index)</h3>
+                <p>\( (1 + x)^n = \sum_{r=0}^n \binom{n}{r} x^r \).</p>
+                <h4>Example 17</h4>
+                <p>Expand \( (x + 3y)^6 \). Term: \( \binom{6}{r} x^{6-r} (3y)^r \). Evaluate \( (103)^6 = (100 + 3)^6 \approx 1.19405 \times 10^{12} \) (5 decimals).</p>
+            </section>
+            <section id="section3-10">
+                <h3>3.10 Binomial Theorem (Non-Positive Index)</h3>
+                <p>For \( -1 < x < 1 \): \( (1 + x)^n = 1 + nx + \frac{n(n-1)}{2!}x^2 + \cdots \).</p>
+                <h4>Example 21</h4>
+                <p>Expand \( \frac{1 + x}{(1 + x)(1 + x^2)} \) to \( x^4 \): Simplifies to \( 7 - 6x - x^2 + 7x^4 + \cdots \).</p>
+            </section>
+            <div class="key-terms">
+                <h4>Key Terms</h4>
+                <p>Arithmetic Progression, Geometric Progression, Permutations, Combinations, Binomial Theorem</p>
+            </div>
+            <div class="review-questions">
+                <h4>Review Questions</h4>
+                <ol>
+                    <li>Find the 8th term of a series with nth term \( 4n - 5 \).</li>
+                    <li>Sum 10 terms of an A.P. with first term 60, last term -104.</li>
+                    <li>Calculate the probability of three heads or tails alternately in three coin tosses.</li>
+                </ol>
+            </div>
+        </section>
+
+        
+		 <section id="chapter4">
+            <h2>Chapter 4: Trigonometrical Ratios for Any Angle, Graphs, Equations</h2>
+            <section id="section4-1">
+                <h3>4.1 Introduction</h3>
+                <p>Students are assumed familiar with circular measure and trigonometrical ratios for acute angles. Thus, \( x \text{ degrees} = \frac{\pi x}{180} \text{ radians} \). For a right-angled triangle \( \triangle ABC \) with \( \angle BCA = 90^\circ \), \( \angle ABC = \theta \), base \( x \), height \( y \), and hypotenuse \( r \):</p>
+                <p>\[ \sin \theta = \frac{y}{r}, \cos \theta = \frac{x}{r}, \tan \theta = \frac{y}{x}, \]</p>
+                <p>\[ \csc \theta = \frac{r}{y}, \sec \theta = \frac{r}{x}, \cot \theta = \frac{x}{y}. \]</p>
+                <p>Key relations include:</p>
+                <p>\[ \tan \theta = \frac{\sin \theta}{\cos \theta}, \quad \sin^2 \theta + \cos^2 \theta = 1, \]</p>
+                <p>\[ 1 + \tan^2 \theta = \sec^2 \theta, \quad 1 + \cot^2 \theta = \csc^2 \theta. \]</p>
+                <h4>Example 1</h4>
+                <p>If \( \sin \theta = \frac{1}{3} \), find other ratios. Using \( \cos^2 \theta = 1 - \sin^2 \theta = \frac{8}{9} \), so \( \cos \theta = \pm \frac{2\sqrt{2}}{3} \). Then, \( \tan \theta = \frac{\sin \theta}{\cos \theta} = \frac{1}{2\sqrt{2}} \), \( \csc \theta = 3 \), \( \sec \theta = \frac{3}{2\sqrt{2}} \), \( \cot \theta = 2\sqrt{2} \).</p>
+                <h4>Example 2</h4>
+                <p>Show: \( \sin^3 \theta - \cos^3 \theta = (\sin \theta - \cos \theta)(1 + \sin \theta \cos \theta) \).</p>
+                <p>\[ \sin^3 \theta - \cos^3 \theta = (\sin \theta - \cos \theta)(\sin^2 \theta + \sin \theta \cos \theta + \cos^2 \theta) = (\sin \theta - \cos \theta)(1 + \sin \theta \cos \theta). \]</p>
+            </section>
+            <section id="section4-2">
+                <h3>4.2 Trigonometrical Ratios for the General Angle</h3>
+                <p>A radius \( OP \) rotates from initial position \( OX \), sweeping positive angles (anti-clockwise) or negative angles (clockwise). For angle \( \theta \), with \( P(x, y) \), \( r = \sqrt{x^2 + y^2} \):</p>
+                <p>\[ \sin \theta = \frac{y}{r}, \cos \theta = \frac{x}{r}, \tan \theta = \frac{y}{x}, \]</p>
+                <p>\[ \csc \theta = \frac{r}{y}, \sec \theta = \frac{r}{x}, \cot \theta = \frac{x}{y}. \]</p>
+                <p>Signs depend on quadrant: 1st (all positive), 2nd (\( \sin, \csc \) positive), 3rd (\( \tan, \cot \) positive), 4th (\( \cos, \sec \) positive).</p>
+            </section>
+            <section id="section4-3">
+                <h3>4.3 Trigonometrical Ratios of Some Related Angles</h3>
+                <p>Relations for related angles:</p>
+                <p>\[ \sin(-\theta) = -\sin \theta, \cos(-\theta) = \cos \theta, \tan(-\theta) = -\tan \theta, \]</p>
+                <p>\[ \sin(180^\circ \pm \theta) = \mp \sin \theta, \cos(180^\circ \pm \theta) = -\cos \theta, \tan(180^\circ \pm \theta) = \pm \tan \theta, \]</p>
+                <p>\[ \sin(90^\circ \pm \theta) = \cos \theta, \cos(90^\circ \pm \theta) = \mp \sin \theta, \tan(90^\circ \pm \theta) = \mp \cot \theta, \]</p>
+                <p>\[ \sin(360^\circ \pm \theta) = \pm \sin \theta, \cos(360^\circ \pm \theta) = \cos \theta. \]</p>
+                <h4>Example 3</h4>
+                <p>Express: \( \sin 135^\circ = \sin(180^\circ - 45^\circ) = \sin 45^\circ \), \( \tan 140^\circ = \tan(180^\circ - 40^\circ) = -\tan 40^\circ \),</p>
+                <p>\[ \sin 1220^\circ = \sin(3 \times 360^\circ + 140^\circ) = \sin 140^\circ = \sin 40^\circ, \]</p>
+                <p>\[ \cos(-840^\circ) = \cos 840^\circ = \cos(2 \times 360^\circ + 120^\circ) = -\cos 60^\circ. \]</p>
+            </section>
+            <section id="section4-4">
+                <h3>4.4 Graphs of Trigonometrical Ratios for Acute Angles</h3>
+                <p>The graph of \( \sin \theta \) rises from 0 to 1 as \( \theta \) goes from 0° to 90°. \( \cos \theta \) mirrors \( \sin(90^\circ - \theta) \). \( \tan \theta \) starts at 0 and increases rapidly toward 90°. Specific values:</p>
+                <p>\[ \sin 45^\circ = \cos 45^\circ = \frac{1}{\sqrt{2}}, \tan 45^\circ = 1, \]</p>
+                <p>\[ \sin 60^\circ = \frac{\sqrt{3}}{2}, \cos 60^\circ = \frac{1}{2}, \tan 60^\circ = \sqrt{3}, \]</p>
+                <p>\[ \sin 30^\circ = \frac{1}{2}, \cos 30^\circ = \frac{\sqrt{3}}{2}, \tan 30^\circ = \frac{1}{\sqrt{3}}. \]</p>
+            </section>
+            <section id="section4-5">
+                <h3>4.5 Graphs of Trigonometrical Ratios for the General Angle</h3>
+                <p>Using relations from 4.3, graphs extend to all angles. \( \sin \theta \) and \( \cos \theta \) have period 360°, amplitude 1. \( \tan \theta \) has period 180°. Relations like \( \sin^2 \theta + \cos^2 \theta = 1 \) hold for all \( \theta \).</p>
+                <h4>Example 4</h4>
+                <p>Graph \( y = \sin(2x + \frac{2\pi}{3}) \) from \( x = 0 \) to \( x = \pi \). Solve \( x = 5 \sin(2x + \frac{2\pi}{3}) \). Intersections at \( x \approx 0.48, 2.34, 3.30 \).</p>
+            </section>
+            <section id="section4-6">
+                <h3>4.6 Solution of Trigonometrical Equations</h3>
+                <p>Equations often reduce to \( \sin \theta = c \), \( \cos \theta = c \), or \( \tan \theta = c \). General solutions:</p>
+                <p>\[ \sin \theta = c: \theta = n \pi + (-1)^n \sin^{-1} c, \]</p>
+                <p>\[ \cos \theta = c: \theta = 2n \pi \pm \cos^{-1} c, \]</p>
+                <p>\[ \tan \theta = c: \theta = n \pi + \tan^{-1} c. \]</p>
+                <h4>Example 5</h4>
+                <p>Solve: \( 2 \cos^2 \theta = 1 + \sin \theta \). Rewrite: \( 2 \sin^2 \theta + \sin \theta - 1 = 0 \). Solutions: \( \sin \theta = \frac{1}{2} \) (\( \theta = 30^\circ, 150^\circ \)) or \( \sin \theta = -1 \) (\( \theta = 270^\circ \)).</p>
+                <h4>Example 6</h4>
+                <p>Solve: \( 4 \sec^2 \theta = 3 \tan \theta + 5 \). Rewrite: \( 4 \tan^2 \theta - 3 \tan \theta - 1 = 0 \). Solutions: \( \tan \theta = 1 \) (\( \theta = n \pi + \frac{\pi}{4} \)) or \( \tan \theta = -\frac{1}{4} \) (\( \theta = n \pi - 14^\circ 2' \)).</p>
+                <h4>Example 7</h4>
+                <p>Solve: \( \sin 2\theta = \cos 3\theta \). Rewrite: \( \sin 2\theta = \sin(90^\circ - 3\theta) \). Solutions: \( \theta = 18^\circ, 90^\circ, 162^\circ, 234^\circ, 270^\circ, 306^\circ \).</p>
+                <h4>Example 8</h4>
+                <p>Solve: \( \tan \theta = \sqrt{3}, \sec \theta = -2 \). Solutions: \( \theta = n \cdot 360^\circ + 240^\circ \).</p>
+            </section>
+            <div class="key-terms">
+                <h4>Key Terms</h4>
+                <p>Trigonometrical Ratios, Quadrants, Period, Amplitude, Inverse Functions</p>
+            </div>
+            <div class="review-questions">
+                <h4>Review Questions</h4>
+                <ol>
+                    <li>If \( \sin \theta = \frac{1}{4} \), find other ratios.</li>
+                    <li>Solve \( 2 \tan \theta + 3 \sec \theta = 4 \cos \theta \).</li>
+                    <li>Graph \( \sin 2x \) and \( 1 - \cos x \) for \( 0^\circ \leq x \leq 180^\circ \). Solve \( \sin 2x = 1 - \cos x \).</li>
+                </ol>
+            </div>
+        </section>
+
+        <section id="chapter5">
+            <h2>Chapter 5: Addition Theorems, Multiple Angles, Inverse Notation, Small Angles</h2>
+            <section id="section5-1">
+                <h3>5.1 Addition Theorems for Sine and Cosine</h3>
+                <p>For angles \( A, B \):</p>
+                <p>\[ \sin(A + B) = \sin A \cos B + \cos A \sin B, \]</p>
+                <p>\[ \cos(A + B) = \cos A \cos B - \sin A \sin B, \]</p>
+                <p>\[ \sin(A - B) = \sin A \cos B - \cos A \sin B, \]</p>
+                <p>\[ \cos(A - B) = \cos A \cos B + \sin A \sin B. \]</p>
+                <h4>Example 1</h4>
+                <p>Show: \( \cos 15^\circ = \frac{\sqrt{2}(\sqrt{3} + 1)}{4} \).</p>
+                <p>\[ \cos 15^\circ = \cos(45^\circ - 30^\circ) = \frac{1}{\sqrt{2}} \cdot \frac{\sqrt{3}}{2} + \frac{1}{\sqrt{2}} \cdot \frac{1}{2} = \frac{\sqrt{2}(\sqrt{3} + 1)}{4}. \]</p>
+                <h4>Example 2</h4>
+                <p>Show: \( \cos(90^\circ + A) = -\sin A \).</p>
+                <p>\[ \cos(90^\circ + A) = \cos 90^\circ \cos A - \sin 90^\circ \sin A = 0 \cdot \cos A - 1 \cdot \sin A = -\sin A. \]</p>
+            </section>
+            <section id="section5-2">
+                <h3>5.2 Addition Theorem for the Tangent</h3>
+                <p>\[ \tan(A + B) = \frac{\tan A + \tan B}{1 - \tan A \tan B}, \]</p>
+                <p>\[ \tan(A - B) = \frac{\tan A - \tan B}{1 + \tan A \tan B}. \]</p>
+                <h4>Example 3</h4>
+                <p>Show: \( \tan(45^\circ + A) = \frac{1 + \tan A}{1 - \tan A} \).</p>
+                <p>\[ \tan(45^\circ + A) = \frac{\tan 45^\circ + \tan A}{1 - \tan 45^\circ \tan A} = \frac{1 + \tan A}{1 - \tan A}. \]</p>
+            </section>
+            <section id="section5-3">
+                <h3>5.3 Multiple Angles</h3>
+                <p>\[ \sin 2A = 2 \sin A \cos A, \]</p>
+                <p>\[ \cos 2A = \cos^2 A - \sin^2 A = 2 \cos^2 A - 1 = 1 - 2 \sin^2 A, \]</p>
+                <p>\[ \tan 2A = \frac{2 \tan A}{1 - \tan^2 A}, \]</p>
+                <p>\[ \sin 3A = 3 \sin A - 4 \sin^3 A, \cos 3A = 4 \cos^3 A - 3 \cos A, \]</p>
+                <p>\[ \tan 3A = \frac{3 \tan A - \tan^3 A}{1 - 3 \tan^2 A}. \]</p>
+            </section>
+            <section id="section5-4">
+                <h3>5.4 Submultiple Angles</h3>
+                <p>Let \( t = \tan \frac{x}{2} \):</p>
+                <p>\[ \sin x = \frac{2t}{1 + t^2}, \cos x = \frac{1 - t^2}{1 + t^2}, \tan x = \frac{2t}{1 - t^2}. \]</p>
+                <h4>Example 4</h4>
+                <p>Prove: \( \frac{\cos \theta}{\cos 2\theta} - \cos 3\theta = 2 (\cos 2\theta - \cos 4\theta) \).</p>
+                <p>Using multiple angle formulas, simplify to \( 2(\cos 2\theta - \cos 4\theta) \).</p>
+                <h4>Example 5</h4>
+                <p>If \( \tan \theta = \frac{4}{3} \), find \( \tan \frac{\theta}{2}, \sin \frac{\theta}{2} \). Solutions: \( \tan \frac{\theta}{2} = \frac{1}{2}, -2 \); \( \sin \frac{\theta}{2} = \frac{1}{\sqrt{5}}, \frac{2}{\sqrt{5}} \).</p>
+            </section>
+            <section id="section5-5">
+                <h3>5.5 Factor Formulae</h3>
+                <p>\[ \sin C + \sin D = 2 \sin \frac{C + D}{2} \cos \frac{C - D}{2}, \]</p>
+                <p>\[ \sin C - \sin D = 2 \cos \frac{C + D}{2} \sin \frac{C - D}{2}, \]</p>
+                <p>\[ \cos C + \cos D = 2 \cos \frac{C + D}{2} \cos \frac{C - D}{2}, \]</p>
+                <p>\[ \cos C - \cos D = -2 \sin \frac{C + D}{2} \sin \frac{C - D}{2}. \]</p>
+                <h4>Example 6</h4>
+                <p>Prove: \( \frac{\sin 3A \sin 6A + \sin A \sin 2A}{\sin 3A \cos 6A + \sin A \cos 2A} = \tan 5A \).</p>
+                <p>Use factor formulas to simplify to \( \tan 5A \).</p>
+                <h4>Example 7</h4>
+                <p>Prove: \( \cos 165^\circ + \sin 165^\circ = \cos 135^\circ \).</p>
+                <p>Use factor formula: \( \cos 165^\circ - \cos 135^\circ = -\sin 165^\circ \), so \( \cos 165^\circ + \sin 165^\circ = \cos 135^\circ \).</p>
+            </section>
+            <section id="section5-6">
+                <h3>5.6 Further Trigonometrical Equations</h3>
+                <p>Use factor formulas to reduce equations. Example 8: Solve \( \cos p\theta + \cos (p+2)\theta = \cos \theta \).</p>
+                <p>\[ 2 \cos (p+1)\theta \cos \theta = \cos \theta \implies \cos \theta = 0 \text{ or } \cos (p+1)\theta = \frac{1}{2}. \]</p>
+                <p>Example 9: Solve \( 2 \sin 3x \sin x = 1 \).</p>
+                <p>\[ -\cos 4x + \cos 2x = 1 \implies \cos 2x (2 \cos 2x - 1) = 0. \]</p>
+            </section>
+            <section id="section5-7">
+                <h3>5.7 Equation \( a \cos \theta + b \sin \theta = c \)</h3>
+                <p>Method 1: Rewrite as \( \cos(\theta - \gamma) = \frac{c}{\sqrt{a^2 + b^2}} \), where \( \tan \gamma = \frac{b}{a} \).</p>
+                <p>Method 2: Use \( t = \tan \frac{\theta}{2} \), solve quadratic in \( t \).</p>
+                <h4>Example 10</h4>
+                <p>Solve: \( 2 \cos \theta - \sin \theta = 1 \).</p>
+                <p>Method 1: \( \cos(\theta + 26^\circ 34') = \frac{1}{\sqrt{5}} \), solutions: \( \theta = n \cdot 360^\circ + 36^\circ 52' \), \( \theta = n \cdot 360^\circ - 90^\circ \).</p>
+                <p>Method 2: Quadratic \( 3t^2 + 2t - 1 = 0 \), same solutions.</p>
+            </section>
+            <section id="section5-8">
+                <h3>5.8 The Inverse Notation</h3>
+                <p>\( \theta = \sin^{-1} x \): \( -\frac{\pi}{2} \leq \theta \leq \frac{\pi}{2} \). \( \theta = \cos^{-1} x \): \( 0 \leq \theta \leq \pi \). \( \theta = \tan^{-1} x \): \( -\frac{\pi}{2} < \theta < \frac{\pi}{2} \).</p>
+                <h4>Example 11</h4>
+                <p>Show: \( \cos^{-1}(-x) = \pi - \cos^{-1} x \), \( \sin^{-1}(-x) = -\sin^{-1} x \).</p>
+                <h4>Example 12</h4>
+                <p>Show: \( \cos^{-1} x + \sin^{-1} x = \frac{\pi}{2} \).</p>
+                <h4>Example 13</h4>
+                <p>Show: \( \tan^{-1} \frac{1}{3} + \sin^{-1} \frac{1}{\sqrt{5}} = \frac{\pi}{4} \).</p>
+            </section>
+            <section id="section5-9">
+                <h3>5.9 Small Angles</h3>
+                <p>For small \( \theta \) (radians): \( \sin \theta \approx \theta \), \( \cos \theta \approx 1 - \frac{\theta^2}{2} \), \( \tan \theta \approx \theta \).</p>
+                <h4>Example 14</h4>
+                <p>Prove: \( AB \approx 2BC \) for small angles in triangle setup.</p>
+                <h4>Example 15</h4>
+                <p>Find \( \theta \) for \( \sin \theta = 0.52 \). Approximate: \( \theta \approx 31^\circ 19' \).</p>
+            </section>
+            <div class="key-terms">
+                <h4>Key Terms</h4>
+                <p>Addition Theorems, Multiple Angles, Factor Formulae, Inverse Notation, Small Angle Approximations</p>
+            </div>
+            <div class="review-questions">
+                <h4>Review Questions</h4>
+                <ol>
+                    <li>Prove: \( \sin(A + B) \sin(A - B) = \sin^2 A - \sin^2 B \).</li>
+                    <li>Solve: \( \cos x + 7 \sin x = 5 \).</li>
+                    <li>Find \( \sin^{-1} \frac{1}{\sqrt{2}} + \cos^{-1} \frac{1}{\sqrt{2}} \).</li>
+                </ol>
+            </div>
+        </section>
+		
+		<section id="chapter5">
+            <h2>Chapter 5: Addition Theorems, Multiple Angles, Inverse Notation, Small Angles</h2>
+            <section id="section5-1">
+                <h3>5.1 Addition Theorems for Sine and Cosine</h3>
+                <p>For angles \( A, B \):</p>
+                <p>\[ \sin(A + B) = \sin A \cos B + \cos A \sin B, \]</p>
+                <p>\[ \cos(A + B) = \cos A \cos B - \sin A \sin B, \]</p>
+                <p>\[ \sin(A - B) = \sin A \cos B - \cos A \sin B, \]</p>
+                <p>\[ \cos(A - B) = \cos A \cos B + \sin A \sin B. \]</p>
+                <h4>Example 1</h4>
+                <p>Show: \( \cos 15^\circ = \frac{\sqrt{2}(\sqrt{3} + 1)}{4} \).</p>
+                <p>\[ \cos 15^\circ = \cos(45^\circ - 30^\circ) = \frac{1}{\sqrt{2}} \cdot \frac{\sqrt{3}}{2} + \frac{1}{\sqrt{2}} \cdot \frac{1}{2} = \frac{\sqrt{2}(\sqrt{3} + 1)}{4}. \]</p>
+                <h4>Example 2</h4>
+                <p>Show: \( \cos(90^\circ + A) = -\sin A \).</p>
+                <p>\[ \cos(90^\circ + A) = \cos 90^\circ \cos A - \sin 90^\circ \sin A = 0 \cdot \cos A - 1 \cdot \sin A = -\sin A. \]</p>
+            </section>
+            <section id="section5-2">
+                <h3>5.2 Addition Theorem for the Tangent</h3>
+                <p>\[ \tan(A + B) = \frac{\tan A + \tan B}{1 - \tan A \tan B}, \]</p>
+                <p>\[ \tan(A - B) = \frac{\tan A - \tan B}{1 + \tan A \tan B}. \]</p>
+                <h4>Example 3</h4>
+                <p>Show: \( \tan(45^\circ + A) = \frac{1 + \tan A}{1 - \tan A} \).</p>
+                <p>\[ \tan(45^\circ + A) = \frac{\tan 45^\circ + \tan A}{1 - \tan 45^\circ \tan A} = \frac{1 + \tan A}{1 - \tan A}. \]</p>
+            </section>
+            <section id="section5-3">
+                <h3>5.3 Multiple Angles</h3>
+                <p>\[ \sin 2A = 2 \sin A \cos A, \]</p>
+                <p>\[ \cos 2A = \cos^2 A - \sin^2 A = 2 \cos^2 A - 1 = 1 - 2 \sin^2 A, \]</p>
+                <p>\[ \tan 2A = \frac{2 \tan A}{1 - \tan^2 A}, \]</p>
+                <p>\[ \sin 3A = 3 \sin A - 4 \sin^3 A, \cos 3A = 4 \cos^3 A - 3 \cos A, \]</p>
+                <p>\[ \tan 3A = \frac{3 \tan A - \tan^3 A}{1 - 3 \tan^2 A}. \]</p>
+            </section>
+            <section id="section5-4">
+                <h3>5.4 Submultiple Angles</h3>
+                <p>Let \( t = \tan \frac{x}{2} \):</p>
+                <p>\[ \sin x = \frac{2t}{1 + t^2}, \cos x = \frac{1 - t^2}{1 + t^2}, \tan x = \frac{2t}{1 - t^2}. \]</p>
+                <h4>Example 4</h4>
+                <p>Prove: \( \frac{\cos \theta}{\cos 2\theta} - \cos 3\theta = 2 (\cos 2\theta - \cos 4\theta) \).</p>
+                <p>Using multiple angle formulas, simplify to \( 2(\cos 2\theta - \cos 4\theta) \).</p>
+                <h4>Example 5</h4>
+                <p>If \( \tan \theta = \frac{4}{3} \), find \( \tan \frac{\theta}{2}, \sin \frac{\theta}{2} \). Solutions: \( \tan \frac{\theta}{2} = \frac{1}{2}, -2 \); \( \sin \frac{\theta}{2} = \frac{1}{\sqrt{5}}, \frac{2}{\sqrt{5}} \).</p>
+            </section>
+            <section id="section5-5">
+                <h3>5.5 Factor Formulae</h3>
+                <p>\[ \sin C + \sin D = 2 \sin \frac{C + D}{2} \cos \frac{C - D}{2}, \]</p>
+                <p>\[ \sin C - \sin D = 2 \cos \frac{C + D}{2} \sin \frac{C - D}{2}, \]</p>
+                <p>\[ \cos C + \cos D = 2 \cos \frac{C + D}{2} \cos \frac{C - D}{2}, \]</p>
+                <p>\[ \cos C - \cos D = -2 \sin \frac{C + D}{2} \sin \frac{C - D}{2}. \]</p>
+                <h4>Example 6</h4>
+                <p>Prove: \( \frac{\sin 3A \sin 6A + \sin A \sin 2A}{\sin 3A \cos 6A + \sin A \cos 2A} = \tan 5A \).</p>
+                <p>Use factor formulas to simplify to \( \tan 5A \).</p>
+                <h4>Example 7</h4>
+                <p>Prove: \( \cos 165^\circ + \sin 165^\circ = \cos 135^\circ \).</p>
+                <p>Use factor formula: \( \cos 165^\circ - \cos 135^\circ = -\sin 165^\circ \), so \( \cos 165^\circ + \sin 165^\circ = \cos 135^\circ \).</p>
+            </section>
+            <section id="section5-6">
+                <h3>5.6 Further Trigonometrical Equations</h3>
+                <p>Use factor formulas to reduce equations. Example 8: Solve \( \cos p\theta + \cos (p+2)\theta = \cos \theta \).</p>
+                <p>\[ 2 \cos (p+1)\theta \cos \theta = \cos \theta \implies \cos \theta = 0 \text{ or } \cos (p+1)\theta = \frac{1}{2}. \]</p>
+                <h4>Example 9</h4>
+                <p>Solve \( 2 \sin 3x \sin x = 1 \).</p>
+                <p>\[ -\cos 4x + \cos 2x = 1 \implies \cos 2x (2 \cos 2x - 1) = 0. \]</p>
+            </section>
+            <section id="section5-7">
+                <h3>5.7 Equation \( a \cos \theta + b \sin \theta = c \)</h3>
+                <p>Method 1: Rewrite as \( \cos(\theta - \gamma) = \frac{c}{\sqrt{a^2 + b^2}} \), where \( \tan \gamma = \frac{b}{a} \).</p>
+                <p>Method 2: Use \( t = \tan \frac{\theta}{2} \), solve quadratic in \( t \).</p>
+                <h4>Example 10</h4>
+                <p>Solve: \( 2 \cos \theta - \sin \theta = 1 \).</p>
+                <p>Method 1: \( \cos(\theta + 26^\circ 34') = \frac{1}{\sqrt{5}} \), solutions: \( \theta = n \cdot 360^\circ + 36^\circ 52' \), \( \theta = n \cdot 360^\circ - 90^\circ \).</p>
+                <p>Method 2: Quadratic \( 3t^2 + 2t - 1 = 0 \), same solutions.</p>
+            </section>
+            <section id="section5-8">
+                <h3>5.8 The Inverse Notation</h3>
+                <p>\( \theta = \sin^{-1} x \): \( -\frac{\pi}{2} \leq \theta \leq \frac{\pi}{2} \). \( \theta = \cos^{-1} x \): \( 0 \leq \theta \leq \pi \). \( \theta = \tan^{-1} x \): \( -\frac{\pi}{2} < \theta < \frac{\pi}{2} \).</p>
+                <h4>Example 11</h4>
+                <p>Show: \( \cos^{-1}(-x) = \pi - \cos^{-1} x \), \( \sin^{-1}(-x) = -\sin^{-1} x \).</p>
+                <h4>Example 12</h4>
+                <p>Show: \( \cos^{-1} x + \sin^{-1} x = \frac{\pi}{2} \).</p>
+                <h4>Example 13</h4>
+                <p>Show: \( \tan^{-1} \frac{1}{3} + \sin^{-1} \frac{1}{\sqrt{5}} = \frac{\pi}{4} \).</p>
+            </section>
+            <section id="section5-9">
+                <h3>5.9 Small Angles</h3>
+                <p>For small \( \theta \) (radians): \( \sin \theta \approx \theta \), \( \cos \theta \approx 1 - \frac{\theta^2}{2} \), \( \tan \theta \approx \theta \).</p>
+                <h4>Example 14</h4>
+                <p>Prove: \( AB \approx 2BC \) for small angles in triangle setup.</p>
+                <h4>Example 15</h4>
+                <p>Find \( \theta \) for \( \sin \theta = 0.52 \). Approximate: \( \theta \approx 31^\circ 19' \).</p>
+            </section>
+            <div class="key-terms">
+                <h4>Key Terms</h4>
+                <p>Addition Theorems, Multiple Angles, Factor Formulae, Inverse Notation, Small Angle Approximations</p>
+            </div>
+            <div class="review-questions">
+                <h4>Review Questions</h4>
+                <ol>
+                    <li>Prove: \( \sin(A + B) \sin(A - B) = \sin^2 A - \sin^2 B \).</li>
+                    <li>Solve: \( \cos x + 7 \sin x = 5 \).</li>
+                    <li>Find \( \sin^{-1} \frac{1}{\sqrt{2}} + \cos^{-1} \frac{1}{\sqrt{2}} \).</li>
+                </ol>
+            </div>
+        </section>
+
+        <section id="chapter6">
+            <h2>Chapter 6: Heights and Distances</h2>
+            <section id="section6-1">
+                <h3>6.1 Introduction</h3>
+                <p>This chapter explores the application of trigonometry to measure heights and distances, particularly in real-world scenarios like surveying and navigation.</p>
+            </section>
+            <section id="section6-2">
+                <h3>6.2 Angles of Elevation and Depression</h3>
+                <p>The angle of elevation is the angle above the horizontal when looking up at an object. The angle of depression is the angle below the horizontal when looking down.</p>
+                <h4>Example 1</h4>
+                <p>A tower is 50 m tall. From a point 100 m away, find the angle of elevation to the top. Solution: \( \tan \theta = \frac{50}{100} = 0.5 \), so \( \theta = \tan^{-1}(0.5) \approx 26.57^\circ \).</p>
+            </section>
+            <section id="section6-3">
+                <h3>6.3 Heights and Distances in One Plane</h3>
+                <p>Problems involve right triangles in a single plane. Use trigonometrical ratios to solve for unknown sides or angles.</p>
+                <h4>Example 2</h4>
+                <p>A tree casts a 30 m shadow when the sun’s elevation is 60°. Find the tree’s height. Solution: \( \tan 60^\circ = \sqrt{3} = \frac{h}{30} \), so \( h = 30 \sqrt{3} \approx 51.96 \, \text{m} \).</p>
+            </section>
+            <section id="section6-4">
+                <h3>6.4 Heights and Distances Not in One Plane</h3>
+                <p>Problems may involve multiple triangles or non-planar setups, requiring multiple trigonometric calculations.</p>
+                <h4>Example 3</h4>
+                <p>From two points 200 m apart, angles of elevation to a balloon are 30° and 45°. Find the balloon’s height. Solution: Set up equations using \( \tan 30^\circ \) and \( \tan 45^\circ \), solve for height \( h \approx 115.47 \, \text{m} \).</p>
+            </section>
+            <div class="key-terms">
+                <h4>Key Terms</h4>
+                <p>Angle of Elevation, Angle of Depression, Heights, Distances</p>
+            </div>
+            <div class="review-questions">
+                <h4>Review Questions</h4>
+                <ol>
+                    <li>Find the height of a pole if its shadow is 20 m when the sun’s elevation is 45°.</li>
+                    <li>Calculate the angle of elevation to a kite 50 m high from a point 75 m away.</li>
+                </ol>
+            </div>
+        </section>
+
+        <section id="chapter7">
+            <h2>Chapter 7: Properties of Triangles</h2>
+            <section id="section7-1">
+                <h3>7.1 Sine Formula</h3>
+                <p>In triangle \( \triangle ABC \), with sides \( a, b, c \):</p>
+                <p>\[ \frac{a}{\sin A} = \frac{b}{\sin B} = \frac{c}{\sin C} = 2R, \]</p>
+                <p>where \( R \) is the circumradius.</p>
+                <h4>Example 1</h4>
+                <p>In \( \triangle ABC \), \( a = 5 \), \( \angle A = 30^\circ \), \( \angle B = 45^\circ \). Find \( b \). Solution: \( \frac{5}{\sin 30^\circ} = \frac{b}{\sin 45^\circ} \), so \( b = 5 \sqrt{2} \).</p>
+            </section>
+            <section id="section7-2">
+                <h3>7.2 Cosine Formula</h3>
+                <p>\[ a^2 = b^2 + c^2 - 2bc \cos A, \]</p>
+                <p>\[ b^2 = a^2 + c^2 - 2ac \cos B, \]</p>
+                <p>\[ c^2 = a^2 + b^2 - 2ab \cos C. \]</p>
+                <h4>Example 2</h4>
+                <p>In \( \triangle ABC \), \( a = 7 \), \( b = 8 \), \( c = 9 \). Find \( \angle A \). Solution: \( \cos A = \frac{b^2 + c^2 - a^2}{2bc} = \frac{64 + 81 - 49}{144} = \frac{96}{144} = \frac{2}{3} \), so \( A \approx 48.19^\circ \).</p>
+            </section>
+            <section id="section7-3">
+                <h3>7.3 Projection Formulae</h3>
+                <p>\[ a = b \cos C + c \cos B, \]</p>
+                <p>\[ b = a \cos C + c \cos A, \]</p>
+                <p>\[ c = a \cos B + b \cos A. \]</p>
+                <h4>Example 3</h4>
+                <p>Verify projection formula for a triangle with given angles and sides.</p>
+            </section>
+            <section id="section7-4">
+                <h3>7.4 Area of a Triangle</h3>
+                <p>\[ \text{Area} = \frac{1}{2}bc \sin A = \frac{1}{2}ac \sin B = \frac{1}{2}ab \sin C, \]</p>
+                <p>\[ \text{Area} = \sqrt{s(s-a)(s-b)(s-c)}, \text{ where } s = \frac{a+b+c}{2}. \]</p>
+                <h4>Example 4</h4>
+                <p>Find the area of \( \triangle ABC \), \( a = 3 \), \( b = 4 \), \( c = 5 \). Solution: \( s = 6 \), area = \( \sqrt{6(6-3)(6-4)(6-5)} = \sqrt{36} = 6 \).</p>
+            </section>
+            <div class="key-terms">
+                <h4>Key Terms</h4>
+                <p>Sine Formula, Cosine Formula, Projection Formulae, Area of Triangle</p>
+            </div>
+            <div class="review-questions">
+                <h4>Review Questions</h4>
+                <ol>
+                    <li>Use the sine formula to find a side in a triangle with given angles.</li>
+                    <li>Calculate the area of a triangle using Heron’s formula.</li>
+                </ol>
+            </div>
+        </section>
+
+        <section id="chapter8">
+            <h2>Chapter 8: Trigonometrical Identities</h2>
+            <section id="section8-1">
+                <h3>8.1 Introduction</h3>
+                <p>Trigonometrical identities are equations true for all angles, used to simplify expressions or solve equations.</p>
+            </section>
+            <section id="section8-2">
+                <h3>8.2 Sum and Difference Identities</h3>
+                <p>Review of addition theorems from Chapter 5, applied to derive new identities.</p>
+                <h4>Example 1</h4>
+                <p>Prove: \( \sin(A + B) + \sin(A - B) = 2 \sin A \cos B \).</p>
+                <p>\[ \sin(A + B) + \sin(A - B) = (\sin A \cos B + \cos A \sin B) + (\sin A \cos B - \cos A \sin B) = 2 \sin A \cos B. \]</p>
+            </section>
+            <section id="section8-3">
+                <h3>8.3 Product-to-Sum Identities</h3>
+                <p>\[ \sin A \cos B = \frac{1}{2} [\sin(A + B) + \sin(A - B)], \]</p>
+                <p>\[ \cos A \sin B = \frac{1}{2} [\sin(A + B) - \sin(A - B)], \]</p>
+                <p>\[ \cos A \cos B = \frac{1}{2} [\cos(A + B) + \cos(A - B)], \]</p>
+                <p>\[ \sin A \sin B = \frac{1}{2} [\cos(A - B) - \cos(A + B)]. \]</p>
+                <h4>Example 2</h4>
+                <p>Express \( \sin 5x \cos 3x \) as a sum. Solution: \( \frac{1}{2} [\sin 8x + \sin 2x] \).</p>
+            </section>
+            <section id="section8-4">
+                <h3>8.4 Sum-to-Product Identities</h3>
+                <p>\[ \sin A + \sin B = 2 \sin \frac{A + B}{2} \cos \frac{A - B}{2}, \]</p>
+                <p>\[ \sin A - \sin B = 2 \cos \frac{A + B}{2} \sin \frac{A - B}{2}, \]</p>
+                <p>\[ \cos A + \cos B = 2 \cos \frac{A + B}{2} \cos \frac{A - B}{2}, \]</p>
+                <p>\[ \cos A - \cos B = -2 \sin \frac{A + B}{2} \sin \frac{A - B}{2}. \]</p>
+                <h4>Example 3</h4>
+                <p>Express \( \cos 4x + \cos 2x \) as a product. Solution: \( 2 \cos 3x \cos x \).</p>
+            </section>
+            <div class="key-terms">
+                <h4>Key Terms</h4>
+                <p>Sum and Difference Identities, Product-to-Sum Identities, Sum-to-Product Identities</p>
+            </div>
+            <div class="review-questions">
+                <h4>Review Questions</h4>
+                <ol>
+                    <li>Prove a given trigonometric identity.</li>
+                    <li>Convert a sum of sines to a product.</li>
+                </ol>
+            </div>
+        </section>
+
+        <section id="chapter9">
+            <h2>Chapter 9: Applications of Trigonometry</h2>
+            <section id="section9-1">
+                <h3>9.1 Introduction</h3>
+                <p>Trigonometry is applied in fields like navigation, surveying, and astronomy to solve practical problems.</p>
+            </section>
+            <section id="section9-2">
+                <h3>9.2 Navigation</h3>
+                <p>Trigonometry calculates bearings and distances in maritime and air navigation.</p>
+                <h4>Example 1</h4>
+                <p>A ship sails 50 km on a bearing of 060°. Find the north and east components. Solution: North: \( 50 \cos 60^\circ = 25 \, \text{km} \); East: \( 50 \sin 60^\circ \approx 43.30 \, \text{km} \).</p>
+            </section>
+            <section id="section9-3">
+                <h3>9.3 Surveying</h3>
+                <p>Trigonometry determines land boundaries and heights using angles and distances.</p>
+                <h4>Example 2</h4>
+                <p>A surveyor measures angles to a point from two stations. Calculate the distance using triangulation.</p>
+            </section>
+            <section id="section9-4">
+                <h3>9.4 Astronomy</h3>
+                <p>Trigonometry calculates distances to celestial bodies using parallax and angular measurements.</p>
+                <h4>Example 3</h4>
+                <p>Find the distance to a star with a parallax angle of 0.01 arcseconds. Solution: Distance \( \approx \frac{1}{0.01} = 100 \, \text{parsecs} \).</p>
+            </section>
+            <div class="key-terms">
+                <h4>Key Terms</h4>
+                <p>Navigation, Surveying, Astronomy, Bearings, Parallax</p>
+            </div>
+            <div class="review-questions">
+                <h4>Review Questions</h4>
+                <ol>
+                    <li>Calculate the distance traveled by a plane on a given bearing.</li>
+                    <li>Use triangulation to find a distance in a surveying problem.</li>
+                </ol>
+            </div>
+        </section>
+		
+		<section id="chapter10">
+            <h2>Chapter 10: Introduction to the Ideas of the Integral Calculus</h2>
+            <section id="section10-1">
+                <h3>10.1 The Nature of the Fundamental Problem of the Integral Calculus</h3>
+                <p>The differential calculus focuses on the rate of variation of known functions, whereas the integral calculus addresses the inverse problem: finding a function \( y \) given its derivative \( \frac{dy}{dx} = \phi(x) \), where \( \phi(x) \) is a known function. For example, if the velocity of a particle is \( u + at \), where \( u \) and \( a \) are constants, we need to find the distance \( s \) from \( \frac{ds}{dt} = u + at \). The solution is \( s = ut + \frac{1}{2}at^2 + C \), where \( C \) is an arbitrary constant. This is written as the indefinite integral:</p>
+                <p>\[ s = \int (u + at) \, dt = ut + \frac{1}{2}at^2 + C. \]</p>
+                <p>Integration is an inverse operation, and the presence of the arbitrary constant \( C \) indicates multiple possible solutions. The indefinite integral \( y = \int \phi(x) \, dx \) represents all functions whose derivative is \( \phi(x) \).</p>
+            </section>
+            <section id="section10-2">
+                <h3>10.2 Standard Forms</h3>
+                <p>Integration, being an inverse operation, relies on known derivatives. A list of standard integrals is derived from standard derivatives (see page 147):</p>
+                <p>\[ \int x^n \, dx = \frac{x^{n+1}}{n+1} + C, \quad (n \neq -1), \]</p>
+                <p>\[ \int \cos x \, dx = \sin x + C, \quad \int \sin x \, dx = -\cos x + C, \]</p>
+                <p>\[ \int \sec^2 x \, dx = \tan x + C, \quad \int \csc^2 x \, dx = -\cot x + C, \]</p>
+                <p>\[ \int \frac{dx}{\sqrt{a^2 - x^2}} = \sin^{-1} \frac{x}{a} + C, \quad \int \frac{dx}{a^2 + x^2} = \frac{1}{a} \tan^{-1} \frac{x}{a} + C. \]</p>
+                <p>The integral of a sum or difference is the sum or difference of the integrals:</p>
+                <p>\[ \int [\phi(x) \pm \psi(x)] \, dx = \int \phi(x) \, dx \pm \int \psi(x) \, dx, \]</p>
+                <p>and for a constant \( a \):</p>
+                <p>\[ \int a \phi(x) \, dx = a \int \phi(x) \, dx. \]</p>
+                <h4>Example 1</h4>
+                <p>Evaluate \( \int \left( x^2 + \frac{2}{x} + \frac{1}{x^2} \right) dx \):</p>
+                <p>\[ \int \left( x^2 + \frac{2}{x} + \frac{1}{x^2} \right) dx = \frac{x^3}{3} + 2 \ln |x| - \frac{1}{x} + C. \]</p>
+                <h4>Example 2</h4>
+                <p>Integrate \( (2x - 1)^3 \):</p>
+                <p>\[ (2x - 1)^3 = 8x^3 - 12x^2 + 6x - 1, \quad \int (2x - 1)^3 \, dx = 2x^4 - 4x^3 + 3x^2 - x + C. \]</p>
+                <h4>Example 3</h4>
+                <p>Evaluate \( \int (2\theta + \sin \theta) \, d\theta \):</p>
+                <p>\[ \int (2\theta + \sin \theta) \, d\theta = \theta^2 - \cos \theta + C. \]</p>
+                <h4>Example 4</h4>
+                <p>Find \( \int \frac{t^4 + 1}{t^2} \, dt \):</p>
+                <p>\[ \int \left( t^2 + \frac{1}{t^2} \right) dt = \frac{t^3}{3} - \frac{1}{t} + C. \]</p>
+                <div class="exercises">
+                    <h4>Exercises 10(a)</h4>
+                    <ol>
+                        <li>\( \int (x^2 + 1) \, dx \)</li>
+                        <li>\( \int x^{4/3} \, dx \)</li>
+                        <li>\( \int \frac{3}{x^2} \, dx \)</li>
+                        <li>\( \int (1 + x)^2 \, dx \)</li>
+                        <li>\( \int \left( x + \frac{1}{x} \right)^2 dx \)</li>
+                        <li>\( \int (\sin x + \cos x) \, dx \)</li>
+                        <li>\( \int \left( 2 \sec^2 x + \frac{1}{1 + x^2} \right) dx \)</li>
+                        <li>\( \int \frac{3 - x^2}{x^2} \, dx \)</li>
+                        <li>\( \int (3t^2 - t + 1) \, dt \)</li>
+                        <li>\( \int (2\theta + \cos \theta) \, d\theta \)</li>
+                        <li>\( \int \tan^2 \theta \, d\theta \)</li>
+                        <li>\( \int \cot^2 \theta \, d\theta \)</li>
+                        <li>\( \int \cos^2 \frac{x}{2} \, dx \)</li>
+                        <li>\( \int \frac{dx}{1 + x^2} \), given \( \frac{d}{dx} (1 + x^2)y = 1 \)</li>
+                    </ol>
+                </div>
+            </section>
+            <section id="section10-3">
+                <h3>10.3 Some Geometrical and Dynamical Applications</h3>
+                <p>Integration finds functions from their derivatives, often with conditions to determine the constant \( C \).</p>
+                <h4>Example 5</h4>
+                <p>Find the equation of a curve where the slope times the square of the abscissa is 2, passing through \( (1, -1) \):</p>
+                <p>\[ x^2 \frac{dy}{dx} = 2 \implies \frac{dy}{dx} = \frac{2}{x^2}, \quad y = \int \frac{2}{x^2} \, dx = -\frac{2}{x} + C. \]</p>
+                <p>At \( x = 1 \), \( y = -1 \): \( -1 = -\frac{2}{1} + C \implies C = 1 \), so \( y = 1 - \frac{2}{x} \).</p>
+                <h4>Example 6</h4>
+                <p>Given \( \frac{dy}{dx} = ax + 2 \), \( \frac{d^2y}{dx^2} = 6 \), and \( y = 4 \) at \( x = 0 \):</p>
+                <p>\[ \frac{d^2y}{dx^2} = a = 6, \quad \frac{dy}{dx} = 6x + 2, \quad y = \int (6x + 2) \, dx = 3x^2 + 2x + C. \]</p>
+                <p>At \( x = 0 \), \( y = 4 \): \( C = 4 \), so \( y = 3x^2 + 2x + 4 \).</p>
+                <h4>Example 7</h4>
+                <p>A particle starts from rest with acceleration \( 30 - 6t \, \text{m/s}^2 \). Find when and where it comes to rest:</p>
+                <p>\[ v = \int (30 - 6t) \, dt = 30t - 3t^2 + C, \quad v = 0 \text{ at } t = 0 \implies C = 0, \quad v = 30t - 3t^2. \]</p>
+                <p>Rest when \( v = 0 \): \( 3t(10 - t) = 0 \implies t = 0, 10 \, \text{s}. \]</p>
+                <p>\[ s = \int (30t - 3t^2) \, dt = 15t^2 - t^3 + C', \quad s = 0 \text{ at } t = 0 \implies C' = 0, \quad s = 15t^2 - t^3. \]</p>
+                <p>At \( t = 10 \), \( s = 15 \cdot 100 - 1000 = 500 \, \text{m} \).</p>
+                <div class="exercises">
+                    <h4>Exercises 10(b)</h4>
+                    <ol>
+                        <li>Find the curve with gradient \( 2x - 1 \), passing through \( (1, 1) \).</li>
+                        <li>Find the curve with gradient \( 1 - 2x^2 \), passing through \( (0, 1) \).</li>
+                        <li>Find the ordinate at \( x = 2 \) for a curve through \( (0, 0) \) with gradient \( 2x - \frac{x^2}{2} \).</li>
+                        <li>Particle with acceleration \( 2 + 3t \, \text{m/s}^2 \), at \( t = 0 \), \( s = 5 \, \text{m} \), at \( t = 1 \), \( v = 10 \, \text{m/s} \). Find position at \( t = 1 \).</li>
+                        <li>Particle with acceleration \( 48t - 24 \), \( v = 6 \), \( x = -1 \) at \( t = 0 \). Find \( x(t) \) and show stationary at \( t = \frac{1}{2} \).</li>
+                        <li>Particle with velocity increasing at \( 4t + \frac{3}{t^3} \), \( v = 10 \), \( s = 4 \) at \( t = 1 \). Find position and velocity at \( t = 2 \).</li>
+                    </ol>
+                </div>
+            </section>
+            <section id="section10-4">
+                <h3>10.4 Calculation of an Area as a Limit of a Sum</h3>
+                <p>Consider the area under \( y = 1 + x \) from \( x = 0 \) to \( x = 10 \). Divide into \( n \) strips of width \( \frac{10}{n} \). For the \( r \)-th strip, the left edge is at \( x = (r-1)\frac{10}{n} \), height \( y = 1 + (r-1)\frac{10}{n} \), and right edge height \( 1 + \frac{10r}{n} \). The area is between:</p>
+                <p>\[ \sum_{r=1}^n \frac{10}{n} \left( 1 + (r-1)\frac{10}{n} \right) = 60 - \frac{50}{n}, \quad \sum_{r=1}^n \frac{10}{n} \left( 1 + \frac{10r}{n} \right) = 60 + \frac{50}{n}. \]</p>
+                <p>As \( n \to \infty \), the area approaches 60 units.</p>
+            </section>
+            <section id="section10-5">
+                <h3>10.5 The Integral as a Sum</h3>
+                <p>For a general curve \( y = \phi(x) \) from \( x = a \) to \( x = b \), divide into \( n \) strips of width \( \delta x = \frac{b-a}{n} \). The area of a strip is approximately \( y \delta x \). The total area is the limit:</p>
+                <p>\[ \int_a^b y \, dx = \lim_{\delta x \to 0} \sum y \delta x = A(b) - A(a), \]</p>
+                <p>where \( A(x) = \int \phi(x) \, dx \).</p>
+            </section>
+            <section id="section10-6">
+                <h3>10.6 The Example of § 10.4 Solved by Integration</h3>
+                <p>For \( y = 1 + x \), \( x = 0 \) to \( x = 10 \):</p>
+                <p>\[ \int_0^{10} (1 + x) \, dx = \left[ x + \frac{x^2}{2} \right]_0^{10} = 10 + \frac{100}{2} = 60. \]</p>
+            </section>
+            <section id="section10-7">
+                <h3>10.7 Illustrative Examples of Definite Integrals and Calculation of Area</h3>
+                <h4>Example 8</h4>
+                <p>Evaluate \( \int_0^{2a} (2x + 3) \, dx \):</p>
+                <p>\[ \int_0^{2a} (2x + 3) \, dx = \left[ x^2 + 3x \right]_0^{2a} = 4a^2 + 6a. \]</p>
+                <h4>Example 9</h4>
+                <p>Evaluate \( \int_1^2 \frac{x^2 - 1}{x^2} \, dx \):</p>
+                <p>\[ \int_1^2 \left( 1 - \frac{1}{x^2} \right) dx = \left[ x + \frac{1}{x} \right]_1^2 = \left( 2 + \frac{1}{2} \right) - \left( 1 + 1 \right) = \frac{1}{2}. \]</p>
+                <h4>Example 10</h4>
+                <p>Evaluate (i) \( \int_0^\pi \sin x \, dx \), (ii) \( \int_0^1 \frac{1}{1 + x^2} \, dx \):</p>
+                <p>(i) \( \int_0^\pi \sin x \, dx = [-\cos x]_0^\pi = -\cos \pi + \cos 0 = 1 + 1 = 2. \]</p>
+                <p>(ii) \( \int_0^1 \frac{1}{1 + x^2} \, dx = [\tan^{-1} x]_0^1 = \tan^{-1} 1 - \tan^{-1} 0 = \frac{\pi}{4}. \]</p>
+                <h4>Example 11</h4>
+                <p>Area under \( y = x(x - 4) \) from \( x = 0 \) to \( x = 4 \):</p>
+                <p>\[ \int_0^4 x(x - 4) \, dx = \int_0^4 (x^2 - 4x) \, dx = \left[ \frac{x^3}{3} - 2x^2 \right]_0^4 = \frac{64}{3} - 32 = -\frac{32}{3}. \]</p>
+                <p>(Negative due to area below x-axis.)</p>
+                <h4>Example 12</h4>
+                <p>Find the curve with gradient \( 1 + \frac{1}{2}x^2 \), passing through \( (1, 0) \), and area from \( x = 1 \) to \( x = 3 \):</p>
+                <p>\[ y = \int \left( 1 + \frac{1}{2}x^2 \right) dx = x + \frac{x^3}{6} + C, \quad 0 = 1 + \frac{1}{6} + C \implies C = -\frac{7}{6}, \quad y = x + \frac{x^3}{6} - \frac{7}{6}. \]</p>
+                <p>Area: \( \int_1^3 \left( x + \frac{x^3}{6} - \frac{7}{6} \right) dx = \left[ \frac{x^2}{2} + \frac{x^4}{24} - \frac{7x}{6} \right]_1^3 = \frac{20}{3}. \]</p>
+                <div class="exercises">
+                    <h4>Exercises 10(c)</h4>
+                    <ol>
+                        <li>\( \int_0^1 (1 + x^2) \, dx \)</li>
+                        <li>\( \int_0^1 (1 - x)^2 \, dx \)</li>
+                        <li>\( \int_0^1 x(1 + x^3) \, dx \)</li>
+                        <li>\( \int_0^1 x(x - 1)(x - 2) \, dx \)</li>
+                        <li>\( \int_0^1 \frac{dx}{\sqrt{1 - x^2}} \)</li>
+                        <li>\( \int_0^{\pi/2} \sec^2 \theta \, d\theta \)</li>
+                        <li>\( \int_0^{\pi/3} \tan^2 \theta \, d\theta \)</li>
+                        <li>\( \int_0^{\pi/2} \left( \sin \frac{t}{2} + \cos \frac{t}{2} \right) dt \)</li>
+                        <li>Area under \( y = 1 + 10x - 2x^2 \), \( x = 1 \) to \( x = 5 \).</li>
+                        <li>Area under \( y = x^3 - 6x^2 + 11x - 6 \), \( x = 1 \) to \( x = 2 \).</li>
+                        <li>Area under \( y = 5x - 6 - x^2 \), where \( y \geq 0 \).</li>
+                        <li>Curve with gradient \( 6x - 3x^2 \), through \( (0, 0) \). Find equation, x-intercept, and area with x-axis.</li>
+                        <li>Area under \( y = x(1 - x^2) \), find \( p \) such that area from \( x = 1 \) to \( x = 1 + p \) equals area from \( x = 0 \) to \( x = 1 \).</li>
+                        <li>Show \( 2 \cdot \text{max ordinate} \cdot \text{x-axis length} = 3 \cdot \text{area in first quadrant} \) for \( y = 11x - 24 - x^2 \).</li>
+                    </ol>
+                </div>
+            </section>
+            <section id="section10-8">
+                <h3>10.8 Volumes of Figures of Revolution</h3>
+                <p>Volume of a solid formed by rotating \( y = \phi(x) \) from \( x = a \) to \( x = b \) about the x-axis:</p>
+                <p>\[ V = \pi \int_a^b y^2 \, dx. \]</p>
+                <h4>Example 13</h4>
+                <p>Volume of \( xy = 8 \), \( x = 2 \) to \( x = 4 \), rotated about x-axis:</p>
+                <p>\[ V = \pi \int_2^4 \left( \frac{8}{x} \right)^2 dx = \pi \int_2^4 \frac{64}{x^2} \, dx = \pi \left[ -\frac{64}{x} \right]_2^4 = 16\pi. \]</p>
+                <h4>Example 14</h4>
+                <p>Volume of a cone, height \( h \), semi-vertical angle \( \alpha \):</p>
+                <p>\[ y = x \tan \alpha, \quad V = \pi \int_0^h (x \tan \alpha)^2 \, dx = \pi \tan^2 \alpha \left[ \frac{x^3}{3} \right]_0^h = \frac{1}{3} \pi h^3 \tan^2 \alpha. \]</p>
+                <div class="exercises">
+                    <h4>Exercises 10(d)</h4>
+                    <ol>
+                        <li>Volume of \( y = 3x^2 - x^3 \) rotated about x-axis.</li>
+                        <li>Volume of \( y = \frac{x^3}{16} \), \( x = 0 \) to \( x = 2 \), rotated about x-axis.</li>
+                        <li>Volume of loop of \( y^2 = x(5 - x)^2 \) rotated about x-axis.</li>
+                        <li>Volume of \( y^2 = 4x \), \( x = 0 \) to \( x = 1 \), rotated about (a) x-axis, (b) y-axis.</li>
+                        <li>Volume of \( x^2 y = x^4 + 3 \), \( x = 1 \) to \( x = 2 \), rotated about x-axis.</li>
+                        <li>Volume of \( y = \cos \frac{x}{2} \), \( x = 0 \) to \( x = \pi \), rotated about x-axis.</li>
+                    </ol>
+                </div>
+                <div class="exercises">
+                    <h4>Exercises 10(e)</h4>
+                    <ol>
+                        <li>Evaluate (i) \( \int 3x(2x^2 + 5x - 4) \, dx \), (ii) \( \int (1 - x)^2 \sqrt{x} \, dx \).</li>
+                        <li>Find (i) \( \int (3x - 4)^2 \, dx \), (ii) \( \int (3 + x)(x - 1) \, dx \).</li>
+                        <li>Show \( \int \frac{dx}{(x + a)^2} = -\frac{1}{x + a} + C \).</li>
+                        <li>Show \( \int \sin (x + a) \, dx = -\cos (x + a) + C \), \( \int \cos (x + a) \, dx = \sin (x + a) + C \).</li>
+                        <li>Evaluate \( \int \sin^2 \frac{\theta}{2} \, d\theta \).</li>
+                        <li>Curve with gradient \( \frac{3}{2} + x - \frac{x^2}{2} \), through \( (0, 1) \). Find equation and area from \( x = 1 \) to \( x = 3 \).</li>
+                        <li>Given \( \frac{d\theta}{dt} = \sin t \), \( \theta = 2 \) at \( t = \frac{\pi}{3} \). Find \( \theta(t) \).</li>
+                        <li>Curve with gradient \( x^2 - 4x + 3 \), through \( (3, 1) \). Find equation and area between max/min and x-axis.</li>
+                        <li>Particle with \( \frac{d(v^2)}{dx} = -18x \), \( v = 4 \, \text{m/s} \) at \( x = 1 \, \text{m} \). Find velocity at \( x = 0 \) and max \( x \).</li>
+                        <li>Integrate \( \frac{d^2y}{dx^2} = \frac{M}{EI} - \frac{Wx}{EI} \), with \( \frac{dy}{dx} = 0 \), \( y = 0 \) at \( x = 0 \). Find \( \frac{dy}{dx} \), \( y \) at \( x = 1 \).</li>
+                        <li>Evaluate (i) \( \int_0^1 (x + 1)^2 \, dx \), (ii) \( \int_0^1 \left( x^2 + \frac{1}{x^2} \right) dx \).</li>
+                        <li>Evaluate (i) \( \int_0^1 (1 - \sqrt{x})^2 \, dx \), (ii) \( \int_0^{\pi/2} (\cos x + \sin x) \, dx \).</li>
+                        <li>If \( y = x^3 \), evaluate \( \int_0^1 (y \, dx + x \, dy) \).</li>
+                        <li>Find \( a \) such that \( \int_0^1 (x + 1) \, dx = 2 \int_0^a \sec^2 x \, dx \).</li>
+                        <li>Curve \( y = ax^2 + bx + c \), x-intercepts at \( x = -1, 3 \), \( y = 12 \) at \( x = 1 \). Find equation and area with x-axis.</li>
+                        <li>Area in first quadrant of \( a^2 y = 4x^2 (3a - 4x) \).</li>
+                        <li>Area between \( y = 2x^3 - 3x^2 - 12x + 25 \), x-axis, and max/min points.</li>
+                        <li>Area under \( y^2 = 4x^3 \), \( x = 0 \) to \( x = 4 \). Find \( c \) where ordinate at \( x = c \) halves the area.</li>
+                        <li>Show areas of rectangle formed by perpendiculars from \( (6, 27) \) on \( 8y = x^3 \) are in ratio 1:3.</li>
+                        <li>Volume of vessel from \( 10y^2 = 4x \), height 0.2 m, rotated about y-axis.</li>
+                        <li>Volume of liquid in can, surface \( y^2 = 4ax \), rotated about x-axis.</li>
+                        <li>Volume of \( cy = (x - a)(x - b) \) rotated about x-axis.</li>
+                        <li>Volume of loop of \( 3x^2 = y(3 - y)^2 \) rotated about y-axis.</li>
+                        <li>Show \( 30a^2 - a^3 = 1000 \) for volume of bowl from \( y = \sqrt{20x - x^2} \).</li>
+                    </ol>
+                </div>
+            </section>
+            <div class="key-terms">
+                <h4>Key Terms</h4>
+                <p>Indefinite Integral, Definite Integral, Standard Integrals, Area as a Limit, Volume of Revolution</p>
+            </div>
+            <div class="review-questions">
+                <h4>Review Questions</h4>
+                <ol>
+                    <li>Explain the difference between definite and indefinite integrals.</li>
+                    <li>Find the area under \( y = x^2 + 2x \) from \( x = 0 \) to \( x = 2 \).</li>
+                    <li>Calculate the volume generated by rotating \( y = x^2 \), \( x = 0 \) to \( x = 1 \), about the x-axis.</li>
+                </ol>
+            </div>
+        </section>
+
+        <section id="chapter11">
+            <h2>Chapter 11: Some Methods of Integration</h2>
+            <section id="section11-1">
+                <h3>11.1 Introduction</h3>
+                <p>Integration extends beyond standard forms, requiring systematic methods. Some functions cannot be integrated in elementary terms, necessitating experience and judgment.</p>
+            </section>
+            <section id="section11-2">
+                <h3>11.2 Generalisation of the List of Standard Integrals</h3>
+                <p>If \( \int f'(x) \, dx = f(x) + C \), then for constants \( a, b \):</p>
+                <p>\[ \int f'(ax + b) \, dx = \frac{1}{a} f(ax + b) + C. \]</p>
+                <p>Generalized standard integrals:</p>
+                <p>\[ \int (ax + b)^n \, dx = \frac{(ax + b)^{n+1}}{(n+1)a} + C, \quad (n \neq -1), \]</p>
+                <p>\[ \int \sin ax \, dx = -\frac{1}{a} \cos ax + C, \quad \int \cos ax \, dx = \frac{1}{a} \sin ax + C, \]</p>
+                <p>\[ \int \sec^2 ax \, dx = \frac{1}{a} \tan ax + C, \quad \int \csc^2 ax \, dx = -\frac{1}{a} \cot ax + C, \]</p>
+                <p>\[ \int \frac{dx}{\sqrt{a^2 - x^2}} = \sin^{-1} \frac{x}{a} + C, \quad \int \frac{dx}{a^2 + x^2} = \frac{1}{a} \tan^{-1} \frac{x}{a} + C. \]</p>
+                <h4>Example 1</h4>
+                <p>Evaluate \( \int_0^1 \left( \sqrt{x + 3} + \sqrt{x + 2} \right) dx \):</p>
+                <p>\[ \int \left( (x + 3)^{1/2} + (x + 2)^{1/2} \right) dx = \frac{2}{3} (x + 3)^{3/2} + \frac{2}{3} (x + 2)^{3/2} + C, \]</p>
+                <p>\[ \left[ \frac{2}{3} (x + 3)^{3/2} + \frac{2}{3} (x + 2)^{3/2} \right]_0^1 = \frac{8}{3} - \frac{4\sqrt{3}}{3}. \]</p>
+                <h4>Example 2</h4>
+                <p>Evaluate \( \int_0^{\pi/2} (\cos x + 2 \cos 2x) \, dx \):</p>
+                <p>\[ \int (\cos x + 2 \cos 2x) \, dx = \sin x + \sin 2x + C, \quad \left[ \sin x + \sin 2x \right]_0^{\pi/2} = 1. \]</p>
+                <h4>Example 3</h4>
+                <p>Evaluate \( \int_0^2 \frac{dx}{x^2 - 4x + 13} \):</p>
+                <p>\[ x^2 - 4x + 13 = (x - 2)^2 + 9, \quad \int \frac{dx}{(x - 2)^2 + 9} = \frac{1}{3} \tan^{-1} \frac{x - 2}{3}, \]</p>
+                <p>\[ \left[ \frac{1}{3} \tan^{-1} \frac{x - 2}{3} \right]_0^2 = \frac{1}{3} \tan^{-1} 0 - \frac{1}{3} \tan^{-1} \left( -\frac{2}{3} \right) = \frac{1}{3} \tan^{-1} \frac{2}{3}. \]</p>
+                <div class="exercises">
+                    <h4>Exercises 11(a)</h4>
+                    <ol>
+                        <li>\( \int (2 - x)^3 \, dx \)</li>
+                        <li>\( \int (1 - x)^{10} \, dx \)</li>
+                        <li>\( \int (2x - 1)^{-3} \, dx \)</li>
+                        <li>\( \int \frac{dx}{\sqrt{5x - 7}} \)</li>
+                        <li>\( \int_0^{\pi/3} \sin \frac{\theta}{2} \, d\theta \)</li>
+                        <li>\( \int_0^{\pi/4} \cos 2t \, dt \)</li>
+                        <li>Integrate (i) \( \cos 2x - \sin 2x \), (ii) \( \sec^2 (2x - 1) \).</li>
+                        <li>\( \int_0^{2/3} \frac{du}{4 + 9u^2} \)</li>
+                        <li>\( \int \frac{dx}{\sqrt{4 - x^2}} \)</li>
+                        <li>\( \int \frac{dx}{x^2 + x + 1} \)</li>
+                        <li>\( \int \frac{dx}{5 + 4x - x^2} \)</li>
+                        <li>\( \int \frac{dx}{3x^2 - 4x + 7} \)</li>
+                    </ol>
+                </div>
+            </section>
+            <section id="section11-3">
+                <h3>11.3 The Integration of Products of Sines and Cosines</h3>
+                <p>Use identities:</p>
+                <p>\[ 2 \sin A \sin B = \cos (A - B) - \cos (A + B), \]</p>
+                <p>\[ 2 \cos A \cos B = \cos (A - B) + \cos (A + B), \]</p>
+                <p>\[ 2 \sin A \cos B = \sin (A + B) + \sin (A - B). \]</p>
+                <h4>Example 4</h4>
+                <p>Integrate \( \cos 3x \cos 2x \):</p>
+                <p>\[ \int \cos 3x \cos 2x \, dx = \frac{1}{2} \int (\cos x + \cos 5x) \, dx = \frac{1}{2} \sin x + \frac{1}{10} \sin 5x + C. \]</p>
+                <h4>Example 5</h4>
+                <p>Evaluate \( \int_0^{\pi/2} \sin 2x \cos x \, dx \):</p>
+                <p>\[ \int \sin 2x \cos x \, dx = \frac{1}{2} \int (\sin x + \sin 3x) \, dx = -\frac{1}{2} \cos x - \frac{1}{6} \cos 3x + C, \]</p>
+                <p>\[ \left[ -\frac{1}{2} \cos x - \frac{1}{6} \cos 3x \right]_0^{\pi/2} = \frac{2}{3}. \]</p>
+                <h4>Example 6</h4>
+                <p>Evaluate \( \int_0^{\pi/4} \cos^2 x \, dx \):</p>
+                <p>\[ \int \cos^2 x \, dx = \frac{1}{2} \int (1 + \cos 2x) \, dx = \frac{1}{2} x + \frac{1}{4} \sin 2x + C, \]</p>
+                <p>\[ \left[ \frac{1}{2} x + \frac{1}{4} \sin 2x \right]_0^{\pi/4} = \frac{\pi}{8} + \frac{1}{4}. \]</p>
+                <div class="exercises">
+                    <h4>Exercises 11(b)</h4>
+                    <ol>
+                        <li>\( \int_0^{\pi/2} \sin^2 x \, dx \)</li>
+                        <li>\( \int_0^{\pi/2} \cos^2 (x - a) \, dx \)</li>
+                        <li>\( \int_0^{\pi/2} (2 \cos^2 \theta + 3 \sin^2 \theta) \, d\theta \)</li>
+                        <li>\( \int_0^{\pi/2} (2 \cos^2 \theta + 3 \sin 3\theta) \, d\theta \)</li>
+                        <li>\( \int_0^{\pi/3} 2 \sin 3x \cos x \, dx \)</li>
+                        <li>\( \int_0^{\pi/2} \sin x \cos x \, dx \)</li>
+                        <li>\( \int_0^{\pi/2} x \cos x \, dx \)</li>
+                        <li>\( \int_0^{3\pi/8} \sin 3\theta \cos \theta \, d\theta \)</li>
+                        <li>\( \int_0^{\pi/2} (\sin 3x + \sin x \cos x) \, dx \)</li>
+                        <li>\( \int_0^{\pi/2} 2 \sin m\theta \sin n\theta \, d\theta \), \( m \neq n \).</li>
+                    </ol>
+                </div>
+            </section>
+            <section id="section11-4">
+                <h3>11.4 Integration by Change of Variable</h3>
+                <p>Change variable from \( x \) to \( t \):</p>
+                <p>\[ \int \phi(x) \, dx = \int \phi(x(t)) \frac{dx}{dt} \, dt. \]</p>
+                <h4>Example 8</h4>
+                <p>Integrate \( x \sqrt{1 + x^2} \):</p>
+                <p>Let \( x^2 = t \), \( 2x \frac{dx}{dt} = 1 \), \( dx = \frac{dt}{2x} \):</p>
+                <p>\[ \int x \sqrt{1 + x^2} \, dx = \frac{1}{2} \int \sqrt{1 + t} \, dt = \frac{1}{3} (1 + t)^{3/2} + C = \frac{1}{3} (1 + x^2)^{3/2} + C. \]</p>
+                <h4>Example 9</h4>
+                <p>Find \( \int \frac{x \, dx}{1 + x^4} \):</p>
+                <p>Let \( x^2 = t \), \( dx = \frac{dt}{2x} \):</p>
+                <p>\[ \int \frac{x}{1 + x^4} \, dx = \frac{1}{2} \int \frac{dt}{1 + t^2} = \frac{1}{2} \tan^{-1} t + C = \frac{1}{2} \tan^{-1} x^2 + C. \]</p>
+                <h4>Example 10</h4>
+                <p>Find \( \int \sin^3 x \cos x \, dx \):</p>
+                <p>Let \( \sin x = t \), \( \cos x \, dx = dt \):</p>
+                <p>\[ \int \sin^3 x \cos x \, dx = \int t^3 \, dt = \frac{t^4}{4} + C = \frac{\sin^4 x}{4} + C. \]</p>
+                <h4>Example 11</h4>
+                <p>Integrate \( \cos^5 x \):</p>
+                <p>Let \( \sin x = t \), \( \cos x \, dx = dt \), \( \cos^4 x = (1 - \sin^2 x)^2 \):</p>
+                <p>\[ \int \cos^5 x \, dx = \int (1 - t^2)^2 \, dt = \int (1 - 2t^2 + t^4) \, dt = t - \frac{2}{3} t^3 + \frac{1}{5} t^5 + C = \sin x - \frac{2}{3} \sin^3 x + \frac{1}{5} \sin^5 x + C. \]</p>
+                <h4>Example 12</h4>
+                <p>Find \( \int \sin^3 x \cos^2 x \, dx \):</p>
+                <p>Let \( \cos x = t \), \( -\sin x \, dx = dt \), \( \sin^3 x = (1 - \cos^2 x) \sin x \):</p>
+                <p>\[ \int \sin^3 x \cos^2 x \, dx = -\int (1 - t^2) t^2 \, dt = -\frac{t^3}{3} + \frac{t^5}{5} + C = -\frac{1}{3} \cos^3 x + \frac{1}{5} \cos^5 x + C. \]</p>
+                <div class="exercises">
+                    <h4>Exercises 11(c)</h4>
+                    <ol>
+                        <li>\( \int x \cos (x^2 - 1) \, dx \)</li>
+                        <li>\( \int (x^3 + 8)^4 \, dx \)</li>
+                        <li>\( \int \frac{1}{x} \cos \sqrt{x} \, dx \)</li>
+                        <li>\( \int \sin x \cos^4 x \, dx \)</li>
+                        <li>\( \int \sin^3 2x \, dx \)</li>
+                        <li>\( \int \frac{x - 1}{\sqrt{1 - 9x^2}} \, dx \)</li>
+                        <li>\( \int \frac{x^3}{1 + x^4} \, dx \)</li>
+                        <li>\( \int \sqrt{4 - x^2} \, dx \)</li>
+                        <li>\( \int_0^1 x \sqrt{1 + x^2} \, dx \)</li>
+                        <li>\( \int_0^{\pi/3} \sin^2 x \cos x \, dx \)</li>
+                        <li>\( \int_0^1 \frac{4x \, dx}{(2 - x^2)^{3/2}} \)</li>
+                        <li>\( \int_0^a x \sqrt{a^2 - x^2} \, dx \)</li>
+                        <li>\( \int_0^{\pi/2} \frac{\cos \theta}{1 + \sin^2 \theta} \, d\theta \)</li>
+                        <li>\( \int_0^a \sqrt{a^2 - x^2} \, dx \)</li>
+                        <li>\( \int_{-\pi/4}^{\pi/4} \tan^2 \theta \sec^2 \theta \, d\theta \)</li>
+                        <li>\( \int_0^{\pi/2} \frac{\cos x}{\sqrt{\sin x}} \, dx \)</li>
+                    </ol>
+                </div>
+            </section>
+            <section id="section11-5">
+                <h3>11.5 Definite Integrals by Change of Variable</h3>
+                <p>For definite integrals, adjust limits or revert to original variable after integration.</p>
+                <h4>Example 13</h4>
+                <p>Evaluate \( \int_0^{\pi/2} \sin^3 x \, dx \):</p>
+                <p>Method 1: \( \cos x = t \), \( -\sin x \, dx = dt \), \( \int \sin^3 x \, dx = -\int (1 - t^2) \, dt = -t + \frac{t^3}{3} + C = -\cos x + \frac{1}{3} \cos^3 x + C, \]</p>
+                <p>\[ \left[ -\cos x + \frac{1}{3} \cos^3 x \right]_0^{\pi/2} = \frac{2}{3}. \]</p>
+                <p>Method 2: Limits \( x = 0 \implies t = 1 \), \( x = \frac{\pi}{2} \implies t = 0 \), \( \int_0^{\pi/2} \sin^3 x \, dx = -\int_1^0 (1 - t^2) \, dt = \int_0^1 (1 - t^2) \, dt = \frac{2}{3}. \]</p>
+                <h4>Example 14</h4>
+                <p>Evaluate \( \int_0^1 \frac{x}{\sqrt{1 - x^2}} \, dx \), let \( x = \sin t \):</p>
+                <p>\[ dx = \cos t \, dt \), limits \( x = 0 \implies t = 0 \), \( x = 1 \implies t = \frac{\pi}{2} \),</p>
+                <p>\[ \int_0^1 \frac{x}{\sqrt{1 - x^2}} \, dx = \int_0^{\pi/2} \frac{\sin t}{\cos t} \cos t \, dt = \int_0^{\pi/2} \sin t \, dt = [-\cos t]_0^{\pi/2} = 1. \]</p>
+                <h4>Example 15</h4>
+                <p>Evaluate \( \int_0^{\pi/4} \sec^4 x \, dx \):</p>
+                <p>Let \( t = \tan x \), \( \sec^2 x \, dx = dt \), limits \( x = 0 \implies t = 0 \), \( x = \frac{\pi}{4} \implies t = 1 \):</p>
+                <p>\[ \int_0^{\pi/4} \sec^4 x \, dx = \int_0^1 (1 + t^2) \, dt = \left[ t + \frac{t^3}{3} \right]_0^1 = \frac{4}{3}. \]</p>
+            </section>
+            <section id="section11-6">
+                <h3>11.6 Integration by Parts</h3>
+                <p>\[ \int u \frac{dv}{dx} \, dx = uv - \int v \frac{du}{dx} \, dx. \]</p>
+                <h4>Example 16</h4>
+                <p>Integrate \( x \tan^{-1} x \):</p>
+                <p>Let \( u = \tan^{-1} x \), \( \frac{dv}{dx} = x \), \( \frac{du}{dx} = \frac{1}{1 + x^2} \), \( v = \frac{x^2}{2} \):</p>
+                <p>\[ \int x \tan^{-1} x \, dx = \frac{x^2}{2} \tan^{-1} x - \int \frac{x^2}{2(1 + x^2)} \, dx = \frac{x^2 + 1}{2} \tan^{-1} x - \frac{x}{2} + C. \]</p>
+                <h4>Example 17</h4>
+                <p>Find \( \int x \cos x \, dx \):</p>
+                <p>Let \( u = x \), \( \frac{dv}{dx} = \cos x \), \( \frac{du}{dx} = 1 \), \( v = \sin x \):</p>
+                <p>\[ \int x \cos x \, dx = x \sin x - \int \sin x \, dx = x \sin x + \cos x + C. \]</p>
+                <h4>Example 18</h4>
+                <p>Find \( \int \sin^2 x \, dx \):</p>
+                <p>Let \( u = \sin x \), \( \frac{dv}{dx} = \sin x \), \( \frac{du}{dx} = \cos x \), \( v = -\cos x \):</p>
+                <p>\[ \int \sin^2 x \, dx = -\sin x \cos x + \int \cos^2 x \, dx = -\sin x \cos x + \int (1 - \sin^2 x) \, dx, \]</p>
+                <p>\[ 2 \int \sin^2 x \, dx = -\sin x \cos x + x + C, \quad \int \sin^2 x \, dx = -\frac{1}{2} \sin x \cos x + \frac{x}{2} + C. \]</p>
+                <h4>Example 19</h4>
+                <p>Find \( \int x^2 \sin x \, dx \):</p>
+                <p>Let \( u = x^2 \), \( \frac{dv}{dx} = \sin x \), \( \frac{du}{dx} = 2x \), \( v = -\cos x \):</p>
+                <p>\[ \int x^2 \sin x \, dx = -x^2 \cos x + 2 \int x \cos x \, dx, \]</p>
+                <p>\[ \int x \cos x \, dx = x \sin x + \cos x + C', \]</p>
+                <p>\[ \int x^2 \sin x \, dx = -x^2 \cos x + 2x \sin x + 2 \cos x + C. \]</p>
+                <div class="exercises">
+                    <h4>Exercises 11(d)</h4>
+                    <ol>
+                        <li>\( \int x \sin x \, dx \)</li>
+                        <li>\( \int \cos^2 x \, dx \)</li>
+                        <li>\( \int \sin x \cos x \, dx \)</li>
+                        <li>\( \int \sin^{-1} x \, dx \)</li>
+                        <li>\( \int_0^1 x \sin^{-1} x \, dx \)</li>
+                        <li>\( \int x^2 \cos x \, dx \)</li>
+                        <li>Show \( V_n = \int x^n \cos x \, dx \), \( U_n = \int x^n \sin x \, dx \), \( V_n = x^n \sin x - n U_{n-1} \), \( U_n = -x^n \cos x + n V_{n-1} \).</li>
+                        <li>Evaluate (i) \( \int_0^{\pi/2} x \cos^{-1} x \, dx \), (ii) \( \int_0^1 \cos^{-1} x \, dx \).</li>
+                    </ol>
+                </div>
+            </section>
+            <section id="section11-7">
+                <h3>11.7 Approximate Methods of Integration</h3>
+                <p>When exact integration is not possible, approximate methods like the trapezoidal rule and Simpson’s rule are used.</p>
+                <p>Trapezoidal rule: \( \int_a^b y \, dx \approx \frac{h}{2} [y_0 + y_n + 2(y_1 + \cdots + y_{n-1})], \quad h = \frac{b-a}{n}. \]</p>
+                <p>Simpson’s rule (even \( n \)): \( \int_a^b y \, dx \approx \frac{h}{3} [y_0 + y_{2n} + 4(y_1 + y_3 + \cdots + y_{2n-1}) + 2(y_2 + y_4 + \cdots + y_{2n-2})], \quad h = \frac{b-a}{2n}. \]</p>
+                <h4>Example 20</h4>
+                <p>Given table for \( y \), \( x = 0 \) to \( 0.6 \), find \( \int_0^{0.6} y \, dx \):</p>
+                <p>Trapezoidal: \( \frac{0.1}{2} (0.2867 + 0.7360) = 0.08794. \]</p>
+                <p>Simpson’s: \( \frac{0.1}{3} (0.2867 + 4 \cdot 0.4405 + 2 \cdot 0.2955) = 0.08799. \]</p>
+                <h4>Example 21</h4>
+                <p>Evaluate \( \int_0^1 \frac{4}{1 + x^2} \, dx \), 5 ordinates:</p>
+                <p>Trapezoidal: \( \frac{0.25}{2} (6.0000 + 9.5247) = 3.1312. \]</p>
+                <p>Simpson’s: \( \frac{0.25}{3} (6.0000 + 4 \cdot 6.3247 + 2 \cdot 3.2000) = 3.1416. \]</p>
+                <p>Exact: \( 4 \tan^{-1} 1 = \pi \approx 3.14159 \).</p>
+                <div class="exercises">
+                    <h4>Exercises 11(e)</h4>
+                    <ol>
+                        <li>Evaluate \( \int_9^{10} y \, dx \) using table with trapezoidal and Simpson’s rules.</li>
+                        <li>Use Simpson’s with 11 ordinates for \( \int_0^2 \frac{dx}{1 + x^2} \).</li>
+                        <li>Estimate area from \( x = 0 \) to \( x = 2 \) with given ordinates using Simpson’s.</li>
+                        <li>Estimate volume of area from \( x = 0 \) to \( x = 6 \) rotated about x-axis using Simpson’s.</li>
+                        <li>Use Simpson’s with 11 ordinates for \( \int_0^1 \frac{dx}{\sqrt{1 - x^2}} \).</li>
+                    </ol>
+                </div>
+                <div class="exercises">
+                    <h4>Exercises 11(f)</h4>
+                    <ol>
+                        <li>\( \int 2x (x^2 - 3)^2 \, dx \)</li>
+                        <li>\( \int \tan x \sec^2 x \, dx \)</li>
+                        <li>\( \int \frac{dx}{\sqrt{4 - x^2}} \)</li>
+                        <li>\( \int \frac{x \, dx}{2x^2 + 2x + 5} \)</li>
+                        <li>\( \int \frac{dx}{x^2 + 2x + 5} \)</li>
+                        <li>\( \int \cos^3 \theta \sin \theta \, d\theta \)</li>
+                        <li>\( \int x \sqrt{4 + x^2} \, dx \)</li>
+                        <li>\( \int (\sec^2 \theta - 1) \sec^2 \theta \, d\theta \)</li>
+                        <li>\( \int \sin (x - \frac{\pi}{3}) \cos (x + \frac{\pi}{3}) \, dx \)</li>
+                        <li>\( \int x \sqrt{x + 2} \, dx \)</li>
+                        <li>\( \int_0^{\pi/3} \sin 5x \cos x \, dx \)</li>
+                        <li>\( \int_0^1 \frac{x \, dx}{(3x + 1)^2} \)</li>
+                        <li>\( \int_0^{\pi/3} \sin^3 \theta \, d\theta \)</li>
+                        <li>\( \int_0^{\pi/4} \sin^3 \theta \, d\theta \)</li>
+                        <li>\( \int_0^{\pi/2} \sin^5 x \cos^2 x \, dx \)</li>
+                        <li>\( \int_0^{\pi/4} (\theta + \cos \theta) \sin \theta \, d\theta \)</li>
+                        <li>\( \int_0^1 \frac{x \, dx}{(2 + x^2)^2} \)</li>
+                        <li>\( \int_0^{\pi/2} \frac{\sec^2 \theta}{4 + \tan^2 \theta} \, d\theta \)</li>
+                        <li>\( \int_0^{\pi/2} x \sin^2 x \, dx \)</li>
+                        <li>\( \int_0^\pi x^3 (\pi^2 - x^2)^{3/2} \, dx \)</li>
+                        <li>Show \( \int_a^b \frac{dx}{(x - a)^{1/2} (b - x)^{1/2}} = \pi \).</li>
+                        <li>Find \( a \) such that \( \int_0^{\pi/2} x \sin x \, dx = \int_0^{\pi/2} (ax^2 + 2x) \, dx \).</li>
+                        <li>Show \( \int_0^{\pi/2} \frac{dx}{1 + \sqrt{\tan x}} = \int_0^{\pi/2} \sin^2 \theta \, d\theta \).</li>
+                        <li>Use Simpson’s with 7 ordinates for area under \( xy = 12 \), \( x = 1 \) to \( x = 4 \).</li>
+                        <li>Find area from table using Simpson’s.</li>
+                    </ol>
+                </div>
+            </section>
+            <div class="key-terms">
+                <h4>Key Terms</h4>
+                <p>Integration by Substitution, Integration by Parts, Trapezoidal Rule, Simpson’s Rule</p>
+            </div>
+            <div class="review-questions">
+                <h4>Review Questions</h4>
+                <ol>
+                    <li>Explain the method of integration by parts with an example.</li>
+                    <li>Use Simpson’s rule to approximate \( \int_0^1 \frac{dx}{1 + x^2} \).</li>
+                    <li>Integrate \( \int x^2 \cos x \, dx \).</li>
+                </ol>
+            </div>
+        </section>
+		
+		<section id="chapter12">
+        <h1>Chapter 12: Some Applications of the Integral Calculus</h1>
+    </section>
+
+    <section id="ch12s1">
+        <h2>12.1 Introduction</h2>
+        <p>Content discussing geometrical and dynamical applications of integral calculus, referencing Chapter 10, and introducing mean values, centres of mass, moments of inertia, lengths of arcs, and areas of surfaces of revolution.</p>
+    </section>
+
+    <section id="ch12s2">
+        <h2>12.2 Further Examples of the Calculation of Area</h2>
+        <p>Explanation of area calculations using definite integrals, handling curves above and below the x-axis, and areas between curves. Includes Examples 1, 2, and 3 with figures (Fig. 73, 74, 75).</p>
+    </section>
+
+    <section id="ch12s3">
+        <h2>12.3 Calculation of Volumes</h2>
+        <p>Describes volume calculations for solids using cross-sectional areas S(x), including solids of revolution. Includes Examples 4 and 5 with figures (Fig. 76).</p>
+    </section>
+
+    <section id="ch12s4">
+        <h2>12.4 Mean Values</h2>
+        <p>Covers the concept of mean values of a function over an interval, with geometric interpretation. Includes Examples 6 and 7 with figure (Fig. 78).</p>
+    </section>
+
+    <section id="ch12s5">
+        <h2>12.5 Centres of Mass</h2>
+        <p>Explains centres of mass for particle systems, rods, laminae, and solids, using integrals. Includes Examples 8, 9, and 10 with figure (Fig. 79).</p>
+    </section>
+
+    <section id="ch12s6">
+        <h2>12.6 Moments of Inertia</h2>
+        <p>Discusses moments of inertia for particle systems and continuous bodies, including rods, laminae, and solids. Includes Examples 11, 12, and 13 with figures (Fig. 80, 81).</p>
+    </section>
+
+    <section id="ch12s7">
+        <h2>12.7 Length of Arc</h2>
+        <p>Derives the formula for arc length of a curve using integrals. Includes Example 14 with figure (Fig. 82).</p>
+    </section>
+
+    <section id="ch12s8">
+        <h2>12.8 Areas of Surfaces of Revolution</h2>
+        <p>Explains surface area calculations for solids of revolution. Includes Example 15 with figure (Fig. 83).</p>
+    </section>
+
+    <section id="ch12ex">
+        <h2>Exercises 12</h2>
+        <p>Contains exercises 12(a), 12(b), 12(c), 12(d), 12(e), and 12(f) as listed, covering areas, volumes, mean values, centres of mass, moments of inertia, arc lengths, and surface areas.</p>
+    </section>
+
+    <section id="chapter13">
+        <h1>Chapter 13: The Logarithmic and Exponential Functions</h1>
+    </section>
+
+    <section id="ch13s1">
+        <h2>13.1 Introduction</h2>
+        <p>Introduces the integral ∫x^(-1)dx, its significance, and its role in defining logarithmic and exponential functions.</p>
+    </section>
+
+    <section id="ch13s2">
+        <h2>13.2 The Area Below the Curve y = 1/x</h2>
+        <p>Discusses the area under y = 1/x, defining the hyperbolic function hyp(t). Includes figure (Fig. 85).</p>
+    </section>
+
+    <section id="ch13s3">
+        <h2>13.3 Some Important Properties of the Function hyp(t)</h2>
+        <p>Explores properties of hyp(t), including its derivative and functional equations. Includes figures (Fig. 86, 87, 88).</p>
+    </section>
+
+    <section id="ch13s4">
+        <h2>13.4 The Logarithmic Function</h2>
+        <p>Defines the natural logarithm as hyp(t) = ln(t), with properties and differentiation. Includes Examples 1 and 2.</p>
+    </section>
+
+    <section id="ch13s5">
+        <h2>13.5 The Exponential Function</h2>
+        <p>Introduces the exponential function e^x as the inverse of ln(x). Includes figures (Fig. 89, 90).</p>
+    </section>
+
+    <section id="ch13s6">
+        <h2>13.6 Differentiation and Integration of e^x</h2>
+        <p>Derives differentiation and integration rules for e^x and a^x. Includes Examples 3 and 4.</p>
+    </section>
+
+    <section id="ch13s7">
+        <h2>13.7 Some Integrals Depending on ∫x^(-1)dx</h2>
+        <p>Covers integration techniques using ln(x), including trigonometric and rational functions. Includes Examples 5–11.</p>
+    </section>
+
+    <section id="ch13s8">
+        <h2>13.8 Logarithmic Differentiation</h2>
+        <p>Explains logarithmic differentiation for complex functions. Includes Example 12.</p>
+    </section>
+
+    <section id="ch13s9">
+        <h2>13.9 Successive Approximations and Maclaurin’s Series</h2>
+        <p>Introduces Maclaurin’s series for function approximation, with conditions for convergence.</p>
+    </section>
+
+    <section id="ch13s10">
+        <h2>13.10 Series for e^x and ln(1+x)</h2>
+        <p>Derives Maclaurin’s series for e^x and ln(1+x), with applications. Includes Example 13.</p>
+    </section>
+
+    <section id="ch13ex">
+        <h2>Exercises 13</h2>
+        <p>Contains exercises 13(a), 13(b), 13(c), 13(d), and 13(e) as listed, covering logarithms, exponentials, integration, differentiation, and series expansions.</p>
+    </section>
+	
+
+<div id="content">
+
+<h2 id="chapter14">Chapter 14: Coordinates. Lengths of Lines. Areas of Triangles. Loci. Intersection of Curves</h2>
+
+<h3 id="section14.1">14.1 Systems of coordinates</h3>
+<p>
+    In elementary graphical work, it is customary to specify the position of a point P in a plane by its perpendicular distances OM, MP from two fixed perpendicular lines Oy, Ox (Fig. 91). The lines Ox, Oy are
+    called the <strong>axes</strong>, O the <strong>origin</strong> and the distances OM, MP are referred to as the <strong>abscissa</strong> and <strong>ordinate</strong> of the point P. A convenient method of referring shortly to the position of a point whose abscissa is x and ordinate y is to say that the point has coordinates x and y and to use the symbol $(x, y)$ to designate the position of such a point.
+</p>
+<p>
+    The student is assumed to be familiar with the usual sign conventions used in graphical work. Briefly these are as follows—for points to the right of the axis Oy the abscissa is positive and for points to the left of Oy the abscissa is negative, while the ordinate is positive or
+    negative according as the point is above or below the axis Ox. Thus, in Fig. 92, the points $P_1, P_2, P_3, P_4$ would be denoted by $(5,2), (-2,3), (-3,-1)$ and $(3,-2)$ respectively.
+</p>
+<p>
+    The above method of specifying the position of a point in a plane by its distances from two straight lines (the axes) was first introduced by the philosopher Des Cartes. It is not essential for the axes to be mutually perpendicular as in Figs. 91, 92, but it is often convenient to use, and in this book we shall only deal with, axes at right angles. Such a system of coordinates is known as the <strong>Cartesian system</strong> and, when the axes are at right angles to one another as in Fig. 91, x and y are referred to as the <strong>rectangular Cartesian coordinates</strong> of the point P. Other coordinate systems, for example that outlined below, exist but the Cartesian system is by far the most important.
+</p>
+<p>
+    Another method of specifying the position of a point in a plane is by its <strong>polar coordinates</strong>. Suppose that O is a fixed point, called the <strong>origin</strong> or <strong>pole</strong>, and Ox is a fixed line, called the <strong>initial line</strong>. Then
+    in Fig. 93, the position of a point P is known when the angle $xOP (= \theta)$ and the length $OP (=r)$ are given. The two quantities r and $\theta$ are called the polar coordinates of P and the position of P is conveniently denoted in this system of coordinates by the symbol $(r, \theta)$.
+</p>
+
+<h3 id="section14.2">14.2 The relation between Cartesian and polar coordinates</h3>
+<p>
+    Suppose that the rectangular Cartesian coordinates of a point P are $(x, y)$ and that its polar coordinates are $(r, \theta)$. Then, from Fig. 94,
+    $$ x = OM = r \cos\theta, $$
+    $$ y = MP = r \sin\theta, $$
+    and x, y can be found when r, $\theta$ are given. Conversely, if x, y are given, we have
+    $$ r^2 = x^2 + y^2, \quad \tan \theta = y/x. \quad (14.2) $$
+    Equations (14.2) do not determine r, $\theta$ uniquely, for $r = \pm\sqrt{(x^2 + y^2)}$ and $\theta$ can take an indefinite number of different values. To obtain an unique correspondence, we take $r = +\sqrt{(x^2 + y^2)}$ and determine $\theta$ as the angle which lies between $-\pi$ and $+\pi$ satisfying the two equations $\cos \theta = x/r, \sin \theta = y/r$.
+</p>
+<p>
+    <strong>Example 1</strong>. Find (i) the Cartesian coordinates of the point whose polar coordinates are $(5, \pi/4)$ and (ii) the polar coordinates of the point whose Cartesian coordinates are $(-1,1)$.
+</p>
+<p>
+    (i) $r = 5, \theta = \pi/4$, so that
+    $$ x = 5 \cos (\pi/4) = 5/\sqrt{2} = 3.536, \quad y = 5 \sin (\pi/4) = 5/\sqrt{2} = 3.536. $$
+    (ii) $x = -1, y = 1$, so that
+    $$ r = \sqrt{(-1)^2 + 1^2} = \sqrt{2} = 1.414, \quad \cos \theta = -1/\sqrt{2}, \quad \sin \theta = 1/\sqrt{2} $$
+    giving $\theta = 3\pi/4$.
+</p>
+
+<h3 id="section14.3">14.3 The distance between two points with given rectangular coordinates</h3>
+<p>
+    Let $P_1, P_2$ be the two given points and let their coordinates be respectively $(x_1, y_1), (x_2, y_2)$. Draw (Fig. 95) $P_1M_1, P_2M_2$ perpendicular to Ox, and draw $P_2R$ parallel to Ox to meet $P_1M_1$ in R. Then
+    $$ P_2R = M_2M_1 = OM_1 - OM_2 = x_1 - x_2, $$
+    and
+    $$ RP_1 = M_1P_1 - M_1R = M_1P_1 - M_2P_2 = y_1 - y_2. $$
+    From the right-angled triangle $P_2RP_1$,
+    $$ P_1P_2 = \sqrt{(P_2R^2 + RP_1^2)} = \sqrt{\{(x_1 - x_2)^2 + (y_1 - y_2)^2\}}. \quad (14.3) $$
+    The proof of formula (14.3) has been given only for the case in which the coordinates of both the points are all positive. When due regard is paid to the usual sign conventions for the coordinates, it will be found to remain true for any positions of the two given points.
+</p>
+<p>
+    <strong>Example 2</strong>. Find the distance between the points $(4, -7)$ and $(-1, 5)$.
+</p>
+<p>
+    By writing $x_1 = 4, y_1 = -7, x_2 = -1, y_2 = 5$ in formula (14.3), or (preferably) working from first principles from a diagram showing the given points, it will be found that the required distance
+    $$ = \sqrt{\{(4 + 1)^2 + (-7 - 5)^2\}} = \sqrt{(25 + 144)} = \sqrt{(169)} = 13. $$
+</p>
+
+<h3 id="section14.4">14.4 A proof of the addition formulae of trigonometry</h3>
+<p>
+    A compact method of obtaining a formula for $\cos (A - B)$ where A and B are angles of any magnitude can now be given. In Fig. 96, diagrams are given for $90^\circ < A < 180^\circ, 0 < B < 90^\circ$ and $0 < A < 90^\circ, 180^\circ < B < 270^\circ$ and corresponding diagrams can be constructed for angles of any size. If OP and OQ are each of unit length, the Cartesian coordinates of P are $(\cos A, \sin A)$ and of Q $(\cos B, \sin B)$. In both cases $\cos \angle POQ = \cos (A - B)$, and the cosine formula for the triangle POQ gives
+    $$ PQ^2 = OP^2 + OQ^2 - 2(OP)(OQ) \cos \angle POQ = 1 + 1 - 2 \cos (A - B) = 2 - 2 \cos (A - B). $$
+    But, from formula (14.3) for the distance between P and Q,
+    $$ PQ^2 = (\cos A - \cos B)^2 + (\sin A - \sin B)^2 = 2 - 2 \cos A \cos B - 2 \sin A \sin B, $$
+    when use is made of the relations
+    $$ \cos^2 A + \sin^2 A = 1, \quad \cos^2 B + \sin^2 B = 1. $$
+    Equating these values of $PQ^2$ we have
+    $$ \cos (A - B) = \cos A \cos B + \sin A \sin B. $$
+    The formulae for $\cos (A + B), \sin (A + B), \sin (A - B)$ can then be deduced by replacing B by $-B, 90^\circ - B$ and $B - 90^\circ$.
+</p>
+
+<div id="exercises14a">
+    <h3>Exercises 14(a)</h3>
+    <ol>
+        <li>Plot the points (i) whose rectangular coordinates are $(2, -3)$ and $(-4, -1)$, (ii) whose polar coordinates are $(2,2\pi/3)$ and $(2, -2\pi/3)$.</li>
+        <li>(i) Find the Cartesian coordinates of the points whose polar coordinates are: (a) $(4, \pi/3)$, (b) $(5, -\pi/4)$. (ii) Find the polar coordinates of the points whose Cartesian coordinates are: (a) $(1,1)$, (b) $(-5,12)$.</li>
+        <li>Show that the distance between two points whose polar coordinates are $(r_1, \theta_1)$ and $(r_2, \theta_2)$ is $\sqrt{(r_1^2 + r_2^2 - 2r_1r_2 \cos(\theta_1 - \theta_2))}$.</li>
+        <li>Find the distances between the following pairs of points: (i) $(0,0)$ and $(a, b)$, (ii) $(a, 0)$ and $(0, b)$, (iii) $(p + q, q + r)$ and $(q + r, r + p)$.</li>
+        <li>Find the lengths of the sides of a triangle whose vertices are the points $(5, -6), (-3, -2)$ and $(1, -3)$.</li>
+        <li>Show that the triangle whose vertices are the points $(-2,2), (2,3)$ and $(-1, -2)$ is isosceles.</li>
+        <li>Show that one of the angles of the triangle whose vertices are the points $(5,1), (-3,7)$ and $(8,5)$ is a right angle.</li>
+        <li>The points A and C have coordinates $(4,1)$ and $(1,4)$ respectively. The point B is constructed by drawing AB equal and parallel to OC, where O is the origin. Find the coordinates of the point B and show that the figure OABC is a rhombus.</li>
+    </ol>
+</div>
+
+<h3 id="section14.5">14.5 The coordinates of a point which divides the join of two given points in a given ratio</h3>
+<p>
+    In Fig. 97, let $P_1$ and $P_2$ be the points $(x_1, y_1), (x_2, y_2)$ respectively
+    and suppose we require to find the coordinates of a point P which
+    divides the line $P_1P_2$ in the ratio $m_1 : m_2$. Draw $P_1M_1, P_2M_2, PM$ perpendicular to the axis Ox and draw $P_1S$ parallel to Ox to meet $PM, P_2M_2$ in R and S respectively. Then, if P is the point $(x, y)$, $OM_1 = x_1, OM_2 = x_2, OM = x$.
+    From the construction of Fig. 97 it should be clear that
+    $$ P_1R = M_1M = OM - OM_1 = x - x_1, $$
+    $$ RS = MM_2 = OM_2 - OM = x_2 - x. $$
+    Since PR, $P_2S$ are parallel,
+    $$ \frac{P_1R}{RS} = \frac{P_1P}{PP_2} = \frac{m_1}{m_2} $$
+    so that
+    $$ \frac{x - x_1}{x_2 - x} = \frac{m_1}{m_2} $$
+    Solving for x we find
+    $$ x = \frac{m_1x_2 + m_2x_1}{m_1 + m_2}. \quad (14.4) $$
+    By drawing $P_1N_1, PN, P_2N_2$ perpendicular to Oy, we could show in the same way that the ordinate of P is given by
+    $$ y = \frac{m_1y_2 + m_2y_1}{m_1 + m_2}. $$
+    Hence the coordinates $(x, y)$ of a point P which divides the join of the points $P_1(x_1, y_1)$ and $P_2(x_2, y_2)$ internally in the ratio $m_1 : m_2$ are given by
+    $$ x = \frac{m_1x_2 + m_2x_1}{m_1 + m_2}, \quad y = \frac{m_1y_2 + m_2y_1}{m_1 + m_2}. $$
+    These are called <strong>Joachimsthal’s section-formulae</strong>. As a special case, the coordinates of the middle point of the line joining $(x_1, y_1)$ to $(x_2, y_2)$ are $\frac{1}{2}(x_1 + x_2)$ and $\frac{1}{2}(y_1 + y_2)$ for here $m_1 = m_2$.
+</p>
+<p>
+    If the point Q divides the line $P_1P_2$ externally in the ratio $m_1:m_2$,
+    i.e., if $P_1Q:QP_2::m_1:m_2$, its coordinates would be found in a similar way to be
+    $$ x = \frac{m_1x_2 - m_2x_1}{m_1 - m_2}, \quad y = \frac{m_1y_2 - m_2y_1}{m_1 - m_2}. \quad (14.5) $$
+</p>
+<p>
+    <strong>Example 3</strong>. The vertices of a triangle are $A(2,4), B(-4,-6), C(6,0)$. Write down the coordinates of X, the mid-point of BC. Find also the coordinates of the points which divide AX internally and externally in the ratio 2:1.
+</p>
+<p>
+    The coordinates of the mid-point of BC are given by
+    $$ x = \frac{1}{2}(-4 + 6) = 1, \quad y = \frac{1}{2}(-6 + 0) = -3, $$
+    so that X is the point $(1, -3)$.
+    The coordinates of the point dividing AX internally in the ratio 2:1 are given by
+    $$ x = \frac{2 \times 1 + 1 \times 2}{2 + 1} = \frac{4}{3}, \quad y = \frac{2 \times (-3) + 1 \times 4}{2 + 1} = -\frac{2}{3}. $$
+    The coordinates of the point dividing AX externally in the ratio 2:1 are given by
+    $$ x = \frac{2 \times 1 - 1 \times 2}{2 - 1} = 0, \quad y = \frac{2 \times (-3) - 1 \times 4}{2 - 1} = -10. $$
+</p>
+
+<h3 id="section14.6">14.6 The area of a triangle whose vertices have given coordinates</h3>
+<p>
+    In Fig. 98, let the vertices of the triangle ABC be the points $A(x_1, y_1), B(x_2, y_2)$ and $C(x_3, y_3)$. Draw AL, BM, CN perpendicular
+    to the axis Ox. Then area $\triangle ABC$
+    $$ = \text{area trapezium } ALNC + \text{area trapezium } CNMB - \text{area trapezium } ALMB $$
+    $$ = \frac{1}{2} LN(LA + NC) + \frac{1}{2} NM(NC + MB) - \frac{1}{2} LM(LA + MB) $$
+    $$ = \frac{1}{2}(x_3 - x_1)(y_1 + y_3) + \frac{1}{2}(x_2 - x_3)(y_3 + y_2) - \frac{1}{2}(x_2 - x_1)(y_1 + y_2). $$
+    After a slight rearrangement of the right-hand side, we have
+    $$ \text{area } \triangle ABC = \frac{1}{2}\{x_1(y_2 - y_3) + x_2(y_3 - y_1) + x_3(y_1 - y_2)\}. \quad (14.6) $$
+    By taking the point C to be at the origin O $(x_3 = y_3 = 0)$, the area of the triangle OAB with vertices $O(0,0), A(x_1,y_1)$ and $B(x_2, y_2)$ is given by
+    $$ \text{area } \triangle OAB = \frac{1}{2}(x_1y_2 - x_2y_1). \quad (14.7) $$
+    It should be noted that for the formula (14.6) to give a positive value for the area, it is necessary for the points A, B and C to be taken in a special order. This is such that in starting from the point A and proceeding round the perimeter of the triangle in the order A, B and C, the area of the triangle must always be on the left. In a specific example it is probably better to draw a rough diagram and work from first principles (see Example 4).
+</p>
+<p>
+    The above formula for the area of a triangle can be used to obtain the condition that three points shall be <strong>collinear</strong> (i.e., that they shall
+    lie on the same straight line). If the three points $(x_1, y_1), (x_2, y_2)$ and $(x_3, y_3)$ lie on the same straight line, the area of the triangle formed by them vanishes and, from (14.6) the condition for collinearity is therefore
+    $$ x_1(y_2 - y_3) + x_2(y_3 - y_1) + x_3(y_1 - y_2) = 0. \quad (14.8) $$
+    The area of a quadrilateral (or other plane polygon) with given vertices can be obtained in a similar way. Perpendiculars are dropped from the vertices on to the axis Ox (or on to a line parallel to Ox through the vertex with the smallest ordinate) and the area can then be expressed in terms of the areas of various trapezia (or triangles). The resulting formula is rather complicated and again it is probably preferable to work from first principles (see Example 6).
+</p>
+<p>
+    <strong>Example 4</strong>. Find the area of the triangle formed by the points $(-2,3), (-7,5), (3, -5)$.
+</p>
+<p>
+    Denoting the points $(-2, 3), (-7,5)$ and $(3, -5)$ by A, B and C, we drop perpendiculars AL, BM on to a line through C parallel to the axis Ox. Then,
+    $$ \text{area } \triangle ABC = \text{area trapezium } BMLA + \text{area } \triangle ALC - \text{area } \triangle BMC $$
+    $$ = \frac{1}{2}(5)(10 + 8) + \frac{1}{2}(5)(8) - \frac{1}{2}(10)(10) = 15 \text{ units}. $$
+    Alternatively, since in proceeding round the perimeter of the triangle in the order, A, B, C, the area of the triangle is always on the left, we could obtain the same result by writing $x_1 = -2, x_2 = -7, x_3 = 3, y_1 = 3, y_2 = 5, y_3 = -5$ in formula (14.6).
+</p>
+<p>
+    <strong>Example 5</strong>. Find the relation between x and y if the point $(x, y)$ lies on the line joining the points $(2, 3)$ and $(5,4)$.
+</p>
+<p>
+    The condition (14.8) for collinearity of the three given points gives
+    $$ x(3 - 4) + 2(4 - y) + 5(y - 3) = 0, $$
+    i.e, $x - 3y + 7 = 0$.
+</p>
+<p>
+    <strong>Example 6</strong>. Find the area of the quadrilateral whose vertices are the points $(2,1), (3,5), (-3,4)$ and $(-2,-2)$.
+</p>
+<p>
+    In Fig. 100, the four points $(2,1), (3,5), (-3,4), (-2,-2)$ are denoted by A, B, C and D. Perpendiculars AL, BM, CN are dropped from A, B and C on
+    to a line through D (the point with the smallest ordinate) parallel to Ox. Then
+    $$ \text{area } ABCD = \text{area trapezium } CNMB - \text{area } \triangle CND - \text{area } \triangle DLA - \text{area trapezium } ALMB $$
+    $$ = \frac{1}{2}(6)(6 + 7) - \frac{1}{2}(3)(6) - \frac{1}{2}(4)(3) - \frac{1}{2}(1)(3 + 7) = 25 \text{ units}. $$
+</p>
+
+<div id="exercises14b">
+    <h3>Exercises 14(b)</h3>
+    <ol>
+        <li>Find the coordinates of the points dividing the line joining the point $(7, -5)$ to the point $(-2, 7)$ internally in the ratio 5:4 and externally in the ratio 3:2.</li>
+        <li>Find the distance between the points $(-2,3), (3, -1)$: find also the coordinates of the point of trisection that lies nearer to $(-2,3)$.</li>
+        <li>The coordinates of the angular points A, B, C, D of a quadrilateral ABCD are respectively $(2,5), (8,1), (10,3)$ and $(0,1)$. E, F, G, H are the middle points of the sides AB, BC, CD, DA respectively. Show that the middle points of EG and FH coincide.</li>
+        <li>If x and y are the coordinates of the middle point of the line joining the points $(2,3)$ and $(3,4)$, show that $x - y + 1=0$.</li>
+        <li>Find the areas of the triangles whose vertices are: (i) $(0,4), (3,6)$ and $(-8,-2)$, (ii) $(a, c + a), (a, c)$ and $(-a, -c - a)$.</li>
+        <li>Show that the four points $(2,9), (-3,12), (-8,15)$ and $(7,6)$ all lie on the same straight line.</li>
+        <li>Find the area of the quadrilateral whose angular points are $(1,1), (3,5), (-2,4)$ and $(-1,-5)$.</li>
+        <li>Find the area of the triangle whose vertices are the points with polar coordinates $(1, 30^\circ), (2, 60^\circ)$ and $(3,90^\circ)$.</li>
+    </ol>
+</div>
+
+<h3 id="section14.7">14.7 The equation to a locus</h3>
+<p>
+    If a point moves so that it always satisfies a given condition, or
+    conditions, the path traced out by it is called its <strong>locus</strong>. For example,
+    if a point always lies on the straight line joining the points $(2,3)$ and
+    $(3,4)$ we have seen in Example 5 of this chapter that its coordinates $(x, y)$ always satisfy the equation
+    $$ x - 3y + 7 = 0. \quad (14.9) $$
+    The locus of the point $(x, y)$ is here the straight line joining the two given points and equation (14.9) is the equation of the locus. (It will be shown in the next chapter that when the locus of the moving point is a straight line, its equation is of the first degree in x and y.)
+</p>
+<p>
+    Again, suppose that a point P moves in a plane so that the lines AP, BP joining it to two fixed points A and B in the same plane are
+    (Fig. 101)
+    always at right angles to each other. Then we know that P lies on the circumference of a circle on AB as diameter (see Fig. 101 in which $P_1, P_2, P_3$ show three possible positions of the point P). The circumference of this circle is the locus of P when its motion is restricted so as to fulfil the above condition.
+</p>
+<p>
+    If a point moves in a plane so as to satisfy some condition such as the above, it will describe in general a definite curve or locus. An equation can in general be found which relates the coordinates $(x, y)$ of the point and this relation will be true only for points lying on the locus. Conversely, to every equation relating x and y there is, in general, a definite geometrical locus. Thus equation (14.9) above represents a straight line. Many other examples will occur to the reader who will already be familiar with the concept of an equation representing a curve from his previous work on graphs and curve sketching.
+</p>
+<p>
+    A few examples on the method of formation of the equation to a locus are appended.
+</p>
+<p>
+    <strong>Example 7</strong>. Find the equation to the locus of a point which is always equidistant from the two points $(0,0)$ and $(3,4)$.
+</p>
+<p>
+    In Fig. 102, O is the point $(0,0)$ and A the point $(3,4)$. $P_1, P_2, P_3$ are three
+    possible positions of a point P on the required locus. Let $P(x, y)$ be any point
+    on the locus. Then
+    $$ OP^2 = x^2 + y^2, $$
+    $$ PA^2 = (x - 3)^2 + (y - 4)^2. $$
+    Since OP is always to be equal to PA,
+    $$ x^2 + y^2 = (x - 3)^2 + (y - 4)^2. $$
+    This equation reduces to
+    $$ 6x + 8y = 25, $$
+    which is the required equation to the locus of P. On geometrical grounds it is clear that the locus is the perpendicular bisector of the line joining the two points O, A and the equation $6x + 8y = 25$ therefore represents this bisector.
+</p>
+<p>
+    <strong>Example 8</strong>. Find the equation to the locus of a point which is always at distance a from the origin.
+</p>
+<p>
+    If P is the point $(x, y)$ and O is the origin
+    $$ OP^2 = x^2 + y^2. $$
+    Since $OP = a$, the required equation to the locus of P is
+    $$ x^2 + y^2 = a^2, $$
+    the equation representing a circle centre the origin and radius a.
+</p>
+<p>
+    <strong>Example 9</strong>. Find the equation to the locus of a point which moves so that its distance from a line parallel to the axis Oy through the point $(-1,0)$ is equal to its distance from the point $(1,0)$.
+</p>
+<p>
+    In Fig. 103, AB is the line through C$(-1,0)$ parallel to the axis Oy. S is the point $(1, 0)$ and P the point $(x, y)$. PM is the distance of P from the line AB and is clearly equal to the sum of the abscissa of P and the length CO. Hence
+    $$ PM = x + 1. $$
+    Also, since P and S are respectively the points $(x, y)$ and $(1,0)$,
+    $$ PS^2 = (x - 1)^2 + y^2. $$
+    Since $PS = PM$, we therefore have
+    $$ (x - 1)^2 + y^2 = (x + 1)^2, $$
+    or $y^2 = 4x$.
+    This is the required equation to the locus of P. The locus is shown dotted in
+    Fig. 103 and its exact shape could be obtained by plotting the graph of $y^2 = 4x$.
+</p>
+
+<h3 id="section14.8">14.8 The intersections of two curves whose equations are known</h3>
+<p>
+    The coordinates of the points of intersection, or common points, of two curves will satisfy simultaneously the equations of both curves. The problem of finding the coordinates of the points of intersection of two curves therefore reduces to that of finding the solutions of a pair of simultaneous equations.
+</p>
+<p>
+    As an example, consider the points of intersection of the straight line $x - 3y + 7 = 0$ (equation (14.9)) with the curve
+    $$ 3x^2 + 3y^2 - 18x - 20y + 57 = 0. $$
+    The coordinates of the points of intersection are given by the solutions of the simultaneous equations
+    $$ x - 3y + 7 = 0, $$
+    $$ 3x^2 + 3y^2 - 18x - 20y + 57 = 0. $$
+    Substituting the value $x = 3y - 7$, obtained from the first equation, in the second, the ordinates of the common points are given by
+    $$ 3(3y - 7)^2 + 3y^2 - 18(3y - 7) - 20y + 57 = 0. $$
+    This reduces to $3y^2 - 20y + 33 = 0$,
+    or, $(3y - 11)(y - 3) = 0$.
+    Hence $y = 11/3$ or 3, and from the relation $x = 3y - 7$, the corresponding values of x are 4 and 2. Hence the required coordinates of the points of intersection are $(4, 11/3)$ and $(2, 3)$. If the graphs of the line and curve are plotted and the coordinates of the points of intersection are read from the diagram, they will be found to agree with these values.
+</p>
+<p>
+    <strong>Example 10</strong>. Find the length of the line joining the points of intersection of the straight line $x - y + 1 = 0$ and the curve $y = 2x^2 - x + 1$.
+</p>
+<p>
+    From the first equation, $y = x + 1$ and substitution in the second gives for the determination of the abscissae of the points of intersection
+    $$ x + 1 = 2x^2 - x + 1, $$
+    or, $2x^2 - 2x = 0$.
+    This can be written $x(x - 1) = 0$,
+    so that $x = 0$ or 1. The corresponding ordinates, found from $y = x + 1$, are therefore $y = 1$ and 2 and the points of intersection are therefore $(0,1)$ and $(1,2)$. The length of the line joining these points
+    $$ = \sqrt{\{(0 - 1)^2 +(1 - 2)^2\}} = \sqrt{2}. $$
+</p>
+
+<div id="exercises14c">
+    <h3>Exercises 14(c)</h3>
+    <ol>
+        <li>Find the equation to the locus of a point which moves so that its distance from the point $(3,4)$ is always 5 units.</li>
+        <li>A and B are respectively the points $(1,0)$ and $(7,8)$. A point P moves so that the angle APB is a right angle. Find the equation to the locus of P.</li>
+        <li>The coordinates of the points A and B are $(1,5)$ and $(5,3)$. Find the equation to the perpendicular bisector of the line AB.</li>
+        <li>Find the equation to the locus of a point P such that the areas of the triangles PAB, PCD are equal, where A, B, C, D are the points $(0,1), (0,7), (3,0), (5,0)$.</li>
+        <li>Find the coordinates of the point of intersection of the two lines $2x - 3y = 5$ and $3x + y + 2 = 0$.</li>
+        <li>Find the coordinates of the points of intersection and length of the common chord of the two curves $y = 2x^2$ and $y^2 = 4x$.</li>
+        <li>Find the coordinates of the common points of the line $x - 2 = 0$ and the curve $x^2 + y^2 - 4x - 10y + 4 = 0$. Find also the coordinates of the middle point of the line joining the common points.</li>
+        <li>The equations to the sides AB, BC, CA of a plane triangle are respectively $y = 2x + 1, x - 3y + 4 = 0$ and $y = x$. D is the mid-point of BC. By actually finding the coordinates of A, B, C and D verily that
+        $$ AB^2 + AC^2 = 2(AD^2 + BD^2). $$</li>
+    </ol>
+</div>
+
+<div id="exercises14d">
+    <h3>Exercises 14(d)</h3>
+    <ol>
+        <li>Find the perimeter of the triangle whose vertices are, in polar coordinates, the points $(0,0), (2,\pi/6), (4, \pi/2)$.</li>
+        <li>Find the lengths of the sides of a triangle whose vertices are the points $(2, 3), (4,-5), (-3,-6)$.</li>
+        <li>Find the coordinates of a point equidistant from the three points $(2,3), (4, 5), (6,1)$.</li>
+        <li>Show that the four points $(-2,3), (0, -1), (6, 7)$ and $(8,3)$ are the angular points of a rectangle.</li>
+        <li>Find the coordinates of the centre of the circumscribed circle of the triangle whose vertices are the points $(-2,2), (1, -2), (1,3)$.</li>
+        <li>Find the radius of the circumscribed circle of the triangle the polar coordinates of whose vertices are $(0,0), (r_1, \theta_1), (r_2, \theta_2)$.</li>
+        <li>The line joining the points $(-6,8)$ and $(8, -6)$ is divided into four equal parts. Find the coordinates of each point of section.</li>
+        <li>A and B are respectively the points $(5,6)$ and $(7,2)$. If the line AB is produced to a point C such that $BC = \frac{1}{2}AB$, find the coordinates of C.</li>
+        <li>By finding the coordinates of the middle points of the lines joining the middle points of pairs of opposite sides of a quadrilateral the coordinates of whose angular points are given, prove that the lines joining the middle points of the opposite sides of any quadrilateral bisect one another.</li>
+        <li>The polar coordinates of three points A, B and C are given in the following table:
+            $\theta = \pi/6, \pi/3, 3\pi/4$,
+            $r = 100, 100, 160$.
+            Find the lengths of the sides and the area of the triangle ABC. (Q.E.)</li>
+        <li>Find the area of the triangle whose vertices are the points $(2,1), (3, -2)$, and $(-4,-1)$.</li>
+        <li>Find the area of the quadrilateral whose vertices are the points $(1,1), (2,3), (3,3)$ and $(4,1)$.</li>
+        <li>A is the point $(2,3)$ and B is the point $(0, -1)$. The angle BAC is a right
+            angle and BC is 5 units in length. Find the coordinates of the two possible positions of C. (L.U.)</li>
+        <li>A and B are the points $(-3,2), (5,8)$ respectively. Find the equation to the
+            locus of a point P which moves so that $PA^2 - PB^2 = 50$. (O.C.)</li>
+        <li>Find the equation to the locus of a point which moves so that its distance from the point $(a,0)$ is always equal to four times its distance from the y-axis.</li>
+        <li>A point moves so that the sum of the squares of its distances from the two fixed points $(a, 0)$ and $(-a, 0)$ is constant and equal to $2c^2$. Show that the equation to its locus is
+            $$ x^2 + y^2 = c^2 - a^2. $$</li>
+        <li>The coordinates of two of the vertices of a plane triangle are $(3,2)$ and $(5,6)$. Find the locus of the third vertex if the area of the triangle is 12 units.</li>
+        <li>The coordinates of points A, B are respectively $(2,5)$ and $(5,8)$. P is a point
+            such that $AP = 2BP$. Find the equation to the locus of P. (O.C.)</li>
+        <li>Find the equation to the perpendicular bisector of the line joining the two
+            points $(4,1)$ and $(-2, 3)$. (O.C.)</li>
+        <li>A variable point P moves so that the square of its distance from the origin is equal to the area of the triangle PAB where A and B are the points $(13,0)$ and $(0,1)$. Find the equation to the locus of P.</li>
+        <li>Find the lengths of the sides of the triangle formed by the three straight lines $x - 4y = 6, 3x - 2y + 1 = 0$ and $x + y = 2$.</li>
+        <li>Find the coordinates of the middle point of the line joining the common
+            points of the line $2x - 3y + 8 = 0$ and the curve $y^2 = 8x$. (O.C.)</li>
+        <li>Find the values of a and b if the straight lines $ax + 5y = 7$ and $4x + by = 5$
+            intersect at the point $(2, -1)$. If the lines meet the x-axis at A and B, find the length of AB. (O.C.)</li>
+        <li>Show that the coordinates of the common point of the line $y = mx + a/m$ and the curve $y^2 = 4ax$ are $(a/m^2, 2a/m)$.</li>
+        <li>Show that the length of the line joining the common points of the line $y = mx + c$ and the curve $y^2 = 4x$ is
+            $$ \frac{2}{m^2} \sqrt{(1 + m^2)(1 - mc)}. $$</li>
+    </ol>
+</div>
+
+<h3 id="keyterms14">Key Terms (Chapter 14)</h3>
+<p>Content not provided for this section.</p>
+
+<h3 id="reviewquestions14">Review Questions (Chapter 14)</h3>
+<p>Content not provided for this section.</p>
+
+<h2 id="chapter15">CHAPTER 15: THE COORDINATE GEOMETRY OF THE STRAIGHT LINE</h2>
+
+<h3 id="section15.1">15.1 An equation of the first degree in x and y represents a straight line</h3>
+<p>
+    The most general equation of the first degree in x and y is
+    $$ Ax + By + C = 0, \quad (15.1) $$
+    where A, B and C are constants. Let $P_1(x_1, y_1), P_2(x_2, y_2), P_3(x_3, y_3)$ be any three points lying on the locus represented by the equation
+    (15.1). Since $P_1$ lies on the locus, its coordinates $(x_1, y_1)$ must satisfy equation (15.1) and hence
+    $$ Ax_1 + By_1 + C = 0. $$
+    Similarly $Ax_2 + By_2 + C = 0$,
+    and $Ax_3 + By_3 + C = 0$.
+    Subtracting the second of these equations from the first and the third from the second we obtain
+    $$ A(x_1 - x_2) + B(y_1 - y_2) = 0 $$
+    and $A(x_2 - x_3) + B(y_2 - y_3) = 0$.
+    By equating the values of the ratio A/B obtained from these two equations we have
+    $$ \frac{y_1 - y_2}{x_1 - x_2} = -\frac{A}{B} = \frac{y_2 - y_3}{x_2 - x_3} $$
+    giving $(x_1 - x_2)(y_2 - y_3) = (x_2 - x_3)(y_1 - y_2)$.
+    This can be rearranged as
+    $$ x_1(y_2 - y_3) + x_2(y_3 - y_1) + x_3(y_1 - y_2) = 0. $$
+    From formula (14.6) we see that the area of the triangle formed by the three points $P_1, P_2$ and $P_3$ is zero. Since the points $P_1, P_2, P_3$ are any three points on the locus represented by equation (15.1), the locus must be a straight line; for a curved line could not be such that the area of the triangle formed by joining any three points on it should be zero.
+</p>
+
+<h3 id="section15.2">15.2 The equation to a straight line which is parallel to one of the coordinate axes</h3>
+<p>
+    In Fig. 104, let AB be a line parallel to the axis Oy. Let AB meet the axis Ox in C and let $OC = c$. Let P be any point on the line AB and let its coordinates be $(x, y)$.
+    Since the abscissa of the point P is always c, we have
+    $$ x = c. $$
+    This relation is true for every point on the line AB and for no other point. The relation $x = c$ is therefore the equation to the line.
+</p>
+<p>
+    Similarly the equation to a line parallel to the axis Ox and at distance d from it is
+    $$ y = d. $$
+    The coordinate axes are special cases of these lines for which $c = d = 0$. The equation of the axis Ox is therefore $y = 0$ and that of the axis Oy is $x = 0$.
+</p>
+
+<h3 id="section15.3">15.3 Special forms of the equation to a straight line</h3>
+<p>
+    It is often useful to be able to write the general equation
+    $$ Ax + By + C = 0 $$
+    of a straight line in a form in which the constants A, B, C, or rather the ratios of two of them to the third, are related to some geometrical properties of the line. Such properties might be the slope of the line and the coordinates of a point on it, the intercepts it makes on the coordinate axes and so on. Special forms of the equation to a line in terms of various properties possessed by it are developed in the paragraphs which follow.
+</p>
+
+<h4 id="section15.3a">15.3 (a) The equation to a line in terms of its slope and its intercept on the y-axis</h4>
+<p>
+    Let the line have slope m and make an intercept c on the y-axis. Then in Fig. 105 where CP is the line, CR is parallel to the axis Ox and PP' is parallel to the axis Oy, $\tan \theta = m$ and the coordinates of the point C are $(0, c)$.
+    If P be any point on the line CP with coordinates $(x, y)$, the figure shows that
+    $$ CR = OP' = x, $$
+    $$ PR = PP' - RP' = PP' - OC = y - c, $$
+    Hence
+    $$ y = mx + c \quad (15.2) $$
+    is the relation between the coordinates of any point $(x, y)$ on CP and this is the required equation to the line in terms of its slope m and intercept c.
+</p>
+<p>
+    By writing the general equation $Ax + By + C = 0$ in the form
+    $$ y = -\frac{A}{B}x - \frac{C}{B}, $$
+    and comparing it with (15.2) we see that the ratios A/B, C/B of the constants in the general equation can be expressed in terms of the slope m of the line and its intercept c on the y-axis by
+    $$ -\frac{A}{B} = m, \quad -\frac{C}{B} = c. \quad (15.3) $$
+    For the line of slope m passing through the origin of coordinates O, $c = 0$ and the equation to such a line is
+    $$ y = mx. $$
+</p>
+
+<h4 id="section15.3b">15.3 (b) The equation to a line in terms of its slope and the coordinates of a point on it</h4>
+<p>
+    The equation to any line of slope m is, from (15.2),
+    $$ y = mx + c. $$
+    If the point whose coordinates are $(x_1, y_1)$ lies on the line, these values of x and y will satisfy the above equation so that
+    $$ y_1 = mx_1 + c. $$
+    By subtraction we have
+    $$ y - y_1 = m(x - x_1) \quad (15.4) $$
+    as the equation to the line of slope m which passes through the point $(x_1, y_1)$.
+</p>
+<p>
+    <strong>Example 1</strong>. Find the equation to the straight line which passes through the point $(1,2)$ and makes an angle of $45^\circ$ with the x-axis.
+</p>
+<p>
+    Here $m = \tan 45^\circ = 1, x_1 = 1, y_1 = 2$ and the required equation is
+    $$ y - 2 = (1)(x - 1), $$
+    or, $x - y + 1 = 0$.
+</p>
+
+<h4 id="section15.3c">15.3 (c) The equation to a line passing through two given points</h4>
+<p>
+    If one of the given points has coordinates $(x_1,y_1)$ the equation to a line passing through it is (equation (15.4)) $y - y_1 = m(x - x_1)$.
+    If the second given point has coordinates $(x_2, y_2)$ and the above line passes through it, its equation will be satisfied by $y = y_2, x = x_2$. Hence
+    $$ y_2 - y_1 = m(x_2 - x_1). $$
+    By division, we have
+    $$ \frac{x - x_1}{x_2 - x_1} = \frac{y - y_1}{y_2 - y_1} \quad (15.5) $$
+    as the required equation to the line passing through the two points $(x_1,y_1), (x_2,y_2)$.
+</p>
+<p>
+    <strong>Example 2</strong>. If B and C are respectively the points $(-1, -3)$ and $(5, -1)$ find the equation to the line BC.
+</p>
+<p>
+    From (15.5) the required equation is
+    $$ \frac{x - (-1)}{5 - (-1)} = \frac{y - (-3)}{-1 - (-3)}, $$
+    $$ \frac{x + 1}{6} = \frac{y + 3}{2}, $$
+    giving $x - 3y = 8$.
+</p>
+
+<h4 id="section15.3d">15.3 (d) The equation to a line in terms of its intercepts on the coordinate axes</h4>
+<p>
+    Let the line AB (Fig. 106) make intercepts of lengths a and b on the coordinate axes Ox, Oy respectively. Then the line passes through
+    the points $(a, 0)$ and $(0, b)$ and formula (15.5) gives for its equation
+    $$ \frac{x - a}{0 - a} = \frac{y - 0}{b - 0}. $$
+    This, by cross multiplication, gives
+    $$ bx - ab = -ay, $$
+    or, after division by ab and a slight rearrangement,
+    $$ \frac{x}{a} + \frac{y}{b} = 1. \quad (15.6) $$
+    The general equation $Ax + By + C = 0$ can be written
+    $$ \frac{x}{(-C/A)} + \frac{y}{(-C/B)} = 1 $$
+    and a comparison with equation (15.6) shows that the line $Ax + By + C = 0$ makes intercepts on the coordinate axes of $-C/A$ and $-C/B$.
+</p>
+
+<h4 id="section15.3e">15.3 (e) The equation to a line in terms of the length of the perpendicular from the origin and the angle this perpendicular makes with the x-axis</h4>
+<p>
+    In Fig. 107, let the line cut the coordinate axes in A and B, let p be the length of the perpendicular OP drawn from the origin O on
+    to AB and let OP make an angle $\alpha$ with the axis Ox. Then the right-angled triangle OAP gives
+    $$ OA = p \sec \alpha, $$
+    and, since the angle BOP is $90^\circ - \alpha$, the right-angled triangle BOP gives
+    $$ OB = p \sec (90^\circ - \alpha) = p \csc \alpha. $$
+    The line AB therefore makes intercepts $p \sec \alpha$ and $p \csc \alpha$ on the
+    coordinate axes and, from (15.6), its equation is
+    $$ \frac{x}{p \sec \alpha} + \frac{y}{p \csc \alpha} = 1, $$
+    or,
+    $$ x \cos \alpha + y \sin \alpha = p. \quad (15.7) $$
+    In working problems on the straight line, a correct choice of the form of the equation to the line can often reduce the algebraical work. We conclude this section with some illustrative examples.
+</p>
+<p>
+    <strong>Example 3</strong>. Two parallel lines AP, BQ pass through the points A$(5,0)$ and B$(-5,0)$ respectively. Find the slope of these lines if they meet the line $4x + 3y = 25$ in points P and Q such that the distance PQ is 5 units. (L.U.)
+</p>
+<p>
+    Let the slope of the parallel lines AP, BQ be m. Then, by (15.4), the equations of AP, BQ are respectively $y = m(x - 5)$ and $y = m(x + 5)$. The coordinates of P, the point of intersection of AP and the line $4x + 3y = 25$, are given by the values of x and y which satisfy the simultaneous equations
+    $$ y = m(x - 5), $$
+    $$ 4x + 3y = 25. $$
+    Substitution of y from the first equation in the second gives
+    $$ 4x + 3m(x - 5) = 25 $$
+    $$ x(4 + 3m) = 25 + 15m $$
+    giving $x = \frac{25 + 15m}{4 + 3m}$.
+    Since $y = m(x - 5)$ the ordinate of the point P is
+    $$ y = m\left(\frac{25 + 15m}{4 + 3m} - 5\right) = m\left(\frac{25 + 15m - 20 - 15m}{4 + 3m}\right) = \frac{5m}{4 + 3m}. $$
+    The coordinates of P are therefore $\left(\frac{25 + 15m}{4 + 3m}, \frac{5m}{4 + 3m}\right)$.
+</p>
+<p>
+    The coordinates of Q are similarly found from the solution of the simultaneous equations $y = m(x + 5), 4x + 3y = 25$ to be
+    $$ x = \frac{25 - 15m}{4 + 3m}, \quad y = \frac{-5m}{4 + 3m}. $$
+    The distance PQ is therefore given by
+    $$ PQ = \sqrt{\left(\frac{25 + 15m}{4 + 3m} - \frac{25 - 15m}{4 + 3m}\right)^2 + \left(\frac{5m}{4 + 3m} - \frac{-5m}{4 + 3m}\right)^2} $$
+    $$ = \sqrt{\left(\frac{30m}{4 + 3m}\right)^2 + \left(\frac{10m}{4 + 3m}\right)^2} = \sqrt{\frac{900m^2 + 100m^2}{(4 + 3m)^2}} = \sqrt{\frac{1000m^2}{(4 + 3m)^2}} = \frac{10m}{\sqrt{1}(4 + 3m)}. $$
+    Since $PQ = 5$, we therefore have, for the determination of the slope m,
+    $$ \frac{10m}{4 + 3m} = 5, $$
+    $$ 10m = 20 + 15m \implies -5m = 20 \implies m = -4. $$
+    Wait, there was a square root in the original text, let's re-evaluate:
+    $$ \sqrt{\frac{2500m^2}{(4 + 3m)^2}} = 5. $$
+    This suggests the original example might have had a different expression for $PQ^2$. Let's stick to the text:
+    $$ PQ^2 = \frac{2500m^2}{(4 + 3m)^2}. $$
+    Since $PQ = 5$,
+    $$ 25 = \frac{2500m^2}{(4 + 3m)^2} $$
+    $$ 25(4 + 3m)^2 = 2500m^2 $$
+    $$ (4 + 3m)^2 = 100m^2 $$
+    $$ (4 + 3m) = \pm 10m $$
+    Case 1: $4 + 3m = 10m \implies 4 = 7m \implies m = 4/7$.
+    Case 2: $4 + 3m = -10m \implies 4 = -13m \implies m = -4/13$.
+    Hence the required values of the slope are $4/7$ or $-4/13$.
+</p>
+<p>
+    <strong>Example 4</strong>. If O is the origin, A the point $(8,0)$ and B the point $(0,6)$, find the coordinates of the points P and Q, where the line $3x + 2y = c$ meets OA and AB respectively. If the area of the triangle OPQ... (content cut off in original input).
+</p>
+
+<h3 id="exercises15a">Exercises 15(a)</h3>
+<p>Content not provided for this section.</p>
+
+<h3 id="exercises15b">Exercises 15(b)</h3>
+<p>Content not provided for this section.</p>
+
+<h3 id="exercises15c">Exercises 15(c)</h3>
+<p>Content not provided for this section.</p>
+
+<h3 id="exercises15d">Exercises 15(d)</h3>
+<p>Content not provided for this section.</p>
+
+<h3 id="keyterms15">Key Terms (Chapter 15)</h3>
+<p>Content not provided for this section.</p>
+
+<h3 id="reviewquestions15">Review Questions (Chapter 15)</h3>
+<p>Content not provided for this section.</p>
+
+</div>
+
+	
+    </main>
+	
+	
+	
+	
+	<!----------------FOOTER----------------->
+    <footer>
+        <p>&copy;DriMS. <br> Contact SchrDbb on <b> (+237) 6 52 65 94 29 </b>, for All your Research Data Analysis and Data Science,
+            Software Development, Website Development, Biomedical/Clinical Science Tutorials.</p> <br> <br> <br>
+    </footer>
+	
+	
+	
+	<!----------------JAVASCRIPT----------------->
+     <script src="js/textbook.js"></script>
+</body>
+</html>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pediatric Case Studies</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.18.9/babel.min.js"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+  <div id="root"></div>
+
+  <script type="text/babel">
+    const CaseStudy = ({ caseNumber, title, summary, questions, answers, clinicalPearls, references }) => (
+      <div className="mb-8 p-6 bg-white rounded-lg shadow-md">
+        <h2 className="text-2xl font-bold mb-4">Case {caseNumber}: {title}</h2>
+        <h3 className="text-xl font-semibold mb-2">Summary</h3>
+        <p className="mb-4">{summary}</p>
+        <h3 className="text-xl font-semibold mb-2">Comprehension Questions</h3>
+        <ul className="list-disc pl-5 mb-4">
+          {questions.map((q, index) => (
+            <li key={index} className="mb-2">{q}</li>
+          ))}
+        </ul>
+        <h3 className="text-xl font-semibold mb-2">Answers</h3>
+        <ul className="list-disc pl-5 mb-4">
+          {answers.map((a, index) => (
+            <li key={index} className="mb-2">{a}</li>
+          ))}
+        </ul>
+        <h3 className="text-xl font-semibold mb-2">Clinical Pearls</h3>
+        <ul className="list-disc pl-5 mb-4">
+          {clinicalPearls.map((p, index) => (
+            <li key={index} className="mb-2">{p}</li>
+          ))}
+        </ul>
+        <h3 className="text-xl font-semibold mb-2">References</h3>
+        <ul className="list-disc pl-5">
+          {references.map((r, index) => (
+            <li key={index} className="mb-2">{r}</li>
+          ))}
+        </ul>
+      </div>
+    );
+
+    const App = () => {
+      const cases = [
+        {
+          caseNumber: 17,
+          title: "Acute Lymphoblastic Leukemia",
+          summary: "A 6-year-old boy presents with a 1-week history of leg pain and limping, low-grade fever, hepatosplenomegaly, and petechiae on his face and chest.",
+          questions: [
+            "A mother brings her 3-year-old son with Down syndrome to the clinic because his gums have been bleeding for 1 week. She reports he has been less energetic than usual. Examination reveals a temperature of 100°F (37.8°C) orally, pallor, splenomegaly, gingival bleeding, and bruises on the lower extremities. Which of the following is most likely? A. Aplastic anemia B. Idiopathic thrombocytopenic purpura C. Leukemia D. Leukemoid reaction E. Megaloblastic anemia",
+            "A father brings to the clinic his 6-year-old son who currently is undergoing induction chemotherapy for ALL. The school will not allow the child to register until his immunizations are up-to-date. Which of the following is the best course of action? A. Call the school nurse or principal to inform him or her that this child should not receive immunizations while he is taking chemotherapy. B. Update all immunizations except for measles-mumps-rubella (MMR) and varicella. C. Update all immunizations except for oral polio vaccine. D. Update all immunizations. E. Call the school nurse or principal to inform him or her that this child will never receive immunizations because of the alteration in his immune system.",
+            "A mother brings to the clinic her 4-year-old son who began complaining of right knee pain 2 weeks ago, is limping slightly, is fatigued, and has had a fever to 100.4°F (38°C). Which of the following laboratory tests is most important? A. Antinuclear antibodies B. Complete blood count (CBC) with differential and platelets C. Epstein-Barr virus titer D. Rheumatoid factor E. Sedimentation rate",
+            "Two weeks after a viral syndrome, a 2-year-old develops bruising and generalized petechiae that is more prominent over the legs. He has neither hepatosplenomegaly nor lymph node enlargement. Laboratory testing reveals a normal hemoglobin, hematocrit, and white blood cell count and differential. The platelet count is 15,000/mm3. Which of the following is the most likely diagnosis? A. Acute lymphoblastic leukemia B. Aplastic anemia C. Immune thrombocytopenic purpura D. Thrombotic thrombocytopenic purpura E. von Willebrand disease"
+          ],
+          answers: [
+            "C. Children with Down syndrome have a 10- to 15-fold increased risk for developing leukemia.",
+            "A. Live virus vaccines are contraindicated during chemotherapy and for at least 6 months after completion of treatment.",
+            "B. The CBC with differential and platelets is the best initial screening test for symptoms suggestive of JRA or leukemia.",
+            "C. Immune thrombocytopenic purpura (ITP) is common in children, often following a viral infection, with a low platelet count but normal other lab results."
+          ],
+          clinicalPearls: [
+            "Leukemias are the most common childhood cancers, with ALL representing approximately 75% of cases.",
+            "ALL has a peak incidence at age 4 years, affecting boys more frequently.",
+            "ALL is often called the 'great imitator' due to nonspecific symptoms like anorexia, irritability, lethargy, pallor, bleeding, petechiae, leg and joint pain, and fever.",
+            "Combination chemotherapy, including induction therapy with prednisone, vincristine, and asparaginase, produces remission in approximately 98% of children with average-risk ALL."
+          ],
+          references: [
+            "Campana D, Pui CH. Childhood leukemia. In: Abeloff’s Clinical Oncology. 4th ed. 2008:2139-2160.",
+            "Freeman MH. Idiopathic (immune) thrombocytopenic purpura (ITP). In: Rudolph’s Pediatrics. 21st ed. 2003:1556-1557.",
+            "Mahoney DH. Acute lymphoblastic leukemia. In: Oski’s Pediatrics: Principles and Practice. 4th ed. 2006:1750-1758.",
+            "Steuber CP, Poplack DG. Acute lymphoblastic leukemia. In: Rudolph’s Pediatrics. 21st ed. 2003:1594-1600.",
+            "Tubergen DT, Bleyer A. The leukemias. In: Nelson Textbook of Pediatrics. 18th ed. 2007:2116-2122.",
+            "Wallace CA, Sherry DD. Juvenile rheumatoid arthritis. In: Rudolph’s Pediatrics. 21st ed. 2003:836-840."
+          ]
+        },
+        {
+          caseNumber: 18,
+          title: "Infant of a Diabetic Mother",
+          summary: "A very large newborn with respiratory depression, born to an 18-year-old mother with no prenatal care, delivered via emergency cesarean section.",
+          questions: [
+            "A 35-week-gestation infant is delivered via cesarean section because of macrosomia and fetal distress. The mother has class D pregestational diabetes. This infant is at risk for birth asphyxia, cardiac septal hypertrophy, polycythemia, and which of the following? A. Congenital dislocated hip B. Dacryostenosis C. Hyaline membrane disease D. Hyperglycemia E. Pneumothorax",
+            "A term infant weighing 4530 g is born to a mother with class A pregestational diabetes. His initial glucose level is 30 mg/dL, but after feeding, it stabilizes. He appears mildly jaundiced 48 hours later. Which serum laboratory tests are most likely to help evaluate this infant’s jaundice? A. Total protein, serum albumin, and liver transaminases B. Total and direct bilirubin, liver transaminases, and a hepatitis panel C. Total bilirubin and a hematocrit D. Total bilirubin and a complete blood count E. Total and direct bilirubin and a complete blood count with differential and platelets",
+            "A premature infant of a class B pregestational diabetic mother is delivered via cesarean section due to fetal distress. The child has poor color, tone, and respiratory effort. After intubation, perioral cyanosis and a heart rate of 90 bpm persist. Which is the most likely cause of her persistent distress? A. Hypocalcemia B. Hypoglycemia C. Impaired cardiac function D. Renal failure E. Sepsis",
+            "A term infant born to a mother with class C pregestational diabetes requires intubation at delivery for poor respiratory effort, tone, and color. His initial serum glucose level is 10 mg/dL, stabilizing with IV glucose. On the third day, an abdominal mass is noted. Which is the most likely cause? A. Hydronephrosis B. Infarction of the spleen C. Intraintestinal air D. Liver engorgement E. Volvulus"
+          ],
+          answers: [
+            "C. Infants of mothers with poorly controlled diabetes are at risk for respiratory distress syndrome at later gestational ages.",
+            "C. Hyperbilirubinemia secondary to liver immaturity and possible polycythemia requires total bilirubin and hematocrit evaluation.",
+            "C. Maternal diabetes history and symptoms suggest a risk for congenital heart anomalies or cardiomyopathy.",
+            "A. Renal vein thrombosis, presenting as hydronephrosis, is a complication of polycythemia in infants of diabetic mothers."
+          ],
+          clinicalPearls: [
+            "Infants of diabetic mothers are at risk for perinatal complications, including hypoglycemia, hyperbilirubinemia, birth trauma, and congenital malformations.",
+            "These infants are usually heavier and longer than expected, but head circumference is typically normal unless placental insufficiency is present.",
+            "Routine prenatal care includes screening for gestational diabetes."
+          ],
+          references: [
+            "Ogata ES. Infant of the diabetic mother. In: Rudolph’s Pediatrics. 21st ed. 2003:124-127.",
+            "Stoll BJ. Infants of diabetic mothers. In: Nelson Textbook of Pediatrics. 18th ed. 2007:783-785.",
+            "Warshaw JB, Hay WW. Infant of the diabetic mother. In: Oski’s Pediatrics: Principles and Practice. 4th ed. 2006:423-427."
+          ]
+        },
+        {
+          caseNumber: 19,
+          title: "Neonatal Hyperbilirubinemia",
+          summary: "A healthy 4-day-old breast-feeding Asian male with jaundice and a large cephalohematoma.",
+          questions: [
+            "Which of the following decreases the risk of neurologic damage in a jaundiced newborn? A. Acidosis B. Displacement of bilirubin from binding sites by drugs such as sulfisoxazole C. Hypoalbuminemia D. Sepsis E. Maternal ingestion of phenobarbital during pregnancy",
+            "You are about to report to the mother of an 8-day-old infant with jaundice first noted on the second day. His total and direct bilirubin levels are 12.5 and 0.9 mg/dL, respectively. He and his mother have O type blood, Coombs tests are negative, reticulocyte count is 15%, and no abnormal cell shapes are seen. He is bottle-feeding well and gaining weight. Which diagnosis remains in your differential? A. Gilbert syndrome B. Disseminated intravascular coagulation (DIC) C. Spherocytosis D. Polycythemia E. An undiagnosed blood group isoimmunization",
+            "The hyperbilirubinemia associated with Crigler-Najjar syndrome type I is caused by which of the following? A. Increased production of bilirubin B. Impaired conjugation of bilirubin C. Deficient hepatic uptake of bilirubin D. Severe deficiency of uridine diphosphate glucuronosyltransferase E. Glucose-6-phosphate dehydrogenase deficiency",
+            "A 30-hour-old full-term infant has face and chest jaundice. He is breast-feeding well with a normal examination. His bilirubin level is 15.5 mg/dL. Which is the most appropriate course of action? A. Recommend cessation of breast-feeding for 48 hours and supplement with formula B. Start phototherapy C. Wait 6 hours and retest the serum bilirubin level D. Start an exchange transfusion E. No action is needed"
+          ],
+          answers: [
+            "E. Phenobarbital induces glucuronyl transferase, reducing neonatal jaundice.",
+            "A. Gilbert syndrome is consistent with negative Coombs test, normal hemoglobin, and prolonged hyperbilirubinemia.",
+            "D. Crigler-Najjar syndrome type I is caused by a severe deficiency of uridine diphosphate glucuronosyltransferase.",
+            "B. Phototherapy should be started to address significant hyperbilirubinemia."
+          ],
+          clinicalPearls: [
+            "Physiologic jaundice results from higher bilirubin production and limited excretion, diagnosed by ruling out other causes.",
+            "Nonphysiologic jaundice may be caused by septicemia, biliary atresia, hepatitis, galactosemia, hypothyroidism, cystic fibrosis, or congenital hemolytic anemia.",
+            "High levels of unconjugated bilirubin may lead to kernicterus, an irreversible neurologic syndrome."
+          ],
+          references: [
+            "American Academy of Pediatrics. Management of hyperbilirubinemia in the newborn infant 35 or more weeks of gestation. Pediatrics. 2004;114:297-316.",
+            "Cashore WJ. Neonatal hyperbilirubinemia. In: Oski’s Pediatrics: Principles and Practice. 4th ed. 2006:235-245.",
+            "Piazza AJ, Stoll BJ, Kliegman RM. Jaundice and hyperbilirubinemia in the newborn. In: Nelson Textbook of Pediatrics. 18th ed. 2007:756-766.",
+            "Stevenson DK, Madan A. Jaundice in the newborn. In: Rudolph’s Pediatrics. 21st ed. 2003:164-169."
+          ]
+        },
+        {
+          caseNumber: 20,
+          title: "Asthma Exacerbation",
+          summary: "A 10-year-old boy with multiple episodes of respiratory difficulty presents with tachypnea, perioral cyanosis, likely pulsus paradoxus, accessory muscle use, slight wheezing, delayed capillary refill, and drowsiness.",
+          questions: [
+            "A 12-year-old asthmatic girl presents with tachypnea, intracostal retractions, perioral cyanosis, and minimal wheezing. After oxygen, albuterol, and prednisone, wheezing increases, and color improves. What is the appropriate explanation? A. Not an asthma attack B. Not responding to albuterol, symptoms worsening C. Responding to albuterol, symptoms improving D. Not enough albuterol E. Albuterol inadvertently left out",
+            "A previously healthy 2-year-old girl presents with acute-onset wheezing after playing in her brother’s room. No family history of asthma. What is the best next step? A. Determine what she was playing with and order a chest radiograph B. Refer to a pulmonologist C. Prescribe antibiotics for pneumonia D. Administer intramuscular prednisone E. Accuse the mother of poor supervision",
+            "A 4-month-old boy presents with worsening respiratory distress, low-grade fever, pallor, perioral cyanosis, and tight wheezes. Blood gas shows pH 7.15, PCO2 65 mm Hg, bicarbonate 20 mmol/L. What is the most likely explanation? A. Bronchiolitis, risk of respiratory failure B. Bronchiolitis, symptoms should resolve with albuterol C. Suspect tracheoesophageal fistula D. Gastroesophageal reflux with aspiration E. Metabolic acidosis due to bacterial sepsis",
+            "A 15-year-old uses albuterol after mowing the lawn for chest tightness, then develops wheezing, cough, and chest pain at dinner. What is the most likely explanation? A. Aspirated grass B. Empty albuterol inhaler C. Outdated albuterol inhaler D. Late-phase reaction E. New allergen exposure"
+          ],
+          answers: [
+            "C. Increased wheezing and improved color indicate albuterol is opening obstructed lung areas.",
+            "A. Acute-onset wheezing in a young child suggests possible foreign-body aspiration, requiring investigation.",
+            "A. Sudden respiratory symptoms with fever in an infant suggest bronchiolitis with risk of respiratory failure.",
+            "D. A late-phase reaction occurs 2-4 hours after initial wheezing due to inflammatory cell accumulation."
+          ],
+          clinicalPearls: [
+            "Asthma prevalence is increasing, making it a frequent admission diagnosis for children.",
+            "Atopy and family history are risk factors for asthma; pollutants like cigarette smoke reduce resolution likelihood.",
+            "The late-phase reaction, occurring 2-4 hours after allergen exposure, causes chronic inflammation.",
+            "NHLBI guidelines guide acute and long-term asthma management."
+          ],
+          references: [
+            "Eggleston PA. Asthma. In: Oski’s Pediatrics: Principles and Practice. 4th ed. 2006:2404-2410.",
+            "Lie AH, Covar RA, Spahn JD, Leung DYM. Childhood asthma. In: Nelson Textbook of Pediatrics. 18th ed. 2007:953-970."
+          ]
+        },
+        {
+          caseNumber: 21,
+          title: "Growth Hormone Deficiency",
+          summary: "An 8-year-old boy with no significant medical history and normal examination presents with failure to grow, with tall parents who had normal pubertal timing.",
+          questions: [
+            "An 8-year-old boy with short stature has gained weight, has low energy, sleeps more, and feels cold. His height dropped from the 50th to 5th percentile, weight to 90th. He is obese, with immature facies, thin hair, and slow reflexes. What is the most appropriate action? A. Epstein-Barr virus titers B. Thyroid function C. Reassure normal prepubertal development D. Bone age E. Somatomedin C level",
+            "A 16-year-old boy, the shortest in his class, is at the fifth percentile for height, Tanner stage 3. His father began puberty late and is 6 ft 2 in; mother began early and is 5 ft 4 in. What is the most appropriate intervention? A. Chromosomal analysis B. Liver function studies C. Bone age D. Somatomedin C E. Pediatric endocrinology referral",
+            "A 17-year-old girl is 4 ft 10 in tall, with parents of normal height. She had cardiac surgery at age 1 and no menstrual periods. What is the most appropriate action? A. Chromosomal analysis B. Pediatric endocrinology referral C. Serum testosterone levels D. Thyroid function studies E. Ultrasonogram of abdomen",
+            "A 14-year-old boy in juvenile detention is tall, slim, underweight, with long legs, small testes, and learning difficulties. What diagnostic test is most likely to identify his problem? A. Chromosomal analysis B. Pediatric endocrinology referral C. Serum testosterone levels D. Thyroid function studies E. Ultrasonogram of abdomen"
+          ],
+          answers: [
+            "B. Symptoms suggest acquired hypothyroidism, requiring thyroid function studies.",
+            "C. Constitutional growth delay is likely, with delayed bone age indicating growth potential.",
+            "A. Chromosomal analysis is likely to show Turner syndrome given short stature and cardiac history.",
+            "A. Chromosomal analysis is likely to confirm Klinefelter syndrome, indicated by tall stature and small testes."
+          ],
+          clinicalPearls: [
+            "Constitutional growth delay involves slower growth with delayed puberty but normal adult height.",
+            "Familial short stature involves short children of short parents with normal pubertal timing.",
+            "Idiopathic short stature is diagnosed when no other cause is found.",
+            "Growth hormone deficiency results in growth failure, delayed bone age, and catch-up growth with replacement."
+          ],
+          references: [
+            "Moshang T, Grimberg A. Neuroendocrine disorders. In: Oski’s Pediatrics: Principles and Practice. 4th ed. 2006:2097-2103.",
+            "Parks JS, Felner EI. Hypopituitarism. In: Nelson Textbook of Pediatrics. 18th ed. 2007:2293-2299.",
+            "Plotnick LP, Miller RS. Growth, growth hormone, and pituitary disorders. In: Oski’s Pediatrics: Principles and Practice. 4th ed. 2006:2084-2092.",
+            "Rapaport R. Hypergonadotropic hypogonadism in the male (primary hypogonadism). In: Nelson Textbook of Pediatrics. 18th ed. 2007:2379-2382.",
+            "Reiter EO, D’Ercole AJ. Disorders of the anterior pituitary gland, hypothalamus, and growth. In: Rudolph’s Pediatrics. 21st ed. 2003:2011-2025."
+          ]
+        },
+        {
+          caseNumber: 22,
+          title: "Group B Streptococcal Infection",
+          summary: "A 2800-g infant born at 36-weeks’ gestation via vaginal delivery presents with poor feeding, tachypnea, hypothermia, and poor perfusion at 6 hours of age.",
+          questions: [
+            "A newborn infant born at home has puffy, tense eyelids, red conjunctivae, and purulent ocular discharge at 2 days of life. What is the most likely diagnosis? A. Chemical conjunctivitis B. Chlamydial conjunctivitis C. Dacryocystitis D. Gonococcal ophthalmia E. Pneumococcal ophthalmia",
+            "A term 3500-g female delivered by cesarean section develops a respiratory rate of 70 breaths/min and expiratory grunting at 1 hour of life. She has good tone, color, and suck. What is the most likely diagnosis? A. Intubation and suctioning below the vocal cords B. Administration of surfactant C. Initiation of antibiotic therapy D. Swallow study and upper GI series E. Observation for several hours",
+            "A term infant is born to a 23-year-old HIV-positive mother who took antiretroviral medications during pregnancy. What should routine management of the healthy infant include? A. Intravenous immunoglobulin B. Neonatal intensive care unit admission C. Zidovudine course D. Chest radiographs for Pneumocystis carinii E. HIV ELISA to determine congenital infection",
+            "A 2150-g infant delivered at 34-week gestation has a diffuse erythematous pustular rash, pallor, poor feeding, tachypnea, and cyanosis. His CBC shows marked monocytosis, and he dies at 4 hours of age. What is the most likely diagnosis? A. Congenital syphilis B. Congenital varicella C. Disseminated herpes D. GBS disease E. Listeriosis"
+          ],
+          answers: [
+            "D. Gonococcal ophthalmia is likely given the timing and severity of symptoms, requiring prompt treatment.",
+            "E. Transient tachypnea of the newborn is common in cesarean deliveries and typically resolves within 24-48 hours.",
+            "C. Zidovudine administration to the infant reduces the risk of perinatal HIV transmission.",
+            "E. Listeriosis is suggested by the clinical presentation, monocytosis, and high mortality rate in early-onset disease."
+          ],
+          clinicalPearls: [
+            "Neonatal sepsis presents with nonspecific signs like temperature instability, tachypnea, and hypotension.",
+            "GBS is the most common cause of neonatal sepsis from birth to 3 months, often presenting with respiratory signs.",
+            "Risk factors for early-onset GBS include prolonged membrane rupture, maternal fever, and prematurity.",
+            "Intrapartum antibiotic prophylaxis has significantly reduced the incidence of early-onset GBS disease."
+          ],
+          references: [
+            "Brady MT. Human immunodeficiency virus type 1 infection in infants and children. In: Rudolph’s Pediatrics. 21st ed. 2003:1045-1053.",
+            "Centers for Disease Control and Prevention. Prevention of perinatal group B streptococcal disease. MMWR Recomm Rep. 2002;51(RR-11):1-22.",
+            "Edwards MS. Group B streptococcal infections. In: Rudolph’s Pediatrics. 21st ed. 2003:999-1001.",
+            "Gallagher PG, Baltimore RS. Sepsis neonatorum. In: Oski’s Pediatrics: Principles and Practice. 4th ed. 2006:482-492.",
+            "Glasgow TS, Young PC, Wallin J, et al. Association of intrapartum antibiotic exposure and late-onset serious bacterial infections in infants. Pediatrics. 2005;116:696-702.",
+            "Lachenauer CS, Wessels MR. Group B Streptococcus. In: Nelson Textbook of Pediatrics. 18th ed. 2007:1145-1150.",
+            "Moylett EH, Shearer WT. Pediatric human immunodeficiency virus infection. In: Oski’s Pediatrics: Principles and Practice. 4th ed. 2006:942-95."
+          ]
+        }
+      ];
+
+      return (
+        <div className="container mx-auto p-4">
+          <h1 className="text-3xl font-bold mb-6">Pediatric Case Studies</h1>
+          <nav className="mb-6">
+            <ul className="flex space-x-4">
+              {cases.map((caseStudy) => (
+                <li key={caseStudy.caseNumber}>
+                  <a href={`#case-${caseStudy.caseNumber}`} className="text-blue-600 hover:underline">
+                    Case {caseStudy.caseNumber}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+          {cases.map((caseStudy) => (
+            <div id={`case-${caseStudy.caseNumber}`} key={caseStudy.caseNumber}>
+              <CaseStudy
+                caseNumber={caseStudy.caseNumber}
+                title={caseStudy.title}
+                summary={caseStudy.summary}
+                questions={caseStudy.questions}
+                answers={caseStudy.answers}
+                clinicalPearls={caseStudy.clinicalPearls}
+                references={caseStudy.references}
+              />
+            </div>
+          ))}
+        </div>
+      );
+    };
+
+    ReactDOM.render(<App />, document.getElementById('root'));
+  </script>
+</body>
+</html>

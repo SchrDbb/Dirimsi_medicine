@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dirimsi - Select Course Test Subject</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brown-dark': '#2c1e1a',
+                        'brown-card': '#42322a',
+                        'yellow-text': '#d4c2a5',
+                        'golden-yellow': '#d4af37',
+                        'dark-yellow': '#b8860b',
+                        'brown-accent': '#574438',
+                        'yellow-highlight': '#ffe26e',
+                        'dark-red': '#8B0000',
+                    },
+                },
+            },
+        };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- No specific CSS for this file, Tailwind handles it. -->
+</head>
+<body class="bg-brown-dark text-yellow-text min-h-screen flex flex-col items-center justify-center p-4">
+
+    <div class="bg-brown-card p-6 sm:p-10 rounded-xl shadow-lg w-full max-w-3xl">
+        <h2 class="text-3xl font-bold mb-8 text-center text-golden-yellow">Select Your Course Test Subject</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Example: Biology -->
+            <a href="biology_subtopic.html" class="block bg-brown-dark p-6 rounded-lg shadow-md transition-transform duration-200 hover:scale-105 hover:bg-brown-accent text-center">
+                <h4 class="text-2xl font-bold mb-2 text-golden-yellow">Biology</h4>
+                <p class="text-yellow-text">Dive into fundamental biological concepts.</p>
+            </a>
+
+            <!-- Example: Chemistry (you'll create chemistry_subtopic.html later) -->
+            <a href="#" onclick="alert('Chemistry subtopics coming soon!'); return false;" class="block bg-brown-dark p-6 rounded-lg shadow-md transition-transform duration-200 hover:scale-105 hover:bg-brown-accent text-center opacity-70 cursor-not-allowed">
+                <h4 class="text-2xl font-bold mb-2 text-golden-yellow">Chemistry</h4>
+                <p class="text-yellow-text">Explore chemical principles and reactions.</p>
+            </a>
+
+            <!-- Example: Anatomy (you'll create anatomy_subtopic.html later) -->
+            <a href="#" onclick="alert('Anatomy subtopics coming soon!'); return false;" class="block bg-brown-dark p-6 rounded-lg shadow-md transition-transform duration-200 hover:scale-105 hover:bg-brown-accent text-center opacity-70 cursor-not-allowed">
+                <h4 class="text-2xl font-bold mb-2 text-golden-yellow">Anatomy</h4>
+                <p class="text-yellow-text">Test your knowledge of human body structures.</p>
+            </a>
+
+            <!-- Add more subjects as needed, linking to their respective subtopic pages -->
+            <!-- For now, they are placeholders or will link to a "coming soon" alert -->
+
+        </div>
+
+        <div class="mt-10 text-center">
+            <button onclick="window.location.href='main.html'" class="px-6 py-3 bg-golden-yellow text-brown-dark font-bold rounded-lg shadow-md hover:bg-dark-yellow transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-golden-yellow focus:ring-offset-2 focus:ring-offset-brown-dark">
+                <i class="fas fa-arrow-left mr-2"></i> Back to Arcade Mode
+            </button>
+        </div>
+    </div>
+
+</body>
+</html>

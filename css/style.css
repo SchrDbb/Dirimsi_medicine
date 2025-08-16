@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #3e2723;
+    color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+.container {
+    max-width: 500px;
+    width: 100%;
+}
+.card {
+    background-color: #4e342e;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+.logo {
+    max-width: 150px;
+    height: auto;
+    border-radius: 9999px;
+    box-shadow: 0 0 10px rgba(255, 204, 128, 0.3);
+}
+.form-input {
+    background-color: #6d4c41;
+    border: 1px solid #8d6e63;
+    color: #fff;
+}
+.form-input::placeholder {
+    color: #bcaaa4;
+}
+.form-button {
+    background-color: #ffcc80;
+    color: #3e2723;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+.form-button:hover {
+    background-color: #ffb74d;
+}
+.app-id-display {
+    background-color: #5d4037;
+    border: 2px solid #ffcc80;
+    color: #ffcc80;
+    padding: 16px 24px;
+}
+.error-message {
+    color: #ef5350;
+}
+.debug-message {
+    color: #4fc3f7;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+}

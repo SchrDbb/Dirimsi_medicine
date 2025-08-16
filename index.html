@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dirimsi - Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brown-dark': '#2c1e1a',
+                        'brown-card': '#42322a',
+                        'yellow-text': '#d4c2a5',
+                        'golden-yellow': '#d4af37',
+                        'dark-yellow': '#b8860b',
+                        'brown-accent': '#574438',
+                        'yellow-highlight': '#ffe26e',
+                        'dark-red': '#8B0000',
+                    },
+                },
+            },
+        };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .show {
+            transform: translateY(0);
+        }
+        /* Custom styles for the message box based on user request */
+        .info {
+            background-color: #3b82f6; /* Tailwind's blue-500 */
+            color: white;
+        }
+        /* Custom success message styling */
+        .success {
+            background-color: #d4af37; /* golden-yellow */
+            color: #b8860b; /* dark-yellow */
+        }
+        /* Custom error message styling */
+        .error {
+            background-color: #8B0000; /* dark-red */
+            color: #b8860b; /* dark-yellow */
+        }
+    </style>
+</head>
+<body id="index-page" class="bg-brown-dark text-yellow-text min-h-screen flex items-center justify-center font-sans p-4">
+    <div class="bg-brown-card p-8 rounded-xl shadow-lg w-full max-w-md text-center">
+        <div class="flex flex-col items-center mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-golden-yellow" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+                <path d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zm0 8c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3z"/>
+            </svg>
+            <h1 class="text-3xl font-bold text-golden-yellow mt-2">Dirimsi Login</h1>
+        </div>
+        <p class="text-sm text-yellow-text mb-4">Please use the password associated with this App ID to log in.</p>
+        
+        <div class="mb-6 bg-brown-accent rounded-lg p-4 shadow-inner">
+            <h4 class="text-lg font-semibold text-golden-yellow">App ID:</h4>
+            <p id="app-id-display" class="text-xl font-mono text-yellow-highlight mt-2"></p>
+        </div>
+
+        <form id="login-form" class="space-y-4">
+            <div>
+                <label for="password" class="block text-yellow-text font-medium mb-1 text-left">Password:</label>
+                <input type="password" id="password" class="w-full p-3 rounded-lg bg-brown-dark text-yellow-text border border-brown-accent focus:outline-none focus:ring-2 focus:ring-golden-yellow transition-colors" placeholder="Enter password" required>
+            </div>
+            <button type="submit" class="w-full py-3 bg-golden-yellow text-brown-dark font-bold rounded-lg shadow-md hover:bg-dark-yellow transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-golden-yellow focus:ring-offset-2 focus:ring-offset-brown-dark">
+                Log In
+            </button>
+        </form>
+        
+        <div class="mt-8 text-center text-yellow-text">
+            <p class="text-lg font-semibold mb-2">Need help?</p>
+            <p class="text-sm mb-4">Contact SchrDbb on <a href="tel:+237652659429" class="underline hover:text-golden-yellow transition-colors">(+237)652659429</a></p>
+            <div class="flex justify-center space-x-6">
+                <a href="https://wa.me/237652659429" target="_blank" aria-label="WhatsApp" class="text-3xl text-yellow-highlight hover:text-green-500 transition-colors">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="https://t.me/SchrDbb" target="_blank" aria-label="Telegram" class="text-3xl text-yellow-highlight hover:text-blue-500 transition-colors">
+                    <i class="fab fa-telegram-plane"></i>
+                </a>
+            </div>
+        </div>
+
+        <div id="message-box" class="fixed bottom-4 right-4 p-4 rounded-lg shadow-xl transition-transform transform translate-y-20 duration-300 z-50">
+            <p id="message-text" class="font-bold"></p>
+        </div>
+    </div>
+    
+    <script type="module" src="js/login.js"></script>
+</body>
+</html>

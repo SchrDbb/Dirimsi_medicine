@@ -1,0 +1,2625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physics</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+	
+	<!----------------CSS CODE----------------->
+	<link rel="stylesheet" href="css/textbook.css">
+	
+</head>
+<body>
+ <header>
+    <h1>Concepts of Biology</h1>
+   <h3>&copy; DirimSi Academy | Telegram: @SchrDbb | Phone: +237 6 52 65 94 29</h3>
+	
+</header>
+<button class="toc-button" aria-expanded="false" aria-controls="nav-menu">|||</button>
+
+<!------------------------NAVIGATION MENU--------------------------->
+<nav id="nav-menu" role="navigation" aria-label="Table of contents">
+        <h2>Table of Contents</h2>
+        <ul>
+            <li><a href="#chapter1">Chapter 1: Units and Measurement</a>
+                <ul>
+                    <li><a href="#section1-1">Physical Quantities and Units</a></li>
+                    <li><a href="#section1-2">Systems of Units</a></li>
+                    <li><a href="#section1-3">Dimensions and Significant Figures</a></li>
+                    <li><a href="#section1-4">Errors in Measurement</a></li>
+                </ul>
+            </li>
+            <li><a href="#chapter2">Chapter 2: Scalars and Vectors</a>
+                <ul>
+                    <li><a href="#section2-1">Scalars and Tensors</a></li>
+                    <li><a href="#section2-2">Vectors and Their Types</a></li>
+                    <li><a href="#section2-3">Vector Operations</a></li>
+                </ul>
+            </li>
+            <li><a href="#chapter3">Chapter 3: Motion in a Straight Line</a>
+                <ul>
+                    <li><a href="#section3-1">Motion and Rest</a></li>
+                    <li><a href="#section3-2">Speed and Velocity</a></li>
+                    <li><a href="#section3-3">Acceleration</a></li>
+                    <li><a href="#section3-4">Equations of Motion</a></li>
+                </ul>
+            </li>
+            <li><a href="#chapter4">Chapter 4: Motion in a Plane</a>
+                <ul>
+                    <li><a href="#section4-1">Position and Displacement Vectors</a></li>
+                    <li><a href="#section4-2">Velocity and Acceleration Vectors</a></li>
+                    <li><a href="#section4-3">Projectile Motion</a></li>
+                    <li><a href="#section4-4">Circular Motion</a></li>
+                </ul>
+            </li>
+			 <li><a href="#chapter5">Chapter 5: Laws of Motion</a>
+                <ul>
+                    <li><a href="#section5-1">Inertia</a></li>
+                    <li><a href="#section5-2">Force</a></li>
+                    <li><a href="#section5-3">Linear Momentum</a></li>
+                    <li><a href="#section5-4">Newton’s Laws of Motion</a></li>
+                    <li><a href="#section5-5">Equilibrium and Common Forces</a></li>
+                    <li><a href="#section5-6">Friction</a></li>
+                    <li><a href="#section5-7">Motion of Bodies in Contact and Connected Systems</a></li>
+                </ul>
+            </li>
+            <li><a href="#chapter6">Chapter 6: Work, Energy, and Power</a>
+                <ul>
+                    <li><a href="#section6-1">Work</a></li>
+                    <li><a href="#section6-2">Energy</a></li>
+                    <li><a href="#section6-3">Work-Energy Theorem</a></li>
+                    <li><a href="#section6-4">Power</a></li>
+                    <li><a href="#section6-5">Collisions</a></li>
+                </ul>
+            </li>
+            <li><a href="#chapter7">Chapter 7: Rotational Motion</a>
+                <ul>
+                    <li><a href="#section7-1">Centre of Mass</a></li>
+                    <li><a href="#section7-2">Linear Momentum of a System</a></li>
+                    <li><a href="#section7-3">Rotational Motion and Moment of Inertia</a></li>
+                    <li><a href="#section7-4">Torque and Angular Momentum</a></li>
+                    <li><a href="#section7-5">Rolling Motion</a></li>
+                </ul>
+            </li>
+            <li><a href="#chapter8">Chapter 8: Gravitation</a>
+                <ul>
+                    <li><a href="#section8-1">Newton’s Law of Gravitation</a></li>
+                    <li><a href="#section8-2">Acceleration Due to Gravity</a></li>
+                    <li><a href="#section8-3">Gravitational Field and Potential</a></li>
+                    <li><a href="#section8-4">Kepler’s Laws and Satellites</a></li>
+                    <li><a href="#section8-5">Escape Velocity and Weightlessness</a></li>
+                </ul>
+            </li>
+            <li><a href="#chapter9">Chapter 9: Elasticity</a>
+                <ul>
+                    <li><a href="#section9-1">Deforming Force and Elasticity</a></li>
+                    <li><a href="#section9-2">Stress and Strain</a></li>
+                    <li><a href="#section9-3">Elastic Moduli</a></li>
+                    <li><a href="#section9-4">Poisson’s Ratio and Elastic Properties</a></li>
+                    <li><a href="#section9-5">Elastic Energy and Structural Applications</a></li>
+                </ul>
+            </li>
+            <li><a href="#chapter10">Chapter 10: Hydrostatics</a>
+                <ul>
+                    <li><a href="#section10-1">Fluids and Thrust</a></li>
+                    <li><a href="#section10-2">Pressure in Fluids</a></li>
+                    <li><a href="#section10-3">Buoyancy and Archimedes’ Principle</a></li>
+                    <li><a href="#section10-4">Laws of Floatation</a></li>
+                    <li><a href="#section10-5">Density and Relative Density</a></li>
+                </ul>
+            </li>
+			<li><a href="#chapter11">Chapter 11: Hydrodynamics</a>
+                <ul>
+                    <li><a href="#section11-1">Flow of Liquid</a></li>
+                    <li><a href="#section11-2">Reynold’s Number</a></li>
+                    <li><a href="#section11-3">Equation of Continuity</a></li>
+                    <li><a href="#section11-4">Energy of a Liquid</a></li>
+                    <li><a href="#section11-5">Bernoulli’s Theorem</a></li>
+                    <li><a href="#section11-6">Venturimeter</a></li>
+                    <li><a href="#section11-7">Torricelli’s Theorem</a></li>
+                    <li><a href="#section11-8">Viscosity</a></li>
+                    <li><a href="#section11-9">Stoke’s Law and Terminal Velocity</a></li>
+                    <li><a href="#section11-10">Critical Velocity</a></li>
+                </ul>
+            </li>
+            <li><a href="#chapter12">Chapter 12: Surface Tension</a>
+                <ul>
+                    <li><a href="#section12-1">Surface Tension</a></li>
+                    <li><a href="#section12-2">Adhesive and Cohesive Forces</a></li>
+                    <li><a href="#section12-3">Force of Surface Tension on Different Shapes</a></li>
+                    <li><a href="#section12-4">Molecular Range</a></li>
+                    <li><a href="#section12-5">Factors Affecting Surface Tension</a></li>
+                    <li><a href="#section12-6">Surface Energy</a></li>
+                    <li><a href="#section12-7">Excess Pressure due to Surface Tension</a></li>
+                    <li><a href="#section12-8">Angle of Contact</a></li>
+                    <li><a href="#section12-9">Capillarity</a></li>
+                    <li><a href="#section12-10">Some Phenomena Based on Surface Tension</a></li>
+                </ul>
+            </li>
+            <li><a href="#chapter13">Chapter 13: Thermometry and Calorimetry</a>
+                <ul>
+                    <li><a href="#section13-1">Heat</a></li>
+                    <li><a href="#section13-2">Temperature and its Measurement</a></li>
+                    <li><a href="#section13-3">Different Scales of Temperature</a></li>
+                    <li><a href="#section13-4">Thermometric Property</a></li>
+                    <li><a href="#section13-5">Thermometers</a></li>
+                    <li><a href="#section13-6">Thermal Expansion</a></li>
+                    <li><a href="#section13-7">Specific Heat</a></li>
+                    <li><a href="#section13-8">Latent Heat</a></li>
+                    <li><a href="#section13-9">Calorimetry</a></li>
+                </ul>
+            </li>
+            <li><a href="#chapter14">Chapter 14: Kinetic Theory of Gases</a>
+                <ul>
+                    <li><a href="#section14-1">Kinetic Theory of Ideal Gases</a></li>
+                    <li><a href="#section14-2">Gas Laws</a></li>
+                    <li><a href="#section14-3">Ideal Gas Equation</a></li>
+                    <li><a href="#section14-4">Pressure of a Gas</a></li>
+                    <li><a href="#section14-5">Kinetic Energy and Molecular Speeds</a></li>
+                    <li><a href="#section14-6">Degree of Freedom</a></li>
+                    <li><a href="#section14-7">Maxwell’s Law of Distribution of Molecular Speeds</a></li>
+                    <li><a href="#section14-8">Law of Equipartition of Energy</a></li>
+                    <li><a href="#section14-9">Mean Free Path</a></li>
+                    <li><a href="#section14-10">Brownian Motion</a></li>
+                    <li><a href="#section14-11">Critical Temperature, Pressure, and Volume</a></li>
+                </ul>
+            </li>
+            <li><a href="#chapter15">Chapter 15: Thermodynamics</a>
+                <ul>
+                    <li><a href="#section15-1">Thermodynamic Terms</a></li>
+                    <li><a href="#section15-2">Thermodynamic Processes</a></li>
+                    <li><a href="#section15-3">First Law of Thermodynamics</a></li>
+                    <li><a href="#section15-4">Second Law of Thermodynamics</a></li>
+                    <li><a href="#section15-5">Entropy</a></li>
+                    <li><a href="#section15-6">Heat Engine</a></li>
+                    <li><a href="#section15-7">Carnot’s Cycle</a></li>
+                    <li><a href="#section15-8">Refrigerator</a></li>
+                </ul>
+            </li>
+			
+			<li><a href="#chapter16">Chapter 16: Transmission of Heat</a>
+                <ul>
+                    <li><a href="#section16-1">Heat Transmission</a></li>
+                    <li><a href="#section16-2">Conduction of Heat in a Conducting Rod</a></li>
+                    <li><a href="#section16-3">Heat Flow in Conducting Rods</a></li>
+                    <li><a href="#section16-4">Ingen-Hausz Experiment</a></li>
+                    <li><a href="#section16-5">Formation of Ice on Lakes</a></li>
+                    <li><a href="#section16-6">Radiative Properties</a></li>
+                </ul>
+            </li>
+            <li><a href="#chapter17">Chapter 17: Oscillations</a>
+                <ul>
+                    <li><a href="#section17-1">Types of Motion</a></li>
+                    <li><a href="#section17-2">Terms Related to SHM</a></li>
+                    <li><a href="#section17-3">SHM Formulae</a></li>
+                    <li><a href="#section17-4">Energy in SHM</a></li>
+                    <li><a href="#section17-5">Types of Pendulums</a></li>
+                    <li><a href="#section17-6">Other Oscillatory Systems</a></li>
+                    <li><a href="#section17-7">Types of Oscillations</a></li>
+                </ul>
+            </li>
+            <li><a href="#chapter18">Chapter 18: Waves and Sound</a>
+                <ul>
+                    <li><a href="#section18-1">Wave Types</a></li>
+                    <li><a href="#section18-2">Nature of Waves</a></li>
+                    <li><a href="#section18-3">Wave Terms</a></li>
+                    <li><a href="#section18-4">Sound Waves</a></li>
+                    <li><a href="#section18-5">Factors Affecting Sound Velocity</a></li>
+                    <li><a href="#section18-6">Wave Phenomena</a></li>
+                </ul>
+            </li>
+            <li><a href="#chapter19">Chapter 19: Electrostatics</a>
+                <ul>
+                    <li><a href="#section19-1">Electric Charge</a></li>
+                    <li><a href="#section19-2">Coulomb’s Law</a></li>
+                    <li><a href="#section19-3">Electric Field</a></li>
+                    <li><a href="#section19-4">Electric Potential</a></li>
+                    <li><a href="#section19-5">Capacitance</a></li>
+                </ul>
+            </li>
+            <li><a href="#chapter20">Chapter 20: Current Electricity</a>
+                <ul>
+                    <li><a href="#section20-1">Electric Current</a></li>
+                    <li><a href="#section20-2">Ohm’s Law</a></li>
+                    <li><a href="#section20-3">Resistance and Resistivity</a></li>
+                    <li><a href="#section20-4">Electrical Circuits</a></li>
+                    <li><a href="#section20-5">Electrical Power and Energy</a></li>
+                </ul>
+            </li>
+			<li><a href="#chapter21">Chapter 21: Heating and Chemical Effects of Current</a>
+                <ul>
+                    <li><a href="#section21-1">Electric Energy and Power</a></li>
+                    <li><a href="#section21-2">Heating Effects of Current</a></li>
+                    <li><a href="#section21-3">Electric Fuse and Circuit Issues</a></li>
+                    <li><a href="#section21-4">Chemical Effects of Current</a></li>
+                    <li><a href="#section21-5">Thermoelectric Effects</a></li>
+                </ul>
+            </li>
+            <li><a href="#chapter22">Chapter 22: Magnetic Effect of Current</a>
+                <ul>
+                    <li><a href="#section22-1">Oersted’s Experiment and Magnetic Field</a></li>
+                    <li><a href="#section22-2">Rules for Magnetic Field Direction</a></li>
+                    <li><a href="#section22-3">Biot-Savart’s Law</a></li>
+                    <li><a href="#section22-4">Magnetic Field Due to Conductors</a></li>
+                    <li><a href="#section22-5">Force on Charged Particles and Conductors</a></li>
+                    <li><a href="#section22-6">Magnetic Dipole and Torque</a></li>
+                </ul>
+            </li>
+            <li><a href="#chapter23">Chapter 23: Magnetism and Matter</a>
+                <ul>
+                    <li><a href="#section23-1">Basics of Magnetism</a></li>
+                    <li><a href="#section23-2">Magnetic Dipole and Field</a></li>
+                    <li><a href="#section23-3">Earth’s Magnetism</a></li>
+                    <li><a href="#section23-4">Magnetic Materials</a></li>
+                </ul>
+            </li>
+            <li><a href="#chapter24a">Chapter 24a: Electromagnetic Induction</a>
+                <ul>
+                    <li><a href="#section24a-1">Faraday’s Laws of Electromagnetic Induction</a></li>
+                    <li><a href="#section24a-2">Lenz’s Law</a></li>
+                    <li><a href="#section24a-3">Motional Electromotive Force</a></li>
+                    <li><a href="#section24a-4">Self and Mutual Induction</a></li>
+                    <li><a href="#section24a-5">Eddy Currents</a></li>
+                </ul>
+            </li>
+            <li><a href="#chapter24b">Chapter 24b: Alternating Current</a>
+                <ul>
+                    <li><a href="#section24b-1">Basics of Alternating Current</a></li>
+                    <li><a href="#section24b-2">AC Circuit Elements</a></li>
+                    <li><a href="#section24b-3">Series AC Circuits</a></li>
+                    <li><a href="#section24b-4">Power in AC Circuits</a></li>
+                    <li><a href="#section24b-5">Transformers</a></li>
+                </ul>
+            </li>
+			<li><a href="#chapter24c">Chapter 24c: Electromagnetic Induction</a>
+                <ul>
+                    <li><a href="#section24c-1">Magnetic Flux</a></li>
+                    <li><a href="#section24c-2">Faraday’s Laws of Electromagnetic Induction</a></li>
+                    <li><a href="#section24c-3">Lenz’s Law</a></li>
+                    <li><a href="#section24c-4">Motional Emf</a></li>
+                    <li><a href="#section24c-5">Eddy Currents</a></li>
+                    <li><a href="#section24c-6">Self-Induction</a></li>
+                    <li><a href="#section24c-7">Mutual Induction</a></li>
+                    <li><a href="#section24c-8">Coefficient of Coupling</a></li>
+                    <li><a href="#section24c-9">Grouping of Coils</a></li>
+                </ul>
+            </li>
+            <li><a href="#chapter25">Chapter 25: Alternating Current</a>
+                <ul>
+                    <li><a href="#section25-1">Basics of Alternating Current</a></li>
+                    <li><a href="#section25-2">Mean and RMS Values</a></li>
+                    <li><a href="#section25-3">Reactance</a></li>
+                    <li><a href="#section25-4">Impedance</a></li>
+                    <li><a href="#section25-5">Power in AC Circuits</a></li>
+                    <li><a href="#section25-6">Current and Potential Relations</a></li>
+                    <li><a href="#section25-7">Resonance in AC Circuits</a></li>
+                    <li><a href="#section25-8">Wattless Current and L-C Oscillations</a></li>
+                    <li><a href="#section25-9">Choke Coil and Transient Current</a></li>
+                    <li><a href="#section25-10">AC Generator and DC Motor</a></li>
+                    <li><a href="#section25-11">Transformers</a></li>
+                </ul>
+            </li>
+            <li><a href="#chapter26">Chapter 26: Electromagnetic Waves</a>
+                <ul>
+                    <li><a href="#section26-1">Displacement Current</a></li>
+                    <li><a href="#section26-2">Maxwell’s Equations</a></li>
+                    <li><a href="#section26-3">Electromagnetic Waves</a></li>
+                    <li><a href="#section26-4">Electromagnetic Spectrum</a></li>
+                </ul>
+            </li>
+            <li><a href="#chapter27">Chapter 27: Ray Optics</a>
+                <ul>
+                    <li><a href="#section27-1">Characteristics of Light</a></li>
+                    <li><a href="#section27-2">Reflection of Light</a></li>
+                    <li><a href="#section27-3">Mirrors</a></li>
+                    <li><a href="#section27-4">Refraction of Light</a></li>
+                    <li><a href="#section27-5">Lenses</a></li>
+                    <li><a href="#section27-6">Prism and Dispersion</a></li>
+                    <li><a href="#section27-7">Scattering of Light</a></li>
+                    <li><a href="#section27-8">Human Eye</a></li>
+                    <li><a href="#section27-9">Optical Instruments</a></li>
+                </ul>
+            </li>
+			<li><a href="#chapter28">Chapter 28: Wave Optics</a>
+                <ul>
+                    <li><a href="#section28-1">Introduction to Wave Optics</a></li>
+                    <li><a href="#section28-2">Newton’s Corpuscular Theory</a></li>
+                    <li><a href="#section28-3">Huygens’ Wave Theory</a></li>
+                    <li><a href="#section28-4">Wavefront</a></li>
+                    <li><a href="#section28-5">Huygens’ Principle</a></li>
+                    <li><a href="#section28-6">Superposition of Waves</a></li>
+                    <li><a href="#section28-7">Interference of Light</a></li>
+                    <li><a href="#section28-8">Young’s Double Slit Experiment</a></li>
+                    <li><a href="#section28-9">Interference in Thin Films</a></li>
+                    <li><a href="#section28-10">Fresnel’s Biprism and Lloyd’s Mirror</a></li>
+                    <li><a href="#section28-11">Diffraction</a></li>
+                    <li><a href="#section28-12">Polarisation</a></li>
+                    <li><a href="#section28-13">Doppler’s Effect in Light</a></li>
+                </ul>
+            </li>
+            <li><a href="#chapter29">Chapter 29: Electrons, Photons and X-rays</a>
+                <ul>
+                    <li><a href="#section29-1">Cathode Rays</a></li>
+                    <li><a href="#section29-2">Positive Rays</a></li>
+                    <li><a href="#section29-3">Electron Emission</a></li>
+                    <li><a href="#section29-4">Photoelectric Effect</a></li>
+                    <li><a href="#section29-5">Planck’s Quantum Theory</a></li>
+                    <li><a href="#section29-6">Compton Effect</a></li>
+                    <li><a href="#section29-7">Dual Nature of Radiation</a></li>
+                    <li><a href="#section29-8">Matter Waves</a></li>
+                    <li><a href="#section29-9">Davisson-Germer Experiment</a></li>
+                    <li><a href="#section29-10">Electron Microscope</a></li>
+                    <li><a href="#section29-11">X-rays</a></li>
+                </ul>
+            </li>
+            <li><a href="#chapter30">Chapter 30: Atomic Physics</a>
+                <ul>
+                    <li><a href="#section30-1">Dalton’s Atomic Theory</a></li>
+                    <li><a href="#section30-2">Thomson’s Atomic Model</a></li>
+                    <li><a href="#section30-3">Rutherford’s Atomic Model</a></li>
+                    <li><a href="#section30-4">Bohr’s Atomic Model</a></li>
+                    <li><a href="#section30-5">Hydrogen Spectrum Series</a></li>
+                    <li><a href="#section30-6">Wave Model</a></li>
+                </ul>
+            </li>
+            <li><a href="#chapter31">Chapter 31: Nuclear Physics</a>
+                <ul>
+                    <li><a href="#section31-1">Nucleus</a></li>
+                    <li><a href="#section31-2">Nuclear Force</a></li>
+                    <li><a href="#section31-3">Mass Defect and Binding Energy</a></li>
+                    <li><a href="#section31-4">Nuclear Reaction</a></li>
+                    <li><a href="#section31-5">Nuclear Fission</a></li>
+                    <li><a href="#section31-6">Nuclear Fusion</a></li>
+                    <li><a href="#section31-7">Radioactivity</a></li>
+                </ul>
+            </li>
+			<li><a href="#chapter32">Chapter 32: Electronics</a>
+                <ul>
+                    <li><a href="#section32-1">Introduction to Electronics</a></li>
+                    <li><a href="#section32-2">Classification of Solids</a></li>
+                    <li><a href="#section32-3">Energy Bands of Solids</a></li>
+                    <li><a href="#section32-4">Types of Semiconductors</a></li>
+                    <li><a href="#section32-5">Electrical Conduction in Semiconductors</a></li>
+                    <li><a href="#section32-6">p-n Junction and Diode</a></li>
+                    <li><a href="#section32-7">Zener Diode and Light Emitting Diode</a></li>
+                    <li><a href="#section32-8">Photodiode and Solar Cell</a></li>
+                    <li><a href="#section32-9">p-n Junction Diode as Rectifier</a></li>
+                    <li><a href="#section32-10">Transistor</a></li>
+                    <li><a href="#section32-11">Transistor as an Amplifier</a></li>
+                    <li><a href="#section32-12">Transistor as an Oscillator</a></li>
+                    <li><a href="#section32-13">Transistor as a Switch</a></li>
+                    <li><a href="#section32-14">Logic Gates</a></li>
+                </ul>
+            </li>
+            <li><a href="#chapter33">Chapter 33: Communication</a>
+                <ul>
+                    <li><a href="#section33-1">Introduction to Communication</a></li>
+                    <li><a href="#section33-2">Communication System</a></li>
+                    <li><a href="#section33-3">Message Signals</a></li>
+                    <li><a href="#section33-4">Modulation</a></li>
+                    <li><a href="#section33-5">Antenna</a></li>
+                    <li><a href="#section33-6">Propagation of Electromagnetic Waves</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+
+
+
+<!------------------------MAIN CHAPTERS--------------------------->
+    <main>
+	
+	
+	
+	<!------------------------CHAPTER 1--------------------------->
+        <section id="chapter1">
+            <h2>Chapter 1: Units and Measurement</h2>
+            <section id="section1-1">
+                <h3>1.1 Physical Quantities and Units</h3>
+                <p>The comparison of any physical quantity with its standard unit is called measurement. Physical quantities are those that can be measured directly or indirectly, and the laws of physics are described in terms of these quantities.</p>
+                <p>A standard amount of a physical quantity chosen to measure the same kind of quantity is called a unit. It should be easily reproducible and internationally accepted.</p>
+                <h4>Fundamental Quantities and Units</h4>
+                <p>Fundamental quantities are independent of each other, and their units are called fundamental units. The following table lists the seven fundamental quantities and their SI units:</p>
+                <table>
+                    <tr><th>Quantity</th><th>Name</th><th>Symbol</th><th>Definition</th></tr>
+                    <tr><td>Length</td><td>Metre</td><td>m</td><td>The length of the path travelled by light in vacuum during a time interval of \( \frac{1}{299,792,458} \) of a second (1983).</td></tr>
+                    <tr><td>Mass</td><td>Kilogram</td><td>kg</td><td>The mass of the international prototype of the kilogram at Sevres, France (1889).</td></tr>
+                    <tr><td>Time</td><td>Second</td><td>s</td><td>The duration of 9,192,631,770 periods of radiation of cesium-133 atom (1967).</td></tr>
+                    <tr><td>Electric Current</td><td>Ampere</td><td>A</td><td>Constant current producing a force of \( 2 \times 10^{-7} \) N/m between two parallel conductors 1 m apart in vacuum (1948).</td></tr>
+                    <tr><td>Thermodynamic Temperature</td><td>Kelvin</td><td>K</td><td>The fraction \( \frac{1}{273.16} \) of the thermodynamic temperature of the triple point of water (1967).</td></tr>
+                    <tr><td>Amount of Substance</td><td>Mole</td><td>mol</td><td>Amount containing as many entities as atoms in 0.012 kg of carbon-12 (1971).</td></tr>
+                    <tr><td>Luminous Intensity</td><td>Candela</td><td>cd</td><td>Luminous intensity of a source emitting monochromatic radiation of frequency \( 540 \times 10^{12} \) Hz with radiant intensity \( \frac{1}{683} \) watt per steradian (1979).</td></tr>
+                </table>
+                <h4>Supplementary Units</h4>
+                <p>Radian (rad) measures plane angle: \( \theta = \frac{ds}{r} \). Steradian (sr) measures solid angle: \( \Omega = \frac{dA}{r^2} \).</p>
+            </section>
+            <section id="section1-2">
+                <h3>1.2 Systems of Units</h3>
+                <p>A system of units includes both fundamental and derived units. Common systems include:</p>
+                <ul>
+                    <li><strong>CGS:</strong> Centimetre (length), Gram (mass), Second (time).</li>
+                    <li><strong>FPS:</strong> Foot (length), Pound (mass), Second (time).</li>
+                    <li><strong>MKS:</strong> Metre (length), Kilogram (mass), Second (time).</li>
+                    <li><strong>SI:</strong> Internationally accepted system with seven fundamental and two supplementary units.</li>
+                </ul>
+                <p>Some practical unit conversions:</p>
+                <table>
+                    <tr><th>Quantity</th><th>Unit Conversion</th></tr>
+                    <tr><td>Length</td><td>\( 1 \, \mu m = 10^{-6} \, m \), \( 1 \, nm = 10^{-9} \, m \), \( 1 \, \text{Å} = 10^{-10} \, m \)</td></tr>
+                    <tr><td>Mass</td><td>\( 1 \, \text{metric ton} = 10^3 \, kg \), \( 1 \, \text{pound} = 0.4537 \, kg \), \( 1 \, \text{amu} = 1.66 \times 10^{-23} \, kg \)</td></tr>
+                    <tr><td>Force</td><td>\( 1 \, \text{dyne} = 10^{-5} \, N \), \( 1 \, \text{kgf} = 9.81 \, N \)</td></tr>
+                    <tr><td>Pressure</td><td>\( 1 \, \text{atm} = 1.01 \times 10^5 \, \text{Pa} \), \( 1 \, \text{mm Hg} = 133 \, \text{Pa} \)</td></tr>
+                </table>
+            </section>
+            <section id="section1-3">
+                <h3>1.3 Dimensions and Significant Figures</h3>
+                <p>Dimensions express a physical quantity in terms of fundamental quantities (e.g., force: \( [M L T^{-2}] \)).</p>
+                <table>
+                    <tr><th>Quantity</th><th>Dimensional Formula</th><th>SI Unit</th></tr>
+                    <tr><td>Velocity</td><td>\( [L T^{-1}] \)</td><td>\( m/s \)</td></tr>
+                    <tr><td>Acceleration</td><td>\( [L T^{-2}] \)</td><td>\( m/s^2 \)</td></tr>
+                    <tr><td>Force</td><td>\( [M L T^{-2}] \)</td><td>\( N \)</td></tr>
+                    <tr><td>Work</td><td>\( [M L^2 T^{-2}] \)</td><td>\( J \)</td></tr>
+                </table>
+                <p>Significant figures indicate the precision of a measurement. Rules include:</p>
+                <ul>
+                    <li>All non-zero digits are significant.</li>
+                    <li>Zeros between non-zero digits are significant (e.g., 1005 has 4 significant figures).</li>
+                    <li>Trailing zeros in decimals are significant (e.g., 1.4750 has 5 significant figures).</li>
+                </ul>
+            </section>
+            <section id="section1-4">
+                <h3>1.4 Errors in Measurement</h3>
+                <p>Errors arise from instrument limitations or other causes. Types include:</p>
+                <ul>
+                    <li><strong>Absolute Error:</strong> \( \Delta a_i = a_m - a_i \), where \( a_m \) is the mean of measurements.</li>
+                    <li><strong>Mean Absolute Error:</strong> \( \Delta a = \frac{|\Delta a_1| + |\Delta a_2| + \cdots + |\Delta a_n|}{n} \).</li>
+                    <li><strong>Relative Error:</strong> \( \frac{\Delta a}{a_m} \).</li>
+                    <li><strong>Percentage Error:</strong> \( \frac{\Delta a}{a_m} \times 100\% \).</li>
+                </ul>
+                <div class="key-terms">
+                    <h4>Key Terms</h4>
+                    <p>Physical Quantity, Fundamental Unit, Derived Unit, Significant Figures, Dimensional Formula</p>
+                </div>
+                <div class="review-questions">
+                    <h4>Review Questions</h4>
+                    <ol>
+                        <li>Define a physical quantity and give three examples.</li>
+                        <li>Calculate the number of significant figures in 0.00789 and 12.340.</li>
+                        <li>Explain the principle of homogeneity in dimensional analysis.</li>
+                    </ol>
+                </div>
+            </section>
+        </section>
+        <section id="chapter2">
+            <h2>Chapter 2: Scalars and Vectors</h2>
+            <section id="section2-1">
+                <h3>2.1 Scalars and Tensors</h3>
+                <p>Scalars require only magnitude (e.g., mass, speed). Tensors have different values in different directions (e.g., moment of inertia).</p>
+            </section>
+            <section id="section2-2">
+                <h3>2.2 Vectors and Their Types</h3>
+                <p>Vectors require magnitude and direction (e.g., displacement, velocity). Types include:</p>
+                <ul>
+                    <li><strong>Polar Vectors:</strong> Have a starting point (e.g., force).</li>
+                    <li><strong>Axial Vectors:</strong> Represent rotational effects (e.g., angular momentum).</li>
+                    <li><strong>Unit Vector:</strong> \( \hat{A} = \frac{\vec{A}}{|\vec{A}|} \).</li>
+                    <li><strong>Zero Vector:</strong> Magnitude is zero, direction undefined.</li>
+                </ul>
+            </section>
+            <section id="section2-3">
+                <h3>2.3 Vector Operations</h3>
+                <p><strong>Addition:</strong> Triangle law: \( \vec{R} = \sqrt{A^2 + B^2 + 2AB \cos \theta} \).</p>
+                <p><strong>Dot Product:</strong> \( \vec{A} \cdot \vec{B} = AB \cos \theta \).</p>
+                <p><strong>Cross Product:</strong> \( \vec{A} \times \vec{B} = AB \sin \theta \, \hat{n} \).</p>
+                <p><strong>Resolution:</strong> For a vector \( \vec{A} \) at angle \( \theta \), components are \( A_x = A \cos \theta \), \( A_y = A \sin \theta \).</p>
+                <div class="key-terms">
+                    <h4>Key Terms</h4>
+                    <p>Scalar, Vector, Dot Product, Cross Product, Unit Vector</p>
+                </div>
+                <div class="review-questions">
+                    <h4>Review Questions</h4>
+                    <ol>
+                        <li>Differentiate between scalar and vector quantities with examples.</li>
+                        <li>Calculate the resultant of two vectors \( \vec{A} = 3\hat{i} + 4\hat{j} \) and \( \vec{B} = 5\hat{i} - 2\hat{j} \).</li>
+                        <li>Explain the significance of the cross product in physics.</li>
+                    </ol>
+                </div>
+            </section>
+        </section>
+        <section id="chapter3">
+            <h2>Chapter 3: Motion in a Straight Line</h2>
+            <section id="section3-1">
+                <h3>3.1 Motion and Rest</h3>
+                <p>Motion occurs when an object changes position with respect to its surroundings over time. Rest is the absence of such change. Both are relative to the frame of reference.</p>
+            </section>
+            <section id="section3-2">
+                <h3>3.2 Speed and Velocity</h3>
+                <p>Speed is the rate of change of distance: \( v = \frac{s}{t} \). Velocity is the rate of change of displacement: \( \vec{v} = \frac{\Delta \vec{x}}{\Delta t} \).</p>
+                <p>Average speed: \( v_{\text{avg}} = \frac{\text{Total distance}}{\text{Total time}} \). Average velocity: \( \vec{v}_{\text{avg}} = \frac{\Delta \vec{x}}{\Delta t} \).</p>
+            </section>
+            <section id="section3-3">
+                <h3>3.3 Acceleration</h3>
+                <p>Acceleration is the rate of change of velocity: \( \vec{a} = \frac{\Delta \vec{v}}{\Delta t} \). Uniform acceleration implies constant change in velocity.</p>
+            </section>
+            <section id="section3-4">
+                <h3>3.4 Equations of Motion</h3>
+                <p>For uniformly accelerated motion:</p>
+                <ol>
+                    <li>\( v = u + at \)</li>
+                    <li>\( s = ut + \frac{1}{2}at^2 \)</li>
+                    <li>\( v^2 = u^2 + 2as \)</li>
+                    <li>Distance in \( n \)-th second: \( s_n = u + \frac{a}{2}(2n - 1) \)</li>
+                </ol>
+                <div class="key-terms">
+                    <h4>Key Terms</h4>
+                    <p>Displacement, Velocity, Acceleration, Uniform Motion</p>
+                </div>
+                <div class="review-questions">
+                    <h4>Review Questions</h4>
+                    <ol>
+                        <li>Derive the second equation of motion graphically.</li>
+                        <li>A car accelerates from rest at \( 2 \, m/s^2 \) for 5 seconds. Calculate its final velocity.</li>
+                        <li>Explain the difference between average speed and instantaneous velocity.</li>
+                    </ol>
+                </div>
+            </section>
+        </section>
+        <section id="chapter4">
+            <h2>Chapter 4: Motion in a Plane</h2>
+            <section id="section4-1">
+                <h3>4.1 Position and Displacement Vectors</h3>
+                <p>Position vector: \( \vec{r} = x\hat{i} + y\hat{j} \). Displacement vector: \( \Delta \vec{r} = (x_2 - x_1)\hat{i} + (y_2 - y_1)\hat{j} \).</p>
+            </section>
+            <section id="section4-2">
+                <h3>4.2 Velocity and Acceleration Vectors</h3>
+                <p>Velocity: \( \vec{v} = \frac{d\vec{r}}{dt} = \frac{dx}{dt}\hat{i} + \frac{dy}{dt}\hat{j} \). Acceleration: \( \vec{a} = \frac{d\vec{v}}{dt} \).</p>
+            </section>
+            <section id="section4-3">
+                <h3>4.3 Projectile Motion</h3>
+                <p>A projectile launched at angle \( \theta \) with velocity \( u \):</p>
+                <ul>
+                    <li>Time of flight: \( T = \frac{2u \sin \theta}{g} \)</li>
+                    <li>Maximum height: \( H = \frac{u^2 \sin^2 \theta}{2g} \)</li>
+                    <li>Range: \( R = \frac{u^2 \sin 2\theta}{g} \)</li>
+                </ul>
+            </section>
+            <section id="section4-4">
+                <h3>4.4 Circular Motion</h3>
+                <p>Uniform circular motion involves constant speed. Centripetal acceleration: \( a = \frac{v^2}{r} = \omega^2 r \). Centripetal force: \( F = \frac{mv^2}{r} \).</p>
+                <div class="key-terms">
+                    <h4>Key Terms</h4>
+                    <p>Projectile, Centripetal Force, Angular Velocity, Time of Flight</p>
+                </div>
+                <div class="review-questions">
+                    <h4>Review Questions</h4>
+                    <ol>
+                        <li>Derive the expression for the range of a projectile.</li>
+                        <li>Calculate the centripetal force for a 2 kg object moving at 5 m/s in a circle of radius 3 m.</li>
+                        <li>Explain why the work done by centripetal force is zero.</li>
+                    </ol>
+                </div>
+            </section>
+        </section>
+		
+		<section id="chapter5">
+            <h2>Chapter 5: Laws of Motion</h2>
+            <section id="section5-1">
+                <h3>5.1 Inertia</h3>
+                <p>Inertia is the property of an object by virtue of which it cannot change its state of rest or uniform motion along a straight line without external influence. The inertia of a body is proportional to its mass; greater mass implies greater inertia.</p>
+                <p><strong>Types of Inertia:</strong></p>
+                <ul>
+                    <li><strong>Inertia of Rest:</strong> Tendency of a body to remain at rest. For example, a book on a table does not move unless pushed.</li>
+                    <li><strong>Inertia of Motion:</strong> Tendency to maintain uniform motion. For example, a moving car continues moving unless braked.</li>
+                    <li><strong>Inertia of Direction:</strong> Inability to change direction without external force, e.g., a car turning requires steering force.</li>
+                </ul>
+            </section>
+            <section id="section5-2">
+                <h3>5.2 Force</h3>
+                <p>Force is a push or pull that changes or attempts to change an object's state of rest, motion, size, or shape. Its SI unit is the newton (N), with dimensional formula \( [MLT^{-2}] \).</p>
+                <p><strong>Types of Forces:</strong></p>
+                <ul>
+                    <li><strong>Contact Forces:</strong> Include frictional force, tension, spring force, and normal force.</li>
+                    <li><strong>Distant (Field) Forces:</strong> Include electrostatic, gravitational, and magnetic forces.</li>
+                    <li><strong>Impulsive Force:</strong> A force acting briefly but causing significant momentum change, e.g., a kick to a ball.</li>
+                </ul>
+            </section>
+            <section id="section5-3">
+                <h3>5.3 Linear Momentum</h3>
+                <p>Linear momentum is the product of a body's mass and velocity, denoted by \( \vec{p} = m \vec{v} \). It is a vector quantity with SI unit kg-m/s and dimensional formula \( [MLT^{-1}] \).</p>
+                <p><strong>Law of Conservation of Linear Momentum:</strong> If no external forces act on a system, its total linear momentum remains conserved, independent of the frame of reference.</p>
+                <p><strong>Impulse:</strong> The product of an impulsive force and the time it acts, equal to the change in momentum: \( \text{Impulse} = \vec{F} \cdot t = \Delta \vec{p} \). Its SI unit is N-s or kg-m/s, with dimensional formula \( [MLT^{-1}] \).</p>
+            </section>
+            <section id="section5-4">
+                <h3>5.4 Newton’s Laws of Motion</h3>
+                <p><strong>First Law (Law of Inertia):</strong> A body remains at rest or in uniform motion unless acted upon by an external force. Examples: dust leaving a beaten carpet, passengers lurching forward in a stopping vehicle.</p>
+                <p><strong>Second Law:</strong> The rate of change of momentum is proportional to the applied force and occurs in the direction of the force: \( \vec{F} = m \vec{a} \). This is a vector law, with components \( F_x = m a_x \), \( F_y = m a_y \), \( F_z = m a_z \).</p>
+                <p><strong>Third Law:</strong> For every action, there is an equal and opposite reaction acting on different bodies: \( \vec{F}_{12} = -\vec{F}_{21} \). Examples: swimming, rocket propulsion, or a gun's recoil.</p>
+                <p>Newton’s second law is considered the real law, as it encompasses the first and third laws.</p>
+            </section>
+            <section id="section5-5">
+                <h3>5.5 Equilibrium and Common Forces</h3>
+                <p><strong>Equilibrium:</strong> A particle is in equilibrium if the vector sum of forces is zero: \( \vec{F}_1 + \vec{F}_2 = 0 \). Lami’s theorem states that for three forces in equilibrium, each is proportional to the sine of the angle between the other two: \( \frac{F_1}{\sin \alpha} = \frac{F_2}{\sin \beta} = \frac{F_3}{\sin \gamma} \).</p>
+                <p><strong>Common Forces:</strong></p>
+                <ul>
+                    <li><strong>Weight:</strong> \( \vec{w} = m \vec{g} \), a field force pulling towards Earth's center.</li>
+                    <li><strong>Normal Reaction:</strong> Perpendicular force between contacting surfaces.</li>
+                    <li><strong>Tension:</strong> Pulling force in ropes or strings, constant across a massless pulley.</li>
+                    <li><strong>Apparent Weight in a Lift:</strong> At rest or constant speed, \( R = mg \); accelerating upward, \( R = m(g + a) \); accelerating downward, \( R = m(g - a) \); in free fall, \( R = 0 \).</li>
+                </ul>
+            </section>
+            <section id="section5-6">
+                <h3>5.6 Friction</h3>
+                <p>Friction opposes relative motion at contact points, arising from intermolecular interactions. Types include:</p>
+                <ul>
+                    <li><strong>Static Friction:</strong> Opposes impending motion, self-adjusting up to a maximum: \( f_s (\text{max}) = \mu_s R \).</li>
+                    <li><strong>Limiting Friction:</strong> Maximum static friction when motion is imminent.</li>
+                    <li><strong>Kinetic Friction:</strong> Acts during motion: \( f_k = \mu_k R \). Includes sliding and rolling friction, with rolling friction being less.</li>
+                </ul>
+                <p><strong>Angle of Friction:</strong> Angle between normal reaction and resultant force: \( \tan \theta = \mu_s \).</p>
+                <p><strong>Angle of Repose:</strong> Minimum angle for sliding: \( \tan \alpha = \mu_s \).</p>
+                <p><strong>Motion on Rough Inclined Plane:</strong> Normal reaction \( R = mg \cos \theta \), net force \( F = mg \sin \theta - f \), acceleration \( a = g (\sin \theta - \mu \cos \theta) \).</p>
+            </section>
+            <section id="section5-7">
+                <h3>5.7 Motion of Bodies in Contact and Connected Systems</h3>
+                <p><strong>Two Bodies in Contact:</strong> For force \( F \) on mass \( m_1 \), acceleration \( a = \frac{F}{m_1 + m_2} \), contact forces \( F_1 = m_2 a \), \( F_2 = m_1 a \).</p>
+                <p><strong>Three Bodies in Contact:</strong> Acceleration \( a = \frac{F}{m_1 + m_2 + m_3} \), contact forces between \( m_1 \) and \( m_2 \): \( F_1 = (m_2 + m_3) a \), between \( m_2 \) and \( m_3 \): \( F_2 = m_3 a \).</p>
+                <p><strong>Bodies Connected by Strings:</strong> For masses \( m_1, m_2, m_3 \), acceleration \( a = \frac{F}{m_1 + m_2 + m_3} \), tensions \( T_2 = (m_2 + m_3) a \), \( T_3 = m_3 a \).</p>
+                <p><strong>Pulley Systems:</strong> For unequal masses \( m_1 > m_2 \), acceleration \( a = \frac{(m_1 - m_2) g}{m_1 + m_2} \), tension \( T = \frac{2 m_1 m_2 g}{m_1 + m_2} \).</p>
+                <p><strong>Motion on Inclined Planes:</strong> For two masses on different inclines, acceleration and tension depend on angles and masses, as derived in the text.</p>
+                <div class="key-terms">
+                    <h4>Key Terms</h4>
+                    <p>Inertia, Force, Linear Momentum, Impulse, Newton’s Laws, Friction, Equilibrium</p>
+                </div>
+                <div class="review-questions">
+                    <h4>Review Questions</h4>
+                    <ol>
+                        <li>Explain the three types of inertia with examples.</li>
+                        <li>Derive Newton’s second law and show how it encompasses the first law.</li>
+                        <li>Calculate the acceleration of two masses \( m_1 = 5 \, \text{kg} \), \( m_2 = 3 \, \text{kg} \) connected over a pulley.</li>
+                    </ol>
+                </div>
+            </section>
+        </section>
+        <section id="chapter6">
+            <h2>Chapter 6: Work, Energy, and Power</h2>
+            <section id="section6-1">
+                <h3>6.1 Work</h3>
+                <p>Work is done when a force causes displacement in its direction: \( W = \vec{F} \cdot \vec{s} = Fs \cos \theta \). It is a scalar quantity with SI unit joule (J) and dimensional formula \( [ML^2 T^{-2}] \). 1 J = \( 10^7 \) erg.</p>
+                <p>Work is zero if displacement is zero or perpendicular to the force (\( \theta = 90^\circ \)). Work is positive for acute angles and negative for obtuse angles.</p>
+                <p><strong>Special Cases:</strong></p>
+                <ul>
+                    <li><strong>Variable Force:</strong> \( W = \int \vec{F} \cdot d\vec{s} \), area under force-displacement graph.</li>
+                    <li><strong>Conservative Forces:</strong> Work depends only on initial and final positions (e.g., gravity, electrostatic).</li>
+                    <li><strong>Non-Conservative Forces:</strong> Work depends on path (e.g., friction).</li>
+                    <li><strong>Gravity:</strong> \( W = mgh \). <strong>Spring:</strong> \( W = -\frac{1}{2} k x^2 \).</li>
+                </ul>
+            </section>
+            <section id="section6-2">
+                <h3>6.2 Energy</h3>
+                <p>Energy is the capacity to do work, a scalar quantity with SI unit joule and dimensional formula \( [ML^2 T^{-2}] \).</p>
+                <p><strong>Mechanical Energy:</strong></p>
+                <ul>
+                    <li><strong>Kinetic Energy:</strong> Energy due to motion: \( K = \frac{1}{2} m v^2 = \frac{p^2}{2m} \).</li>
+                    <li><strong>Potential Energy:</strong> Energy due to position or configuration, defined for conservative forces: \( F(x) = -\frac{dU}{dx} \). Examples: Gravitational \( U = mgh \), elastic \( U = \frac{1}{2} k x^2 \), electric \( U = \frac{1}{4 \pi \epsilon_0} \frac{q_1 q_2}{r} \).</li>
+                </ul>
+                <p><strong>Equilibrium Types:</strong> Stable (\( \frac{d^2 U}{dr^2} > 0 \)), unstable (\( \frac{d^2 U}{dr^2} < 0 \)), neutral (\( \frac{d^2 U}{dr^2} = 0 \)).</p>
+            </section>
+            <section id="section6-3">
+                <h3>6.3 Work-Energy Theorem</h3>
+                <p>Work done equals the change in kinetic energy: \( W = \int \vec{F} \cdot d\vec{s} = \frac{1}{2} m v_f^2 - \frac{1}{2} m v_i^2 = \Delta K \). This applies in both inertial and non-inertial frames, including pseudo forces in the latter.</p>
+            </section>
+            <section id="section6-4">
+                <h3>6.4 Power</h3>
+                <p>Power is the rate of doing work: \( P = \frac{W}{t} = \vec{F} \cdot \vec{v} = F v \cos \theta \). It is a scalar quantity with SI unit watt (W) and dimensional formula \( [ML^2 T^{-3}] \). 1 kW = 1000 W, 1 hp = 746 W, 1 kWh = \( 3.6 \times 10^6 \) J.</p>
+            </section>
+            <section id="section6-5">
+                <h3>6.5 Collisions</h3>
+                <p>Collisions involve strong forces over a short time. Types include:</p>
+                <ul>
+                    <li><strong>Elastic Collision:</strong> Both momentum and kinetic energy conserved. For one-dimensional collision: \( v_2 - v_1 = -(u_2 - u_1) \).</li>
+                    <li><strong>Inelastic Collision:</strong> Only momentum conserved. Perfectly inelastic collisions result in bodies sticking together.</li>
+                    <li><strong>Coefficient of Restitution (e):</strong> \( e = \frac{\text{relative velocity after collision}}{\text{relative velocity before collision}} \). \( e = 1 \) (elastic), \( e = 0 \) (perfectly inelastic), \( 0 < e < 1 \) (inelastic).</li>
+                </ul>
+                <p><strong>One-Dimensional Elastic Collision:</strong> Velocities after collision: \( v_1 = \frac{m_1 - m_2}{m_1 + m_2} u_1 + \frac{2 m_2}{m_1 + m_2} u_2 \), \( v_2 = \frac{m_2 - m_1}{m_1 + m_2} u_2 + \frac{2 m_1}{m_1 + m_2} u_1 \).</p>
+                <p><strong>Inelastic Collision Loss:</strong> \( \Delta K = \frac{m_1 m_2}{2 (m_1 + m_2)} (u_1 - u_2)^2 (1 - e^2) \).</p>
+                <div class="key-terms">
+                    <h4>Key Terms</h4>
+                    <p>Work, Kinetic Energy, Potential Energy, Power, Collision, Conservation of Energy</p>
+                </div>
+                <div class="review-questions">
+                    <h4>Review Questions</h4>
+                    <ol>
+                        <li>Derive the work-energy theorem for a variable force.</li>
+                        <li>Calculate the work done in stretching a spring by 0.1 m with spring constant 500 N/m.</li>
+                        <li>Explain the coefficient of restitution in elastic and inelastic collisions.</li>
+                    </ol>
+                </div>
+            </section>
+        </section>
+        <section id="chapter7">
+            <h2>Chapter 7: Rotational Motion</h2>
+            <section id="section7-1">
+                <h3>7.1 Centre of Mass</h3>
+                <p>The centre of mass of a system is where its mass appears concentrated, behaving as if all external forces act there. For \( n \) particles: \( \vec{r}_{CM} = \frac{\sum_{i=1}^n m_i \vec{r}_i}{\sum_{i=1}^n m_i} \). Coordinates: \( x_{CM} = \frac{\sum m_i x_i}{\sum m_i} \), similarly for \( y \) and \( z \).</p>
+                <p>For two particles: \( \vec{r}_{CM} = \frac{m_1 \vec{r}_1 + m_2 \vec{r}_2}{m_1 + m_2} \). Velocity: \( \vec{v}_{CM} = \frac{m_1 \vec{v}_1 + m_2 \vec{v}_2}{m_1 + m_2} \). It remains constant for an isolated system.</p>
+            </section>
+            <section id="section7-2">
+                <h3>7.2 Linear Momentum of a System</h3>
+                <p>Total momentum: \( \vec{p} = M \vec{v}_{CM} \). Newton’s second law for a system: \( \vec{F}_{\text{ext}} = \frac{d\vec{p}}{dt} \).</p>
+            </section>
+            <section id="section7-3">
+                <h3>7.3 Rotational Motion and Moment of Inertia</h3>
+                <p><strong>Rotational Motion:</strong> Each particle moves in a circle around a fixed axis. Equations: \( \omega = \omega_0 + \alpha t \), \( \theta = \omega_0 t + \frac{1}{2} \alpha t^2 \), \( \omega^2 = \omega_0^2 + 2 \alpha \theta \).</p>
+                <p><strong>Moment of Inertia:</strong> \( I = \sum m_i r_i^2 \), with SI unit kg-m² and dimensional formula \( [ML^2] \). Depends on mass distribution and axis position.</p>
+                <p><strong>Radius of Gyration:</strong> \( K = \sqrt{\frac{\sum r_i^2}{n}} \), so \( I = M K^2 \).</p>
+                <p><strong>Theorems:</strong> Parallel axes: \( I = I_{CM} + M r^2 \). Perpendicular axes (2D): \( I_z = I_x + I_y \).</p>
+                <table>
+                    <tr><th>Body</th><th>Axis</th><th>Moment of Inertia</th></tr>
+                    <tr><td>Thin Circular Ring</td><td>Through center, perpendicular to plane</td><td>\( I = M R^2 \)</td></tr>
+                    <tr><td>Circular Disc</td><td>Through center, perpendicular to plane</td><td>\( I = \frac{1}{2} M R^2 \)</td></tr>
+                    <tr><td>Solid Sphere</td><td>About diameter</td><td>\( I = \frac{2}{5} M R^2 \)</td></tr>
+                </table>
+            </section>
+            <section id="section7-4">
+                <h3>7.4 Torque and Angular Momentum</h3>
+                <p><strong>Torque:</strong> \( \vec{\tau} = \vec{r} \times \vec{F} = r F \sin \theta \hat{n} \), with SI unit N-m and dimensional formula \( [ML^2 T^{-2}] \). \( \tau = I \alpha \).</p>
+                <p><strong>Angular Momentum:</strong> \( \vec{L} = I \vec{\omega} = \vec{r} \times \vec{p} \), with SI unit J-s and dimensional formula \( [ML^2 T^{-1}] \). \( \vec{\tau} = \frac{d\vec{L}}{dt} \).</p>
+                <p><strong>Conservation of Angular Momentum:</strong> If \( \vec{\tau}_{\text{ext}} = 0 \), then \( I \omega = \text{constant} \).</p>
+            </section>
+            <section id="section7-5">
+                <h3>7.5 Rolling Motion</h3>
+                <p>Rolling combines translation and rotation. For a body rolling down an incline without slipping: acceleration \( a = \frac{g \sin \theta}{1 + \frac{K^2}{r^2}} \), velocity \( v = \sqrt{\frac{2 g h}{1 + \frac{K^2}{r^2}}} \), time \( t = \sqrt{\frac{2 s (1 + \frac{K^2}{r^2})}{g \sin \theta}} \).</p>
+                <p>Total kinetic energy: \( K = \frac{1}{2} m v^2 + \frac{1}{2} I \omega^2 \). Power by torque: \( P = \tau \omega \).</p>
+                <div class="key-terms">
+                    <h4>Key Terms</h4>
+                    <p>Centre of Mass, Moment of Inertia, Torque, Angular Momentum, Rolling Motion</p>
+                </div>
+                <div class="review-questions">
+                    <h4>Review Questions</h4>
+                    <ol>
+                        <li>Derive the expression for the centre of mass of a two-particle system.</li>
+                        <li>Calculate the moment of inertia of a solid sphere about its diameter.</li>
+                        <li>Explain conservation of angular momentum with an example.</li>
+                    </ol>
+                </div>
+            </section>
+        </section>
+        <section id="chapter8">
+            <h2>Chapter 8: Gravitation</h2>
+            <section id="section8-1">
+                <h3>8.1 Newton’s Law of Gravitation</h3>
+                <p>Gravitational force between two masses \( m_1 \) and \( m_2 \) separated by distance \( r \): \( F = \frac{G m_1 m_2}{r^2} \), where \( G = 6.67 \times 10^{-11} \, \text{N-m}^2/\text{kg}^2 \). Dimensional formula: \( [M^{-1} L^3 T^{-2}] \). It is a central, conservative force, independent of medium.</p>
+            </section>
+            <section id="section8-2">
+                <h3>8.2 Acceleration Due to Gravity</h3>
+                <p>Acceleration due to gravity: \( g = \frac{G M}{R^2} \), approximately 9.8 m/s² on Earth. Varies with:</p>
+                <ul>
+                    <li><strong>Shape:</strong> Minimum at equator, maximum at poles due to Earth’s oblate shape.</li>
+                    <li><strong>Rotation:</strong> \( g' = g - R \omega^2 \cos^2 \lambda \), minimum at equator.</li>
+                    <li><strong>Altitude:</strong> \( g' = g \left(1 + \frac{h}{R}\right)^{-2} \approx g \left(1 - \frac{2h}{R}\right) \).</li>
+                    <li><strong>Depth:</strong> \( g' = g \left(1 - \frac{h}{R}\right) \), zero at Earth’s center.</li>
+                </ul>
+            </section>
+            <section id="section8-3">
+                <h3>8.3 Gravitational Field and Potential</h3>
+                <p><strong>Gravitational Field Intensity:</strong> \( \vec{E}_g = \frac{\vec{F}}{m} = \frac{G M}{r^2} \hat{r} \), with SI unit N/kg and dimensional formula \( [LT^{-2}] \).</p>
+                <p><strong>Gravitational Potential:</strong> Work done per unit mass: \( V_g = -\frac{G M}{r} \), SI unit J/kg, dimensional formula \( [L^2 T^{-2}] \).</p>
+                <p><strong>Potential Energy:</strong> \( U = -\frac{G M m}{r} \). For a system of particles: \( U = -G \sum \frac{m_i m_j}{r_{ij}} \).</p>
+                <p><strong>Relation:</strong> \( \vec{E}_g = -\nabla V_g \).</p>
+            </section>
+            <section id="section8-4">
+                <h3>8.4 Kepler’s Laws and Satellites</h3>
+                <p><strong>Kepler’s Laws:</strong></p>
+                <ul>
+                    <li><strong>Law of Orbits:</strong> Planets move in elliptical orbits with the Sun at one focus.</li>
+                    <li><strong>Law of Areas:</strong> Areal velocity is constant: \( \frac{dA}{dt} = \frac{L}{2m} \).</li>
+                    <li><strong>Law of Periods:</strong> \( T^2 \propto a^3 \).</li>
+                </ul>
+                <p><strong>Satellites:</strong> Time period \( T = 2\pi \sqrt{\frac{r^3}{G M}} \). Geostationary satellites: \( h \approx 36,000 \, \text{km} \), \( T = 24 \, \text{h} \). Polar satellites: \( h \approx 880 \, \text{km} \), \( T \approx 84 \, \text{min} \).</p>
+            </section>
+            <section id="section8-5">
+                <h3>8.5 Escape Velocity and Weightlessness</h3>
+                <p><strong>Escape Velocity:</strong> \( v_e = \sqrt{\frac{2 G M}{R}} = \sqrt{2 g R} \approx 11.2 \, \text{km/s} \) on Earth. Independent of mass or direction.</p>
+                <p><strong>Weightlessness:</strong> Occurs when effective weight is zero, e.g., in free fall, satellites, or at Earth’s center.</p>
+                <div class="key-terms">
+                    <h4>Key Terms</h4>
+                    <p>Gravitational Force, Acceleration Due to Gravity, Gravitational Potential, Escape Velocity, Kepler’s Laws</p>
+                </div>
+                <div class="review-questions">
+                    <h4>Review Questions</h4>
+                    <ol>
+                        <li>Derive the expression for gravitational potential energy.</li>
+                        <li>Calculate the escape velocity from the Moon (mass \( 7.34 \times 10^{22} \, \text{kg} \), radius \( 1.74 \times 10^6 \, \text{m} \)).</li>
+                        <li>Explain Kepler’s second law using angular momentum conservation.</li>
+                    </ol>
+                </div>
+            </section>
+        </section>
+        <section id="chapter9">
+            <h2>Chapter 9: Elasticity</h2>
+            <section id="section9-1">
+                <h3>9.1 Deforming Force and Elasticity</h3>
+                <p>A deforming force changes an object’s configuration. Elasticity is the property allowing a body to regain its original shape after the force is removed. Elastic limit is the maximum force beyond which permanent deformation occurs.</p>
+                <p><strong>Perfectly Elastic Bodies:</strong> Regain shape immediately (e.g., quartz). <strong>Perfectly Plastic Bodies:</strong> Retain deformation (e.g., putty).</p>
+            </section>
+            <section id="section9-2">
+                <h3>9.2 Stress and Strain</h3>
+                <p><strong>Stress:</strong> Internal restoring force per unit area: \( \text{Stress} = \frac{F}{A} \), SI unit N/m², dimensional formula \( [ML^{-1} T^{-2}] \). Types: normal (tensile/compressive), volumetric, tangential.</p>
+                <p><strong>Strain:</strong> Fractional change in configuration, dimensionless. Types: longitudinal (\( \frac{\Delta l}{l} \)), volumetric (\( \frac{\Delta V}{V} \)), shearing (angular displacement).</p>
+                <p><strong>Hooke’s Law:</strong> Within elastic limit, stress is proportional to strain: \( \text{Stress} = E \cdot \text{Strain} \), where \( E \) is the modulus of elasticity.</p>
+            </section>
+            <section id="section9-3">
+                <h3>9.3 Elastic Moduli</h3>
+                <p><strong>Young’s Modulus:</strong> \( Y = \frac{\text{Normal Stress}}{\text{Longitudinal Strain}} = \frac{F l}{A \Delta l} \), SI unit N/m².</p>
+                <p><strong>Bulk Modulus:</strong> \( K = -\frac{\Delta p V}{\Delta V} \), negative sign indicates volume decrease with pressure increase.</p>
+                <p><strong>Shear Modulus:</strong> \( \eta = \frac{\text{Tangential Stress}}{\text{Shearing Strain}} = \frac{F}{A \theta} \).</p>
+                <p><strong>Compressibility:</strong> \( C = \frac{1}{K} \), SI unit N⁻¹ m².</p>
+            </section>
+            <section id="section9-4">
+                <h3>9.4 Poisson’s Ratio and Elastic Properties</h3>
+                <p><strong>Poisson’s Ratio:</strong> \( \sigma = -\frac{\text{Lateral Strain}}{\text{Longitudinal Strain}} = -\frac{\Delta R / R}{\Delta l / l} \), ranges between -1 and 0.5, typically 0 to 0.5.</p>
+                <p><strong>Relations:</strong> \( Y = 3 K (1 - 2 \sigma) \), \( Y = 2 \eta (1 + \sigma) \), \( \sigma = \frac{3 K - 2 \eta}{2 (3 K + \eta)} \).</p>
+                <p><strong>Factors Affecting Elasticity:</strong> Temperature (decreases), annealing (decreases), hammering (increases), impurities (varies).</p>
+            </section>
+            <section id="section9-5">
+                <h3>9.5 Elastic Energy and Structural Applications</h3>
+                <p><strong>Elastic Potential Energy:</strong> \( U = \frac{1}{2} \text{Stress} \cdot \text{Strain} \cdot \text{Volume} = \frac{1}{2} Y (\text{Strain})^2 \cdot \text{Volume} \). For a spring: \( U = \frac{1}{2} k x^2 \).</p>
+                <p><strong>Thermal Stress:</strong> \( \text{Stress} = Y \alpha \Delta \theta \), where \( \alpha \) is the coefficient of linear expansion.</p>
+                <p><strong>Cantilever:</strong> Depression \( \delta = \frac{w l^3}{3 Y I_G} \). For rectangular cross-section: \( I_G = \frac{b d^3}{12} \).</p>
+                <p><strong>Torsion:</strong> Couple per unit twist \( C = \frac{\pi \eta r^4}{2 l} \), work done \( W = \frac{1}{2} C \theta^2 \).</p>
+                <div class="key-terms">
+                    <h4>Key Terms</h4>
+                    <p>Elasticity, Stress, Strain, Young’s Modulus, Poisson’s Ratio, Elastic Energy</p>
+                </div>
+                <div class="review-questions">
+                    <h4>Review Questions</h4>
+                    <ol>
+                        <li>Derive the expression for Young’s modulus for a wire.</li>
+                        <li>Calculate the elastic potential energy stored in a spring stretched by 0.05 m with \( k = 200 \, \text{N/m} \).</li>
+                        <li>Explain the significance of Poisson’s ratio in material science.</li>
+                    </ol>
+                </div>
+            </section>
+        </section>
+        <section id="chapter10">
+            <h2>Chapter 10: Hydrostatics</h2>
+            <section id="section10-1">
+                <h3>10.1 Fluids and Thrust</h3>
+                <p>Fluids (liquids and gases) flow under external forces, taking the shape of their container. Thrust is the total normal force exerted by a fluid at rest on a surface, measured in newtons.</p>
+            </section>
+            <section id="section10-2">
+                <h3>10.2 Pressure in Fluids</h3>
+                <p>Pressure is force per unit area: \( p = \frac{F}{A} \), with SI unit N/m² and dimensional formula \( [ML^{-1} T^{-2}] \). Hydrostatic pressure: \( p = \rho h g \). Mean pressure on vessel walls: \( \frac{\rho h g}{2} \).</p>
+                <p><strong>Variation with Depth:</strong> \( p = p_0 + \rho h g \), where \( p_0 \) is atmospheric pressure (1 atm = \( 1.013 \times 10^5 \, \text{Pa} \)).</p>
+                <p><strong>Hydrostatic Paradox:</strong> Pressure depends on depth, not liquid quantity or vessel shape.</p>
+            </section>
+            <section id="section10-3">
+                <h3>10.3 Buoyancy and Archimedes’ Principle</h3>
+                <p>Buoyancy is the upward force on a body in a fluid: \( F_b = \rho V g \), acting at the center of buoyancy. Archimedes’ principle: Weight loss equals the weight of displaced fluid.</p>
+                <p>Real weight: \( w = \frac{T}{1 - \frac{\rho}{\sigma}} \), where \( T \) is apparent weight, \( \rho \) is fluid density, \( \sigma \) is body density.</p>
+            </section>
+            <section id="section10-4">
+                <h3>10.4 Laws of Floatation</h3>
+                <p>A body floats if its weight equals the buoyant force. Conditions:</p>
+                <ul>
+                    <li><strong>Sinking:</strong> \( W > F_b \).</li>
+                    <li><strong>Partially Submerged:</strong> \( W < F_b \).</li>
+                    <li><strong>Floating:</strong> \( W = F_b \).</li>
+                </ul>
+                <p>Fraction of volume outside: \( \frac{V_{\text{out}}}{V} = 1 - \frac{\rho}{\sigma} \).</p>
+            </section>
+            <section id="section10-5">
+                <h3>10.5 Density and Relative Density</h3>
+                <p>Density: \( \rho = \frac{m}{V} \), SI unit kg/m³, dimensional formula \( [ML^{-3}] \). Relative density: \( \frac{\text{Density of substance}}{\text{Density of water at } 4^\circ \text{C}} \), dimensionless.</p>
+                <p><strong>Mixture Density:</strong> For two liquids: \( \rho = \frac{m_1 + m_2}{\frac{m_1}{\rho_1} + \frac{m_2}{\rho_2}} \). Equal masses: \( \rho = \frac{2 \rho_1 \rho_2}{\rho_1 + \rho_2} \). Equal volumes: \( \rho = \frac{\rho_1 + \rho_2}{2} \).</p>
+                <div class="key-terms">
+                    <h4>Key Terms</h4>
+                    <p>Fluid, Pressure, Buoyancy, Archimedes’ Principle, Relative Density</p>
+                </div>
+                <div class="review-questions">
+                    <h4>Review Questions</h4>
+                    <ol>
+                        <li>Derive the expression for pressure at a depth in a fluid.</li>
+                        <li>Calculate the buoyant force on a 0.5 m³ object fully immersed in water (\( \rho = 1000 \, \text{kg/m}^3 \)).</li>
+                        <li>Explain the hydrostatic paradox with an example.</li>
+                    </ol>
+                </div>
+            </section>
+        </section>
+	<section id="chapter11">
+            <h2>Chapter 11: Hydrodynamics</h2>
+            <section id="section11-1">
+                <h3>11.1 Flow of Liquid</h3>
+                <p><strong>Streamline Flow:</strong> Streamline flow occurs when each particle of a liquid follows the same path as the preceding particles. Two streamlines cannot cross, and the velocity of the liquid is greater where streamlines are more crowded.</p>
+                <p><strong>Laminar Flow:</strong> This is a steady flow over a horizontal surface in layers with different velocities, often synonymous with streamline flow.</p>
+                <p><strong>Turbulent Flow:</strong> When the velocity exceeds the critical velocity, the flow becomes disordered, forming eddies. Most external energy is used to produce these eddies, leaving little for forward flow.</p>
+            </section>
+            <section id="section11-2">
+                <h3>11.2 Reynold’s Number</h3>
+                <p>Reynold’s number (\( K \)) is a dimensionless quantity, the ratio of inertial force to viscous force per unit area: \( K = \frac{\rho v_c r}{\eta} \), where \( v_c \) is critical velocity, \( \rho \) is density, \( r \) is the radius of the pipe, and \( \eta \) is viscosity.</p>
+                <p>For water in a cylindrical pipe, \( K \approx 1000 \). Flow is:</p>
+                <ul>
+                    <li>Streamline for \( 0 < K < 2000 \).</li>
+                    <li>Variable (streamline or turbulent) for \( 2000 < K < 3000 \).</li>
+                    <li>Turbulent for \( K > 3000 \).</li>
+                </ul>
+            </section>
+            <section id="section11-3">
+                <h3>11.3 Equation of Continuity</h3>
+                <p>For streamline flow in a pipe of varying cross-sectional area, the rate of flow remains constant: \( a v = \text{constant} \) or \( a_1 v_1 = a_2 v_2 \). Velocity is inversely proportional to the cross-sectional area (\( v \propto \frac{1}{a} \)).</p>
+                <p>A falling water stream narrows as its velocity increases, reducing the cross-sectional area. Deep water appears still due to its large cross-sectional area.</p>
+            </section>
+            <section id="section11-4">
+                <h3>11.4 Energy of a Liquid</h3>
+                <p>A liquid in motion possesses three types of energy:</p>
+                <ul>
+                    <li><strong>Pressure Energy:</strong> Per unit mass: \( \frac{p}{\rho} \); per unit volume: \( p \), where \( p \) is pressure and \( \rho \) is density.</li>
+                    <li><strong>Kinetic Energy:</strong> Per unit mass: \( \frac{1}{2} v^2 \); per unit volume: \( \frac{1}{2} \rho v^2 \).</li>
+                    <li><strong>Potential Energy:</strong> Per unit mass: \( gh \); per unit volume: \( \rho g h \), where \( h \) is height.</li>
+                </ul>
+            </section>
+            <section id="section11-5">
+                <h3>11.5 Bernoulli’s Theorem</h3>
+                <p>For an ideal liquid in streamline flow, the total energy per unit volume is constant: \( p + \frac{1}{2} \rho v^2 + \rho g h = \text{constant} \). Alternatively: \( \frac{p}{\rho g} + \frac{v^2}{2g} + h = \text{constant} \), where \( \frac{p}{\rho g} \) is pressure head, \( \frac{v^2}{2g} \) is velocity head, and \( h \) is gravitational head.</p>
+                <p>For horizontal flow: \( p + \frac{1}{2} \rho v^2 = \text{constant} \), where \( p \) is static pressure and \( \frac{1}{2} \rho v^2 \) is dynamic pressure. If \( p \) increases, \( v \) decreases, and vice versa.</p>
+                <p><strong>Applications:</strong> Carburetor, Bunsen burner, Magnus effect, blood flow, aeroplane lift, and wind storms blowing off roofs.</p>
+            </section>
+            <section id="section11-6">
+                <h3>11.6 Venturimeter</h3>
+                <p>A venturimeter measures the rate of liquid flow in pipes using Bernoulli’s theorem. Rate of flow: \( v = a_1 a_2 \sqrt{\frac{2 g h}{a_1^2 - a_2^2}} \), where \( a_1 \) and \( a_2 \) are cross-sectional areas at broader and narrower parts, and \( h \) is the height difference in vertical tubes.</p>
+            </section>
+            <section id="section11-7">
+                <h3>11.7 Torricelli’s Theorem</h3>
+                <p>The velocity of efflux from an orifice is equal to that of a freely falling body over the same vertical distance: \( v = \sqrt{2 g h} \), where \( h \) is the depth of the orifice below the liquid surface.</p>
+                <p>Time to reach base level: \( t = \sqrt{\frac{2 (H - h)}{g}} \). Horizontal range: \( S = \sqrt{4 h (H - h)} \), maximum when \( h = \frac{H}{2} \). Time to empty a tank: \( t = \frac{A}{a} \sqrt{\frac{2 H}{g}} \), where \( A \) is tank area and \( a \) is orifice area. Volume flow rate: \( V = a \sqrt{2 g h} \).</p>
+            </section>
+            <section id="section11-8">
+                <h3>11.8 Viscosity</h3>
+                <p>Viscosity is the property of a fluid that opposes relative motion between its layers via internal frictional forces: \( F = -\eta A \frac{dv}{dx} \), where \( \eta \) is the coefficient of viscosity, \( A \) is area, and \( \frac{dv}{dx} \) is the velocity gradient. SI unit: \( \text{N-s/m}^2 \) or Pa-s, dimensional formula: \( [ML^{-1} T^{-1}] \).</p>
+                <p>Viscosity in liquids arises from cohesive forces, in gases from diffusion. Viscosity decreases with temperature in liquids (\( \eta = \frac{\eta_0}{1 + \alpha t + \beta t^2} \)) but increases in gases (\( \eta \propto \sqrt{T} \)).</p>
+                <p><strong>Poiseuille’s Formula:</strong> Rate of flow: \( v = \frac{\pi p r^4}{8 \eta l} \), where \( p \) is pressure difference, \( r \) is radius, and \( l \) is tube length.</p>
+            </section>
+            <section id="section11-9">
+                <h3>11.9 Stoke’s Law and Terminal Velocity</h3>
+                <p>Stoke’s law: Viscous force on a spherical body: \( F = 6 \pi \eta r v \), where \( r \) is radius and \( v \) is velocity. Terminal velocity: \( v = \frac{2 r^2 (\rho - \sigma) g}{9 \eta} \), where \( \rho \) is body density, \( \sigma \) is fluid density. If \( \rho > \sigma \), body falls; if \( \rho < \sigma \), it rises.</p>
+                <p><strong>Applications:</strong> Millikan’s oil drop experiment, parachute descent, cloud formation.</p>
+            </section>
+            <section id="section11-10">
+                <h3>11.10 Critical Velocity</h3>
+                <p>Critical velocity is the threshold below which flow is streamline and above which it is turbulent: \( v_c = \frac{K \eta}{\rho r} \), where \( K \) is Reynold’s number, \( \eta \) is viscosity, \( \rho \) is density, and \( r \) is pipe radius.</p>
+                <div class="key-terms">
+                    <h4>Key Terms</h4>
+                    <p>Streamline Flow, Reynold’s Number, Bernoulli’s Theorem, Viscosity, Terminal Velocity</p>
+                </div>
+                <div class="review-questions">
+                    <h4>Review Questions</h4>
+                    <ol>
+                        <li>Derive the equation of continuity for streamline flow.</li>
+                        <li>Calculate the terminal velocity of a sphere (radius 0.01 m, density 8000 kg/m³) in water (density 1000 kg/m³, viscosity 0.001 Pa-s).</li>
+                        <li>Explain how Bernoulli’s theorem applies to the Magnus effect.</li>
+                    </ol>
+                </div>
+            </section>
+        </section>
+        <section id="chapter12">
+            <h2>Chapter 12: Surface Tension</h2>
+            <section id="section12-1">
+                <h3>12.1 Surface Tension</h3>
+                <p>Surface tension (\( S \)) is the force per unit length acting tangentially on a liquid’s free surface: \( S = \frac{F}{l} = \frac{\text{Work done}}{\Delta A} \). SI unit: N/m or J/m², dimensional formula: \( [MT^{-2}] \). It arises from cohesive forces and causes small liquid drops to be spherical.</p>
+            </section>
+            <section id="section12-2">
+                <h3>12.2 Adhesive and Cohesive Forces</h3>
+                <p><strong>Adhesive Force:</strong> Attraction between molecules of different substances (e.g., water and glass). <strong>Cohesive Force:</strong> Attraction between molecules of the same substance (e.g., water molecules). Both are van der Waals’ forces, varying inversely with the eighth power of distance.</p>
+            </section>
+            <section id="section12-3">
+                <h3>12.3 Force of Surface Tension on Different Shapes</h3>
+                <table>
+                    <tr><th>Shape</th><th>Force of Surface Tension</th></tr>
+                    <tr><td>Thin Ring (radius \( r \))</td><td>\( F = 4 \pi r S \)</td></tr>
+                    <tr><td>Circular Plate (radius \( r \))</td><td>\( F = 2 \pi r S \)</td></tr>
+                    <tr><td>Square Frame (side \( a \))</td><td>\( F = 8 a S \)</td></tr>
+                    <tr><td>Square Plate (side \( a \))</td><td>\( F = 4 a S \)</td></tr>
+                    <tr><td>Hollow Disc (inner radius \( r_1 \), outer radius \( r_2 \))</td><td>\( F = 2 \pi (r_1 + r_2) S \)</td></tr>
+                    <tr><td>Wire (length \( l \))</td><td>\( F = 2 l S \)</td></tr>
+                </table>
+            </section>
+            <section id="section12-4">
+                <h3>12.4 Molecular Range</h3>
+                <p>The molecular range is the maximum distance (about \( 10^{-9} \) m) over which a molecule exerts attractive forces. Beyond this, the force is negligible.</p>
+            </section>
+            <section id="section12-5">
+                <h3>12.5 Factors Affecting Surface Tension</h3>
+                <ul>
+                    <li>Decreases with temperature, becoming zero at critical temperature.</li>
+                    <li>Zero at boiling point, maximum at freezing point.</li>
+                    <li>Decreases with partially soluble impurities (e.g., soap, detergent).</li>
+                    <li>Increases with highly soluble impurities (e.g., salt).</li>
+                    <li>Decreases with dust, oil, or electrification (e.g., charged soap bubble).</li>
+                </ul>
+            </section>
+            <section id="section12-6">
+                <h3>12.6 Surface Energy</h3>
+                <p>Surface energy is the potential energy per unit area due to surface tension: \( E = S \Delta A \). Work done:</p>
+                <ul>
+                    <li>Liquid drop (radius \( r_1 \) to \( r_2 \)): \( W = 4 \pi S (r_2^2 - r_1^2) \).</li>
+                    <li>Soap bubble: \( W = 8 \pi S (r_2^2 - r_1^2) \).</li>
+                    <li>Splitting drop into \( n \) droplets: \( W = 4 \pi S R^2 (n^{1/3} - 1) \).</li>
+                    <li>Coalescence of \( n \) drops: \( \Delta U = 4 \pi S r^2 (n - n^{1/3}) \).</li>
+                </ul>
+            </section>
+            <section id="section12-7">
+                <h3>12.7 Excess Pressure due to Surface Tension</h3>
+                <table>
+                    <tr><th>Nature of Surface</th><th>Excess Pressure</th></tr>
+                    <tr><td>Plane Surface</td><td>\( \Delta p = 0 \)</td></tr>
+                    <tr><td>Convex Surface (radius \( R \))</td><td>\( \Delta p = \frac{2 S}{R} \)</td></tr>
+                    <tr><td>Concave Surface (radius \( R \))</td><td>\( \Delta p = \frac{2 S}{R} \)</td></tr>
+                    <tr><td>Cylindrical Surface (radius \( R \))</td><td>\( \Delta p = \frac{S}{R} \)</td></tr>
+                    <tr><td>Liquid Drop</td><td>\( \Delta p = \frac{2 S}{R} \)</td></tr>
+                    <tr><td>Air Bubble in Liquid</td><td>\( \Delta p = \frac{2 S}{R} \)</td></tr>
+                    <tr><td>Soap Bubble</td><td>\( \Delta p = \frac{4 S}{R} \)</td></tr>
+                    <tr><td>Liquid Surface (radii \( R_1, R_2 \))</td><td>\( \Delta p = S \left( \frac{1}{R_1} + \frac{1}{R_2} \right) \)</td></tr>
+                    <tr><td>Liquid Film (radii \( R_1, R_2 \))</td><td>\( \Delta p = 2 S \left( \frac{1}{R_1} + \frac{1}{R_2} \right) \)</td></tr>
+                </table>
+            </section>
+            <section id="section12-8">
+                <h3>12.8 Angle of Contact</h3>
+                <p>The angle of contact (\( \theta \)) is the angle between tangents at the liquid and solid surfaces inside the liquid. It depends on the liquid, solid, and medium above the liquid surface.</p>
+                <ul>
+                    <li>\( \theta < 90^\circ \): Concave meniscus, liquid wets solid (e.g., water and glass, \( \theta \approx 0^\circ \)).</li>
+                    <li>\( \theta = 90^\circ \): Plane meniscus, no wetting (e.g., water and silver).</li>
+                    <li>\( \theta > 90^\circ \): Convex meniscus, no wetting (e.g., mercury and glass, \( \theta \approx 138^\circ \)).</li>
+                </ul>
+                <p>Increases with temperature, decreases with soluble impurities.</p>
+            </section>
+            <section id="section12-9">
+                <h3>12.9 Capillarity</h3>
+                <p>Capillarity is the rise or fall of a liquid in a capillary tube. Height of liquid column: \( h = \frac{2 S \cos \theta}{\rho g r} \), where \( r \) is tube radius. For narrow tubes: \( h \approx \frac{2 S \cos \theta}{\rho g r} \). Liquid rises if \( \theta < 90^\circ \), falls if \( \theta > 90^\circ \).</p>
+                <p><strong>Zurin’s Law:</strong> \( R h = \text{constant} \), where \( R \) is the radius of curvature of the meniscus.</p>
+            </section>
+            <section id="section12-10">
+                <h3>12.10 Some Phenomena Based on Surface Tension</h3>
+                <ul>
+                    <li>Low surface tension of wound-washing medicines enhances penetration.</li>
+                    <li>Hot soup spreads more due to lower surface tension.</li>
+                    <li>Insects float on water due to surface tension; kerosene lowers it, causing sinking.</li>
+                    <li>Detergents reduce surface tension to remove dirt.</li>
+                </ul>
+                <div class="key-terms">
+                    <h4>Key Terms</h4>
+                    <p>Surface Tension, Cohesive Force, Adhesive Force, Capillarity, Excess Pressure</p>
+                </div>
+                <div class="review-questions">
+                    <h4>Review Questions</h4>
+                    <ol>
+                        <li>Derive the expression for the height of liquid in a capillary tube.</li>
+                        <li>Calculate the excess pressure inside a soap bubble of radius 0.01 m with surface tension 0.072 N/m.</li>
+                        <li>Explain why small liquid drops are spherical.</li>
+                    </ol>
+                </div>
+            </section>
+        </section>
+        <section id="chapter13">
+            <h2>Chapter 13: Thermometry and Calorimetry</h2>
+            <section id="section13-1">
+                <h3>13.1 Heat</h3>
+                <p>Heat is thermal energy transferred from a hotter body to a colder one due to a temperature difference. SI unit: joule (J), practical unit: calorie (1 cal = 4.18 J). Heat is the sum of kinetic energies of particles due to translational, vibrational, and rotational motion.</p>
+            </section>
+            <section id="section13-2">
+                <h3>13.2 Temperature and its Measurement</h3>
+                <p>Temperature measures the degree of hotness or coldness. Highest lab temperature: \( 10^8 \) K; lowest: \( 10^{-8} \) K. Cryogenics studies low temperatures, pyrometry high temperatures. NTP/STP is 273.15 K (0°C).</p>
+            </section>
+            <section id="section13-3">
+                <h3>13.3 Different Scales of Temperature</h3>
+                <table>
+                    <tr><th>Scale</th><th>Melting Point of Ice</th><th>Boiling Point of Water</th><th>Divisions</th></tr>
+                    <tr><td>Celsius</td><td>0°C</td><td>100°C</td><td>100</td></tr>
+                    <tr><td>Fahrenheit</td><td>32°F</td><td>212°F</td><td>180</td></tr>
+                    <tr><td>Kelvin</td><td>273 K</td><td>373 K</td><td>100</td></tr>
+                    <tr><td>Reaumer</td><td>0°R</td><td>80°R</td><td>80</td></tr>
+                </table>
+                <p>Relation: \( \frac{C}{100} = \frac{F - 32}{180} = \frac{K - 273}{100} = \frac{R}{80} \). Absolute zero is the lowest possible temperature.</p>
+            </section>
+            <section id="section13-4">
+                <h3>13.4 Thermometric Property</h3>
+                <p>A thermometric property changes with temperature. Examples:</p>
+                <ul>
+                    <li><strong>Gas Pressure (Constant Volume):</strong> \( \frac{p_1}{T_1} = \frac{p_2}{T_2} \), \( t = \frac{p_t - p_0}{p_{100} - p_0} \times 100^\circ \text{C} \).</li>
+                    <li><strong>Electrical Resistance:</strong> \( R_t = R_0 (1 + \alpha t) \), \( t = \frac{R_t - R_0}{R_{100} - R_0} \times 100^\circ \text{C} \).</li>
+                    <li><strong>Mercury Column Length:</strong> \( l_t = l_0 (1 + \alpha t) \).</li>
+                </ul>
+            </section>
+            <section id="section13-5">
+                <h3>13.5 Thermometers</h3>
+                <p>Thermometers measure temperature via properties like length, pressure, or resistance. Types:</p>
+                <ul>
+                    <li><strong>Mercury Thermometer:</strong> Uses length of mercury column: \( t = \frac{l_t - l_0}{l_{100} - l_0} \times 100^\circ \text{C} \).</li>
+                    <li><strong>Constant Volume Gas Thermometer:</strong> Uses pressure: \( t = \frac{p_t - p_0}{p_{100} - p_0} \times 100^\circ \text{C} \).</li>
+                    <li><strong>Platinum Resistance Thermometer:</strong> Uses resistance: \( t = \frac{R_t - R_0}{R_{100} - R_0} \times 100^\circ \text{C} \).</li>
+                    <li><strong>Pyrometers:</strong> Measure high temperatures via radiation intensity.</li>
+                </ul>
+            </section>
+            <section id="section13-6">
+                <h3>13.6 Thermal Expansion</h3>
+                <p>Thermal expansion is the increase in size of matter when heated. Types:</p>
+                <ul>
+                    <li><strong>Linear (Solids):</strong> \( l_2 = l_1 (1 + \alpha \Delta t) \), \( \alpha = \frac{\Delta l}{l \Delta t} \).</li>
+                    <li><strong>Superficial (Solids):</strong> \( A_2 = A_1 (1 + \beta \Delta t) \), \( \beta = \frac{\Delta A}{A \Delta t} \), \( \beta = 2 \alpha \).</li>
+                    <li><strong>Cubical (Solids):</strong> \( V_2 = V_1 (1 + \gamma \Delta t) \), \( \gamma = \frac{\Delta V}{V \Delta t} \), \( \gamma = 3 \alpha \).</li>
+                    <li><strong>Liquids:</strong> Apparent expansion: \( \gamma_a = \frac{\Delta V_{\text{app}}}{V \Delta t} \); real expansion: \( \gamma_r = \gamma_a + \gamma_g \).</li>
+                    <li><strong>Gases:</strong> Volume coefficient: \( \gamma_V = \frac{V_2 - V_1}{V_0 (t_2 - t_1)} \); pressure coefficient: \( \gamma_p = \frac{p_2 - p_1}{p_0 (t_2 - t_1)} \).</li>
+                </ul>
+                <p>Anomalous expansion of water: Volume decreases from 0°C to 4°C, minimum at 4°C.</p>
+            </section>
+            <section id="section13-7">
+                <h3>13.7 Specific Heat</h3>
+                <p>Specific heat (\( c \)) is the heat required to raise 1 kg of a substance by 1°C: \( Q = m c \Delta t \). SI unit: J/kg-K, dimensional formula: \( [L^2 T^{-2} \theta^{-1}] \). For gases: \( C_p > C_V \), \( C_p - C_V = R \), \( \gamma = \frac{C_p}{C_V} \).</p>
+                <p>Water: \( c = 4200 \, \text{J/kg-°C} \). Molar specific heat: \( c = M S \).</p>
+            </section>
+            <section id="section13-8">
+                <h3>13.8 Latent Heat</h3>
+                <p>Latent heat (\( L \)) is the heat absorbed/released per unit mass during a phase change: \( Q = m L \). SI unit: J/kg, dimensional formula: \( [L^2 T^{-2}] \). For water: vaporization (100°C): 2260 kJ/kg; fusion (0°C): 336 kJ/kg.</p>
+            </section>
+            <section id="section13-9">
+                <h3>13.9 Calorimetry</h3>
+                <p>Calorimetry measures heat based on conservation of energy: heat lost = heat gained. For two bodies: \( m_1 c_1 (T_1 - T_{\text{mix}}) = m_2 c_2 (T_{\text{mix}} - T_2) \). Mixture temperature:</p>
+                <ul>
+                    <li>Same material: \( T_{\text{mix}} = \frac{m_1 T_1 + m_2 T_2}{m_1 + m_2} \).</li>
+                    <li>Same mass: \( T_{\text{mix}} = \frac{c_1 T_1 + c_2 T_2}{c_1 + c_2} \).</li>
+                    <li>Ice and water: \( T_{\text{mix}} = \frac{m_w c_w T_w - m_i L_i}{m_w + m_i} \).</li>
+                </ul>
+                <div class="key-terms">
+                    <h4>Key Terms</h4>
+                    <p>Heat, Temperature, Thermal Expansion, Specific Heat, Latent Heat, Calorimetry</p>
+                </div>
+                <div class="review-questions">
+                    <h4>Review Questions</h4>
+                    <ol>
+                        <li>Derive the relation between Celsius and Kelvin scales.</li>
+                        <li>Calculate the heat required to raise 2 kg of water from 20°C to 80°C (c = 4200 J/kg-°C).</li>
+                        <li>Explain the anomalous expansion of water and its significance.</li>
+                    </ol>
+                </div>
+            </section>
+        </section>
+        <section id="chapter14">
+            <h2>Chapter 14: Kinetic Theory of Gases</h2>
+            <section id="section14-1">
+                <h3>14.1 Kinetic Theory of Ideal Gases</h3>
+                <p>Kinetic theory explains gas behavior by correlating macroscopic properties (pressure, temperature) with microscopic properties (speed, momentum). Assumptions include identical, elastic, point-mass molecules with negligible intermolecular forces and random motion.</p>
+            </section>
+            <section id="section14-2">
+                <h3>14.2 Gas Laws</h3>
+                <p><strong>Boyle’s Law:</strong> At constant temperature, \( p V = \text{constant} \), \( p_1 V_1 = p_2 V_2 \).</p>
+                <p><strong>Charles’ Law:</strong> At constant pressure, \( \frac{V}{T} = \text{constant} \), \( \frac{V_1}{T_1} = \frac{V_2}{T_2} \). Volume changes by \( \frac{1}{273.15} \) per °C.</p>
+                <p><strong>Gay-Lussac’s Law:</strong> At constant volume, \( \frac{p}{T} = \text{constant} \), \( \frac{p_1}{T_1} = \frac{p_2}{T_2} \).</p>
+                <p><strong>Avogadro’s Law:</strong> Equal volumes of gases at same temperature and pressure contain equal numbers of molecules. Avogadro’s number: \( N_A = 6.023 \times 10^{23} \, \text{mol}^{-1} \).</p>
+                <p><strong>Dalton’s Law:</strong> Total pressure of non-interacting gases: \( p = p_1 + p_2 + \dots \).</p>
+            </section>
+            <section id="section14-3">
+                <h3>14.3 Ideal Gas Equation</h3>
+                <p>For an ideal gas: \( p V = n R T \), where \( R = 8.31 \, \text{J/mol-K} \). Real gases deviate due to molecular attractions and finite volume, described by van der Waals’ equation: \( \left( p + \frac{a}{V^2} \right) (V - b) = R T \).</p>
+            </section>
+            <section id="section14-4">
+                <h3>14.4 Pressure of a Gas</h3>
+                <p>Pressure: \( p = \frac{1}{3} \frac{m n}{V} v^2 = \frac{1}{3} \rho v^2 \), where \( v^2 \) is mean square speed. For one mole: \( p = \frac{1}{3} \frac{M}{V} v^2 \). Pressure relates to kinetic energy: \( p = \frac{2}{3} E \), where \( E \) is kinetic energy per unit volume.</p>
+            </section>
+            <section id="section14-5">
+                <h3>14.5 Kinetic Energy and Molecular Speeds</h3>
+                <p><strong>Average Kinetic Energy:</strong> Per molecule: \( E = \frac{3}{2} k T \); per mole: \( E = \frac{3}{2} R T \). Boltzmann constant: \( k = \frac{R}{N_A} = 1.38 \times 10^{-23} \, \text{J/K} \).</p>
+                <p><strong>Molecular Speeds:</strong> RMS speed: \( v_{\text{rms}} = \sqrt{\frac{3 R T}{M}} \); average speed: \( v = \sqrt{\frac{8 R T}{\pi M}} \); most probable speed: \( v_{\text{mp}} = \sqrt{\frac{2 R T}{M}} \). \( v_{\text{rms}} > v > v_{\text{mp}} \).</p>
+            </section>
+            <section id="section14-6">
+                <h3>14.6 Degree of Freedom</h3>
+                <p>Degree of freedom (\( f \)): Number of independent coordinates describing a system. For a gas: \( f = 3A - R \). Monoatomic: \( f = 3 \); diatomic: \( f = 5 \); non-linear triatomic: \( f = 6 \); linear triatomic: \( f = 7 \).</p>
+                <p>Specific heats: \( C_V = \frac{f}{2} R \), \( C_p = \left( \frac{f}{2} + 1 \right) R \), \( \gamma = 1 + \frac{2}{f} \).</p>
+            </section>
+            <section id="section14-7">
+                <h3>14.7 Maxwell’s Law of Distribution of Molecular Speeds</h3>
+                <p>Describes the distribution of molecular speeds: \( \frac{dN}{dv} = 4 \pi N \left( \frac{m}{2 \pi k T} \right)^{3/2} v^2 e^{-\frac{m v^2}{2 k T}} \). The distribution curve shifts with temperature.</p>
+            </section>
+            <section id="section14-8">
+                <h3>14.8 Law of Equipartition of Energy</h3>
+                <p>Each degree of freedom contributes \( \frac{1}{2} k T \) to the energy of a molecule in thermal equilibrium.</p>
+            </section>
+            <section id="section14-9">
+                <h3>14.9 Mean Free Path</h3>
+                <p>Mean free path: \( \lambda = \frac{k T}{\sqrt{2} \pi \sigma^2 p} \), where \( \sigma \) is molecular diameter. \( \lambda \propto T \), \( \lambda \propto \frac{1}{p} \).</p>
+            </section>
+            <section id="section14-10">
+                <h3>14.10 Brownian Motion</h3>
+                <p>Random motion of particles suspended in a fluid due to unequal molecular bombardment.</p>
+            </section>
+            <section id="section14-11">
+                <h3>14.11 Critical Temperature, Pressure, and Volume</h3>
+                <p>Critical temperature (\( T_C \)): Temperature above which a gas cannot be liquefied. Critical pressure (\( p_C \)) and volume (\( V_C \)): \( V_C = 3b \), \( p_C = \frac{a}{27 b^2} \), \( T_C = \frac{8a}{27 R b} \). Critical coefficient: \( \frac{R T_C}{p_C V_C} = \frac{8}{3} \).</p>
+                <div class="key-terms">
+                    <h4>Key Terms</h4>
+                    <p>Ideal Gas, Gas Laws, Kinetic Energy, Mean Free Path, Critical Temperature</p>
+                </div>
+                <div class="review-questions">
+                    <h4>Review Questions</h4>
+                    <ol>
+                        <li>Derive the ideal gas equation from kinetic theory.</li>
+                        <li>Calculate the RMS speed of oxygen molecules at 300 K (M = 0.032 kg/mol).</li>
+                        <li>Explain the significance of the law of equipartition of energy.</li>
+                    </ol>
+                </div>
+            </section>
+        </section>
+        <section id="chapter15">
+            <h2>Chapter 15: Thermodynamics</h2>
+            <section id="section15-1">
+                <h3>15.1 Thermodynamic Terms</h3>
+                <p><strong>Thermodynamic System:</strong> A system exchanging energy/matter with surroundings. Types: open (exchanges both), closed (energy only), isolated (neither).</p>
+                <p><strong>Variables:</strong> Extensive (e.g., volume, internal energy) depend on system size; intensive (e.g., pressure, temperature) do not.</p>
+                <p><strong>Thermal Equilibrium:</strong> No change in macroscopic variables. <strong>Adiabatic Wall:</strong> Insulates against heat flow. <strong>Diathermic Wall:</strong> Allows heat flow.</p>
+            </section>
+            <section id="section15-2">
+                <h3>15.2 Thermodynamic Processes</h3>
+                <p><strong>Quasi-static:</strong> Slow process with uniform temperature and pressure. Types:</p>
+                <ul>
+                    <li><strong>Isothermal:</strong> Constant temperature, \( p V = \text{constant} \), \( dU = 0 \), \( dQ = dW \), \( W = 2.3026 n R T \log_{10} \frac{V_f}{V_i} \).</li>
+                    <li><strong>Adiabatic:</strong> No heat exchange, \( p V^\gamma = \text{constant} \), \( dQ = 0 \), \( W = \frac{n R (T_i - T_f)}{\gamma - 1} \).</li>
+                    <li><strong>Isobaric:</strong> Constant pressure, \( \frac{V}{T} = \text{constant} \), \( dW = p \Delta V \).</li>
+                    <li><strong>Isochoric:</strong> Constant volume, \( \frac{p}{T} = \text{constant} \), \( dW = 0 \).</li>
+                    <li><strong>Cyclic:</strong> Returns to initial state, \( dU = 0 \), \( dQ = dW \).</li>
+                </ul>
+            </section>
+            <section id="section15-3">
+                <h3>15.3 First Law of Thermodynamics</h3>
+                <p>Heat added (\( dQ \)) increases internal energy (\( dU \)) and does work (\( dW \)): \( dQ = dU + dW \). This is a restatement of energy conservation.</p>
+            </section>
+            <section id="section15-4">
+                <h3>15.4 Second Law of Thermodynamics</h3>
+                <p><strong>Kelvin’s Statement:</strong> No continuous work from cooling a body below its surroundings’ temperature.</p>
+                <p><strong>Clausius’ Statement:</strong> Heat cannot transfer from a colder to a hotter body without external work.</p>
+                <p><strong>Planck’s Statement:</strong> A heat engine cannot convert all heat into work.</p>
+            </section>
+            <section id="section15-5">
+                <h3>15.5 Entropy</h3>
+                <p>Entropy (\( S \)) measures molecular disorder: \( dS = \frac{dQ}{T} \). Never decreases (\( dS \geq 0 \)). For solids/liquids: phase change: \( \Delta S = \frac{m L}{T} \); temperature change: \( \Delta S = m s \ln \frac{T_2}{T_1} \).</p>
+            </section>
+            <section id="section15-6">
+                <h3>15.6 Heat Engine</h3>
+                <p>Converts heat to mechanical work. Efficiency: \( \eta = \frac{W}{Q_1} = 1 - \frac{T_2}{T_1} \), where \( Q_1 \) is heat absorbed, \( T_2 \) and \( T_1 \) are sink and source temperatures.</p>
+            </section>
+            <section id="section15-7">
+                <h3>15.7 Carnot’s Cycle</h3>
+                <p>An ideal cycle with isothermal expansion, adiabatic expansion, isothermal compression, and adiabatic compression. Efficiency: \( \eta = 1 - \frac{T_2}{T_1} \). Work done equals the area of the p-V loop.</p>
+            </section>
+            <section id="section15-8">
+                <h3>15.8 Refrigerator</h3>
+                <p>Absorbs heat from a sink and rejects it to a source. Coefficient of performance: \( \beta = \frac{Q_2}{Q_1 - Q_2} = \frac{T_2}{T_1 - T_2} \). Relation: \( \beta = \frac{1 - \eta}{\eta} \).</p>
+                <div class="key-terms">
+                    <h4>Key Terms</h4>
+                    <p>Thermodynamic System, Internal Energy, Entropy, Heat Engine, Carnot Cycle</p>
+                </div>
+                <div class="review-questions">
+                    <h4>Review Questions</h4>
+                    <ol>
+                        <li>Derive the work done in an isothermal process.</li>
+                        <li>Calculate the efficiency of a Carnot engine operating between 500 K and 300 K.</li>
+                        <li>Explain why entropy never decreases in an isolated system.</li>
+                    </ol>
+                </div>
+            </section>
+        </section>
+		
+		
+		<section id="chapter16">
+            <h2>Chapter 16: Transmission of Heat</h2>
+            <section id="section16-1">
+                <h3>16.1 Heat Transmission</h3>
+                <p>Heat transmission refers to the transfer of heat from one part of a system to another. It occurs through three primary methods:</p>
+                <ul>
+                    <li><strong>Conduction:</strong> Heat transfer in solids from higher to lower temperature without particle movement.</li>
+                    <li><strong>Convection:</strong> Heat transfer in fluids (liquids or gases) via particle movement, e.g., land and sea breezes.</li>
+                    <li><strong>Radiation:</strong> Heat transfer via electromagnetic waves, requiring no medium, e.g., heat from the sun.</li>
+                </ul>
+            </section>
+            <section id="section16-2">
+                <h3>16.2 Conduction of Heat in a Conducting Rod</h3>
+                <p><strong>Steady State:</strong> A state where no part of the rod absorbs heat.</p>
+                <p><strong>Isothermal Surface:</strong> A surface where all points are at the same temperature.</p>
+                <p><strong>Temperature Gradient:</strong> Rate of temperature change with distance: \( \Delta \theta / \Delta x \), SI unit: °C/m, Dimensional formula: \( [L^{-1}\theta] \).</p>
+                <p><strong>Thermal Conductivity:</strong> Measures a material’s ability to conduct heat. Heat flow: \( Q = \frac{K A \Delta \theta t}{l} \), where \( K \) is the thermal conductivity coefficient, SI unit: W m⁻¹ K⁻¹, Dimensional formula: \( [MLT^{-3}\theta^{-1}] \).</p>
+                <p><strong>Thermal Current and Resistance:</strong> Thermal current \( H = \frac{K A \Delta \theta}{l} \), thermal resistance \( R = \frac{l}{K A} \), SI unit: K/W, Dimensional formula: \( [M^{-1}L^{-2}T^3\theta] \).</p>
+            </section>
+            <section id="section16-3">
+                <h3>16.3 Heat Flow in Conducting Rods</h3>
+                <p><strong>Series Connection:</strong> Heat flow: \( H = \frac{\theta_1 - \theta_2}{\frac{l_1}{K_1 A} + \frac{l_2}{K_2 A}} \). Contact temperature: \( \theta = \frac{K_1 l_2 \theta_1 + K_2 l_1 \theta_2}{K_1 l_2 + K_2 l_1} \). Equivalent thermal conductivity: \( K = \frac{l_1 + l_2}{\frac{l_1}{K_1} + \frac{l_2}{K_2}} \). Equivalent resistance: \( R = R_1 + R_2 \).</p>
+                <p><strong>Parallel Connection:</strong> Heat flow: \( H = \frac{(K_1 A_1 + K_2 A_2)(\theta_1 - \theta_2)}{l} \). Equivalent thermal conductivity: \( K = \frac{K_1 A_1 + K_2 A_2}{A_1 + A_2} \). Equivalent resistance: \( \frac{1}{R} = \frac{1}{R_1} + \frac{1}{R_2} \).</p>
+            </section>
+            <section id="section16-4">
+                <h3>16.4 Ingen-Hausz Experiment</h3>
+                <p>Thermal conductivities are proportional to the square of the lengths of melted wax on rods in steady state: \( K_1 : K_2 : K_3 = l_1^2 : l_2^2 : l_3^2 \).</p>
+            </section>
+            <section id="section16-5">
+                <h3>16.5 Formation of Ice on Lakes</h3>
+                <p>Time to form ice of thickness \( x \): \( t = \frac{\rho L x^2}{2 K \theta} \). Time to increase thickness from \( x_1 \) to \( x_2 \): \( t = \frac{\rho L (x_2^2 - x_1^2)}{2 K \theta} \).</p>
+            </section>
+            <section id="section16-6">
+                <h3>16.6 Radiative Properties</h3>
+                <p><strong>Reflectance (r):</strong> Ratio of reflected to incident thermal radiations.</p>
+                <p><strong>Absorptance (a):</strong> Ratio of absorbed to incident thermal radiations.</p>
+                <p><strong>Transmittance (t):</strong> Ratio of transmitted to incident thermal radiations. Relation: \( r + a + t = 1 \).</p>
+                <p><strong>Emissive Power (e):</strong> Energy emitted per unit time per unit area: \( e = \frac{d\theta / dt}{A} \), SI unit: W m⁻², Dimensional formula: \( [MT^{-3}] \).</p>
+                <p><strong>Emissivity (ε):</strong> Ratio of a body’s emissive power to that of a perfect black body: \( \varepsilon = \frac{e}{E} \).</p>
+                <p><strong>Kirchhoff’s Law:</strong> \( \frac{e}{a} = E \).</p>
+                <p><strong>Stefan’s Law:</strong> \( E = \sigma T^4 \), \( \sigma = 5.735 \times 10^{-8} \, \text{W m}^{-2} \text{K}^{-4} \).</p>
+                <p><strong>Newton’s Law of Cooling:</strong> \( \frac{dT}{dt} \propto -(T - T_0) \).</p>
+                <p><strong>Wien’s Displacement Law:</strong> \( \lambda_m T = b \), \( b = 2.898 \times 10^{-3} \, \text{m K} \).</p>
+                <p><strong>Solar Constant:</strong> \( S = \left(\frac{r}{R}\right)^2 \sigma T^4 \), value: 1.937 cal cm⁻² min⁻¹.</p>
+                <div class="key-terms">
+                    <h4>Key Terms</h4>
+                    <p>Conduction, Convection, Radiation, Thermal Conductivity, Stefan’s Law, Wien’s Displacement Law</p>
+                </div>
+                <div class="review-questions">
+                    <h4>Review Questions</h4>
+                    <ol>
+                        <li>Explain the differences between conduction, convection, and radiation with examples.</li>
+                        <li>Derive the expression for heat flow in two conducting rods in series.</li>
+                        <li>Calculate the time to form 2 cm of ice on a lake if \( \rho = 917 \, \text{kg/m}^3 \), \( L = 334 \, \text{kJ/kg} \), \( K = 2.2 \, \text{W m}^{-1} \text{K}^{-1} \), \( \theta = 5 \, \text{°C} \).</li>
+                    </ol>
+                </div>
+            </section>
+        </section>
+
+        <section id="chapter17">
+            <h2>Chapter 17: Oscillations</h2>
+            <section id="section17-1">
+                <h3>17.1 Types of Motion</h3>
+                <p><strong>Periodic Motion:</strong> Motion repeating at fixed intervals, e.g., Earth’s orbit, clock arms.</p>
+                <p><strong>Oscillatory Motion:</strong> To-and-fro periodic motion about a fixed point, e.g., simple pendulum.</p>
+                <p><strong>Harmonic Oscillation:</strong> Expressed as a single harmonic function (sine or cosine).</p>
+                <p><strong>Simple Harmonic Motion (SHM):</strong> Harmonic oscillation with constant amplitude and single frequency, restoring force proportional to displacement: \( y = a \sin(\omega t) \) or \( y = a \cos(\omega t) \).</p>
+            </section>
+            <section id="section17-2">
+                <h3>17.2 Terms Related to SHM</h3>
+                <ul>
+                    <li><strong>Time Period (T):</strong> Time for one oscillation.</li>
+                    <li><strong>Frequency (n):</strong> Oscillations per second, \( n = \frac{1}{T} \), SI unit: hertz.</li>
+                    <li><strong>Angular Frequency (ω):</strong> \( \omega = 2\pi n \), SI unit: rad/s.</li>
+                    <li><strong>Displacement (y):</strong> Change from mean position.</li>
+                    <li><strong>Amplitude (a):</strong> Maximum displacement.</li>
+                    <li><strong>Phase (φ):</strong> Position and direction of motion.</li>
+                </ul>
+            </section>
+            <section id="section17-3">
+                <h3>17.3 SHM Formulae</h3>
+                <p><strong>Displacement:</strong> \( y = a \sin(\omega t) \) or \( y = a \cos(\omega t) \).</p>
+                <p><strong>Velocity:</strong> \( v = \omega \sqrt{a^2 - y^2} \), maximum at mean position: \( v_{\text{max}} = \omega a \).</p>
+                <p><strong>Acceleration:</strong> \( a = -\omega^2 y \), maximum at extreme position: \( a_{\text{max}} = -\omega^2 a \).</p>
+                <p><strong>Time Period:</strong> \( T = 2\pi \sqrt{\frac{m}{k}} \).</p>
+            </section>
+            <section id="section17-4">
+                <h3>17.4 Energy in SHM</h3>
+                <p><strong>Kinetic Energy:</strong> \( K = \frac{1}{2} m \omega^2 (a^2 - x^2) \).</p>
+                <p><strong>Potential Energy:</strong> \( U = \frac{1}{2} m \omega^2 x^2 \).</p>
+                <p><strong>Total Energy:</strong> \( E = \frac{1}{2} m \omega^2 a^2 \).</p>
+            </section>
+            <section id="section17-5">
+                <h3>17.5 Types of Pendulums</h3>
+                <p><strong>Simple Pendulum:</strong> \( T = 2\pi \sqrt{\frac{l}{g}} \).</p>
+                <p><strong>Conical Pendulum:</strong> \( T = 2\pi \sqrt{\frac{m r \sin \theta}{T \sin \theta}} \).</p>
+                <p><strong>Compound Pendulum:</strong> \( T = 2\pi \sqrt{\frac{I}{mgd}} \).</p>
+                <p><strong>Torsional Pendulum:</strong> \( T = 2\pi \sqrt{\frac{I}{C}} \).</p>
+                <p><strong>Spring Pendulum:</strong> \( T = 2\pi \sqrt{\frac{m}{k}} \).</p>
+            </section>
+            <section id="section17-6">
+                <h3>17.6 Other Oscillatory Systems</h3>
+                <p><strong>Liquid in a U-tube:</strong> \( T = 2\pi \sqrt{\frac{h}{g}} \).</p>
+                <p><strong>Ball in a Bowl:</strong> \( T = 2\pi \sqrt{\frac{R}{g}} \).</p>
+                <p><strong>Tunnel through Earth:</strong> \( T = 2\pi \sqrt{\frac{R}{g}} \).</p>
+            </section>
+            <section id="section17-7">
+                <h3>17.7 Types of Oscillations</h3>
+                <p><strong>Free Oscillations:</strong> Oscillate at natural frequency.</p>
+                <p><strong>Damped Oscillations:</strong> Amplitude decreases: \( x = x_0 e^{-bt/2m} \cos(\omega' t + \phi) \).</p>
+                <p><strong>Forced Oscillations:</strong> Driven by external periodic force.</p>
+                <p><strong>Resonant Oscillations:</strong> Driven at natural frequency.</p>
+                <p><strong>Lissajous’ Figures:</strong> Result from two perpendicular SHMs.</p>
+                <div class="key-terms">
+                    <h4>Key Terms</h4>
+                    <p>SHM, Time Period, Frequency, Amplitude, Damped Oscillations, Resonance</p>
+                </div>
+                <div class="review-questions">
+                    <h4>Review Questions</h4>
+                    <ol>
+                        <li>Derive the time period of a simple pendulum.</li>
+                        <li>Calculate the frequency of a spring pendulum with \( m = 0.5 \, \text{kg} \), \( k = 100 \, \text{N/m} \).</li>
+                        <li>Explain the concept of resonance with an example.</li>
+                    </ol>
+                </div>
+            </section>
+        </section>
+
+        <section id="chapter18">
+            <h2>Chapter 18: Waves and Sound</h2>
+            <section id="section18-1">
+                <h3>18.1 Wave Types</h3>
+                <p><strong>Mechanical Waves:</strong> Require a medium, e.g., sound, water waves.</p>
+                <p><strong>Electromagnetic Waves:</strong> No medium required, e.g., light, radio waves.</p>
+                <p><strong>Matter Waves:</strong> Associated with particles, e.g., electrons.</p>
+            </section>
+            <section id="section18-2">
+                <h3>18.2 Nature of Waves</h3>
+                <p><strong>Transverse Waves:</strong> Particle vibration perpendicular to wave direction, forming crests and troughs.</p>
+                <p><strong>Longitudinal Waves:</strong> Particle vibration parallel to wave direction, forming compressions and rarefactions.</p>
+            </section>
+            <section id="section18-3">
+                <h3>18.3 Wave Terms</h3>
+                <ul>
+                    <li><strong>Amplitude:</strong> Maximum displacement.</li>
+                    <li><strong>Wavelength (λ):</strong> Distance between two points in same phase.</li>
+                    <li><strong>Time Period (T):</strong> Time for one vibration.</li>
+                    <li><strong>Frequency (f):</strong> Vibrations per second, \( f = \frac{1}{T} \).</li>
+                    <li><strong>Wave Velocity (v):</strong> \( v = f \lambda \).</li>
+                </ul>
+            </section>
+            <section id="section18-4">
+                <h3>18.4 Sound Waves</h3>
+                <p><strong>Types:</strong></p>
+                <ul>
+                    <li><strong>Infrasonic:</strong> 0–20 Hz.</li>
+                    <li><strong>Audible:</strong> 20 Hz–20,000 Hz.</li>
+                    <li><strong>Ultrasonic:</strong> Above 20,000 Hz.</li>
+                </ul>
+                <p><strong>Velocity:</strong> \( v = \sqrt{\frac{E}{\rho}} \). Newton’s formula: \( v = \sqrt{\frac{p}{\rho}} \). Laplace’s correction: \( v = \sqrt{\frac{\gamma p}{\rho}} \).</p>
+            </section>
+            <section id="section18-5">
+                <h3>18.5 Factors Affecting Sound Velocity</h3>
+                <ul>
+                    <li><strong>Pressure:</strong> No effect at constant temperature.</li>
+                    <li><strong>Temperature:</strong> \( v \propto \sqrt{T} \).</li>
+                    <li><strong>Density:</strong> \( v \propto \frac{1}{\sqrt{\rho}} \).</li>
+                    <li><strong>Humidity:</strong> Increases velocity in moist air.</li>
+                </ul>
+            </section>
+            <section id="section18-6">
+                <h3>18.6 Wave Phenomena</h3>
+                <p><strong>Interference:</strong> Superposition causing varying intensity.</p>
+                <p><strong>Beats:</strong> Intensity variation due to superposition of close frequencies: \( f_{\text{beat}} = |f_1 - f_2| \).</p>
+                <p><strong>Stationary Waves:</strong> Formed by superposition of identical waves traveling in opposite directions.</p>
+                <p><strong>Doppler Effect:</strong> Change in frequency due to relative motion: \( f' = f \frac{v \pm v_o}{v \mp v_s} \).</p>
+                <div class="key-terms">
+                    <h4>Key Terms</h4>
+                    <p>Transverse Wave, Longitudinal Wave, Sound Velocity, Interference, Doppler Effect</p>
+                </div>
+                <div class="review-questions">
+                    <h4>Review Questions</h4>
+                    <ol>
+                        <li>Explain the difference between transverse and longitudinal waves.</li>
+                        <li>Calculate the beat frequency for two sound waves of 440 Hz and 445 Hz.</li>
+                        <li>Derive the Doppler effect formula for a moving observer.</li>
+                    </ol>
+                </div>
+            </section>
+        </section>
+
+        <section id="chapter19">
+            <h2>Chapter 19: Electrostatics</h2>
+            <section id="section19-1">
+                <h3>19.1 Electric Charge</h3>
+                <p>Electric charge is a fundamental property causing attraction or repulsion. Types: positive and negative. Charge is quantized: \( q = ne \), where \( e = 1.602 \times 10^{-19} \, \text{C} \).</p>
+                <p><strong>Conservation:</strong> Total charge in an isolated system is conserved.</p>
+            </section>
+            <section id="section19-2">
+                <h3>19.2 Coulomb’s Law</h3>
+                <p>Force between two point charges: \( F = \frac{1}{4 \pi \epsilon_0} \frac{q_1 q_2}{r^2} \), where \( \epsilon_0 = 8.854 \times 10^{-12} \, \text{C}^2 \text{N}^{-1} \text{m}^{-2} \). Dimensional formula: \( [M L T^{-2}] \).</p>
+            </section>
+            <section id="section19-3">
+                <h3>19.3 Electric Field</h3>
+                <p>Electric field at a point: \( \vec{E} = \frac{\vec{F}}{q} \), SI unit: N/C or V/m. Field due to a point charge: \( E = \frac{1}{4 \pi \epsilon_0} \frac{q}{r^2} \).</p>
+                <p><strong>Electric Field Lines:</strong> Imaginary lines showing field direction, originating from positive charges.</p>
+            </section>
+            <section id="section19-4">
+                <h3>19.4 Electric Potential</h3>
+                <p>Potential at a point: \( V = \frac{W}{q} \), SI unit: volt (V). Potential due to a point charge: \( V = \frac{1}{4 \pi \epsilon_0} \frac{q}{r} \). Relation: \( \vec{E} = -\frac{dV}{dr} \).</p>
+            </section>
+            <section id="section19-5">
+                <h3>19.5 Capacitance</h3>
+                <p>Capacitance: \( C = \frac{q}{V} \), SI unit: farad (F). For a parallel plate capacitor: \( C = \frac{\epsilon_0 A}{d} \).</p>
+                <p><strong>Energy Stored:</strong> \( U = \frac{1}{2} C V^2 \).</p>
+                <div class="key-terms">
+                    <h4>Key Terms</h4>
+                    <p>Electric Charge, Coulomb’s Law, Electric Field, Electric Potential, Capacitance</p>
+                </div>
+                <div class="review-questions">
+                    <h4>Review Questions</h4>
+                    <ol>
+                        <li>Explain the quantization of electric charge.</li>
+                        <li>Calculate the electric field at 2 m from a 5 μC charge.</li>
+                        <li>Derive the energy stored in a capacitor.</li>
+                    </ol>
+                </div>
+            </section>
+        </section>
+
+        <section id="chapter20">
+            <h2>Chapter 20: Current Electricity</h2>
+            <section id="section20-1">
+                <h3>20.1 Electric Current</h3>
+                <p>Electric current is the rate of flow of charge: \( I = \frac{q}{t} \), SI unit: ampere (A), Dimensional formula: \( [I] \).</p>
+                <p><strong>Drift Velocity:</strong> \( v_d = \frac{I}{n e A} \), where \( n \) is electron density, \( e \) is electron charge, \( A \) is cross-sectional area.</p>
+            </section>
+            <section id="section20-2">
+                <h3>20.2 Ohm’s Law</h3>
+                <p>Voltage across a conductor is proportional to current: \( V = I R \), where \( R \) is resistance.</p>
+            </section>
+            <section id="section20-3">
+                <h3>20.3 Resistance and Resistivity</h3>
+                <p>Resistance: \( R = \frac{\rho l}{A} \), where \( \rho \) is resistivity, SI unit: ohm-meter (Ω·m).</p>
+                <p><strong>Series:</strong> \( R_{\text{eq}} = R_1 + R_2 + \cdots \).</p>
+                <p><strong>Parallel:</strong> \( \frac{1}{R_{\text{eq}}} = \frac{1}{R_1} + \frac{1}{R_2} + \cdots \).</p>
+            </section>
+            <section id="section20-4">
+                <h3>20.4 Electrical Circuits</h3>
+                <p><strong>Kirchhoff’s Laws:</strong></p>
+                <ul>
+                    <li><strong>Junction Rule:</strong> Sum of currents entering a junction equals sum leaving.</li>
+                    <li><strong>Loop Rule:</strong> Sum of potential differences around a closed loop is zero.</p>
+                </ul>
+            </section>
+            <section id="section20-5">
+                <h3>20.5 Electrical Power and Energy</h3>
+                <p>Power: \( P = V I = I^2 R = \frac{V^2}{R} \), SI unit: watt (W).</p>
+                <p>Energy: \( E = P t \), SI unit: joule (J) or kWh.</p>
+                <div class="key-terms">
+                    <h4>Key Terms</h4>
+                    <p>Electric Current, Ohm’s Law, Resistance, Kirchhoff’s Laws, Electrical Power</p>
+                </div>
+                <div class="review-questions">
+                    <h4>Review Questions</h4>
+                    <ol>
+                        <li>Derive the expression for drift velocity.</li>
+                        <li>Calculate the equivalent resistance of three 10 Ω resistors in parallel.</li>
+                        <li>Explain Kirchhoff’s loop rule with an example.</li>
+                    </ol>
+                </div>
+            </section>
+        </section>
+		
+		 <section id="chapter21">
+            <h2>Chapter 21: Heating and Chemical Effects of Current</h2>
+            <section id="section21-1">
+                <h3>21.1 Electric Energy and Power</h3>
+                <p>Electric energy is the energy supplied by a source to maintain current in a circuit. It is expressed as:</p>
+                <p class="equation">\( W = V q = V I t = I^2 R t = \frac{V^2 t}{R} \)</p>
+                <p>SI unit: joule (J). Commercial unit: kilowatt-hour (kWh), where:</p>
+                <p class="equation">\( 1 \, \text{kWh} = 1000 \, \text{W} \times 3600 \, \text{s} = 3.6 \times 10^6 \, \text{J} \)</p>
+                <p>Electric power is the rate of energy consumption:</p>
+                <p class="equation">\( P = V I = I^2 R = \frac{V^2}{R} \)</p>
+                <p>SI unit: watt (W). Other units: \( 1 \, \text{kW} = 1000 \, \text{W} \), \( 1 \, \text{HP} = 746 \, \text{W} \).</p>
+                <p>Energy in kWh: \( W = \frac{V I t}{1000} \).</p>
+            </section>
+            <section id="section21-2">
+                <h3>21.2 Heating Effects of Current</h3>
+                <p>Joule’s law states that heat generated in a conductor is:</p>
+                <p class="equation">\( H = I^2 R t \, \text{J} = \frac{I^2 R t}{4.18} \, \text{cal} \)</p>
+                <p>Alternatively: \( H = \frac{V^2 t}{R} \, \text{J} = \frac{V^2 t}{4.18 R} \, \text{cal} \).</p>
+                <p>Supply wires have low resistance, hence minimal heating. Filament lamps have high resistance, producing significant heat. Heater wires use high-resistivity, high-melting-point materials.</p>
+            </section>
+            <section id="section21-3">
+                <h3>21.3 Electric Fuse and Circuit Issues</h3>
+                <p>An electric fuse, made of tin-lead alloy (63% tin, 37% lead), protects circuits by melting at low temperatures during excess current. It has high resistance and is connected in series with the live wire.</p>
+                <p>Maximum safe current: \( I \propto r^{3/2} \), independent of length.</p>
+                <p><strong>Short Circuiting:</strong> Occurs when live and neutral wires touch, reducing resistance and increasing current.</p>
+                <p><strong>Overloading:</strong> High current beyond wire rating causes heating.</p>
+                <p><strong>Appliance Rating:</strong> Power and voltage together define the rating. In series, lower-wattage bulbs glow brighter; in parallel, higher-wattage bulbs glow brighter.</p>
+            </section>
+            <section id="section21-4">
+                <h3>21.4 Chemical Effects of Current</h3>
+                <p><strong>Electrolysis:</strong> Direct current through an electrolyte (acidic/basic solution) dissociates it into ions. Key terms:</p>
+                <ul>
+                    <li><strong>Anode:</strong> Positive electrode.</li>
+                    <li><strong>Cathode:</strong> Negative electrode.</li>
+                    <li><strong>Anions/Cations:</strong> Negative/positive ions moving to anode/cathode.</li>
+                    <li><strong>Voltameter:</strong> Vessel for electrolysis.</li>
+                </ul>
+                <p><strong>Faraday’s Laws:</strong></p>
+                <ul>
+                    <li><strong>First Law:</strong> Mass liberated: \( m = Z I t \), where \( Z \) is the electrochemical equivalent.</li>
+                    <li><strong>Second Law:</strong> \( \frac{m_1}{m_2} = \frac{E_1}{E_2} \), where \( E = \frac{\text{Atomic weight}}{\text{Valency}} \).</li>
+                </ul>
+                <p>Faraday’s constant: \( F = N e \approx 96500 \, \text{C} \). Uses: electroplating, anodising, medical applications.</p>
+            </section>
+            <section id="section21-5">
+                <h3>21.5 Thermoelectric Effects</h3>
+                <p><strong>Thermocouple:</strong> Two different metal wires forming two junctions. Uses: thermometers, current meters, generators, refrigerators.</p>
+                <p><strong>Seebeck Effect:</strong> Thermo emf produced when junctions are at different temperatures: \( E = \alpha T + \frac{1}{2} \beta T^2 \).</p>
+                <p><strong>Neutral Temperature:</strong> Temperature at maximum emf, constant for a thermocouple.</p>
+                <p><strong>Inversion Temperature:</strong> Temperature where emf reverses: \( T_i = 2 T_n - T_0 \).</p>
+                <p><strong>Peltier Effect:</strong> Heat absorbed/generated at junctions due to current. Coefficient: \( \pi = \frac{\text{Peltier heat}}{\text{Charge}} \).</p>
+                <p><strong>Thomson’s Effect:</strong> Emf due to temperature difference in a conductor. Coefficient: \( \sigma = \frac{dV}{dT} \).</p>
+                <p><strong>Thermopile:</strong> Multiple thermocouples in series for detecting heat radiation.</p>
+                <div class="key-terms">
+                    <h4>Key Terms</h4>
+                    <p>Electric Power, Joule’s Law, Electrolysis, Faraday’s Laws, Seebeck Effect, Peltier Effect</p>
+                </div>
+                <div class="review-questions">
+                    <h4>Review Questions</h4>
+                    <ol>
+                        <li>Derive the expression for electric power in terms of voltage and resistance.</li>
+                        <li>Calculate the heat generated in a 10 Ω resistor with 2 A current flowing for 5 minutes.</li>
+                        <li>Explain Faraday’s first law of electrolysis with an example.</li>
+                    </ol>
+                </div>
+            </section>
+        </section>
+
+        <section id="chapter22">
+            <h2>Chapter 22: Magnetic Effect of Current</h2>
+            <section id="section22-1">
+                <h3>22.1 Oersted’s Experiment and Magnetic Field</h3>
+                <p>Oersted’s experiment showed that a current-carrying conductor deflects a magnetic compass, indicating a magnetic field. The magnetic field is the region where magnetic influence is experienced, measured in tesla (T) or Wb/m².</p>
+                <p class="equation">\( 1 \, \text{T} = 1 \, \text{Wb/m}^2 = 1 \, \text{N A}^{-1} \text{m}^{-1} \), \( 1 \, \text{gauss} = 10^{-4} \, \text{T} \).</p>
+            </section>
+            <section id="section22-2">
+                <h3>22.2 Rules for Magnetic Field Direction</h3>
+                <p><strong>Maxwell’s Cork Screw Rule:</strong> Rotate a screw in the current direction; rotation gives field direction.</p>
+                <p><strong>Ampere’s Swimming Rule:</strong> North pole deflects to the left of a swimmer facing the compass, aligned with current.</p>
+                <p><strong>Right Hand Thumb Rule:</strong> Thumb points to current; curled fingers show field direction.</p>
+            </section>
+            <section id="section22-3">
+                <h3>22.3 Biot-Savart’s Law</h3>
+                <p>Magnetic field due to a current element:</p>
+                <p class="equation">\( dB = \frac{\mu_0}{4 \pi} \frac{I dl \sin \theta}{r^2} \)</p>
+                <p>In a medium: \( dB = \frac{\mu_0 \mu_r}{4 \pi} \frac{I dl \times r}{r^3} \), where \( \mu_0 = 4 \pi \times 10^{-7} \, \text{T m A}^{-1} \).</p>
+            </section>
+            <section id="section22-4">
+                <h3>22.4 Magnetic Field Due to Conductors</h3>
+                <p><strong>Straight Conductor:</strong> \( B = \frac{\mu_0 I}{4 \pi r} (\sin \phi_1 + \sin \phi_2) \). For infinite conductor: \( B = \frac{\mu_0 I}{2 \pi r} \).</p>
+                <p><strong>Circular Coil (Center):</strong> \( B = \frac{\mu_0 I}{2 r} \). On axis: \( B = \frac{\mu_0 n I r^2}{2 (r^2 + x^2)^{3/2}} \).</p>
+                <p><strong>Solenoid (Inside):</strong> \( B = \mu_0 n I \). At end: \( B = \frac{\mu_0 n I}{2} \).</p>
+                <p><strong>Toroid:</strong> \( B = \mu_0 n I \). Outside: \( B = 0 \).</p>
+                <p><strong>Infinite Sheet:</strong> \( B = \frac{\mu_0 J}{2} \).</p>
+            </section>
+            <section id="section22-5">
+                <h3>22.5 Force on Charged Particles and Conductors</h3>
+                <p><strong>Force on Charge:</strong> \( \vec{F} = q (\vec{v} \times \vec{B}) \), magnitude: \( F = q v B \sin \theta \).</p>
+                <p><strong>Motion in Magnetic Field:</strong> Circular path radius: \( r = \frac{m v}{B q} \). Time period: \( T = \frac{2 \pi m}{B q} \). Helical pitch: \( \frac{2 \pi m v \cos \theta}{B q} \).</p>
+                <p><strong>Lorentz Force:</strong> \( \vec{F} = q (\vec{E} + \vec{v} \times \vec{B}) \).</p>
+                <p><strong>Force on Conductor:</strong> \( \vec{F} = I (\vec{l} \times \vec{B}) \). Between parallel conductors: \( F = \frac{\mu_0 I_1 I_2 l}{2 \pi r} \).</p>
+                <p><strong>Cyclotron:</strong> Frequency: \( \nu = \frac{B q}{2 \pi m} \). Max energy: \( E_{\text{max}} = \frac{B^2 q^2 r_0^2}{2 m} \).</p>
+            </section>
+            <section id="section22-6">
+                <h3>22.6 Magnetic Dipole and Torque</h3>
+                <p><strong>Magnetic Dipole:</strong> Moment: \( \vec{M} = N I A \). Torque: \( \vec{\tau} = \vec{M} \times \vec{B} \).</p>
+                <p><strong>Galvanometer:</strong> Current sensitivity: \( \frac{\theta}{I} = \frac{N B A}{k} \). Voltage sensitivity: \( \frac{\theta}{V} = \frac{N B A}{k R} \).</p>
+                <p><strong>Ammeter Conversion:</strong> Shunt: \( S = \frac{I_g G}{I - I_g} \).</p>
+                <p><strong>Voltmeter Conversion:</strong> Series resistance: \( R = \frac{V}{I_g} - G \).</p>
+                <div class="key-terms">
+                    <h4>Key Terms</h4>
+                    <p>Magnetic Field, Biot-Savart’s Law, Ampere’s Law, Lorentz Force, Cyclotron, Magnetic Dipole</p>
+                </div>
+                <div class="review-questions">
+                    <h4>Review Questions</h4>
+                    <ol>
+                        <li>Derive the magnetic field at the center of a circular coil using Biot-Savart’s law.</li>
+                        <li>Calculate the force between two parallel wires carrying 5 A each, 0.1 m apart.</li>
+                        <li>Explain the principle of a cyclotron.</li>
+                    </ol>
+                </div>
+            </section>
+        </section>
+
+        <section id="chapter23">
+            <h2>Chapter 23: Magnetism and Matter</h2>
+            <section id="section23-1">
+                <h3>23.1 Basics of Magnetism</h3>
+                <p>Magnetism is the property of attracting iron or steel. Natural magnets (e.g., magnetite, Fe₃O₄) and artificial magnets (e.g., bar magnets) exist. Poles are regions of concentrated magnetism, always in pairs with equal strength.</p>
+                <p><strong>Properties:</strong> Aligns north-south, like poles repel, unlike poles attract, poles inseparable.</p>
+            </section>
+            <section id="section23-2">
+                <h3>23.2 Magnetic Dipole and Field</h3>
+                <p><strong>Magnetic Dipole:</strong> Two equal, opposite poles separated by a small distance. Moment: \( \vec{M} = m (2l) \), SI unit: A-m². For a loop: \( \vec{M} = N I A \).</p>
+                <p><strong>Magnetic Field:</strong> Axial: \( B = \frac{\mu_0 2 M}{4 \pi r^3} \). Equatorial: \( B = \frac{\mu_0 M}{4 \pi r^3} \). General: \( B = \frac{\mu_0 M}{4 \pi r^3} \sqrt{1 + 3 \cos^2 \theta} \).</p>
+                <p><strong>Torque:</strong> \( \vec{\tau} = \vec{M} \times \vec{B} \). Potential energy: \( U = -\vec{M} \cdot \vec{B} \).</p>
+                <p><strong>Atomic Magnetic Moment:</strong> \( M = \frac{e v r}{2} = \frac{n e h}{4 \pi m_e} \). Bohr magneton: \( \mu_B = 9.27 \times 10^{-24} \, \text{A-m}^2 \).</p>
+            </section>
+            <section id="section23-3">
+                <h3>23.3 Earth’s Magnetism</h3>
+                <p>Earth acts as a magnet with a field strength of a few tenths of a gauss. Key elements:</p>
+                <ul>
+                    <li><strong>Declination (\(\theta\)):</strong> Angle between magnetic and geographic meridians.</li>
+                    <li><strong>Dip (\(\delta\)):</strong> Angle between magnetic field and horizontal, 0° at equator, 90° at poles.</li>
+                    <li><strong>Horizontal Component:</strong> \( H = B \cos \delta \). Vertical: \( V = B \sin \delta \).</li>
+                </ul>
+                <p><strong>Magnetic Maps:</strong> Isogonic, isoclinic, isodynamic lines. Neutral points occur where magnet’s field cancels Earth’s horizontal field.</p>
+                <p><strong>Vibration Magnetometer:</strong> Time period: \( T = 2 \pi \sqrt{\frac{I}{M H}} \).</p>
+            </section>
+            <section id="section23-4">
+                <h3>23.4 Magnetic Materials</h3>
+                <p><strong>Permeability:</strong> \( \mu = \frac{B}{H} \). <strong>Intensity of Magnetization:</strong> \( I = \frac{M}{V} \).</p>
+                <p><strong>Susceptibility:</strong> \( \chi_m = \frac{I}{H} \). Relation: \( \mu = \mu_0 (1 + \chi_m) \).</p>
+                <p><strong>Material Types:</strong></p>
+                <table>
+                    <tr><th>Property</th><th>Diamagnetic</th><th>Paramagnetic</th><th>Ferromagnetic</th></tr>
+                    <tr><td>Magnetization</td><td>Weak, opposite to field</td><td>Weak, aligns with field</td><td>Strong, aligns with field</td></tr>
+                    <tr><td>Permeability</td><td>\( \mu < 1 \)</td><td>\( \mu > 1 \)</td><td>\( \mu \gg 1 \)</td></tr>
+                    <tr><td>Susceptibility</td><td>Negative, temp-independent</td><td>Positive, \( \chi_m \propto \frac{1}{T} \)</td><td>Large, positive</td></tr>
+                </table>
+                <div class="key-terms">
+                    <h4>Key Terms</h4>
+                    <p>Magnetic Dipole, Earth’s Magnetism, Susceptibility, Diamagnetic, Paramagnetic, Ferromagnetic</p>
+                </div>
+                <div class="review-questions">
+                    <h4>Review Questions</h4>
+                    <ol>
+                        <li>Derive the magnetic field on the axial line of a dipole.</li>
+                        <li>Calculate the dip angle if \( H = 0.3 \, \text{G} \), \( V = 0.4 \, \text{G} \).</li>
+                        <li>Compare properties of diamagnetic and ferromagnetic materials.</li>
+                    </ol>
+                </div>
+            </section>
+        </section>
+
+        <section id="chapter24a">
+            <h2>Chapter 24a: Electromagnetic Induction</h2>
+            <section id="section24a-1">
+                <h3>24.1 Faraday’s Laws of Electromagnetic Induction</h3>
+                <p><strong>First Law:</strong> An emf is induced in a conductor when the magnetic flux through it changes.</p>
+                <p><strong>Second Law:</strong> The magnitude of induced emf is proportional to the rate of change of magnetic flux:</p>
+                <p class="equation">\( \mathcal{E} = -\frac{d\Phi_B}{dt} \), where \( \Phi_B = \vec{B} \cdot \vec{A} \).</p>
+            </section>
+            <section id="section24a-2">
+                <h3>24.2 Lenz’s Law</h3>
+                <p>The direction of induced current opposes the change in magnetic flux causing it. This ensures conservation of energy.</p>
+            </section>
+            <section id="section24a-3">
+                <h3>24.3 Motional Electromotive Force</h3>
+                <p>Emf induced in a conductor moving in a magnetic field:</p>
+                <p class="equation">\( \mathcal{E} = B l v \sin \theta \), where \( l \) is the conductor length, \( v \) is velocity.</p>
+                <p>For a rotating coil in a magnetic field: \( \mathcal{E} = N B A \omega \sin \omega t \).</p>
+            </section>
+            <section id="section24a-4">
+                <h3>24.4 Self and Mutual Induction</h3>
+                <p><strong>Self-Induction:</strong> Emf induced in a coil due to its own current change: \( \mathcal{E} = -L \frac{dI}{dt} \). Inductance: \( L = \frac{N \Phi_B}{I} \).</p>
+                <p><strong>Mutual Induction:</strong> Emf induced in one coil due to current change in another: \( \mathcal{E}_2 = -M \frac{dI_1}{dt} \). Mutual inductance: \( M = \frac{N_2 \Phi_{B2}}{I_1} \).</p>
+            </section>
+            <section id="section24a-5">
+                <h3>24.5 Eddy Currents</h3>
+                <p>Induced currents in bulk conductors due to changing magnetic fields. Applications: electromagnetic braking, induction furnaces. Disadvantages: energy loss as heat.</p>
+                <div class="key-terms">
+                    <h4>Key Terms</h4>
+                    <p>Faraday’s Laws, Lenz’s Law, Motional Emf, Self-Induction, Mutual Induction, Eddy Currents</p>
+                </div>
+                <div class="review-questions">
+                    <h4>Review Questions</h4>
+                    <ol>
+                        <li>Explain Faraday’s second law with a derivation.</li>
+                        <li>Calculate the emf induced in a 0.5 m rod moving at 2 m/s in a 0.3 T field perpendicularly.</li>
+                        <li>Describe the role of Lenz’s law in energy conservation.</li>
+                    </ol>
+                </div>
+            </section>
+        </section>
+
+        <section id="chapter24b">
+            <h2>Chapter 24b: Alternating Current</h2>
+            <section id="section24b-1">
+                <h3>26.1 Basics of Alternating Current</h3>
+                <p>Alternating current (AC) periodically reverses direction. Current: \( I = I_0 \sin \omega t \). Voltage: \( V = V_0 \sin \omega t \).</p>
+                <p><strong>RMS Values:</strong> \( I_{\text{rms}} = \frac{I_0}{\sqrt{2}} \), \( V_{\text{rms}} = \frac{V_0}{\sqrt{2}} \).</p>
+            </section>
+            <section id="section24b-2">
+                <h3>26.2 AC Circuit Elements</h3>
+                <p><strong>Resistor:</strong> \( V = I R \), in phase.</p>
+                <p><strong>Inductor:</strong> \( V = L \frac{dI}{dt} \), voltage leads current by \( \pi/2 \). Reactance: \( X_L = \omega L \).</p>
+                <p><strong>Capacitor:</strong> \( I = C \frac{dV}{dt} \), current leads voltage by \( \pi/2 \). Reactance: \( X_C = \frac{1}{\omega C} \).</p>
+            </section>
+            <section id="section24b-3">
+                <h3>26.3 Series AC Circuits</h3>
+                <p><strong>RLC Circuit:</strong> Impedance: \( Z = \sqrt{R^2 + (X_L - X_C)^2} \). Phase angle: \( \tan \phi = \frac{X_L - X_C}{R} \).</p>
+                <p><strong>Resonance:</strong> Occurs when \( X_L = X_C \), frequency: \( \omega = \frac{1}{\sqrt{L C}} \).</p>
+            </section>
+            <section id="section24b-4">
+                <h3>26.4 Power in AC Circuits</h3>
+                <p>Average power: \( P = V_{\text{rms}} I_{\text{rms}} \cos \phi \), where \( \cos \phi \) is the power factor.</p>
+                <p>Power is maximum at resonance, where \( \cos \phi = 1 \).</p>
+            </section>
+            <section id="section24b-5">
+                <h3>26.5 Transformers</h3>
+                <p>Transformers change AC voltage using mutual induction. Voltage ratio: \( \frac{V_s}{V_p} = \frac{N_s}{N_p} \). Current ratio: \( \frac{I_s}{I_p} = \frac{N_p}{N_s} \).</p>
+                <p>Efficiency: \( \eta = \frac{\text{Output power}}{\text{Input power}} \). Losses: copper, iron, hysteresis.</p>
+                <div class="key-terms">
+                    <h4>Key Terms</h4>
+                    <p>Alternating Current, RMS Value, Reactance, Impedance, Resonance, Transformer</p>
+                </div>
+                <div class="review-questions">
+                    <h4>Review Questions</h4>
+                    <ol>
+                        <li>Derive the impedance of a series RLC circuit.</li>
+                        <li>Calculate the resonant frequency for \( L = 0.1 \, \text{H} \), \( C = 10 \, \mu\text{F} \).</li>
+                        <li>Explain the working principle of a transformer.</li>
+                    </ol>
+                </div>
+            </section>
+        </section>
+		
+		
+		<section id="chapter24c">
+            <h2>Chapter 24c: Electromagnetic Induction</h2>
+            <section id="section24c-1">
+                <h3>24.1 Magnetic Flux</h3>
+                <p>Magnetic flux is the total number of magnetic field lines crossing a surface normally when placed in a magnetic field. It is defined as:</p>
+                <p class="equation">\( \Phi = B \cdot S \cos \theta = B S \cos \theta \)</p>
+                <p>SI unit: weber (Wb), equivalent to tesla-metre². CGS unit: maxwell, where \( 1 \, \text{weber} = 10^8 \, \text{maxwell} \).</p>
+                <p>Dimensional formula: \( [\Phi] = [ML^2 T^{-2} A^{-1}] \).</p>
+            </section>
+            <section id="section24c-2">
+                <h3>24.2 Faraday’s Laws of Electromagnetic Induction</h3>
+                <p><strong>First Law:</strong> Whenever the magnetic flux linked with a circuit changes, an induced emf is produced.</p>
+                <p><strong>Second Law:</strong> The induced emf lasts as long as the flux change continues.</p>
+                <p><strong>Third Law:</strong> The magnitude of induced emf is proportional to the rate of change of magnetic flux:</p>
+                <p class="equation">\( \mathcal{E} = -\frac{d\Phi}{dt} \)</p>
+                <p>The negative sign indicates that the induced emf opposes the flux change.</p>
+                <p>Induced current: \( I = -\frac{1}{R} \frac{d\Phi}{dt} \).</p>
+                <p>For a coil in a uniform magnetic field: \( I = \frac{N B A \omega \sin \omega t}{R} = I_0 \sin \omega t \), where \( I_0 = N B A \omega \).</p>
+                <p>Induced charge: \( q = \frac{1}{R} \Delta \Phi \).</p>
+            </section>
+            <section id="section24c-3">
+                <h3>24.3 Lenz’s Law</h3>
+                <p>Lenz’s law states that the direction of induced emf or current opposes the cause of the flux change, conserving energy.</p>
+                <p><strong>Rules for Direction:</strong></p>
+                <ul>
+                    <li>If flux decreases, the induced current’s magnetic field aligns with the existing field.</li>
+                    <li>If flux increases, the induced current’s magnetic field opposes the existing field.</li>
+                </ul>
+                <p><strong>RIN Rule:</strong> For a loop on the right of a conductor with increasing current, induced current is anti-clockwise (north pole).</p>
+                <p><strong>Ä IN Rule:</strong> For an inward magnetic field increasing, induced current is anti-clockwise.</p>
+                <p><strong>Bar Magnet and Coil:</strong></p>
+                <ul>
+                    <li>North pole approaching: anti-clockwise current (north pole formed).</li>
+                    <li>North pole receding: clockwise current (south pole formed).</li>
+                    <li>South pole approaching: clockwise current (south pole formed).</li>
+                    <li>South pole receding: anti-clockwise current (north pole formed).</li>
+                </ul>
+            </section>
+            <section id="section24c-4">
+                <h3>24.4 Motional Emf</h3>
+                <p>Emf induced in a rod of length \( l \) moving perpendicular to a magnetic field \( B \) with velocity \( v \):</p>
+                <p class="equation">\( \mathcal{E} = B v l \)</p>
+                <p>If the rod moves at an angle \( \theta \): \( \mathcal{E} = B v l \sin \theta \).</p>
+                <p>For a rotating rod: \( \mathcal{E} = \frac{1}{2} B \omega l^2 = B A f \), where \( A = \pi l^2 \).</p>
+                <p>For a rotating disc: \( \mathcal{E} = \frac{1}{2} B \omega r^2 = B A f \), where \( A = \pi r^2 \).</p>
+                <p><strong>Fleming’s Right Hand Rule:</strong> Thumb (motion), forefinger (magnetic field), central finger (induced current).</p>
+                <p>Integral form of Faraday’s law: \( \oint \vec{E} \cdot d\vec{l} = -\frac{d\Phi}{dt} \).</p>
+            </section>
+            <section id="section24c-5">
+                <h3>24.5 Eddy Currents</h3>
+                <p>Eddy currents are induced currents in bulk metal placed in a varying magnetic field or rotated in a uniform field, resembling whirlpools.</p>
+                <p>Magnitude: \( I = -\frac{1}{R} \frac{d\Phi}{dt} \).</p>
+                <p>Also called Foucault’s currents, they cause heating and power loss, which can be reduced by laminating the metal core.</p>
+            </section>
+            <section id="section24c-6">
+                <h3>24.6 Self-Induction</h3>
+                <p>Self-induction is the production of induced emf in a coil due to its own current change.</p>
+                <p>Flux: \( \Phi = L I \), where \( L \) is the self-inductance.</p>
+                <p>Induced emf: \( \mathcal{E} = -L \frac{dI}{dt} \).</p>
+                <p>SI unit: henry (H). Dimensional formula: \( [ML^2 T^{-2} A^{-2}] \).</p>
+                <p>Self-inductance of a solenoid: \( L = \mu_0 n^2 A l \), or \( L = \mu_0 \mu_r n^2 A l \) with a magnetic core.</p>
+                <p>Self-inductance of a toroid: \( L = \mu_0 \frac{N^2 A}{2 \pi r} \).</p>
+                <p>Energy stored: \( E = \frac{1}{2} L I^2 \).</p>
+            </section>
+            <section id="section24c-7">
+                <h3>24.7 Mutual Induction</h3>
+                <p>Mutual induction is the production of induced emf in one coil due to a current change in a neighboring coil.</p>
+                <p>Flux in secondary coil: \( \Phi = M I \), where \( M \) is mutual inductance.</p>
+                <p>Induced emf: \( \mathcal{E} = -M \frac{dI}{dt} \).</p>
+                <p>SI unit: henry (H). Dimensional formula: \( [ML^2 T^{-2} A^{-2}] \).</p>
+                <p>Mutual inductance of two solenoids: \( M = \mu_0 n_1 n_2 A l \).</p>
+            </section>
+            <section id="section24c-8">
+                <h3>24.8 Coefficient of Coupling</h3>
+                <p>The coefficient of coupling measures how two coils are coupled:</p>
+                <p class="equation">\( K = \frac{M}{\sqrt{L_1 L_2}} \)</p>
+                <p>Maximum \( K = 1 \) for coaxial coils; minimum \( K = 0 \) for perpendicular coils.</p>
+            </section>
+            <section id="section24c-9">
+                <h3>24.9 Grouping of Coils</h3>
+                <p><strong>Series, \( K = 0 \):</strong> \( L = L_1 + L_2 + L_3 \).</p>
+                <p><strong>Parallel, \( K = 0 \):</strong> \( \frac{1}{L} = \frac{1}{L_1} + \frac{1}{L_2} + \frac{1}{L_3} \).</p>
+                <p><strong>Series, \( K = 1 \):</strong></p>
+                <ul>
+                    <li>Same direction: \( L = L_1 + L_2 + 2M \).</li>
+                    <li>Opposite direction: \( L = L_1 + L_2 - 2M \).</li>
+                </ul>
+                <p><strong>Parallel, \( K = 1 \):</strong></p>
+                <ul>
+                    <li>Same direction: \( L = \frac{L_1 L_2 - M^2}{L_1 + L_2 + 2M} \).</li>
+                    <li>Opposite direction: \( L = \frac{L_1 L_2 - M^2}{L_1 + L_2 - 2M} \).</li>
+                </ul>
+                <div class="key-terms">
+                    <h4>Key Terms</h4>
+                    <p>Magnetic Flux, Faraday’s Laws, Lenz’s Law, Motional Emf, Eddy Currents, Self-Induction, Mutual Induction, Coefficient of Coupling</p>
+                </div>
+                <div class="review-questions">
+                    <h4>Review Questions</h4>
+                    <ol>
+                        <li>Derive the expression for induced emf in a rotating coil.</li>
+                        <li>Calculate the emf induced in a 0.2 m rod moving at 3 m/s in a 0.5 T field at 60°.</li>
+                        <li>Explain how Lenz’s law supports energy conservation.</li>
+                    </ol>
+                </div>
+            </section>
+        </section>
+
+        <section id="chapter25">
+            <h2>Chapter 25: Alternating Current</h2>
+            <section id="section25-1">
+                <h3>25.1 Basics of Alternating Current</h3>
+                <p>Alternating current (AC) changes magnitude and direction periodically.</p>
+                <p>Current: \( I = I_0 \sin \omega t \). Voltage: \( V = V_0 \sin \omega t \), where \( I_0 \) and \( V_0 \) are peak values.</p>
+            </section>
+            <section id="section25-2">
+                <h3>25.2 Mean and RMS Values</h3>
+                <p><strong>Mean Value (Half-Cycle):</strong> \( I_m = \frac{2 I_0}{\pi} \approx 0.637 I_0 \). For a full cycle: \( I_m = 0 \).</p>
+                <p>Mean voltage: \( V_m = \frac{2 V_0}{\pi} \approx 0.637 V_0 \).</p>
+                <p><strong>RMS Value:</strong> \( I_{\text{rms}} = \frac{I_0}{\sqrt{2}} \approx 0.707 I_0 \), \( V_{\text{rms}} = \frac{V_0}{\sqrt{2}} \approx 0.707 V_0 \).</p>
+                <p>Form factor: \( \frac{I_{\text{rms}}}{I_m} = \frac{\pi}{2 \sqrt{2}} \approx 1.11 \). Peak factor: \( \frac{I_0}{I_{\text{rms}}} = \sqrt{2} \approx 1.414 \).</p>
+            </section>
+            <section id="section25-3">
+                <h3>25.3 Reactance</h3>
+                <p><strong>Inductive Reactance (\( X_L \)):</strong> \( X_L = \omega L = 2 \pi f L \). Zero for DC (\( f = 0 \)). Unit: ohm.</p>
+                <p><strong>Capacitive Reactance (\( X_C \)):</strong> \( X_C = \frac{1}{\omega C} = \frac{1}{2 \pi f C} \). Infinite for DC. Unit: ohm.</p>
+            </section>
+            <section id="section25-4">
+                <h3>25.4 Impedance</h3>
+                <p>Impedance in an AC circuit: \( Z = \sqrt{R^2 + (X_L - X_C)^2} \). Unit: ohm.</p>
+            </section>
+            <section id="section25-5">
+                <h3>25.5 Power in AC Circuits</h3>
+                <p>Average power: \( P_{\text{av}} = V_{\text{rms}} I_{\text{rms}} \cos \phi = \frac{V I}{2} \cos \phi \), where \( \cos \phi = \frac{R}{Z} \) is the power factor.</p>
+            </section>
+            <section id="section25-6">
+                <h3>25.6 Current and Potential Relations</h3>
+                <p><strong>Pure Resistive Circuit:</strong> \( V = I R \), in phase, \( P = E I \), \( \cos \phi = 1 \).</p>
+                <p><strong>Pure Inductive Circuit:</strong> \( V = L \frac{dI}{dt} \), current lags by \( \pi/2 \), \( X_L = \omega L \), \( P = 0 \), \( \cos \phi = 0 \).</p>
+                <p><strong>Pure Capacitive Circuit:</strong> \( I = C \frac{dV}{dt} \), current leads by \( \pi/2 \), \( X_C = \frac{1}{\omega C} \), \( P = 0 \), \( \cos \phi = 0 \).</p>
+                <p><strong>R-C Circuit:</strong> \( Z = \sqrt{R^2 + \frac{1}{\omega^2 C^2}} \), current leads by \( \tan \phi = \frac{1}{\omega C R} \).</p>
+                <p><strong>L-C Circuit:</strong> \( Z = |X_L - X_C| \), \( \tan \phi = \frac{X_L - X_C}{0} \). If \( X_L > X_C \), \( \phi = \pi/2 \); if \( X_L < X_C \), \( \phi = -\pi/2 \). At resonance (\( X_L = X_C \)): \( Z = 0 \).</p>
+                <p><strong>L-C-R Circuit:</strong> \( Z = \sqrt{R^2 + (X_L - X_C)^2} \), \( \cos \phi = \frac{R}{Z} \), \( P = E I \cos \phi \).</p>
+            </section>
+            <section id="section25-7">
+                <h3>25.7 Resonance in AC Circuits</h3>
+                <p><strong>Series Resonance:</strong> \( X_L = X_C \), resonance frequency: \( f = \frac{1}{2 \pi \sqrt{L C}} \), \( Z = R \), maximum current.</p>
+                <p>Q-factor: \( Q = \frac{1}{R} \sqrt{\frac{L}{C}} \). Also called an acceptor circuit.</p>
+                <p><strong>Parallel Resonance:</strong> \( X_L = X_C \), maximum impedance, minimum current.</p>
+            </section>
+            <section id="section25-8">
+                <h3>25.8 Wattless Current and L-C Oscillations</h3>
+                <p><strong>Wattless Current:</strong> Current with zero power consumption (\( \cos \phi = 0 \)), common in pure L or C circuits.</p>
+                <p><strong>L-C Oscillations:</strong> Oscillations in a circuit with a charged capacitor and inductor: \( \frac{d^2 q}{dt^2} + \frac{q}{L C} = 0 \), frequency: \( \nu = \frac{1}{2 \pi \sqrt{L C}} \).</p>
+            </section>
+            <section id="section25-9">
+                <h3>25.9 Choke Coil and Transient Current</h3>
+                <p><strong>Choke Coil:</strong> High inductance, low resistance device to adjust AC current with minimal power loss, used in fluorescent tubes.</p>
+                <p><strong>Transient Current:</strong></p>
+                <ul>
+                    <li>Growth in inductor: \( I = I_0 (1 - e^{-Rt/L}) \), time constant: \( \tau = \frac{L}{R} \).</li>
+                    <li>Decay in inductor: \( I = I_0 e^{-Rt/L} \).</li>
+                    <li>Charging capacitor: \( q = q_0 (1 - e^{-t/RC}) \), time constant: \( \tau = R C \).</li>
+                    <li>Discharging capacitor: \( q = q_0 e^{-t/RC} \).</li>
+                </ul>
+            </section>
+            <section id="section25-10">
+                <h3>25.10 AC Generator and DC Motor</h3>
+                <p><strong>AC Generator:</strong> Converts mechanical energy to AC via electromagnetic induction. Emf: \( \mathcal{E} = N B A \omega \sin \omega t \).</p>
+                <p>Components: armature, field magnets, slip rings, brushes.</p>
+                <p><strong>DC Motor:</strong> Converts electrical energy to mechanical energy via torque: \( \tau = N B I A \sin \theta \). Efficiency: \( \eta = \frac{\text{Back emf}}{\text{Applied emf}} \).</p>
+            </section>
+            <section id="section25-11">
+                <h3>25.11 Transformers</h3>
+                <p>Transformers change AC voltage via mutual induction.</p>
+                <p><strong>Step-up:</strong> \( N_s > N_p \), \( V_s > V_p \), \( I_p > I_s \).</p>
+                <p><strong>Step-down:</strong> \( N_p > N_s \), \( V_p > V_s \), \( I_s > I_p \).</p>
+                <p>Transformation ratio: \( K = \frac{N_s}{N_p} = \frac{V_s}{V_p} = \frac{I_p}{I_s} \).</p>
+                <p>Efficiency: \( \eta = \frac{\text{Output power}}{\text{Input power}} \), typically 70–90%.</p>
+                <p>Losses: flux leakage, resistance, eddy currents, hysteresis, magnetostriction.</p>
+                <div class="key Plays: AC Generator, Transformer, Wattless Current, Resonance, Choke Coil
+                <h4>Key Terms</h4>
+                <p>Alternating Current, RMS Value, Reactance, Impedance, Power Factor, Resonance, Transformer</p>
+                </div>
+                <div class="review-questions">
+                    <h4>Review Questions</h4>
+                    <ol>
+                        <li>Derive the impedance of a series L-C-R circuit.</li>
+                        <li>Calculate the resonant frequency for \( L = 0.2 \, \text{H} \), \( C = 20 \, \mu\text{F} \).</li>
+                        <li>Explain the working of a step-up transformer.</li>
+                    </ol>
+                </div>
+            </section>
+        </section>
+
+        <section id="chapter26">
+            <h2>Chapter 26: Electromagnetic Waves</h2>
+            <section id="section26-1">
+                <h3>26.1 Displacement Current</h3>
+                <p>Displacement current is produced in a region where the electric field or flux changes with time:</p>
+                <p class="equation">\( I_D = \epsilon_0 \frac{d\Phi_E}{dt} \)</p>
+            </section>
+            <section id="section26-2">
+                <h3>26.2 Maxwell’s Equations</h3>
+                <p><strong>Gauss’s Law (Electrostatics):</strong> \( \oint \vec{E} \cdot d\vec{S} = \frac{q}{\epsilon_0} \).</p>
+                <p><strong>Gauss’s Law (Magnetostatics):</strong> \( \oint \vec{B} \cdot d\vec{S} = 0 \).</p>
+                <p><strong>Faraday’s Law:</strong> \( \oint \vec{E} \cdot d\vec{l} = -\frac{d\Phi_B}{dt} \).</p>
+                <p><strong>Ampere-Maxwell Law:</strong> \( \oint \vec{B} \cdot d\vec{l} = \mu_0 (I_C + I_D) = \mu_0 I_C + \mu_0 \epsilon_0 \frac{d\Phi_E}{dt} \).</p>
+            </section>
+            <section id="section26-3">
+                <h3>26.3 Electromagnetic Waves</h3>
+                <p>Electromagnetic waves consist of perpendicular, sinusoidally varying electric and magnetic fields propagating at the speed of light (\( c = 3 \times 10^8 \, \text{m/s} \)).</p>
+                <p>Wave equations: \( E = E_0 \sin \omega \left( t - \frac{x}{c} \right) \), \( B = B_0 \sin \omega \left( t - \frac{x}{c} \right) \).</p>
+                <p>Speed: \( c = \frac{1}{\sqrt{\mu_0 \epsilon_0}} \), \( c = \frac{E_0}{B_0} \).</p>
+                <p>Poynting vector: \( \vec{S} = \frac{1}{\mu_0} \vec{E} \times \vec{B} \), unit: W/m².</p>
+                <p>Energy density: \( u_E = \frac{1}{2} \epsilon_0 E^2 \), \( u_B = \frac{1}{2} \frac{B^2}{\mu_0} \), total: \( u = u_E + u_B \).</p>
+                <p>Intensity: \( I = u c = \frac{1}{2} \epsilon_0 E_0^2 c \).</p>
+                <p>Momentum: \( p = \frac{U}{c} \) (absorbing surface), \( p = \frac{2U}{c} \) (reflecting surface).</p>
+            </section>
+            <section id="section26-4">
+                <h3>26.4 Electromagnetic Spectrum</h3>
+                <p>The electromagnetic spectrum is the range of electromagnetic waves arranged by wavelength or frequency.</p>
+                <p><strong>Uses:</strong></p>
+                <ul>
+                    <li><strong>Radio/Microwaves:</strong> Radio and TV communication.</li>
+                    <li><strong>Infrared:</strong> Muscle treatment, fog photography, greenhouse heating, weather forecasting.</li>
+                    <li><strong>Visible Light:</strong> Human vision.</li>
+                    <li><strong>Ultraviolet:</strong> Molecular studies, sterilization, forgery detection.</li>
+                    <li><strong>X-rays:</strong> Fault detection, crystal structure analysis, pearl detection.</li>
+                    <li><strong>Gamma Rays:</strong> Nuclear structure studies.</li>
+                </ul>
+                <div class="key-terms">
+                    <h4>Key Terms</h4>
+                    <p>Displacement Current, Maxwell’s Equations, Electromagnetic Waves, Poynting Vector, Electromagnetic Spectrum</p>
+                </div>
+                <div class="review-questions">
+                    <h4>Review Questions</h4>
+                    <ol>
+                        <li>Explain Maxwell’s equations and their significance.</li>
+                        <li>Calculate the speed of an electromagnetic wave given \( \mu_0 = 4 \pi \times 10^{-7} \, \text{T m A}^{-1} \), \( \epsilon_0 = 8.85 \times 10^{-12} \, \text{C}^2 \text{N}^{-1} \text{m}^{-2} \).</li>
+                        <li>Describe the properties of electromagnetic waves.</li>
+                    </ol>
+                </div>
+            </section>
+        </section>
+
+        <section id="chapter27">
+            <h2>Chapter 27: Ray Optics</h2>
+            <section id="section27-1">
+                <h3>27.1 Characteristics of Light</h3>
+                <p>Light is a transverse electromagnetic wave that produces the sensation of sight. Speed in vacuum: \( 3 \times 10^8 \, \text{m/s} \). Speed and wavelength change in different media, but frequency remains constant.</p>
+            </section>
+            <section id="section27-2">
+                <h3>27.2 Reflection of Light</h3>
+                <p>Reflection is the bouncing back of light rays from a polished surface.</p>
+                <p><strong>Laws of Reflection:</strong></p>
+                <ul>
+                    <li>Incident ray, reflected ray, and normal lie in the same plane.</li>
+                    <li>Angle of incidence equals angle of reflection.</li>
+                </ul>
+                <p><strong>Types:</strong> Regular (parallel reflected rays) and irregular (diffused) reflection.</p>
+            </section>
+            <section id="section27-3">
+                <h3>27.3 Mirrors</h3>
+                <p><strong>Plane Mirror:</strong> Forms virtual or real images, same size, same distance, laterally inverted. Number of images for two mirrors at angle \( \theta \): \( n = \frac{360^\circ}{\theta} - 1 \) (even) or integral part (odd).</p>
+                <p><strong>Spherical Mirrors:</strong></p>
+                <ul>
+                    <li><strong>Concave:</strong> Bent inward, converging.</li>
+                    <li><strong>Convex:</strong> Bulging outward, diverging.</li>
+                </ul>
+                <p>Focal length: \( f = \frac{R}{2} \). Mirror formula: \( \frac{1}{f} = \frac{1}{v} + \frac{1}{u} \). Magnification: \( m = \frac{I}{O} = -\frac{v}{u} \).</p>
+            </section>
+            <section id="section27-4">
+                <h3>27.4 Refraction of Light</h3>
+                <p>Refraction is the bending of light as it passes between media due to speed changes.</p>
+                <p><strong>Laws of Refraction:</strong></p>
+                <ul>
+                    <li>Incident ray, refracted ray, and normal lie in the same plane.</li>
+                    <li>Snell’s law: \( \frac{\sin i}{\sin r} = \mu_{12} \).</li>
+                </ul>
+                <p>Refractive index: \( \mu = \frac{c}{v} \). Relative: \( \mu_{12} = \frac{v_1}{v_2} \).</p>
+                <p><strong>Total Internal Reflection:</strong> Occurs when \( i > C \), where \( \mu = \frac{1}{\sin C} \). Applications: optical fibers, mirages.</p>
+            </section>
+            <section id="section27-5">
+                <h3>27.5 Lenses</h3>
+                <p><strong>Convex Lens:</strong> Converging. <strong>Concave Lens:</strong> Diverging.</p>
+                <p>Lens formula: \( \frac{1}{f} = \frac{1}{v} - \frac{1}{u} \). Lens maker’s formula: \( \frac{1}{f} = (\mu - 1) \left( \frac{1}{R_1} - \frac{1}{R_2} \right) \).</p>
+                <p>Power: \( P = \frac{1}{f} \) (diopter). Magnification: \( m = \frac{v}{u} \).</p>
+                <p><strong>Aberrations:</strong> Spherical (blurred focus), chromatic (color fringing).</p>
+            </section>
+            <section id="section27-6">
+                <h3>27.6 Prism and Dispersion</h3>
+                <p><strong>Prism:</strong> Refracts light, causing dispersion (splitting into colors).</p>
+                <p>Prism formula: \( \mu = \frac{\sin \frac{A + \delta_m}{2}}{\sin \frac{A}{2}} \). For small angles: \( \delta = (\mu - 1) A \).</p>
+                <p><strong>Dispersion:</strong> \( \theta = (\mu_V - \mu_R) A \). Dispersive power: \( \omega = \frac{\mu_V - \mu_R}{\mu - 1} \).</p>
+            </section>
+            <section id="section27-7">
+                <h3>27.7 Scattering of Light</h3>
+                <p>Scattering occurs when light strikes particles of wavelength size, deviating in all directions. Intensity: \( I \propto \frac{1}{\lambda^4} \).</p>
+                <p>Examples: Blue sky, red sunset, black space.</p>
+            </section>
+            <section id="section27-8">
+                <h3>27.8 Human Eye</h3>
+                <p>The eye forms real images on the retina using the cornea, lens, iris, pupil, and ciliary muscles.</p>
+                <p><strong>Defects:</strong></p>
+                <ul>
+                    <li><strong>Myopia:</strong> Corrected by concave lenses.</li>
+                    <li><strong>Hypermetropia:</strong> Corrected by convex lenses.</li>
+                    <li><strong>Astigmatism:</strong> Corrected by cylindrical lenses.</li>
+                    <li><strong>Colour Blindness:</strong> Due to missing cone cells.</li>
+                    <li><strong>Cataract:</strong> Treated surgically.</li>
+                </ul>
+            </section>
+            <section id="section27-9">
+                <h3>27.9 Optical Instruments</h3>
+                <p><strong>Simple Microscope:</strong> Magnification: \( M = 1 + \frac{D}{f} \) (at D), \( M = \frac{D}{f} \) (at infinity).</p>
+                <p><strong>Compound Microscope:</strong> \( M = \frac{v_o}{u_o} \left( 1 + \frac{D}{f_e} \right) \) (at D), \( M = \frac{v_o}{u_o} \frac{D}{f_e} \) (at infinity).</p>
+                <p><strong>Astronomical Telescope:</strong> \( M = \frac{f_o}{f_e} \left( 1 + \frac{f_e}{D} \right) \) (at D), \( M = \frac{f_o}{f_e} \) (at infinity).</p>
+                <p><strong>Reflecting Telescope:</strong> \( M = \frac{f_o}{f_e} \). Uses mirrors for image formation.</p>
+                <p><strong>Resolving Power:</strong> Microscope: \( \frac{1}{d} = \frac{2 \mu \sin \theta}{\lambda} \). Telescope: \( \frac{1}{d\theta} = \frac{d}{1.22 \lambda} \).</p>
+                <div class="key-terms">
+                    <h4>Key Terms</h4>
+                    <p>Light, Reflection, Refraction, Total Internal Reflection, Lens, Prism, Dispersion, Scattering, Human Eye, Microscope, Telescope</p>
+                </div>
+                <div class="review-questions">
+                    <h4>Review Questions</h4>
+                    <ol>
+                        <li>Derive the lens maker’s formula.</li>
+                        <li>Calculate the focal length of a convex lens with \( \mu = 1.5 \), \( R_1 = 20 \, \text{cm} \), \( R_2 = -30 \, \text{cm} \).</li>
+                        <li>Explain the phenomenon of total internal reflection.</li>
+                    </ol>
+                </div>
+            </section>
+        </section>
+		
+		
+		<section id="chapter28">
+            <h2>Chapter 28: Wave Optics</h2>
+            <section id="section28-1">
+                <h3>28.1 Introduction to Wave Optics</h3>
+                <p>Wave optics describes light as a form of energy that travels through a medium in the form of transverse wave motion. The speed of light in a medium depends on the medium’s properties.</p>
+            </section>
+            <section id="section28-2">
+                <h3>28.2 Newton’s Corpuscular Theory</h3>
+                <p>Light consists of small, invisible elastic particles called corpuscles, traveling at \( 3 \times 10^8 \, \text{m/s} \) in a vacuum. Different colors have different corpuscle sizes. This theory explains reflection and refraction but fails to explain interference, diffraction, polarization, photoelectric effect, and Compton effect. It also incorrectly predicts faster light travel in rarer media compared to denser media.</p>
+            </section>
+            <section id="section28-3">
+                <h3>28.3 Huygens’ Wave Theory</h3>
+                <p>Light travels as waves in all directions at the speed of light. Different colors have different wavelengths. This theory explains reflection, refraction, interference, diffraction, and polarization but fails to explain the photoelectric effect and Compton effect. It introduced the concept of a wavefront.</p>
+            </section>
+            <section id="section28-4">
+                <h3>28.4 Wavefront</h3>
+                <p>A wavefront is the continuous locus of particles in a medium vibrating in the same phase. Types include:</p>
+                <ul>
+                    <li><strong>Spherical Wavefront:</strong> From a point source, amplitude \( A \propto \frac{1}{x} \), intensity \( I \propto \frac{1}{x^2} \).</li>
+                    <li><strong>Cylindrical Wavefront:</strong> From a linear source, amplitude \( A \propto \frac{1}{\sqrt{x}} \), intensity \( I \propto \frac{1}{x} \).</li>
+                    <li><strong>Plane Wavefront:</strong> From a distant source, amplitude is constant, intensity is constant.</li>
+                </ul>
+            </section>
+            <section id="section28-5">
+                <h3>28.5 Huygens’ Principle</h3>
+                <p>Every point on a wavefront acts as a source of secondary wavelets that travel at the speed of light. A surface touching these wavelets tangentially gives the new wavefront.</p>
+            </section>
+            <section id="section28-6">
+                <h3>28.6 Superposition of Waves</h3>
+                <p>When two waves propagate simultaneously, the resultant displacement is the vector sum of individual displacements: \( y = y_1 + y_2 \).</p>
+            </section>
+            <section id="section28-7">
+                <h3>28.7 Interference of Light</h3>
+                <p>Interference occurs when two light waves of the same frequency and constant phase difference superpose, resulting in maximum (constructive) or minimum (destructive) intensity. Conditions:</p>
+                <ul>
+                    <li><strong>Constructive:</strong> Phase difference \( \phi = 2n\pi \), path difference \( \Delta x = n\lambda \).</li>
+                    <li><strong>Destructive:</strong> Phase difference \( \phi = (2n-1)\pi \), path difference \( \Delta x = \frac{(2n-1)\lambda}{2} \).</li>
+                </ul>
+                <p>Resultant amplitude: \( R = \sqrt{a^2 + b^2 + 2ab \cos \phi} \). Intensity: \( I = I_1 + I_2 + 2\sqrt{I_1 I_2} \cos \phi \).</p>
+            </section>
+            <section id="section28-8">
+                <h3>28.8 Young’s Double Slit Experiment</h3>
+                <p>Produces interference patterns using two coherent sources. Bright fringe position: \( y_n = \frac{n \lambda D}{d} \). Dark fringe position: \( y_n = \frac{(2n-1) \lambda D}{2d} \). Fringe width: \( \beta = \frac{\lambda D}{d} \). Angular fringe width: \( \theta = \frac{\lambda}{d} \).</p>
+                <p>If immersed in a medium of refractive index \( \mu \), fringe width decreases by \( \mu \). With white light, colored fringes appear, with red fringes larger than violet.</p>
+            </section>
+            <section id="section28-9">
+                <h3>28.9 Interference in Thin Films</h3>
+                <p>Interference occurs in thin films due to reflection from two surfaces. Wavelength in medium: \( \lambda_m = \frac{\lambda}{\mu} \). Constructive interference: \( 2\mu t = \left(n - \frac{1}{2}\right) \lambda \). Destructive interference: \( 2\mu t = n\lambda \).</p>
+            </section>
+            <section id="section28-10">
+                <h3>28.10 Fresnel’s Biprism and Lloyd’s Mirror</h3>
+                <p><strong>Fresnel’s Biprism:</strong> Two prisms create two coherent sources from one. <strong>Lloyd’s Mirror:</strong> Produces hyperbolic or circular fringes, appearing straight at large distances.</p>
+            </section>
+            <section id="section28-11">
+                <h3>28.11 Diffraction</h3>
+                <p>Diffraction is the bending of light around obstacles or apertures. Classes:</p>
+                <table>
+                    <tr><th>S.No.</th><th>Fresnel Class</th><th>Fraunhofer Class</th></tr>
+                    <tr><td>1</td><td>Source at finite distance</td><td>Source at infinite distance</td></tr>
+                    <tr><td>2</td><td>No optics required</td><td>Collimating and focusing lenses required</td></tr>
+                    <tr><td>3</td><td>Fringes not sharp</td><td>Fringes sharp and well-defined</td></tr>
+                </table>
+                <p><strong>Fraunhofer Diffraction at Single Slit:</strong> Secondary minima: \( a \sin \theta = n\lambda \). Secondary maxima: \( a \sin \theta = \frac{(2n+1)\lambda}{2} \). Central maximum width: \( \frac{2\lambda D}{a} \).</p>
+            </section>
+            <section id="section28-12">
+                <h3>28.12 Polarisation</h3>
+                <p>Polarisation restricts light’s electric vectors to one direction. Plane-polarised light has vibrations in one plane. <strong>Nicol Prism:</strong> Produces and analyzes polarised light. <strong>Law of Malus:</strong> \( I \propto \cos^2 \theta \). <strong>Brewster’s Law:</strong> \( \mu = \tan i_p \), where \( i_p + r = 90^\circ \). <strong>Double Refraction:</strong> Splits light into ordinary and extraordinary rays.</p>
+            </section>
+            <section id="section28-13">
+                <h3>28.13 Doppler’s Effect in Light</h3>
+                <p>Apparent change in light frequency due to relative motion. Red shift: \( \lambda_{\text{app}} > \lambda \). Blue shift: \( \lambda_{\text{app}} < \lambda \). Doppler shift: \( \Delta \lambda = \frac{v}{c} \lambda \).</p>
+                <div class="key-terms">
+                    <h4>Key Terms</h4>
+                    <p>Wavefront, Huygens’ Principle, Interference, Diffraction, Polarisation, Doppler Shift</p>
+                </div>
+                <div class="review-questions">
+                    <h4>Review Questions</h4>
+                    <ol>
+                        <li>Derive the fringe width in Young’s double slit experiment.</li>
+                        <li>Explain the conditions for constructive and destructive interference.</li>
+                        <li>Calculate the angular width of a central maximum for a slit of width 0.02 mm and wavelength 600 nm.</li>
+                    </ol>
+                </div>
+            </section>
+        </section>
+
+        <section id="chapter29">
+            <h2>Chapter 29: Electrons, Photons and X-rays</h2>
+            <section id="section29-1">
+                <h3>29.1 Cathode Rays</h3>
+                <p>Cathode rays are streams of fast-moving electrons produced in a discharge tube at low pressure. Properties include deflection by electric and magnetic fields, production of heat, fluorescence, and X-rays when striking high atomic weight targets.</p>
+            </section>
+            <section id="section29-2">
+                <h3>29.2 Positive Rays</h3>
+                <p>Positive rays are fast-moving positive ions of gas in a discharge tube, with mass close to that of gas atoms. They travel slower than cathode rays and produce fluorescence.</p>
+            </section>
+            <section id="section29-3">
+                <h3>29.3 Electron Emission</h3>
+                <p>Electron emission occurs via thermionic, photoelectric, field, or secondary emission processes.</p>
+            </section>
+            <section id="section29-4">
+                <h3>29.4 Photoelectric Effect</h3>
+                <p>Emission of electrons from a metal surface under suitable frequency light. Work function: \( \phi = h \nu_0 \). Einstein’s equation: \( E_{K \text{max}} = h(\nu - \nu_0) \). Stopping potential: \( eV_0 = h(\nu - \nu_0) \).</p>
+            </section>
+            <section id="section29-5">
+                <h3>29.5 Planck’s Quantum Theory</h3>
+                <p>Light travels as discrete quanta (photons) with energy \( E = h\nu \). Photon momentum: \( p = \frac{h}{\lambda} \). Photons are neutral and travel at \( c = 3 \times 10^8 \, \text{m/s} \).</p>
+            </section>
+            <section id="section29-6">
+                <h3>29.6 Compton Effect</h3>
+                <p>Scattering of monochromatic light by free electrons, increasing wavelength. Compton shift: \( \Delta \lambda = \frac{h}{m_0 c} (1 - \cos \phi) \). Maximum shift at \( \phi = 180^\circ \).</p>
+            </section>
+            <section id="section29-7">
+                <h3>29.7 Dual Nature of Radiation</h3>
+                <p>Light exhibits both wave and particle properties, depending on the interaction.</p>
+            </section>
+            <section id="section29-8">
+                <h3>29.8 Matter Waves</h3>
+                <p>De-Broglie waves are associated with moving particles: \( \lambda = \frac{h}{mv} \). For charged particles: \( \lambda = \frac{h}{\sqrt{2m e V}} \).</p>
+            </section>
+            <section id="section29-9">
+                <h3>29.9 Davisson-Germer Experiment</h3>
+                <p>Confirmed wave nature of electrons using Ni crystal diffraction, with maximum intensity at 50° for 54 V.</p>
+            </section>
+            <section id="section29-10">
+                <h3>29.10 Electron Microscope</h3>
+                <p>Uses electron waves for high magnification (\( \approx 10^5 \)) to study minute objects.</p>
+            </section>
+            <section id="section29-11">
+                <h3>29.11 X-rays</h3>
+                <p>Electromagnetic waves (0.1 Å to 100 Å) produced when cathode rays strike high atomic weight metals. Wavelength: \( \lambda = \frac{hc}{eV} \). Bragg’s law for diffraction: \( 2d \sin \theta = n\lambda \).</p>
+                <div class="key-terms">
+                    <h4>Key Terms</h4>
+                    <p>Cathode Rays, Photoelectric Effect, Compton Effect, De-Broglie Waves, X-rays</p>
+                </div>
+                <div class="review-questions">
+                    <h4>Review Questions</h4>
+                    <ol>
+                        <li>Explain Einstein’s photoelectric equation.</li>
+                        <li>Calculate the Compton shift for a photon scattered at 180°.</li>
+                        <li>Describe the properties of X-rays.</li>
+                    </ol>
+                </div>
+            </section>
+        </section>
+
+        <section id="chapter30">
+            <h2>Chapter 30: Atomic Physics</h2>
+            <section id="section30-1">
+                <h3>30.1 Dalton’s Atomic Theory</h3>
+                <p>Elements consist of identical atoms for the same element and different atoms for different elements.</p>
+            </section>
+            <section id="section30-2">
+                <h3>30.2 Thomson’s Atomic Model</h3>
+                <p>Atoms are positively charged spheres with embedded electrons, neutral overall. Fails to explain spectral series and large-angle alpha scattering.</p>
+            </section>
+            <section id="section30-3">
+                <h3>30.3 Rutherford’s Atomic Model</h3>
+                <p>Positive charge and mass are concentrated in a nucleus, with electrons orbiting. Distance of closest approach: \( r_0 = \frac{2 Z e^2}{4 \pi \epsilon_0 E_K} \). Impact parameter: \( b = \frac{Z e^2}{4 \pi \epsilon_0 E_K} \cot \frac{\theta}{2} \).</p>
+            </section>
+            <section id="section30-4">
+                <h3>30.4 Bohr’s Atomic Model</h3>
+                <p>Electrons revolve in stationary orbits where angular momentum is \( mvr = \frac{nh}{2\pi} \). Energy: \( E = -\frac{13.6 Z^2}{n^2} \, \text{eV} \). Radius: \( r \propto \frac{n^2}{Z} \).</p>
+            </section>
+            <section id="section30-5">
+                <h3>30.5 Hydrogen Spectrum Series</h3>
+                <p>Includes Lyman (UV), Balmer (visible), Paschen, Brackett, and Pfund (infrared) series, based on electron transitions.</p>
+            </section>
+            <section id="section30-6">
+                <h3>30.6 Wave Model</h3>
+                <p>Based on wave mechanics, using quantum numbers: principal (\( n \)), orbital (\( l \)), magnetic (\( m_l \)), and spin (\( m_s \)).</p>
+                <div class="key-terms">
+                    <h4>Key Terms</h4>
+                    <p>Atomic Number, Bohr’s Model, Quantum Numbers, Hydrogen Spectrum</p>
+                </div>
+                <div class="review-questions">
+                    <h4>Review Questions</h4>
+                    <ol>
+                        <li>Derive the radius of Bohr’s orbit.</li>
+                        <li>Calculate the energy of an electron in the second orbit of hydrogen.</li>
+                        <li>Explain the limitations of Rutherford’s model.</li>
+                    </ol>
+                </div>
+            </section>
+        </section>
+
+        <section id="chapter31">
+            <h2>Chapter 31: Nuclear Physics</h2>
+            <section id="section31-1">
+                <h3>31.1 Nucleus</h3>
+                <p>The nucleus contains protons and neutrons (nucleons). Atomic number (\( Z \)) is the number of protons, mass number (\( A \)) is protons plus neutrons. Nuclear radius: \( R = R_0 A^{1/3} \).</p>
+            </section>
+            <section id="section31-2">
+                <h3>31.2 Nuclear Force</h3>
+                <p>Strong, short-range, charge-independent force between nucleons, mediated by meson exchange.</p>
+            </section>
+            <section id="section31-3">
+                <h3>31.3 Mass Defect and Binding Energy</h3>
+                <p>Mass defect: \( \Delta m = [Z m_p + (A-Z) m_n] - m \). Binding energy: \( E_b = \Delta m c^2 \). Binding energy per nucleon indicates nuclear stability.</p>
+            </section>
+            <section id="section31-4">
+                <h3>31.4 Nuclear Reaction</h3>
+                <p>Changes a nucleus via bombardment: \( X + a \to Y + b + Q \). Q-value is the energy difference between reactants and products.</p>
+            </section>
+            <section id="section31-5">
+                <h3>31.5 Nuclear Fission</h3>
+                <p>Splitting of a heavy nucleus into lighter nuclei, e.g., \( ^{235}_{92}\text{U} + n \to ^{141}_{56}\text{Ba} + ^{92}_{36}\text{Kr} + 3n \). Can lead to chain reactions.</p>
+            </section>
+            <section id="section31-6">
+                <h3>31.6 Nuclear Fusion</h3>
+                <p>Combining light nuclei to form a heavier nucleus, releasing energy, e.g., \( 3 (^2_1\text{H}) \to ^4_2\text{He} + ^1_1\text{H} + n + 21.6 \, \text{MeV} \).</p>
+            </section>
+            <section id="section31-7">
+                <h3>31.7 Radioactivity</h3>
+                <p>Spontaneous emission of alpha, beta, or gamma rays. Decay law: \( N = N_0 e^{-\lambda t} \). Half-life: \( T_{1/2} = \frac{0.693}{\lambda} \). Activity: \( R = \lambda N \).</p>
+                <div class="key-terms">
+                    <h4>Key Terms</h4>
+                    <p>Nucleus, Nuclear Force, Binding Energy, Fission, Fusion, Radioactivity</p>
+                </div>
+                <div class="review-questions">
+                    <h4>Review Questions</h4>
+                    <ol>
+                        <li>Calculate the binding energy of a nucleus with a mass defect of 0.01 amu.</li>
+                        <li>Explain the difference between nuclear fission and fusion.</li>
+                        <li>Derive the radioactive decay law.</li>
+                    </ol>
+                </div>
+            </section>
+        </section>
+		
+		
+		<section id="chapter32">
+            <h2>Chapter 32: Electronics</h2>
+            <section id="section32-1">
+                <h3>32.1 Introduction to Electronics</h3>
+                <p>Electronics is the branch of science dealing with electron emission, flow, and control through vacuum, gas, or semiconductors.</p>
+            </section>
+            <section id="section32-2">
+                <h3>32.2 Classification of Solids</h3>
+                <p>Solids are classified based on the arrangement of atoms into:</p>
+                <ul>
+                    <li><strong>Crystalline Solids:</strong> Atoms arranged in a regular, periodic order (e.g., sodium chloride, diamond). They have a definite melting point and are anisotropic.</li>
+                    <li><strong>Amorphous Solids:</strong> Atoms lack definite arrangement (e.g., glass, rubber). They have no definite melting point and are isotropic.</li>
+                </ul>
+                <p>Based on conductivity:</p>
+                <ul>
+                    <li><strong>Conductors:</strong> Allow easy passage of electricity (e.g., metals).</li>
+                    <li><strong>Insulators:</strong> Prevent electricity flow (e.g., wood, rubber).</li>
+                    <li><strong>Semiconductors:</strong> Conductivity between conductors and insulators (e.g., silicon, germanium).</li>
+                </ul>
+            </section>
+            <section id="section32-3">
+                <h3>32.3 Energy Bands of Solids</h3>
+                <p>Energy bands in solids include:</p>
+                <ul>
+                    <li><strong>Valence Band:</strong> Contains valence electrons, may be partially or fully filled.</li>
+                    <li><strong>Conduction Band:</strong> Contains conduction electrons, may be empty or partially filled.</li>
+                    <li><strong>Forbidden Band:</strong> Empty band between valence and conduction bands, with band gap \( E_g \).</li>
+                </ul>
+                <p>Classification based on energy bands:</p>
+                <ul>
+                    <li><strong>Conductors:</strong> Overlapping or partially filled bands (\( E_g \approx 0 \)).</li>
+                    <li><strong>Insulators:</strong> Large band gap (\( E_g > 3 \, \text{eV} \)), no electrons in conduction band.</li>
+                    <li><strong>Semiconductors:</strong> Small band gap (\( E_g < 3 \, \text{eV} \)), some electrons reach conduction band at room temperature.</li>
+                </ul>
+            </section>
+            <section id="section32-4">
+                <h3>32.4 Types of Semiconductors</h3>
+                <p>Semiconductors are classified as:</p>
+                <ul>
+                    <li><strong>Intrinsic:</strong> Pure semiconductors (e.g., silicon, germanium).</li>
+                    <li><strong>Extrinsic:</strong> Doped with impurities to enhance conductivity.</li>
+                </ul>
+                <p>Extrinsic types:</p>
+                <ul>
+                    <li><strong>n-type:</strong> Doped with pentavalent impurities (e.g., As, Sb), electrons as majority carriers.</li>
+                    <li><strong>p-type:</strong> Doped with trivalent impurities (e.g., Al, B), holes as majority carriers.</li>
+                </ul>
+                <p>For doped semiconductors: \( n_e n_h = n_i^2 \), where \( n_e \) and \( n_h \) are electron and hole densities, and \( n_i \) is intrinsic carrier density.</p>
+            </section>
+            <section id="section32-5">
+                <h3>32.5 Electrical Conduction in Semiconductors</h3>
+                <p>Current in semiconductors is due to electrons and holes: \( i = i_e + i_h \). Conductivity: \( \sigma = e (n_e \mu_e + n_h \mu_h) \), where \( \mu_e \) and \( \mu_h \) are mobilities of electrons and holes. Holes have lower mobility than electrons.</p>
+            </section>
+            <section id="section32-6">
+                <h3>32.6 p-n Junction and Diode</h3>
+                <p>A p-n junction is formed by joining p-type and n-type semiconductors. With metallic contacts, it becomes a p-n junction diode.</p>
+                <p>Key terms:</p>
+                <ul>
+                    <li><strong>Depletion Layer:</strong> Region with no charge carriers, width ~\( 10^{-6} \, \text{m} \).</li>
+                    <li><strong>Potential Barrier:</strong> Voltage across depletion layer (0.3 V for Ge, 0.7 V for Si).</li>
+                    <li><strong>Forward Bias:</strong> p-side positive, n-side negative, reduces depletion layer, majority carriers conduct.</li>
+                    <li><strong>Reverse Bias:</strong> p-side negative, n-side positive, increases depletion layer, minority carriers conduct.</li>
+                </ul>
+            </section>
+            <section id="section32-7">
+                <h3>32.7 Zener Diode and Light Emitting Diode</h3>
+                <p><strong>Zener Diode:</strong> Heavily doped, operates in reverse bias breakdown region, used as a voltage regulator.</p>
+                <p><strong>Light Emitting Diode (LED):</strong> Emits light during electron-hole recombination in forward bias. Materials determine color (e.g., GaAs for infrared, GaP for red/green).</p>
+            </section>
+            <section id="section32-8">
+                <h3>32.8 Photodiode and Solar Cell</h3>
+                <p><strong>Photodiode:</strong> Reverse-biased p-n junction that generates current via photoexcitation.</p>
+                <p><strong>Solar Cell:</strong> Converts solar energy to electrical energy, operates as a p-n junction diode.</p>
+            </section>
+            <section id="section32-9">
+                <h3>32.9 p-n Junction Diode as Rectifier</h3>
+                <p>Rectifiers convert AC to DC. Types:</p>
+                <ul>
+                    <li><strong>Half-Wave Rectifier:</strong> Converts half AC cycle to DC, ripple frequency equals input AC frequency.</li>
+                    <li><strong>Full-Wave Rectifier:</strong> Converts full AC cycle to DC, ripple frequency is twice the input AC frequency.</li>
+                </ul>
+            </section>
+            <section id="section32-10">
+                <h3>32.10 Transistor</h3>
+                <p>A transistor consists of a thin semiconductor layer (base) between two thicker layers (emitter, collector). Types: p-n-p and n-p-n. Emitter is heavily doped, base is lightly doped. Biasing modes: active, saturation, cut-off, inverse.</p>
+            </section>
+            <section id="section32-11">
+                <h3>32.11 Transistor as an Amplifier</h3>
+                <p>Amplifies voltage, current, or power. In common base: AC current gain \( \alpha_{AC} = \frac{\Delta I_c}{\Delta I_e} \), voltage gain \( A_V = \alpha_{AC} \frac{R_o}{R_i} \). In common emitter: AC current gain \( \beta_{AC} = \frac{\Delta I_c}{\Delta I_b} \), power gain \( \beta_{AC}^2 \cdot \text{resistance gain} \).</p>
+            </section>
+            <section id="section32-12">
+                <h3>32.12 Transistor as an Oscillator</h3>
+                <p>Converts DC to AC using a tank circuit (\( f = \frac{1}{2\pi \sqrt{LC}} \)), transistor amplifier, and positive feedback.</p>
+            </section>
+            <section id="section32-13">
+                <h3>32.13 Transistor as a Switch</h3>
+                <p>Operates in cut-off (off, \( V_0 = V_{CC} \)) or saturation (on, \( V_0 \approx 0 \)) based on input voltage \( V_i \).</p>
+            </section>
+            <section id="section32-14">
+                <h3>32.14 Logic Gates</h3>
+                <p>Logic gates process signals based on logical relations. Types:</p>
+                <ul>
+                    <li><strong>OR Gate:</strong> \( Y = A + B \).</li>
+                    <li><strong>AND Gate:</strong> \( Y = A \cdot B \).</li>
+                    <li><strong>NOT Gate:</strong> \( Y = \overline{A} \).</li>
+                    <li><strong>NAND Gate:</strong> \( Y = \overline{A \cdot B} \).</li>
+                    <li><strong>NOR Gate:</strong> \( Y = \overline{A + B} \).</li>
+                    <li><strong>XOR Gate:</strong> \( Y = A \oplus B \).</li>
+                    <li><strong>XNOR Gate:</strong> \( Y = A \odot B \).</li>
+                </ul>
+                <p>De Morgan’s theorems: \( \overline{A + B} = \overline{A} \cdot \overline{B} \), \( \overline{A \cdot B} = \overline{A} + \overline{B} \).</p>
+                <div class="key-terms">
+                    <h4>Key Terms</h4>
+                    <p>Energy Bands, Semiconductors, p-n Junction, Transistor, Logic Gates</p>
+                </div>
+                <div class="review-questions">
+                    <h4>Review Questions</h4>
+                    <ol>
+                        <li>Explain the difference between intrinsic and extrinsic semiconductors.</li>
+                        <li>Derive the conductivity of a semiconductor.</li>
+                        <li>Describe the operation of a transistor as a switch.</li>
+                    </ol>
+                </div>
+            </section>
+        </section>
+
+        <section id="chapter33">
+            <h2>Chapter 33: Communication</h2>
+            <section id="section33-1">
+                <h3>33.1 Introduction to Communication</h3>
+                <p>Communication is the faithful transmission of information from one place to another.</p>
+            </section>
+            <section id="section33-2">
+                <h3>33.2 Communication System</h3>
+                <p>Consists of:</p>
+                <ul>
+                    <li><strong>Transmitter:</strong> Processes and encodes information for transmission.</li>
+                    <li><strong>Communication Channel:</strong> Medium for signal propagation.</li>
+                    <li><strong>Receiver:</strong> Receives and decodes the signal.</li>
+                </ul>
+            </section>
+            <section id="section33-3">
+                <h3>33.3 Message Signals</h3>
+                <p>Message signals are time-varying electrical signals, either:</p>
+                <ul>
+                    <li><strong>Analog:</strong> Continuous variation in voltage/current.</li>
+                    <li><strong>Digital:</strong> Discrete values (e.g., binary).</li>
+                </ul>
+            </section>
+            <section id="section33-4">
+                <h3>33.4 Modulation</h3>
+                <p>Modulation superimposes an audio signal onto a high-frequency carrier wave. Types:</p>
+                <ul>
+                    <li><strong>Amplitude Modulation:</strong> Varies carrier amplitude, bandwidth = 2 × modulating frequency, modulation index \( m = \frac{\text{Change in amplitude}}{\text{Carrier amplitude}} \).</li>
+                    <li><strong>Frequency Modulation:</strong> Varies carrier frequency.</li>
+                    <li><strong>Pulse Modulation:</strong> Samples continuous waveforms at intervals.</li>
+                </ul>
+                <p><strong>Demodulation:</strong> Extracts audio signal from modulated signal.</p>
+            </section>
+            <section id="section33-5">
+                <h3>33.5 Antenna</h3>
+                <p>Converts electrical energy to electromagnetic waves and vice versa. Types:</p>
+                <ul>
+                    <li><strong>Hertz Antenna:</strong> Length = half the wavelength of the signal.</li>
+                    <li><strong>Marconi Antenna:</strong> Length = quarter the wavelength of the signal.</li>
+                </ul>
+            </section>
+            <section id="section33-6">
+                <h3>33.6 Propagation of Electromagnetic Waves</h3>
+                <p>Radio waves travel from transmitter to receiver antenna through space, categorized by frequency and wavelength ranges.</p>
+                <p>Frequency bands for communication:</p>
+                <table>
+                    <tr><th>Service</th><th>Frequency Bands</th><th>Remarks</th></tr>
+                    <tr><td>Standard AM Broadcast</td><td>540-1600 kHz</td><td>Radio broadcast</td></tr>
+                    <tr><td>FM Broadcast</td><td>88-108 MHz</td><td>Music channel</td></tr>
+                    <tr><td>Television</td><td>54-72 MHz, 76-88 MHz, 174-216 MHz, 420-890 MHz</td><td>VHF, UHF, TV</td></tr>
+                    <tr><td>Cellular Mobile Radio</td><td>896-901 MHz, 840-935 MHz</td><td>Mobile to base, base to mobile</td></tr>
+                    <tr><td>Satellite Communication</td><td>5.925-6.425 GHz (Uplink), 3.7-4.2 GHz (Downlink)</td><td>Satellite links</td></tr>
+                </table>
+                <div class="key-terms">
+                    <h4>Key Terms</h4>
+                    <p>Communication System, Modulation, Antenna, Electromagnetic Waves</p>
+                </div>
+                <div class="review-questions">
+                    <h4>Review Questions</h4>
+                    <ol>
+                        <li>Explain the need for modulation in communication systems.</li>
+                        <li>Describe the components of a communication system.</li>
+                        <li>Calculate the bandwidth for an amplitude-modulated signal with a modulating frequency of 5 kHz.</li>
+                    </ol>
+                </div>
+            </section>
+        </section>
+		
+    </main>
+	
+	
+	
+	
+	<!----------------FOOTER----------------->
+    <footer>
+        <p>&copy;DriMS. <br> Contact SchrDbb on <b> (+237) 6 52 65 94 29 </b>, for All your Research Data Analysis and Data Science,
+            Software Development, Website Development, Biomedical/Clinical Science Tutorials.</p> <br> <br> <br>
+    </footer>
+	
+	
+	
+	<!----------------JAVASCRIPT----------------->
+     <script src="js/textbook.js"></script>
+</body>
+</html>

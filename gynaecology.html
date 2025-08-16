@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anatomy Notes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/anatomy.css">
+</head>
+<body class="bg-brown-dark text-yellow-text min-h-screen flex flex-col">
+    <header class="bg-brown-accent p-4 shadow-md">
+        <h1 class="text-2xl font-bold text-golden-yellow">Anatomy Notes</h1>
+        <a href="main.html" class="text-yellow-highlight hover:text-golden-yellow">Back to Main App</a>
+    </header>
+    <main class="flex-1 p-6">
+        <ul id="study-categories" class="study-categories space-y-2 mb-4">
+            <li class="cursor-pointer py-2 px-4 bg-brown-accent rounded-lg hover:bg-golden-yellow hover:text-brown-dark transition-all" data-topic="skeletal-system">The Skeletal System</li>
+            <li class="cursor-pointer py-2 px-4 bg-brown-accent rounded-lg hover:bg-golden-yellow hover:text-brown-dark transition-all" data-topic="cardiovascular-system">The Cardiovascular System</li>
+        </ul>
+        <div id="notes-display" class="hidden bg-brown-accent p-6 rounded-lg">
+            <h2 id="current-note-topic" class="text-xl font-semibold text-golden-yellow mb-4"></h2>
+            <div id="note-content" class="text-yellow-text"></div>
+            <button id="back-to-categories" class="mt-4 py-2 px-4 bg-golden-yellow text-brown-dark rounded-lg hover:bg-yellow-highlight transition-all">Back to Topics</button>
+        </div>
+    </main>
+    <script src="js/anatomy.js"></script>
+</body>
+</html>

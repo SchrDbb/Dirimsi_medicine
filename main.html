@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dirimsi - Medical Study App</title>
+    <!-- Tailwind CSS and Font Awesome for styling and icons -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brown-dark': '#2c1e1a',
+                        'brown-card': '#42322a',
+                        'yellow-text': '#d4c2a5',
+                        'golden-yellow': '#d4af37',
+                        'dark-yellow': '#b8860b',
+                        'brown-accent': '#574438',
+                        'yellow-highlight': '#ffe26e',
+                        'dark-red': '#8b0000',
+                    },
+                },
+            },
+        };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Link to the custom CSS file -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- Firebase configuration -->
+    <script src="/env.js"></script>
+</head>
+<body class="bg-brown-dark text-yellow-text min-h-screen flex flex-col antialiased font-sans">
+    <header class="bg-brown-card shadow-lg p-4 sticky top-0 z-40 rounded-b-xl">
+        <div class="container mx-auto flex flex-col sm:flex-row items-center justify-between">
+            <div class="flex items-center space-x-4 mb-4 sm:mb-0">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-golden-yellow" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+                    <path d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zm0 8c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3z"/>
+                </svg>
+                <h1 class="text-2xl font-bold text-golden-yellow">Dirimsi</h1>
+                <p id="user-id-display" class="text-sm font-semibold text-yellow-highlight bg-brown-accent px-2 py-1 rounded">User ID: Loading...</p>
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-coins text-golden-yellow"></i>
+                    <p id="header-coin-balance" class="text-sm font-semibold text-golden-yellow">1000</p>
+                </div>
+            </div>
+            <div class="bg-brown-accent rounded-full px-4 py-2 shadow-inner text-center md:text-right transition-all duration-300">
+                <p class="text-xs text-yellow-text font-semibold">Subscription Ends In</p>
+                <div id="countdown-timer" class="text-xl font-bold text-yellow-highlight animate-pulse">
+                    <span id="countdown-loading" class="inline-block">Connecting...</span>
+                    <span id="countdown-display" class="hidden inline-flex space-x-2">
+                        <span id="countdown-days">00</span><span class="text-sm font-normal">d</span>
+                        <span id="countdown-hours">00</span><span class="text-sm font-normal">h</span>
+                        <span id="countdown-minutes">00</span><span class="text-sm font-normal">m</span>
+                        <span id="countdown-seconds">00</span><span class="text-sm font-normal">s</span>
+                    </span>
+                </div>
+            </div>
+            <nav class="main-nav mt-4 sm:mt-0">
+                <ul class="flex flex-row space-x-6 text-lg font-semibold">
+                    <li><a id="profile-link" href="#" data-page="profile" class="text-yellow-text hover:text-golden-yellow transition-colors duration-200">Profile</a></li>
+                    <li><a id="modes-link" href="#" data-page="modes" class="text-yellow-text hover:text-golden-yellow transition-colors duration-200">Modes</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="app-content flex-grow container mx-auto p-4 sm:p-8">
+        <!-- Message box for notifications -->
+        <div id="message-box" class="fixed bottom-4 right-4 p-4 rounded-lg shadow-xl transition-transform transform translate-y-20 duration-300 z-50">
+            <p id="message-text" class="text-white font-bold"></p>
+        </div>
+        <!-- Contact Modal for Zero Coins -->
+        <div id="contact-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+            <div class="bg-brown-card p-6 rounded-lg shadow-lg text-center max-w-sm w-full">
+                <h3 class="text-2xl font-bold text-golden-yellow mb-4">No Coins Left!</h3>
+                <p class="text-yellow-text mb-4">You've run out of coins to access Arcade Mode. Please purchase more coins by contacting SchrDbb with the following details:</p>
+                <p class="text-yellow-text mb-2"><strong>App ID:</strong> <span id="app-id-display" class="font-mono"></span></p>
+                <p class="text-yellow-text mb-4"><strong>Password:</strong> <span id="password-display" class="font-mono"></span></p>
+                <div class="flex justify-center space-x-4">
+                    <a id="whatsapp-link" href="#" target="_blank" class="flex items-center space-x-2 px-4 py-2 bg-green-600 hover:bg-green-700 rounded-lg transition-colors">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="w-6 h-6">
+                        <span class="text-white">WhatsApp</span>
+                    </a>
+                    <a id="telegram-link" href="#" target="_blank" class="flex items-center space-x-2 px-4 py-2 bg-blue-500 hover:bg-blue-600 rounded-lg transition-colors">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram" class="w-6 h-6">
+                        <span class="text-white">Telegram</span>
+                    </a>
+                </div>
+                <button id="close-contact-modal" class="mt-4 px-4 py-2 bg-golden-yellow text-brown-dark font-bold rounded-lg hover:bg-dark-yellow transition-colors">Close</button>
+            </div>
+        </div>
+        <!-- Profile Section -->
+        <section id="profile-section" class="page-section profile-section bg-brown-card p-6 sm:p-10 rounded-xl shadow-lg mb-8 hidden" data-page="profile">
+            <h2 class="text-3xl font-bold mb-6 text-center text-golden-yellow">Your Profile</h2>
+            <div class="flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-12">
+                <div class="profile-picture-container flex-shrink-0 relative group">
+                    <img id="profile-pic-display" src="https://placehold.co/150x150/42322a/d4c2a5?text=Profile" alt="Profile Picture" class="w-40 h-40 rounded-full border-4 border-golden-yellow object-cover transition-transform group-hover:scale-105">
+                    <label for="profile-pic-upload" class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center rounded-full opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer">
+                        <i class="fas fa-camera text-2xl text-white"></i>
+                        <span class="sr-only">Upload Profile Picture</span>
+                    </label>
+                    <input type="file" id="profile-pic-upload" accept="image/*" class="hidden">
+                </div>
+                <div class="profile-info flex-grow grid grid-cols-1 sm:grid-cols-2 gap-6 w-full">
+                    <div class="col-span-full sm:col-span-1">
+                        <label for="name" class="block text-yellow-text font-medium mb-1">Name:</label>
+                        <input type="text" id="name" placeholder="Enter your name" class="w-full p-3 rounded-lg bg-brown-dark text-yellow-text border border-brown-accent focus:outline-none focus:ring-2 focus:ring-golden-yellow transition-colors">
+                    </div>
+                    <div class="col-span-full sm:col-span-1">
+                        <label for="educational-level" class="block text-yellow-text font-medium mb-1">Educational Level:</label>
+                        <input type="text" id="educational-level" placeholder="e.g., Medical Student, Doctor" class="w-full p-3 rounded-lg bg-brown-dark text-yellow-text border border-brown-accent focus:outline-none focus:ring-2 focus:ring-golden-yellow transition-colors">
+                    </div>
+                    <div class="col-span-full sm:col-span-1">
+                        <label for="email" class="block text-yellow-text font-medium mb-1">Email:</label>
+                        <input type="email" id="email" placeholder="your@example.com" class="w-full p-3 rounded-lg bg-brown-dark text-yellow-text border border-brown-accent focus:outline-none focus:ring-2 focus:ring-golden-yellow transition-colors">
+                    </div>
+                    <div class="col-span-full sm:col-span-1">
+                        <label for="whatsapp-number" class="block text-yellow-text font-medium mb-1">WhatsApp Number:</label>
+                        <input type="tel" id="whatsapp-number" placeholder="+1234567890" class="w-full p-3 rounded-lg bg-brown-dark text-yellow-text border border-brown-accent focus:outline-none focus:ring-2 focus:ring-golden-yellow transition-colors">
+                    </div>
+                    <div class="col-span-full sm:col-span-1">
+                        <label class="block text-yellow-text font-medium mb-1">Coins:</label>
+                        <p id="coin-balance" class="text-xl font-bold text-golden-yellow">1000</p>
+                    </div>
+                    <div class="col-span-full flex flex-col items-end">
+                        <button id="save-profile-btn" class="px-6 py-3 bg-golden-yellow text-brown-dark font-bold rounded-lg shadow-md hover:bg-dark-yellow transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-golden-yellow focus:ring-offset-2 focus:ring-offset-brown-dark">
+                            Save Profile
+                        </button>
+                        <p id="save-message" class="text-sm text-yellow-text mt-2 hidden">Data persistence is disabled in Demo Mode.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Modes Section -->
+        <section id="modes-section" class="page-section modes-section bg-brown-card p-6 sm:p-10 rounded-xl shadow-lg mb-8" data-page="modes">
+            <h2 class="text-3xl font-bold mb-6 text-center text-golden-yellow">Choose Your Mode</h2>
+            <div class="mode-buttons flex flex-col sm:flex-row gap-4 mb-8">
+                <button id="study-mode-btn" class="mode-button flex-1 py-4 px-6 text-xl font-bold rounded-xl shadow-md transition-all duration-200 hover:bg-brown-accent hover:scale-105 active:scale-95 bg-golden-yellow text-brown-dark">Study Mode</button>
+                <button id="arcade-mode-btn" class="mode-button flex-1 py-4 px-6 text-xl font-bold rounded-xl shadow-md transition-all duration-200 bg-brown-dark hover:bg-brown-accent hover:scale-105 active:scale-95">Arcade Mode</button>
+            </div>
+            <div id="study-content" class="study-content">
+                <div class="study-categories grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="category-card bg-brown-dark p-6 rounded-lg shadow-md cursor-pointer transition-transform duration-200 hover:scale-105 hover:bg-brown-accent" data-category="premed">
+                        <h4 class="text-2xl font-bold mb-4 text-golden-yellow">PreMed Study</h4>
+                        <ul class="list-disc list-inside space-y-2 text-yellow-text">
+                            <li data-topic="biology" data-page-url="biology.html" class="hover:text-yellow-highlight transition-colors">Biology</li>
+                            <li data-topic="chemistry" data-page-url="chemistry.html" class="hover:text-yellow-highlight transition-colors">Chemistry</li>
+                            <li data-topic="physics" data-page-url="physics.html" class="hover:text-yellow-highlight transition-colors">Physics</li>
+                            <li data-topic="mathematics" data-page-url="mathematics.html" class="hover:text-yellow-highlight transition-colors">Mathematics</li>
+                            <li data-topic="english" data-page-url="english.html" class="hover:text-yellow-highlight transition-colors">English</li>
+                            <li data-topic="french" data-page-url="french.html" class="hover:text-yellow-highlight transition-colors">French</li>
+                            <li data-topic="general-knowledge" data-page-url="general-knowledge.html" class="hover:text-yellow-highlight transition-colors">General Knowledge</li>
+                        </ul>
+                    </div>
+                    <div class="category-card bg-brown-dark p-6 rounded-lg shadow-md cursor-pointer transition-transform duration-200 hover:scale-105 hover:bg-brown-accent" data-category="biomedical">
+                        <h4 class="text-2xl font-bold mb-4 text-golden-yellow">Biomedical Science Study</h4>
+                        <ul class="list-disc list-inside space-y-2 text-yellow-text">
+                            <li data-topic="anatomy" data-page-url="anatomy.html" class="hover:text-yellow-highlight transition-colors">Anatomy</li>
+                            <li data-topic="physiology" data-page-url="physiology.html" class="hover:text-yellow-highlight transition-colors">Physiology</li>
+                            <li data-topic="biochemistry" data-page-url="biochemistry.html" class="hover:text-yellow-highlight transition-colors">Biochemistry</li>
+                            <li data-topic="biophysics" data-page-url="biophysics.html" class="hover:text-yellow-highlight transition-colors">Biophysics</li>
+                            <li data-topic="genetics" data-page-url="genetics.html" class="hover:text-yellow-highlight transition-colors">Genetics</li>
+                            <li data-topic="physical-diagnosis" data-page-url="physical-diagnosis.html" class="hover:text-yellow-highlight transition-colors">Physical Diagnosis/Semiology</li>
+                            <li data-topic="histology" data-page-url="histology.html" class="hover:text-yellow-highlight transition-colors">Histology</li>
+                            <li data-topic="pathology" data-page-url="pathology.html" class="hover:text-yellow-highlight transition-colors">Pathology</li>
+                            <li data-topic="microbiology" data-page-url="microbiology.html" class="hover:text-yellow-highlight transition-colors">Microbiology</li>
+                        </ul>
+                    </div>
+                    <div class="category-card bg-brown-dark p-6 rounded-lg shadow-md cursor-pointer transition-transform duration-200 hover:scale-105 hover:bg-brown-accent" data-category="clinical">
+                        <h4 class="text-2xl font-bold mb-4 text-golden-yellow">Clinical Science</h4>
+                        <ul class="list-disc list-inside space-y-2 text-yellow-text">
+                            <li data-topic="internal-medicine" data-page-url="internal-medicine.html" class="hover:text-yellow-highlight transition-colors">Internal Medicine</li>
+                            <li data-topic="pediatrics" data-page-url="pediatrics.html" class="hover:text-yellow-highlight transition-colors">Pediatrics</li>
+                            <li data-topic="surgery" data-page-url="surgery.html" class="hover:text-yellow-highlight transition-colors">Surgery</li>
+                            <li data-topic="obstetrics" data-page-url="obstetrics.html" class="hover:text-yellow-highlight transition-colors">Obstetrics</li>
+                            <li data-topic="gynaecology" data-page-url="gynaecology.html" class="hover:text-yellow-highlight transition-colors">Gynaecology</li>
+                            <li data-topic="psychiatry" data-page-url="psychiatry.html" class="hover:text-yellow-highlight transition-colors">Psychiatry</li>
+                        </ul>
+                    </div>
+                    <div class="category-card bg-brown-dark p-6 rounded-lg shadow-md cursor-pointer transition-transform duration-200 hover:scale-105 hover:bg-brown-accent" data-category="energetic">
+                        <h4 class="text-2xl font-bold mb-4 text-golden-yellow">Energetic Medicine</h4>
+                        <ul class="list-disc list-inside space-y-2 text-yellow-text">
+                            <li data-topic="chinese-medicine-principles" data-page-url="chinese-medicine-principles.html" class="hover:text-yellow-highlight transition-colors">Chinese Medicine Principles</li>
+                            <li data-topic="energetic-medicine-diagnosis" data-page-url="energetic-medicine-diagnosis.html" class="hover:text-yellow-highlight transition-colors">Energetic Medicine Diagnosis</li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="notes-display" class="notes-display hidden bg-brown-dark p-6 rounded-lg shadow-md mt-6">
+                    <button id="back-to-categories" class="mb-4 px-4 py-2 bg-golden-yellow text-brown-dark font-bold rounded-lg hover:bg-dark-yellow transition-colors duration-200">
+                        <i class="fas fa-arrow-left mr-2"></i> Back to Categories
+                    </button>
+                    <h4 id="current-note-topic" class="text-2xl font-bold mb-4 text-golden-yellow"></h4>
+                    <div id="note-content" class="prose prose-invert max-w-none text-yellow-text"></div>
+                </div>
+            </div>
+            <div id="arcade-content" class="arcade-content hidden text-center p-10 bg-brown-dark rounded-lg shadow-md">
+                <h3 class="text-3xl font-bold text-golden-yellow mb-4">Arcade Mode</h3>
+                <p class="text-xl text-yellow-text mb-6">Test your knowledge or challenge a friend! (1 coin per incorrect answer)</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button id="test-mode-btn" class="py-4 px-6 text-xl font-bold rounded-xl shadow-md bg-golden-yellow text-brown-dark hover:bg-dark-yellow transition-all duration-200">Test</button>
+                    <button id="challenge-mode-btn" class="py-4 px-6 text-xl font-bold rounded-xl shadow-md bg-brown-accent text-yellow-text hover:bg-dark-yellow transition-all duration-200">Challenge</button>
+                </div>
+                <div id="test-content" class="test-content hidden mt-6">
+                    <h4 class="text-2xl font-bold text-golden-yellow mb-4">Test Options</h4>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <!-- Updated link for Course Test -->
+                        <button id="course-test-btn" onclick="window.location.href='course_test_selection.html'" class="py-3 px-4 text-lg font-semibold rounded-lg bg-brown-accent text-yellow-text hover:bg-golden-yellow hover:text-brown-dark transition-all duration-200">Course Test</button>
+                        <button id="international-exam-btn" class="py-3 px-4 text-lg font-semibold rounded-lg bg-brown-accent text-yellow-text hover:bg-golden-yellow hover:text-brown-dark transition-all duration-200">International Exams</button>
+                    </div>
+                    <div id="test-quiz-content" class="hidden mt-6">
+                        <h4 id="test-quiz-title" class="text-2xl font-bold text-golden-yellow mb-4"></h4>
+                        <div id="quiz-question" class="text-yellow-text mb-4"></div>
+                        <div id="quiz-options" class="flex flex-col gap-2"></div>
+                        <button id="submit-answer-btn" class="mt-4 px-4 py-2 bg-golden-yellow text-brown-dark font-bold rounded-lg hover:bg-dark-yellow transition-colors hidden">Submit Answer</button>
+                    </div>
+                </div>
+                <div id="challenge-content" class="challenge-content hidden mt-6">
+                    <h4 class="text-2xl font-bold text-golden-yellow mb-4">Challenge a Friend</h4>
+                    <p class="text-yellow-text mb-4">Enter your friend's User ID to start a challenge (50 questions).</p>
+                    <input type="text" id="opponent-id" placeholder="Enter opponent's User ID" class="w-full max-w-xs p-3 rounded-lg bg-brown-dark text-yellow-text border border-brown-accent focus:outline-none focus:ring-2 focus:ring-golden-yellow transition-colors mb-4">
+                    <button id="start-challenge-btn" class="px-4 py-2 bg-golden-yellow text-brown-dark font-bold rounded-lg hover:bg-dark-yellow transition-colors">Start Challenge</button>
+                    <div id="challenge-quiz-content" class="hidden mt-6">
+                        <h4 class="text-2xl font-bold text-golden-yellow mb-4">Challenge in Progress</h4>
+                        <div class="flex justify-between mb-4">
+                            <p id="current-user-id" class="text-yellow-text font-semibold">Your User ID: Loading...</p>
+                            <p id="opponent-user-id" class="text-yellow-text font-semibold">Opponent User ID: Loading...</p>
+                        </div>
+                        <div id="challenge-question" class="text-yellow-text mb-4"></div>
+                        <div id="challenge-options" class="flex flex-col gap-2"></div>
+                        <button id="submit-challenge-answer-btn" class="mt-4 px-4 py-2 bg-golden-yellow text-brown-dark font-bold rounded-lg hover:bg-dark-yellow transition-colors hidden">Submit Answer</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="app-footer bg-brown-card p-4 text-center text-yellow-text mt-auto rounded-t-xl">
+        <p>&copy; 2025 Dirimsi. All rights reserved.</p>
+    </footer>
+    <!-- Link to the external JavaScript file -->
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
