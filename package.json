@@ -1,0 +1,20 @@
+{
+  "name": "dirimsiapp",
+  "version": "1.0.0",
+  "description": "DirimSi Academy - Medical Study App",
+  "main": "js/main.js",
+  "scripts": {
+    "start": "firebase emulators:start",
+    "serve": "npx http-server .",
+    "build:css": "npx tailwindcss -i ./input.css -o ./main.css --minify",
+    "watch:css": "npx tailwindcss -i ./input.css -o ./main.css --watch"
+  },
+  "dependencies": {
+    "firebase": "^10.12.2"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.3"
+  },
+  "author": "Your Name",
+  "license": "ISC"
+}

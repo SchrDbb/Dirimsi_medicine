@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg-brown-dark { background-color: #2c1e1a; }
+.bg-brown-card { background-color: #42322a; }
+.text-yellow-text { color: #d4c2a5; }
+.bg-golden-yellow { background-color: #d4af37; }
+.bg-dark-yellow { background-color: #b8860b; }
+.bg-brown-accent { background-color: #574438; }
+.text-yellow-highlight { color: #ffe26e; }
+.bg-dark-red { background-color: #8B0000; }
+
+.message-box { transform: translateY(100px); transition: transform 0.3s ease-in-out; }
+.message-box.show { transform: translateY(0); }
